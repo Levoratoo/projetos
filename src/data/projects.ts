@@ -631,7 +631,7 @@ export const projects: Project[] = [
     accessLinks: [
       {
         label: "Acesso público",
-        url: "https://printbag.com.br",
+        url: "https://www.embalagensprintbag.com/",
         visibility: "public"
       }
     ],
@@ -1245,7 +1245,7 @@ export const projectsLite: ProjectLite[] = [
       "GitHub Pages",
       "SSG"
     ],
-    accessLinks: [{ label: "Acesso público", url: "https://printbag.com.br" }],
+    accessLinks: [{ label: "Acesso público", url: "https://www.embalagensprintbag.com/" }],
     images: [
       { src: "/projects/landing-page-printbag/thumb.png", alt: "Capa da landing page" },
       { src: "/projects/landing-page-printbag/screen1.png", alt: "Hero e CTA" },
@@ -1503,7 +1503,7 @@ export const previewProjects: PreviewProject[] = [
       "Integração com EmailJS e webhook n8n para automação",
       "Rastreamento de conversão via Google Tag Manager"
     ],
-    accessLinks: [{ label: "Acesso público", url: "https://printbag.com.br" }],
+    accessLinks: [{ label: "Acesso público", url: "https://www.embalagensprintbag.com/" }],
     gallery: [
       { src: "/projects/landing-page-printbag/thumb.png", alt: "Capa principal da landing" },
       { src: "/projects/landing-page-printbag/screen1.png", alt: "Hero e CTA" },
