@@ -1,0 +1,117 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply bg-[#0b0f0e] text-mist font-body antialiased;
+}
+
+select option {
+  background-color: #0b0f0e;
+  color: #e7e7e7;
+}
+
+::selection {
+  background: rgba(166, 255, 179, 0.25);
+}
+
+.glass {
+  background: rgba(16, 18, 22, 0.75);
+  backdrop-filter: blur(14px);
+}
+
+.shineText {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 40%,
+    rgba(52, 255, 180, 0.95) 50%,
+    #ffffff 60%,
+    #ffffff 100%
+  );
+  background-size: 250% 100%;
+  background-position: 120% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shineSweep 4.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(52, 255, 180, 0.18);
+}
+
+.shineTextProject {
+  background-image: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 32%,
+    rgba(52, 255, 180, 0.98) 50%,
+    #ffffff 68%,
+    #ffffff 100%
+  );
+  background-size: 220% 100%;
+  animation-duration: 3.8s;
+  text-shadow: 0 0 16px rgba(52, 255, 180, 0.28);
+}
+
+@keyframes shineSweep {
+  0% {
+    background-position: 120% 0;
+  }
+  50% {
+    background-position: -120% 0;
+  }
+  100% {
+    background-position: 120% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shineText {
+    animation: none;
+    background-position: 50% 0;
+  }
+  .shineTextProject {
+    animation: none;
+  }
+}
+
+@keyframes progressShine {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(220%);
+    opacity: 0;
+  }
+}
+
+.progress-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(52, 211, 153, 0.35),
+    transparent
+  );
+  animation: progressShine 2.5s linear infinite;
+  pointer-events: none;
+}
