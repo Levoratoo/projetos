@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { homeProjects } from "@/data/projects";
 import { HomeHero } from "@/components/home/HomeHero";
-import { ProjectsHubSection } from "@/components/home/ProjectsHubSection";
 import { ProjectSection } from "@/components/projects/ProjectSection";
 import { CallToActionRequest } from "@/components/CallToActionRequest";
 
@@ -157,20 +156,11 @@ export function SnapHome() {
       >
         <HomeHero />
       </section>
-      <section
-        ref={(el) => {
-          sectionsRef.current[1] = el;
-        }}
-        id="home-chapters"
-        className="snap-start"
-      >
-        <ProjectsHubSection />
-      </section>
       {homeProjects.map((project, index) => (
         <ProjectSection
           key={project.slug}
           ref={(el) => {
-            sectionsRef.current[index + 2] = el;
+            sectionsRef.current[index + 1] = el;
           }}
           project={project}
           priorityImage={index === 0}
@@ -178,7 +168,7 @@ export function SnapHome() {
       ))}
       <section
         ref={(el) => {
-          sectionsRef.current[homeProjects.length + 2] = el;
+          sectionsRef.current[homeProjects.length + 1] = el;
         }}
         className="snap-start"
       >
