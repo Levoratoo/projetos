@@ -996,26 +996,26 @@ export const projects: Project[] = [
       {
         title: "Pipeline Python",
         description: "Upload, execucao assincrona e monitoramento em tempo real.",
-        thumbSrc: "/projects/_placeholders/cover.svg",
-        fullSrc: "/projects/_placeholders/screen1.svg"
+        thumbSrc: "/projects/previsao-demanda-python-estatistica/thumb.jpg",
+        fullSrc: "/projects/previsao-demanda-python-estatistica/thumb.jpg"
       },
       {
         title: "Historico de jobs",
         description: "Status, horarios, scriptVersion e trilha de execucao.",
-        thumbSrc: "/projects/_placeholders/screen1.svg",
-        fullSrc: "/projects/_placeholders/screen1.svg"
+        thumbSrc: "/projects/previsao-demanda-python-estatistica/screen1.jpg",
+        fullSrc: "/projects/previsao-demanda-python-estatistica/screen1.jpg"
       },
       {
         title: "Leitura estatistica",
         description: "Visao executiva com modulos e filtros por contexto.",
-        thumbSrc: "/projects/_placeholders/screen2.svg",
-        fullSrc: "/projects/_placeholders/screen2.svg"
+        thumbSrc: "/projects/previsao-demanda-python-estatistica/screen2.jpg",
+        fullSrc: "/projects/previsao-demanda-python-estatistica/screen2.jpg"
       },
       {
         title: "Drill-down analitico",
         description: "Detalhamento com retorno intuitivo e estado preservado.",
-        thumbSrc: "/projects/_placeholders/screen3.svg",
-        fullSrc: "/projects/_placeholders/screen3.svg"
+        thumbSrc: "/projects/previsao-demanda-python-estatistica/screen3.jpg",
+        fullSrc: "/projects/previsao-demanda-python-estatistica/screen3.jpg"
       }
     ]
   }];
@@ -1522,7 +1522,7 @@ export const previewProjects: PreviewProject[] = [
     status: "Concluído",
     progress: 100,
     tags: ["Previsao", "Python", "Estatistica", "Jobs", "Analytics"],
-    thumb: "/projects/_placeholders/cover.svg",
+    thumb: "/projects/previsao-demanda-python-estatistica/thumb.jpg",
     description:
       "Plataforma com duas frentes: execucao do pipeline Python e leitura executiva da previsao estatistica consolidada.",
     bullets: [
@@ -1532,10 +1532,10 @@ export const previewProjects: PreviewProject[] = [
       "Debounce, filtros e drill-down com retorno intuitivo."
     ],
     gallery: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Visao geral do pipeline" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Historico de jobs" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Analise estatistica" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Drill-down e contexto" }
+      { src: "/projects/previsao-demanda-python-estatistica/thumb.jpg", alt: "Visao geral do pipeline" },
+      { src: "/projects/previsao-demanda-python-estatistica/screen1.jpg", alt: "Historico de jobs" },
+      { src: "/projects/previsao-demanda-python-estatistica/screen2.jpg", alt: "Analise estatistica" },
+      { src: "/projects/previsao-demanda-python-estatistica/screen3.jpg", alt: "Drill-down e contexto" }
     ]
   }];
 
