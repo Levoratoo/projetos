@@ -108,7 +108,7 @@ export function HomeHero() {
               </div>
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link
-                  href="/projetos"
+                  href="#home-chapters"
                   className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-ink shadow-[0_12px_30px_rgba(74,222,128,0.2)] transition hover:-translate-y-0.5 hover:bg-emerald-300 hover:shadow-[0_18px_40px_rgba(74,222,128,0.26)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                 >
                   Ver projetos

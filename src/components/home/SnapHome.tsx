@@ -158,6 +158,7 @@ export function SnapHome() {
       {homeProjects.map((project, index) => (
         <ProjectSection
           key={project.slug}
+          id={index === 0 ? "home-chapters" : undefined}
           ref={(el) => {
             sectionsRef.current[index + 1] = el;
           }}
