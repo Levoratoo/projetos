@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { homeProjectSlugs, projects } from "@/data/projects";
@@ -8,7 +8,6 @@ import { ProjectPreviewCard } from "@/components/case/ProjectPreviewCard";
 import { TourNavPills } from "@/components/case/TourNavPills";
 import { CaseSection } from "@/components/case/CaseSection";
 import { CinemaGallery } from "@/components/case/CinemaGallery";
-import { RequestCTA } from "@/components/case/RequestCTA";
 
 type PageProps = {
   params: { slug: string };
@@ -861,8 +860,6 @@ export default function ProjectPage({ params }: PageProps) {
                 </section>
               </CaseSection>
             ) : null}
-
-            <RequestCTA projectUrl={`/projetos/${project.slug}`} />
           </div>
         </Container>
       </section>

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { homeProjects } from "@/data/projects";
 import { HomeHero } from "@/components/home/HomeHero";
 import { ProjectSection } from "@/components/projects/ProjectSection";
-import { CallToActionRequest } from "@/components/CallToActionRequest";
 
 function useReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -166,14 +165,6 @@ export function SnapHome() {
           priorityImage={index === 0}
         />
       ))}
-      <section
-        ref={(el) => {
-          sectionsRef.current[homeProjects.length + 1] = el;
-        }}
-        className="snap-start"
-      >
-        <CallToActionRequest />
-      </section>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 ﻿"use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Container } from "@/components/Container";
 
@@ -71,12 +70,6 @@ export function Hero() {
             >
               Ver cases
             </a>
-            <Link
-              href="/solicitar"
-              className="rounded-full bg-emerald-400 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
-            >
-              Solicitar projeto
-            </Link>
           </div>
         </div>
       </Container>

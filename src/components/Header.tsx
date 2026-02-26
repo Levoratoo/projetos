@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 
 export function Header() {
@@ -19,9 +19,6 @@ export function Header() {
             </Link>
             <Link href="/projetos" className="hover:text-white">
               Projetos
-            </Link>
-            <Link href="/solicitar" className="hover:text-white">
-              Solicitar projeto
             </Link>
             <a href="#sobre" className="hover:text-white">
               Sobre
