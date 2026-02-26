@@ -905,7 +905,120 @@ export const projects: Project[] = [
       }
     ]
   }
-];
+,
+  {
+    slug: "previsao-demanda-python-estatistica",
+    title: "Previsao de Demanda (Python + Estatistica)",
+    subtitle: "Da planilha manual para um fluxo operacional auditavel e orientado a decisao.",
+    summary:
+      "Plataforma com duas frentes: execucao do pipeline Python por job e leitura executiva da previsao estatistica consolidada.",
+    description:
+      "Projeto criado para transformar o planejamento de demanda em um sistema de decisao. A frente Python resolve como gerar a previsao com trilha operacional; a frente Estatistica resolve como decidir, com leitura executiva e explicabilidade.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Planejamento",
+    domain: "Operacoes",
+    segment: "Previsao de Demanda",
+    tags: ["Previsao", "Python", "Estatistica", "Planejamento", "Jobs", "Analytics"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Wouter",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Radix/shadcn",
+      "Node.js",
+      "Express",
+      "tRPC",
+      "MariaDB",
+      "Drizzle ORM",
+      "xlsx",
+      "Python",
+      "Vitest"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(120, 255, 200, 0.32)",
+      b: "rgba(100, 170, 255, 0.28)",
+      c: "rgba(255, 255, 255, 0.14)"
+    },
+    context:
+      "O planejamento de demanda dependia de planilhas isoladas, com baixa rastreabilidade de execucao e pouca leitura executiva do resultado. O objetivo foi separar claramente o fluxo de geracao (Python) da camada de interpretacao (Estatistica), com governanca e usabilidade.",
+    problem: [
+      "Execucao manual sem trilha clara de status e historico.",
+      "Planilhas extensas com baixa navegabilidade e explicabilidade.",
+      "UX instavel em filtros e atualizacoes, com consultas excessivas.",
+      "Drill-down sem retorno intuitivo para o usuario.",
+      "Escopos misturados entre execucao Python e analise estatistica."
+    ],
+    constraints: [
+      "Manter rastreabilidade completa por job (status, versao, horarios e logs).",
+      "Suportar datasets grandes sem travar a leitura analitica.",
+      "Separar claramente os contextos de execucao e decisao.",
+      "Preservar fluidez visual durante refetch e interacoes frequentes."
+    ],
+    solution: [
+      "Tela Previsao Python com upload validado, disparo de job assincrono e log em tempo real.",
+      "Ciclo de vida formal de jobs (PENDING, RUNNING, SUCCESS, ERROR) com historico e metadados.",
+      "Download do Excel de saida e visualizacao analitica dentro do sistema.",
+      "Tela Previsao Demanda Estatistica dedicada a leitura do ciclo consolidado.",
+      "Leitura por modulos analiticos (visao executiva, clientes, metodos e previsao).",
+      "Paginacao, busca, filtros, ordenacao e drill-down com retorno explicito.",
+      "Debounce e preservacao de dados durante refetch para eliminar piscadas."
+    ],
+    results: [
+      "Governanca operacional com trilha auditavel em todas as execucoes.",
+      "Reducao da dependencia de execucao manual por pessoa.",
+      "Leitura executiva mais rapida que o uso direto de planilhas brutas.",
+      "Decisao com contexto, risco e prioridade, nao apenas numero.",
+      "Melhor adocao por interface mais intuitiva em filtros e drill-down.",
+      "Escalabilidade para alto volume com paginacao e consultas otimizadas."
+    ],
+    learnings: [
+      "Separar explicitamente geracao e interpretacao reduz ambiguidade operacional.",
+      "Debounce e estado preservado elevam a percepcao de performance.",
+      "Drill-down precisa de retorno visual claro para evitar perda de contexto.",
+      "Rastreabilidade de job melhora suporte, auditoria e confianca no processo."
+    ],
+    nextSteps: [
+      "Evoluir explicabilidade automatica com causas provaveis de variacao.",
+      "Adicionar recomendacoes de acao por risco e oportunidade.",
+      "Expandir paineis executivos com comparativos entre ciclos e janelas."
+    ],
+    kpis: [
+      { label: "Trilha operacional", value: "Jobs auditaveis ponta a ponta" },
+      { label: "Leitura executiva", value: "Navegavel e explicavel" },
+      { label: "Escalabilidade", value: "Paginacao + filtros otimizados" }
+    ],
+    gallery: [
+      {
+        title: "Pipeline Python",
+        description: "Upload, execucao assincrona e monitoramento em tempo real.",
+        thumbSrc: "/projects/_placeholders/cover.svg",
+        fullSrc: "/projects/_placeholders/screen1.svg"
+      },
+      {
+        title: "Historico de jobs",
+        description: "Status, horarios, scriptVersion e trilha de execucao.",
+        thumbSrc: "/projects/_placeholders/screen1.svg",
+        fullSrc: "/projects/_placeholders/screen1.svg"
+      },
+      {
+        title: "Leitura estatistica",
+        description: "Visao executiva com modulos e filtros por contexto.",
+        thumbSrc: "/projects/_placeholders/screen2.svg",
+        fullSrc: "/projects/_placeholders/screen2.svg"
+      },
+      {
+        title: "Drill-down analitico",
+        description: "Detalhamento com retorno intuitivo e estado preservado.",
+        thumbSrc: "/projects/_placeholders/screen3.svg",
+        fullSrc: "/projects/_placeholders/screen3.svg"
+      }
+    ]
+  }];
 
 
 export type ProjectLite = {
@@ -1400,7 +1513,31 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/landing-page-printbag/screen5.png", alt: "Contato e formulário" }
     ]
   }
-];
+,
+  {
+    slug: "previsao-demanda-python-estatistica",
+    title: "Previsao de Demanda (Python + Estatistica)",
+    year: 2026,
+    area: "Operacoes",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Previsao", "Python", "Estatistica", "Jobs", "Analytics"],
+    thumb: "/projects/_placeholders/cover.svg",
+    description:
+      "Plataforma com duas frentes: execucao do pipeline Python e leitura executiva da previsao estatistica consolidada.",
+    bullets: [
+      "Upload e execucao assincrona com historico e log por job.",
+      "Status de ciclo de vida com trilha auditavel de ponta a ponta.",
+      "Leitura analitica paginada por modulos executivos.",
+      "Debounce, filtros e drill-down com retorno intuitivo."
+    ],
+    gallery: [
+      { src: "/projects/_placeholders/cover.svg", alt: "Visao geral do pipeline" },
+      { src: "/projects/_placeholders/screen1.svg", alt: "Historico de jobs" },
+      { src: "/projects/_placeholders/screen2.svg", alt: "Analise estatistica" },
+      { src: "/projects/_placeholders/screen3.svg", alt: "Drill-down e contexto" }
+    ]
+  }];
 
 function normalizeProjectAssets(collection: Project[]) {
   collection.forEach((project) => {
@@ -1439,6 +1576,7 @@ export const homeProjectSlugs = [
   "sistema-orcamentario-produtos-graficos",
   "monitoramento-pedidos-tempo-real",
   "apresentador-projetos",
+  "previsao-demanda-python-estatistica",
   "landing-page-printbag"
 ];
 

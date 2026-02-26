@@ -59,6 +59,7 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "dashboard-separacao-estoque" ||
     project.slug === "monitoramento-pedidos-tempo-real" ||
     project.slug === "landing-page-printbag" ||
+    project.slug === "previsao-demanda-python-estatistica" ||
     project.slug === "sistema-orcamentario-produtos-graficos" ||
     project.slug === "apresentador-projetos"
       ? [{ id: "visao-tecnica", label: "Visão técnica" }]
@@ -734,6 +735,84 @@ export default function ProjectPage({ params }: PageProps) {
               </CaseSection>
             ) : null}
 
+            {project.slug === "previsao-demanda-python-estatistica" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visao tecnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Arquitetura orientada a jobs e leitura executiva
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O modulo foi desenhado como aplicacao full-stack orientada a jobs,
+                      separando claramente duas frentes complementares: execucao da previsao
+                      (Python) e leitura analitica do ciclo consolidado (Estatistica).
+                      Na pratica, a primeira frente responde como gerar; a segunda responde
+                      como decidir.
+                    </p>
+                    <p>
+                      No fluxo da Previsao Python, o usuario envia os arquivos de entrada,
+                      a API cria e persiste o job com metadados (status, scriptVersion,
+                      horarios, arquivos), dispara o script Python de forma assincrona,
+                      registra logs durante a execucao e finaliza com output auditavel
+                      para download e visualizacao no proprio sistema.
+                    </p>
+                    <p>
+                      No fluxo da Previsao Demanda Estatistica, o usuario envia a planilha
+                      consolidada multiaba e a API normaliza os dados para consultas por
+                      modulo (visao executiva, clientes, metodos e detalhamento por aba).
+                      A interface foi preparada para leitura de alto volume com paginacao,
+                      filtros, busca, ordenacao e drill-down com retorno claro ao contexto.
+                    </p>
+                    <p>
+                      As decisoes tecnicas priorizaram fluidez operacional: debounce em
+                      filtros para evitar requisicao por tecla, preservacao do dataset
+                      anterior durante refetch para eliminar piscada visual, e estado
+                      controlado de drill-down para manter navegacao previsivel.
+                    </p>
+                    <p>
+                      Em governanca, cada execucao passa a ser reproduzivel e defensavel,
+                      com trilha operacional completa (quem executou, quando iniciou,
+                      quando finalizou, versao de script e mensagens). Isso reduz
+                      dependencia de processo manual e aumenta confianca no planejamento.
+                    </p>
+                  </div>
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
+                      Principais tecnologias utilizadas
+                    </p>
+                    <ul className="mt-4 space-y-2 text-sm text-neutral-300 sm:text-[15px]">
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Frontend: React, TypeScript, Vite, Wouter, TanStack Query</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>UI: Tailwind CSS + componentes Radix/shadcn</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Backend: Node.js, Express, tRPC</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Persistencia: MariaDB + Drizzle ORM</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Processamento: xlsx (workbook) + pipeline Python versionado</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Qualidade: TypeScript forte + testes com Vitest</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
             {project.slug === "sistema-orcamentario-produtos-graficos" ? (
               <CaseSection id="visao-tecnica">
                 <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
