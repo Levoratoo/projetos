@@ -7,6 +7,10 @@ type PageProps = {
   params: { slug: string };
 };
 
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default function RequestPage({ params }: PageProps) {
   const project = projects.find((item) => item.slug === params.slug);
   if (!project) {

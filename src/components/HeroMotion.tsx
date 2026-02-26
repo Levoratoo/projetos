@@ -50,22 +50,27 @@ export function HeroMotion({ children, className }: HeroMotionProps) {
     if (!enabled) return;
     const root = rootRef.current;
     if (!root) return;
+    const getRoot = () => rootRef.current;
 
     function onMove(event: MouseEvent) {
-      const rect = root.getBoundingClientRect();
+      const node = getRoot();
+      if (!node) return;
+      const rect = node.getBoundingClientRect();
       const mx = event.clientX - rect.left;
       const my = event.clientY - rect.top;
       const nx = (mx / rect.width - 0.5) * 2;
       const ny = (my / rect.height - 0.5) * 2;
       target.current = { x: nx, y: ny };
-      root.style.setProperty("--mx", `${mx}px`);
-      root.style.setProperty("--my", `${my}px`);
+      node.style.setProperty("--mx", `${mx}px`);
+      node.style.setProperty("--my", `${my}px`);
     }
 
     function onLeave() {
+      const node = getRoot();
+      if (!node) return;
       target.current = { x: 0, y: 0 };
-      root.style.setProperty("--mx", "50%");
-      root.style.setProperty("--my", "50%");
+      node.style.setProperty("--mx", "50%");
+      node.style.setProperty("--my", "50%");
     }
 
     function tick() {
@@ -76,8 +81,10 @@ export function HeroMotion({ children, className }: HeroMotionProps) {
       const ny = y + (ty - y) * 0.08;
       current.current = { x: nx, y: ny };
 
-      root.style.setProperty("--hx", `${nx}`);
-      root.style.setProperty("--hy", `${ny}`);
+      const node = getRoot();
+      if (!node) return;
+      node.style.setProperty("--hx", `${nx}`);
+      node.style.setProperty("--hy", `${ny}`);
       rafRef.current = window.requestAnimationFrame(tick);
     }
 

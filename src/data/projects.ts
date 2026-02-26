@@ -1,4 +1,6 @@
-﻿export type Project = {
+import { withBasePath } from "@/lib/basePath";
+
+export type Project = {
   slug: string;
   title: string;
   subtitle: string;
@@ -6,7 +8,7 @@
   description: string;
   year: number;
   status: "Concluído" | "Em produção";
-  progress: 80,
+  progress: number,
   type: string;
   domain: string;
   segment: string;
@@ -1195,7 +1197,7 @@ export type PreviewProject = {
   year: number;
   area: string;
   status: "Concluído" | "Em produção";
-  progress: 80,
+  progress: number,
   tags: string[];
   thumb: string;
   description?: string;
@@ -1400,6 +1402,37 @@ export const previewProjects: PreviewProject[] = [
   }
 ];
 
+function normalizeProjectAssets(collection: Project[]) {
+  collection.forEach((project) => {
+    project.gallery?.forEach((item) => {
+      if (item.thumbSrc) item.thumbSrc = withBasePath(item.thumbSrc);
+      if (item.fullSrc) item.fullSrc = withBasePath(item.fullSrc);
+    });
+  });
+}
+
+function normalizeProjectsLiteAssets(collection: ProjectLite[]) {
+  collection.forEach((project) => {
+    project.images = project.images.map((image) => ({
+      ...image,
+      src: withBasePath(image.src)
+    }));
+  });
+}
+
+function normalizePreviewAssets(collection: PreviewProject[]) {
+  collection.forEach((project) => {
+    project.thumb = withBasePath(project.thumb);
+    project.gallery = project.gallery?.map((image) => ({
+      ...image,
+      src: withBasePath(image.src)
+    }));
+  });
+}
+
+normalizeProjectAssets(projects);
+normalizeProjectsLiteAssets(projectsLite);
+normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
   "dashboard-separacao-estoque",
   "planejamento-orcamentario-coordenador",

@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Effect,
   EffectComposer,
   EffectPass,
   RenderPass,
@@ -148,7 +149,7 @@ export function PostFX({ envDebug }: { envDebug?: EnvDebug }) {
 
     const tone = new ToneMappingEffect({
       mode: ToneMappingMode.ACES_FILMIC,
-      exposure
+      whitePoint: exposure
     });
 
     const bloom = new BloomEffect({
@@ -158,9 +159,9 @@ export function PostFX({ envDebug }: { envDebug?: EnvDebug }) {
     });
 
     const noise = new NoiseEffect({
-      opacity: grainOpacity,
       blendFunction: BlendFunction.SOFT_LIGHT
     });
+    noise.blendMode.opacity.value = grainOpacity;
 
     const vignette = new VignetteEffect({
       eskil: false,
@@ -168,7 +169,7 @@ export function PostFX({ envDebug }: { envDebug?: EnvDebug }) {
       darkness: vignetteDarkness
     });
 
-    const effects = [tone, bloom, noise, vignette];
+    const effects: Effect[] = [tone, bloom, noise, vignette];
 
     if (dofEnabled) {
       effects.push(

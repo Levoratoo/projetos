@@ -6,6 +6,7 @@ import { ProjectProgress } from "@/components/ProjectProgress";
 import { type PreviewProject } from "@/data/projects";
 import { useProjectPreview } from "@/state/projectPreview";
 import { cn } from "@/lib/utils";
+import { withBasePath } from "@/lib/basePath";
 
 function buildTags(project: PreviewProject) {
   return [
@@ -112,7 +113,7 @@ export function ProjectHeroBlock({
           <div className="mt-4 w-full max-w-[520px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20">
               <Image
-                src={project.thumb || "/projects/_placeholders/cover.svg"}
+                src={project.thumb || withBasePath("/projects/_placeholders/cover.svg")}
                 alt={project.title}
                 fill
                 className="object-cover"

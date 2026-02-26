@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { ProjectProgress } from "@/components/ProjectProgress";
 import { homeProjects } from "@/data/projects";
 import { useProjectPreview } from "@/state/projectPreview";
+import { withBasePath } from "@/lib/basePath";
 
 const motionProps = {
   initial: { opacity: 0, y: 18, filter: "blur(6px)" },
@@ -131,7 +132,7 @@ export function ProjectsHubSection() {
                 <div className="avatar-badge flex items-center gap-2 rounded-full border border-emerald-300/25 bg-black/50 px-2 py-1 shadow-[0_0_18px_rgba(82,255,170,0.2)]">
                   <div className="avatar-ring h-9 w-9 overflow-hidden rounded-full border border-emerald-300/60 shadow-[0_0_16px_rgba(82,255,170,0.35)]">
                     <img
-                      src="/images/pedro.jpg"
+                      src={withBasePath("/images/pedro.jpg")}
                       alt="Pedro Levorato"
                       className="h-full w-full object-cover"
                       loading="lazy"

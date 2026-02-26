@@ -34,6 +34,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default function ProjectPage({ params }: PageProps) {
   const projectIndex = projects.findIndex((item) => item.slug === params.slug);
   const project = projects[projectIndex];

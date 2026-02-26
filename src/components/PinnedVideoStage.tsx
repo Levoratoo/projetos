@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 import { Container } from "@/components/Container";
 import { ProjectActions } from "@/components/ProjectActions";
 import { previewProjects } from "@/data/projects";
@@ -51,6 +52,8 @@ export function PinnedVideoStage({ src, poster, heightClass = "h-[320vh]" }: Pin
   const reducedMotion = useReducedMotion();
   const saveData = useSaveData();
   const shouldPlay = !reducedMotion && !saveData;
+  const resolvedSrc = withBasePath(src);
+  const resolvedPoster = poster ? withBasePath(poster) : undefined;
 
   const chapters = useMemo(() => previewProjects.slice(0, 4), []);
 
@@ -95,8 +98,8 @@ export function PinnedVideoStage({ src, poster, heightClass = "h-[320vh]" }: Pin
           {shouldPlay ? (
             <video
               className="h-full w-full object-cover"
-              src={src}
-              poster={poster}
+              src={resolvedSrc}
+              poster={resolvedPoster}
               autoPlay
               muted
               loop
@@ -108,7 +111,7 @@ export function PinnedVideoStage({ src, poster, heightClass = "h-[320vh]" }: Pin
             <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(86,255,146,0.12),_transparent_55%),linear-gradient(180deg,rgba(8,10,12,0.9),rgba(8,10,12,0.55))]">
               {poster ? (
                 <img
-                  src={poster}
+                  src={resolvedPoster}
                   alt=""
                   className="h-full w-full object-cover"
                   aria-hidden="true"

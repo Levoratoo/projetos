@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 // HeroVideo: coloque arquivos em /public/video e troque a prop src (ex: /video/seminfo.mp4).
 // Recomendado: MP4 H.264 + tamanho reduzido (até ~8-12MB) para carregamento rápido.
@@ -52,6 +53,8 @@ export function HeroVideo({
   const reducedMotion = useReducedMotion();
   const saveData = useSaveData();
   const shouldPlay = !reducedMotion && !saveData;
+  const resolvedSrc = withBasePath(src);
+  const resolvedPoster = poster ? withBasePath(poster) : undefined;
 
   const noiseStyle = useMemo(() => {
     if (!showNoise) return undefined;
@@ -68,8 +71,8 @@ export function HeroVideo({
         {shouldPlay ? (
           <video
             className={`h-full w-full object-cover ${enableBlur ? "md:blur-[2px]" : ""}`}
-            src={src}
-            poster={poster}
+            src={resolvedSrc}
+            poster={resolvedPoster}
             autoPlay
             muted
             loop
@@ -81,7 +84,7 @@ export function HeroVideo({
           <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(86,255,146,0.12),_transparent_55%),linear-gradient(180deg,rgba(8,10,12,0.9),rgba(8,10,12,0.55))]">
             {poster ? (
               <img
-                src={poster}
+                src={resolvedPoster}
                 alt=""
                 className="h-full w-full object-cover"
                 aria-hidden="true"

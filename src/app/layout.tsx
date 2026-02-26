@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Sora, Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/app/providers";
+import { withBasePath } from "@/lib/basePath";
 
 const display = Sora({ subsets: ["latin"], variable: "--font-display" });
 const body = Manrope({ subsets: ["latin"], variable: "--font-body" });
@@ -12,9 +13,9 @@ export const metadata: Metadata = {
   description:
     "Portfólio premium de projetos Printbag com foco em performance, design e resultados.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    icon: withBasePath("/favicon.png"),
+    shortcut: withBasePath("/favicon.png"),
+    apple: withBasePath("/favicon.png")
   },
   openGraph: {
     title: "Portfólio de Projetos",
