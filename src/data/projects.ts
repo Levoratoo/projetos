@@ -411,9 +411,9 @@ export const projects: Project[] = [
     ],
     accessLinks: [
       {
-        label: "Acesso interno - LAN",
-        url: "http://192.168.1.104:3001/",
-        visibility: "internal"
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/orcamentoengenhariaprintbag/",
+        visibility: "public"
       }
     ],
     gallery: [
@@ -527,9 +527,9 @@ export const projects: Project[] = [
     ],
     accessLinks: [
       {
-        label: "Acesso interno - LAN",
-        url: "http://192.168.1.104:3007/",
-        visibility: "internal"
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/Middleware/",
+        visibility: "public"
       }
     ],
     gallery: [
@@ -1126,7 +1126,9 @@ export const projectsLite: ProjectLite[] = [
       "Dados estruturados para análise"
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "SQL Server", "APIs"],
-    accessLinks: [],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentoengenhariaprintbag/" }
+    ],
     images: [
       {
         src: "/projects/sistema-orcamentario-produtos-graficos/thumb.jpg",
@@ -1192,7 +1194,7 @@ export const projectsLite: ProjectLite[] = [
       "ESLint"
     ],
     accessLinks: [
-      { label: "Acesso interno - LAN", url: "http://192.168.1.104:3007/" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/Middleware/" }
     ],
     images: [
       {
@@ -1405,7 +1407,7 @@ export const previewProjects: PreviewProject[] = [
       "Dashboard com métricas e comparativos"
     ],
     accessLinks: [
-      { label: "Acesso interno - LAN", url: "http://192.168.1.104:3001/" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentoengenhariaprintbag/" }
     ],
     gallery: [
       {
@@ -1449,7 +1451,7 @@ export const previewProjects: PreviewProject[] = [
       "Métricas: total processado, erros, taxa de sucesso e ranking de falhas."
     ],
     accessLinks: [
-      { label: "Acesso interno - LAN", url: "http://192.168.1.104:3007/" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/Middleware/" }
     ],
     gallery: [
       {
@@ -1539,6 +1541,18 @@ export const previewProjects: PreviewProject[] = [
     ]
   }];
 
+const featuredPreviewSlug = "landing-page-printbag";
+const featuredPreviewIndex = previewProjects.findIndex(
+  (project) => project.slug === featuredPreviewSlug
+);
+
+if (featuredPreviewIndex > 0) {
+  const [featuredPreviewProject] = previewProjects.splice(featuredPreviewIndex, 1);
+  if (featuredPreviewProject) {
+    previewProjects.unshift(featuredPreviewProject);
+  }
+}
+
 function normalizeProjectAssets(collection: Project[]) {
   collection.forEach((project) => {
     project.gallery?.forEach((item) => {
@@ -1571,13 +1585,13 @@ normalizeProjectAssets(projects);
 normalizeProjectsLiteAssets(projectsLite);
 normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
+  "landing-page-printbag",
   "dashboard-separacao-estoque",
   "planejamento-orcamentario-coordenador",
   "sistema-orcamentario-produtos-graficos",
   "monitoramento-pedidos-tempo-real",
   "apresentador-projetos",
-  "previsao-demanda-python-estatistica",
-  "landing-page-printbag"
+  "previsao-demanda-python-estatistica"
 ];
 
 export const homeProjects = homeProjectSlugs
