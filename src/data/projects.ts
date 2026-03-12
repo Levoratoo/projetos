@@ -193,9 +193,9 @@ export const projects: Project[] = [
     ],
     accessLinks: [
       {
-        label: "LAN",
-        url: "http://192.168.1.104:3002/dashboard",
-        visibility: "internal"
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/estoqueemtemporeal/",
+        visibility: "public"
       }
     ],
     gallery: [
@@ -308,9 +308,9 @@ export const projects: Project[] = [
     ],
     accessLinks: [
       {
-        label: "Acesso interno - LAN",
-        url: "http://192.168.1.104:3004/login",
-        visibility: "internal"
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/orcamentario-custos/planejamento/",
+        visibility: "public"
       }
     ],
     gallery: [
@@ -1054,7 +1054,7 @@ export const projectsLite: ProjectLite[] = [
     ],
     techStack: ["Next.js", "TypeScript", "SQL Server", "APIs REST"],
     accessLinks: [
-      { label: "LAN", url: "http://192.168.1.104:3002/dashboard" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/estoqueemtemporeal/" }
     ],
     images: [
       { src: "/images/projetos/estoque/estoque-1.png", alt: "Pedidos pendentes" },
@@ -1083,7 +1083,7 @@ export const projectsLite: ProjectLite[] = [
     ],
     techStack: ["Next.js", "TypeScript", "SQL Server"],
     accessLinks: [
-      { label: "Acesso interno - LAN", url: "http://192.168.1.104:3004/login" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentario-custos/planejamento/" }
     ],
     images: [
       {
@@ -1340,7 +1340,7 @@ export const previewProjects: PreviewProject[] = [
       "Filtros e gráficos para análise rápida"
     ],
     accessLinks: [
-      { label: "LAN", url: "http://192.168.1.104:3002/dashboard" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/estoqueemtemporeal/" }
     ],
     gallery: [
       { src: "/images/projetos/estoque/estoque-1.png", alt: "Pedidos pendentes" },
@@ -1367,7 +1367,7 @@ export const previewProjects: PreviewProject[] = [
       "Comparação previsto vs realizado"
     ],
     accessLinks: [
-      { label: "Acesso interno - LAN", url: "http://192.168.1.104:3004/login" }
+      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentario-custos/planejamento/" }
     ],
     gallery: [
       {
