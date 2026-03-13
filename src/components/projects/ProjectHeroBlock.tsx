@@ -47,7 +47,7 @@ export function ProjectHeroBlock({
       >
         <div className={cn(isHome && "lg:col-span-7 2xl:col-span-8")}>
           <p className="text-xs uppercase tracking-[0.35em] text-glow/70">
-            WEISUL PROJECTS
+            LEVORATO PROJECTS
           </p>
           <p className="mt-4 text-xs uppercase tracking-[0.3em] text-mist/60">
             {project.area} · {project.title} · {project.area}

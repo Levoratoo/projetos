@@ -61,7 +61,8 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "landing-page-printbag" ||
     project.slug === "previsao-demanda-python-estatistica" ||
     project.slug === "sistema-orcamentario-produtos-graficos" ||
-    project.slug === "apresentador-projetos"
+    project.slug === "apresentador-projetos" ||
+    project.slug === "sistema-chamados-portfolio-vivo"
       ? [{ id: "visao-tecnica", label: "Visão técnica" }]
       : []),
     { id: "galeria", label: "Galeria" }
@@ -728,6 +729,84 @@ export default function ProjectPage({ params }: PageProps) {
                       <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
                         <span>Conteúdo: dados tipados em TS + assets em /public</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "sistema-chamados-portfolio-vivo" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Compatibilidade, isolamento e publicabilidade
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      A versão de portfólio foi tratada como produto real: o objetivo não era
+                      reproduzir apenas layout, mas preservar comportamento. Para isso, a
+                      arquitetura partiu de três pilares: compatibilidade de contrato com o
+                      sistema original, isolamento total de infraestrutura e publicabilidade
+                      estática para deploy contínuo.
+                    </p>
+                    <p>
+                      Na prática, o frontend continuou consumindo estruturas de dados próximas
+                      às respostas reais (tickets, métricas, kanban e notificações), evitando
+                      regressões de lógica e de interface. Em vez de reescrever telas, o projeto
+                      trocou a origem dos dados por um provider local em memória com funções
+                      assíncronas, latência simulada e erro controlado.
+                    </p>
+                    <p>
+                      Esse provider foi desenhado para se comportar como API: transforma dados
+                      para visões de tabela e kanban, atualiza store local em criação e mudança
+                      de status, e mantém estados reais de UI (carregando, sucesso e falha).
+                      Com isso, filtros, ordenação, paginação, dashboard e notificações seguem
+                      exercitando os mesmos ciclos de interação de um ambiente produtivo.
+                    </p>
+                    <p>
+                      A camada de publicação foi ajustada para build estático em `out`,
+                      incluindo correção de basePath e empacotamento de assets no GitHub Pages.
+                      O pipeline de GitHub Actions publica cada push em `main`, reduzindo
+                      fricção operacional e evitando divergências entre ambiente local e público.
+                    </p>
+                    <p>
+                      Nos fluxos críticos, foram preservados os pontos que comunicam maturidade
+                      de produto: abertura de chamado com templates, detalhe completo por clique
+                      na tabela e no kanban, atualização de status com regras de interação,
+                      feedback explícito de loading/erro e prevenção de conflito entre clique e
+                      drag-and-drop.
+                    </p>
+                    <p>
+                      Mesmo sendo demo, a versão pública recebeu cuidados de robustez:
+                      sanitização de texto dinâmico, validações de entrada na criação de
+                      chamados e fallback de erro claro para manter previsibilidade de uso.
+                      Resultado: uma experiência demonstrável, segura e próxima do sistema real.
+                    </p>
+                  </div>
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
+                      Principais tecnologias utilizadas
+                    </p>
+                    <ul className="mt-4 space-y-2 text-sm text-neutral-300 sm:text-[15px]">
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Frontend: React, TypeScript, Vite, Tailwind CSS</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Visualização e UX: Recharts, kanban com drag-and-drop, modais de detalhe</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Dados: provider mock local, contratos tipados e store em memória</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
+                        <span>Publicação: GitHub Actions, GitHub Pages e build estática</span>
                       </li>
                     </ul>
                   </div>

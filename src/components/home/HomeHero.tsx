@@ -6,7 +6,7 @@ import { Container } from "@/components/Container";
 import { HeroMotion } from "@/components/HeroMotion";
 
 const HERO_COPY = {
-  kicker: "WEISUL PROJECTS",
+  kicker: "LEVORATO PROJECTS",
   title: "Portfólio de projetos",
   subtitle: "Cases internos com contexto, decisão e impacto.",
   chips: ["Next.js", "TypeScript", "SQL Server", "Dashboards", "Automação"],

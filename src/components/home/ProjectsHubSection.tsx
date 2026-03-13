@@ -98,7 +98,7 @@ export function ProjectsHubSection() {
       <Container className="max-w-[1560px] xl:max-w-[1720px] 2xl:max-w-[1880px]">
         <motion.div {...motionProps} className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.4em] text-emerald-200/70">
-            WEISUL PROJECTS
+            LEVORATO PROJECTS
           </p>
           <h2 className="mt-4 pb-1 text-[clamp(40px,5.6vw,76px)] font-semibold leading-[1.08] text-white overflow-visible">
             <span className="shineText shineTextProject">Hub de projetos</span>

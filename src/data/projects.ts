@@ -911,8 +911,120 @@ export const projects: Project[] = [
         fullSrc: "/projects/apresentador-projetos/screen4.jpg"
       }
     ]
-  }
-,
+  },
+  {
+    slug: "sistema-chamados-portfolio-vivo",
+    title: "Sistema de Chamados - Portfolio Vivo",
+    subtitle: "Como transformamos um sistema real em uma experiencia publica navegavel.",
+    summary:
+      "Versao publica do sistema de chamados, mantendo fluxos reais com dados simulados e deploy estatico.",
+    description:
+      "Projeto para publicar uma versao demonstravel do sistema de chamados sem backend, sem banco e sem autenticacao, preservando filtros, ordenacao, paginacao, dashboard, kanban, notificacoes e detalhe de chamado.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Plataforma",
+    domain: "Sistemas",
+    segment: "Atendimento",
+    tags: ["Chamados", "Kanban", "Dashboard", "Provider Mock", "GitHub Pages", "CI/CD"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Recharts",
+      "dnd-kit",
+      "GitHub Actions",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(120, 255, 200, 0.34)",
+      b: "rgba(90, 150, 255, 0.26)",
+      c: "rgba(255, 255, 255, 0.12)"
+    },
+    context:
+      "A proposta parecia simples, mas o ruido apareceu em ambiente estatico, pipeline de publicacao e percepcao de demo incompleta. O desafio foi manter a experiencia do produto original sem API e sem infraestrutura interna.",
+    problem: [
+      "Deploy estatico com 404 intermitente e falhas de CSS por configuracao de paths.",
+      "Pipeline de GitHub Actions desalinhado com saida estatico (out) e empacotamento de assets.",
+      "Gap de experiencia quando a interface abre, mas sem fluxos essenciais de produto.",
+      "Dependencia previa de backend para criar, listar e detalhar chamados."
+    ],
+    constraints: [
+      "Rodar 100% estatico, sem backend, sem banco e sem rotas server-only.",
+      "Preservar contratos de dados para evitar reescrita completa de UI.",
+      "Manter comportamento de carregando, sucesso e falha para estados reais.",
+      "Publicar em URL publica com CI/CD automatico."
+    ],
+    solution: [
+      "Mapeamento de tipos e contratos para manter compatibilidade com o sistema original.",
+      "Provider local mock em memoria com funcoes assincronas, latencia e erro controlado.",
+      "Troca total de fetch/axios pelo provider, mantendo filtros, ordenacao, paginacao, dashboard e kanban.",
+      "Deploy estatico via GitHub Actions + GitHub Pages com ajuste de basePath e assets.",
+      "Modulo Abrir Chamado com templates (Suporte TI, Reembolso e Compra).",
+      "Detalhe de chamado por clique na tabela e no kanban com modal dedicado."
+    ],
+    results: [
+      "Projeto interno virou experiencia publica navegavel e demonstravel por link.",
+      "Melhor narrativa para recrutadores, clientes e stakeholders.",
+      "Menor custo de demonstracao sem depender de ambiente completo.",
+      "Onboarding mais rapido para novos colaboradores.",
+      "Desacoplamento da interface em relacao ao backend para evolucao de UX."
+    ],
+    learnings: [
+      "Portfolio funcional precisa se comportar como produto, nao como maquete.",
+      "Compatibilidade de contrato reduz risco tecnico na migracao para mock.",
+      "Fluxos de detalhe e criacao sao decisivos para percepcao de produto completo."
+    ],
+    nextSteps: [
+      "Adicionar cenarios de permissao simulada por perfil.",
+      "Expandir templates de abertura de chamado por area.",
+      "Incluir historico de auditoria ficticio por ticket para demos tecnicas."
+    ],
+    kpis: [
+      { label: "Modo de execucao", value: "100% estatico" },
+      { label: "Fluxos preservados", value: "Ponta a ponta" },
+      { label: "Publicacao", value: "Automatica por push" }
+    ],
+    confidentialityNote:
+      "Dados, nomes e indicadores desta versao sao ficticios e seguros para exibicao publica.",
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/sistemas-de-chamado/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Visao geral da aplicacao",
+        description: "Listagem, filtros e resumo operacional.",
+        thumbSrc: "/projects/_placeholders/cover.svg",
+        fullSrc: "/projects/_placeholders/screen1.svg"
+      },
+      {
+        title: "Kanban de chamados",
+        description: "Movimentacao de cards com regras de fluxo.",
+        thumbSrc: "/projects/_placeholders/screen1.svg",
+        fullSrc: "/projects/_placeholders/screen2.svg"
+      },
+      {
+        title: "Dashboard e metricas",
+        description: "Graficos, notificacoes e leitura executiva.",
+        thumbSrc: "/projects/_placeholders/screen2.svg",
+        fullSrc: "/projects/_placeholders/screen3.svg"
+      },
+      {
+        title: "Detalhe e criacao de chamados",
+        description: "Modal completo com estados de loading e erro.",
+        thumbSrc: "/projects/_placeholders/screen3.svg",
+        fullSrc: "/projects/_placeholders/cover.svg"
+      }
+    ]
+  },
+  
+  
   {
     slug: "previsao-demanda-python-estatistica",
     title: "Previsao de Demanda (Python + Estatistica)",
@@ -1265,6 +1377,48 @@ export const projectsLite: ProjectLite[] = [
     ]
   },
   {
+    slug: "sistema-chamados-portfolio-vivo",
+    title: "Sistema de Chamados - Portfolio Vivo",
+    oneLiner:
+      "Versao publica do sistema de chamados com comportamento real, sem backend e sem banco.",
+    problem:
+      "Dificuldade de demonstrar o produto fora do ambiente interno completo, com risco de expor infraestrutura.",
+    solution:
+      "Provider local mock com contratos preservados, fluxos reais de UI e deploy estatico via GitHub Pages.",
+    features: [
+      "Listagem de chamados com filtros combinaveis",
+      "Ordenacao e paginacao com metadados",
+      "Kanban com regras de movimentacao",
+      "Dashboard com graficos e contadores",
+      "Notificacoes e controle de nao lidos",
+      "Criacao e detalhe de chamado com modal"
+    ],
+    benefits: [
+      "Demonstracao publica com baixo risco",
+      "Onboarding mais rapido para novos colaboradores",
+      "Evolucao de UX desacoplada do backend"
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Recharts",
+      "dnd-kit",
+      "GitHub Actions",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
+    ],
+    images: [
+      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
+      { src: "/projects/_placeholders/screen1.svg", alt: "Listagem e filtros" },
+      { src: "/projects/_placeholders/screen2.svg", alt: "Kanban e dashboard" },
+      { src: "/projects/_placeholders/screen3.svg", alt: "Detalhe e criacao de chamado" }
+    ]
+  },
+  {
     slug: "mock-projeto-01",
     title: "Monitor de SLA Operacional",
     oneLiner: "Painel para acompanhar SLAs por etapa e gargalos críticos.",
@@ -1499,6 +1653,33 @@ export const previewProjects: PreviewProject[] = [
     ]
   },
   {
+    slug: "sistema-chamados-portfolio-vivo",
+    title: "Sistema de Chamados - Portfolio Vivo",
+    year: 2026,
+    area: "Sistemas",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Chamados", "Kanban", "Dashboard", "Provider Mock", "CI/CD"],
+    thumb: "/projects/_placeholders/cover.svg",
+    description:
+      "Versao publica navegavel do sistema de chamados, com fluxo de produto preservado sem backend.",
+    bullets: [
+      "Filtros, ordenacao e paginacao funcionando em dados mockados",
+      "Kanban, dashboard, notificacoes e detalhe de chamado",
+      "Criacao de chamado com templates e atualizacao no store local",
+      "Deploy estatico com GitHub Actions e GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
+    ],
+    gallery: [
+      { src: "/projects/_placeholders/cover.svg", alt: "Visao geral da aplicacao" },
+      { src: "/projects/_placeholders/screen1.svg", alt: "Listagem e filtros" },
+      { src: "/projects/_placeholders/screen2.svg", alt: "Kanban e dashboard" },
+      { src: "/projects/_placeholders/screen3.svg", alt: "Detalhe e criacao de chamado" }
+    ]
+  },
+  {
     slug: "landing-page-printbag",
     title: "Landing Page Printbag",
     year: 2026,
@@ -1601,6 +1782,7 @@ export const homeProjectSlugs = [
   "sistema-orcamentario-produtos-graficos",
   "monitoramento-pedidos-tempo-real",
   "apresentador-projetos",
+  "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica"
 ];
 

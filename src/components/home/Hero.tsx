@@ -55,7 +55,7 @@ export function Hero() {
       <Container>
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.4em] text-glow/70">
-            WEISUL PROJECTS
+            LEVORATO PROJECTS
           </p>
           <h1 className="mt-4 text-[clamp(24px,3.5vw,38px)] font-semibold text-white">
             Portfólio de entregas
