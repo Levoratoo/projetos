@@ -872,6 +872,13 @@ export const projects: Project[] = [
     ],
     confidentialityNote:
       "Conteudo com imagens e descricoes sem dados sensiveis.",
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/sistemas-de-chamado/",
+        visibility: "public"
+      }
+    ],
     gallery: [
       {
         title: "Visao geral",
@@ -1479,6 +1486,9 @@ export const previewProjects: PreviewProject[] = [
       "Preview rapido por modal e overlay fullscreen",
       "Narrativa visual consistente para stakeholders",
       "Estrutura pronta para novos cases"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
     ],
     gallery: [
       { src: "/projects/apresentador-projetos/thumb.jpg", alt: "Visao geral do hub" },
