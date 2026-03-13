@@ -743,48 +743,41 @@ export default function ProjectPage({ params }: PageProps) {
                     Visão técnica do projeto
                   </p>
                   <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
-                    Compatibilidade, isolamento e publicabilidade
+                    Arquitetura pragmática para operação real
                   </h2>
                   <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
                     <p>
-                      A versão de portfólio foi tratada como produto real: o objetivo não era
-                      reproduzir apenas layout, mas preservar comportamento. Para isso, a
-                      arquitetura partiu de três pilares: compatibilidade de contrato com o
-                      sistema original, isolamento total de infraestrutura e publicabilidade
-                      estática para deploy contínuo.
+                      A base técnica segue uma stack moderna e pragmática: Laravel 11
+                      com PHP 8.2 no backend, Blade + Tailwind + Alpine no frontend
+                      server-rendered, Vite para build e MySQL/MariaDB para persistência.
+                      A arquitetura MVC mantém separação clara entre domínio, regras de
+                      autorização e camada de apresentação.
                     </p>
                     <p>
-                      Na prática, o frontend continuou consumindo estruturas de dados próximas
-                      às respostas reais (tickets, métricas, kanban e notificações), evitando
-                      regressões de lógica e de interface. Em vez de reescrever telas, o projeto
-                      trocou a origem dos dados por um provider local em memória com funções
-                      assíncronas, latência simulada e erro controlado.
+                      Em governança e segurança, o sistema aplica controle de acesso por
+                      perfil (admin, gestor, atendente e usuário), uso de policies,
+                      validações de entrada, sanitização de conteúdo e rate limiting em
+                      rotas críticas. Isso reduz abuso, mantém rastreabilidade e protege
+                      fluxos sensíveis de atendimento.
                     </p>
                     <p>
-                      Esse provider foi desenhado para se comportar como API: transforma dados
-                      para visões de tabela e kanban, atualiza store local em criação e mudança
-                      de status, e mantém estados reais de UI (carregando, sucesso e falha).
-                      Com isso, filtros, ordenação, paginação, dashboard e notificações seguem
-                      exercitando os mesmos ciclos de interação de um ambiente produtivo.
+                      Os fluxos críticos preservados no desenho técnico incluem: abertura
+                      com formulários por tipo, fila por área/perfil, dashboard de SLA,
+                      kanban operacional, comentários, notas internas, anexos e avaliação
+                      de atendimento. Essa cobertura funcional sustenta operação contínua
+                      sem depender de canais paralelos.
                     </p>
                     <p>
-                      A camada de publicação foi ajustada para build estático em `out`,
-                      incluindo correção de basePath e empacotamento de assets no GitHub Pages.
-                      O pipeline de GitHub Actions publica cada push em `main`, reduzindo
-                      fricção operacional e evitando divergências entre ambiente local e público.
+                      A integração com Active Directory (LDAP/SSO) reduz fricção de
+                      autenticação e acelera adoção interna, mantendo consistência no
+                      ciclo de vida de usuários. Isso melhora experiência de acesso e
+                      reduz custo operacional de gestão de credenciais.
                     </p>
                     <p>
-                      Nos fluxos críticos, foram preservados os pontos que comunicam maturidade
-                      de produto: abertura de chamado com templates, detalhe completo por clique
-                      na tabela e no kanban, atualização de status com regras de interação,
-                      feedback explícito de loading/erro e prevenção de conflito entre clique e
-                      drag-and-drop.
-                    </p>
-                    <p>
-                      Mesmo sendo demo, a versão pública recebeu cuidados de robustez:
-                      sanitização de texto dinâmico, validações de entrada na criação de
-                      chamados e fallback de erro claro para manter previsibilidade de uso.
-                      Resultado: uma experiência demonstrável, segura e próxima do sistema real.
+                      Como evolução técnica, os próximos passos são ampliar testes
+                      automatizados, fortalecer hardening de upload (validação de tipo,
+                      tamanho e conteúdo) e elevar observabilidade para diagnóstico mais
+                      rápido de gargalos em produção.
                     </p>
                   </div>
                   <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -794,19 +787,19 @@ export default function ProjectPage({ params }: PageProps) {
                     <ul className="mt-4 space-y-2 text-sm text-neutral-300 sm:text-[15px]">
                       <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
-                        <span>Frontend: React, TypeScript, Vite, Tailwind CSS</span>
+                        <span>Backend: Laravel 11, PHP 8.2, MVC</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
-                        <span>Visualização e UX: Recharts, kanban com drag-and-drop, modais de detalhe</span>
+                        <span>Frontend: Blade, Tailwind CSS, Alpine.js, Vite</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
-                        <span>Dados: provider mock local, contratos tipados e store em memória</span>
+                        <span>Banco de dados: MySQL/MariaDB</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
-                        <span>Publicação: GitHub Actions, GitHub Pages e build estática</span>
+                        <span>Segurança e governança: policies, validações, logs e rate limiting</span>
                       </li>
                     </ul>
                   </div>

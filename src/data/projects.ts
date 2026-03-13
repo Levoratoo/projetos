@@ -914,28 +914,27 @@ export const projects: Project[] = [
   },
   {
     slug: "sistema-chamados-portfolio-vivo",
-    title: "Sistema de Chamados - Portfolio Vivo",
-    subtitle: "Como transformamos um sistema real em uma experiencia publica navegavel.",
+    title: "Sistema Interno de Chamados Printbag",
+    subtitle: "Centralizacao de solicitacoes com rastreabilidade de ponta a ponta.",
     summary:
-      "Versao publica do sistema de chamados, mantendo fluxos reais com dados simulados e deploy estatico.",
+      "Sistema interno para organizar chamados entre TI, RH, Compras, Financeiro, Logistica e Pre-impressao em fluxo unico.",
     description:
-      "Projeto para publicar uma versao demonstravel do sistema de chamados sem backend, sem banco e sem autenticacao, preservando filtros, ordenacao, paginacao, dashboard, kanban, notificacoes e detalhe de chamado.",
+      "Projeto focado em eliminar atendimento disperso (e-mail, WhatsApp e verbal), com papeis claros e jornada completa de abertura, triagem, atendimento, finalizacao e avaliacao.",
     year: 2026,
     status: "Concluído",
     progress: 100,
     type: "Plataforma",
     domain: "Sistemas",
     segment: "Atendimento",
-    tags: ["Chamados", "Kanban", "Dashboard", "Provider Mock", "GitHub Pages", "CI/CD"],
+    tags: ["Chamados", "SLA", "Kanban", "Dashboard", "Workflow", "LDAP/SSO"],
     stack: [
-      "React",
-      "TypeScript",
-      "Vite",
+      "Laravel 11",
+      "PHP 8.2",
+      "Blade",
       "Tailwind CSS",
-      "Recharts",
-      "dnd-kit",
-      "GitHub Actions",
-      "GitHub Pages"
+      "Alpine.js",
+      "Vite",
+      "MySQL/MariaDB"
     ],
     cover: {
       kind: "gradient",
@@ -944,51 +943,49 @@ export const projects: Project[] = [
       c: "rgba(255, 255, 255, 0.12)"
     },
     context:
-      "A proposta parecia simples, mas o ruido apareceu em ambiente estatico, pipeline de publicacao e percepcao de demo incompleta. O desafio foi manter a experiencia do produto original sem API e sem infraestrutura interna.",
+      "O sistema foi desenhado para reduzir ruido operacional com formularios por tipo de chamado, filas por area/perfil e filtros inteligentes, diminuindo retrabalho e demandas fora de contexto.",
     problem: [
-      "Deploy estatico com 404 intermitente e falhas de CSS por configuracao de paths.",
-      "Pipeline de GitHub Actions desalinhado com saida estatico (out) e empacotamento de assets.",
-      "Gap de experiencia quando a interface abre, mas sem fluxos essenciais de produto.",
-      "Dependencia previa de backend para criar, listar e detalhar chamados."
+      "Atendimento disperso entre e-mail, WhatsApp e solicitacoes verbais.",
+      "Solicitacoes incompletas gerando retrabalho no atendimento.",
+      "Chamados fora de contexto por falta de fila e triagem estruturada.",
+      "Necessidade de reforcar testes e revisar pontos de autorizacao/filtro."
     ],
     constraints: [
-      "Rodar 100% estatico, sem backend, sem banco e sem rotas server-only.",
-      "Preservar contratos de dados para evitar reescrita completa de UI.",
-      "Manter comportamento de carregando, sucesso e falha para estados reais.",
-      "Publicar em URL publica com CI/CD automatico."
+      "Manter separacao de papeis (admin, gestor, atendente e usuario).",
+      "Garantir rastreabilidade completa da jornada do chamado.",
+      "Sustentar operacao multi-area com regras diferentes por tipo de demanda.",
+      "Evoluir sem quebrar governanca, seguranca e produtividade do time."
     ],
     solution: [
-      "Mapeamento de tipos e contratos para manter compatibilidade com o sistema original.",
-      "Provider local mock em memoria com funcoes assincronas, latencia e erro controlado.",
-      "Troca total de fetch/axios pelo provider, mantendo filtros, ordenacao, paginacao, dashboard e kanban.",
-      "Deploy estatico via GitHub Actions + GitHub Pages com ajuste de basePath e assets.",
-      "Modulo Abrir Chamado com templates (Suporte TI, Reembolso e Compra).",
-      "Detalhe de chamado por clique na tabela e no kanban com modal dedicado."
+      "Fila de atendimento com kanban, dashboard, SLA automatico e notificacoes.",
+      "Comentarios, notas internas e anexos para reduzir ping-pong de comunicacao.",
+      "Integracao com Active Directory (LDAP/SSO) para acelerar adocao.",
+      "Mais de 30 tipos de chamados modelados com aderencia ao negocio.",
+      "Criacao, acompanhamento, finalizacao e avaliacao em fluxo unico."
     ],
     results: [
-      "Projeto interno virou experiencia publica navegavel e demonstravel por link.",
-      "Melhor narrativa para recrutadores, clientes e stakeholders.",
-      "Menor custo de demonstracao sem depender de ambiente completo.",
-      "Onboarding mais rapido para novos colaboradores.",
-      "Desacoplamento da interface em relacao ao backend para evolucao de UX."
+      "Maior previsibilidade de prazo e melhor priorizacao de demandas via SLA.",
+      "Metricas gerenciais de volume, status, conformidade e performance por area.",
+      "Mais transparencia entre solicitante, atendente e gestor.",
+      "Reducao de gargalos invisiveis com decisoes baseadas em dados."
     ],
     learnings: [
-      "Portfolio funcional precisa se comportar como produto, nao como maquete.",
-      "Compatibilidade de contrato reduz risco tecnico na migracao para mock.",
-      "Fluxos de detalhe e criacao sao decisivos para percepcao de produto completo."
+      "Formularios por tipo elevam qualidade e velocidade da triagem.",
+      "Rastreabilidade compartilhada melhora colaboracao entre areas.",
+      "Governanca de acesso e filtros precisa evoluir junto com as features."
     ],
     nextSteps: [
-      "Adicionar cenarios de permissao simulada por perfil.",
-      "Expandir templates de abertura de chamado por area.",
-      "Incluir historico de auditoria ficticio por ticket para demos tecnicas."
+      "Ampliar cobertura de testes automatizados.",
+      "Padronizar validacoes e hardening de upload.",
+      "Otimizar consultas, indices e observabilidade."
     ],
     kpis: [
-      { label: "Modo de execucao", value: "100% estatico" },
-      { label: "Fluxos preservados", value: "Ponta a ponta" },
-      { label: "Publicacao", value: "Automatica por push" }
+      { label: "Atendimento", value: "Fluxo unico rastreavel" },
+      { label: "SLA", value: "Conformidade monitorada" },
+      { label: "Gestao", value: "Decisao por metricas" }
     ],
     confidentialityNote:
-      "Dados, nomes e indicadores desta versao sao ficticios e seguros para exibicao publica.",
+      "Dados operacionais e nomes sensiveis protegidos para uso seguro em ambiente interno.",
     accessLinks: [
       {
         label: "Acesso público",
@@ -1378,35 +1375,34 @@ export const projectsLite: ProjectLite[] = [
   },
   {
     slug: "sistema-chamados-portfolio-vivo",
-    title: "Sistema de Chamados - Portfolio Vivo",
+    title: "Sistema Interno de Chamados Printbag",
     oneLiner:
-      "Versao publica do sistema de chamados com comportamento real, sem backend e sem banco.",
+      "Centraliza chamados entre areas com fluxo unico, SLA e rastreabilidade.",
     problem:
-      "Dificuldade de demonstrar o produto fora do ambiente interno completo, com risco de expor infraestrutura.",
+      "Atendimento disperso e sem padrao entre canais informais.",
     solution:
-      "Provider local mock com contratos preservados, fluxos reais de UI e deploy estatico via GitHub Pages.",
+      "Workflow completo com fila, kanban, dashboard, notificacoes e avaliacao de atendimento.",
     features: [
-      "Listagem de chamados com filtros combinaveis",
-      "Ordenacao e paginacao com metadados",
-      "Kanban com regras de movimentacao",
-      "Dashboard com graficos e contadores",
-      "Notificacoes e controle de nao lidos",
-      "Criacao e detalhe de chamado com modal"
+      "Formularios por tipo de chamado",
+      "Fila por area e perfil",
+      "Kanban e dashboard de SLA",
+      "Comentarios, notas internas e anexos",
+      "Integracao com LDAP/SSO",
+      "Mais de 30 tipos de chamados modelados"
     ],
     benefits: [
-      "Demonstracao publica com baixo risco",
-      "Onboarding mais rapido para novos colaboradores",
-      "Evolucao de UX desacoplada do backend"
+      "Melhor priorizacao de demandas",
+      "Maior previsibilidade de prazo",
+      "Transparencia operacional para gestao"
     ],
     techStack: [
-      "React",
-      "TypeScript",
-      "Vite",
+      "Laravel 11",
+      "PHP 8.2",
+      "Blade",
       "Tailwind CSS",
-      "Recharts",
-      "dnd-kit",
-      "GitHub Actions",
-      "GitHub Pages"
+      "Alpine.js",
+      "Vite",
+      "MySQL/MariaDB"
     ],
     accessLinks: [
       { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
@@ -1654,20 +1650,20 @@ export const previewProjects: PreviewProject[] = [
   },
   {
     slug: "sistema-chamados-portfolio-vivo",
-    title: "Sistema de Chamados - Portfolio Vivo",
+    title: "Sistema Interno de Chamados Printbag",
     year: 2026,
     area: "Sistemas",
     status: "Concluído",
     progress: 100,
-    tags: ["Chamados", "Kanban", "Dashboard", "Provider Mock", "CI/CD"],
+    tags: ["Chamados", "SLA", "Kanban", "Dashboard", "LDAP/SSO"],
     thumb: "/projects/_placeholders/cover.svg",
     description:
-      "Versao publica navegavel do sistema de chamados, com fluxo de produto preservado sem backend.",
+      "Sistema interno para centralizar solicitacoes entre areas com fluxo unico e rastreavel.",
     bullets: [
-      "Filtros, ordenacao e paginacao funcionando em dados mockados",
-      "Kanban, dashboard, notificacoes e detalhe de chamado",
-      "Criacao de chamado com templates e atualizacao no store local",
-      "Deploy estatico com GitHub Actions e GitHub Pages"
+      "Formularios por tipo para reduzir solicitacoes incompletas",
+      "Fila por area/perfil com filtros inteligentes",
+      "Kanban, dashboard, SLA automatico e notificacoes",
+      "Integracao com LDAP/SSO e mais de 30 tipos modelados"
     ],
     accessLinks: [
       { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
