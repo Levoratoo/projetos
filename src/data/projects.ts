@@ -996,27 +996,39 @@ export const projects: Project[] = [
     gallery: [
       {
         title: "Visao geral da aplicacao",
-        description: "Listagem, filtros e resumo operacional.",
-        thumbSrc: "/projects/_placeholders/cover.svg",
-        fullSrc: "/projects/_placeholders/screen1.svg"
+        description: "Tela inicial com resumo de chamados, metricas rapidas e acoes diretas.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen1.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen1.jpg"
+      },
+      {
+        title: "Dashboard Executivo",
+        description: "Metricas de SLA, volume, status e performance por area em tempo real.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen2.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen2.jpg"
+      },
+      {
+        title: "Top Atendentes e Chamados Recentes",
+        description: "Ranking de resolucao e tabela de chamados com status, prioridade e SLA.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen3.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen3.jpg"
+      },
+      {
+        title: "Fila de Chamados",
+        description: "Listagem completa com filtros por area, status, prioridade e SLA.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen4.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen4.jpg"
       },
       {
         title: "Kanban de chamados",
-        description: "Movimentacao de cards com regras de fluxo.",
-        thumbSrc: "/projects/_placeholders/screen1.svg",
-        fullSrc: "/projects/_placeholders/screen2.svg"
+        description: "Movimentacao de cards por status com regras de fluxo e visao por fila.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen5.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen5.jpg"
       },
       {
-        title: "Dashboard e metricas",
-        description: "Graficos, notificacoes e leitura executiva.",
-        thumbSrc: "/projects/_placeholders/screen2.svg",
-        fullSrc: "/projects/_placeholders/screen3.svg"
-      },
-      {
-        title: "Detalhe e criacao de chamados",
-        description: "Modal completo com estados de loading e erro.",
-        thumbSrc: "/projects/_placeholders/screen3.svg",
-        fullSrc: "/projects/_placeholders/cover.svg"
+        title: "Detalhe do chamado",
+        description: "Visao completa do chamado com historico, responsaveis e status de atendimento.",
+        thumbSrc: "/projects/sistema-chamados-portfolio-vivo/screen6.jpg",
+        fullSrc: "/projects/sistema-chamados-portfolio-vivo/screen6.jpg"
       }
     ]
   },
@@ -1408,10 +1420,12 @@ export const projectsLite: ProjectLite[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
     ],
     images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Listagem e filtros" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Kanban e dashboard" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Detalhe e criacao de chamado" }
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen1.jpg", alt: "Visao geral da aplicacao" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen2.jpg", alt: "Dashboard Executivo" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen3.jpg", alt: "Top Atendentes e Chamados Recentes" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen4.jpg", alt: "Fila de Chamados" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen5.jpg", alt: "Kanban de chamados" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen6.jpg", alt: "Detalhe do chamado" }
     ]
   },
   {
@@ -1656,7 +1670,7 @@ export const previewProjects: PreviewProject[] = [
     status: "Concluído",
     progress: 100,
     tags: ["Chamados", "SLA", "Kanban", "Dashboard", "LDAP/SSO"],
-    thumb: "/projects/_placeholders/cover.svg",
+    thumb: "/projects/sistema-chamados-portfolio-vivo/thumb.jpg",
     description:
       "Sistema interno para centralizar solicitacoes entre areas com fluxo unico e rastreavel.",
     bullets: [
@@ -1669,10 +1683,12 @@ export const previewProjects: PreviewProject[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
     ],
     gallery: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Visao geral da aplicacao" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Listagem e filtros" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Kanban e dashboard" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Detalhe e criacao de chamado" }
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen1.jpg", alt: "Visao geral da aplicacao" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen2.jpg", alt: "Dashboard Executivo" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen3.jpg", alt: "Top Atendentes e Chamados Recentes" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen4.jpg", alt: "Fila de Chamados" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen5.jpg", alt: "Kanban de chamados" },
+      { src: "/projects/sistema-chamados-portfolio-vivo/screen6.jpg", alt: "Detalhe do chamado" }
     ]
   },
   {
