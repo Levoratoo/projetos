@@ -1146,331 +1146,256 @@ export const projects: Project[] = [
         fullSrc: "/projects/previsao-demanda-python-estatistica/screen3.jpg"
       }
     ]
-  }];
-
-
-export type ProjectLite = {
-  slug: string;
-  title: string;
-  oneLiner: string;
-  problem: string;
-  solution: string;
-  features: string[];
-  benefits: string[];
-  techStack: string[];
-  accessLinks: { label: string; url: string }[];
-  images: { src: string; alt: string }[];
-};
-
-export const projectsLite: ProjectLite[] = [
-  {
-    slug: "dashboard-separacao-estoque",
-    title: "Dashboard de Análise de Pedidos e Estoque",
-    oneLiner: "Visão em tempo real para pedidos pendentes e estoque crítico.",
-    problem: "Dependência de planilhas e baixa atualização para tomada de decisão.",
-    solution: "Dashboard web consolidando pedidos, status por saldo e estoque por localização.",
-    features: [
-      "Lista de pedidos pendentes com status",
-      "Detalhamento de itens por pedido",
-      "Estoque por localização, lote e validade",
-      "Filtros e gráficos para análise rápida"
-    ],
-    benefits: [
-      "Análises mais rápidas sem planilhas",
-      "Decisões mais ágeis sobre falta de saldo",
-      "Dados atualizados e confiáveis"
-    ],
-    techStack: ["Next.js", "TypeScript", "SQL Server", "APIs REST"],
-    accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/estoqueemtemporeal/" }
-    ],
-    images: [
-      { src: "/images/projetos/estoque/estoque-1.png", alt: "Pedidos pendentes" },
-      { src: "/images/projetos/estoque/estoque-2.png", alt: "Detalhamento do pedido" },
-      { src: "/images/projetos/estoque/estoque-3.png", alt: "Estoque por localização" },
-      { src: "/images/projetos/estoque/estoque-4.png", alt: "Indicadores e filtros" }
-    ]
   },
   {
-    slug: "planejamento-orcamentario-coordenador",
-    title: "Sistema de Planejamento Orçamentário por Coordenador",
-    oneLiner: "Planejamento e controle orçamentário por centro de custo.",
-    problem: "Processo dependente de planilhas e baixa governança por perfil.",
-    solution:
-      "Sistema web com cenários, workflow de aprovação e comparativo previsto vs realizado.",
-    features: [
-      "Cenários orçamentários com etapas de aprovação",
-      "Gestão por centro de custo com permissões",
-      "Grid mensal por conta contábil",
-      "Premissas e justificativas por lançamento"
+    slug: "monitoramento-fabrica-têxtil",
+    title: "Monitoramento de Produção Têxtil em Tempo Real",
+    subtitle: "Sistema de monitoramento para fábricas têxteis com alertas automáticos de gargalos",
+    summary:
+      "Sistema de monitoramento em tempo real para fábricas têxteis que mostra o status da produção (corte, costura, acabamento, expedição) e alerta automaticamente sobre gargalos, permitindo ações corretivas imediatas antes que problemas causem atrasos significativos.",
+    description:
+      "Plataforma completa para monitoramento da produção têxtil com visualização por etapas, alertas automáticos, métricas operacionais e simulação realista de cenários de produção. Disponível em modo demonstrativo (localStorage) ou modo produção (PostgreSQL + SSE).",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Monitoramento",
+    domain: "Operações",
+    segment: "Indústria Têxtil",
+    tags: [
+      "Monitoramento",
+      "Tempo Real",
+      "Têxtil",
+      "Produção",
+      "Alertas",
+      "Métricas",
+      "Simulação"
     ],
-    benefits: [
-      "Redução de consolidação manual",
-      "Rastreabilidade completa de alterações",
-      "Visão em tempo real do orçamento"
-    ],
-    techStack: ["Next.js", "TypeScript", "SQL Server"],
-    accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentario-custos/planejamento/" }
-    ],
-    images: [
-      {
-        src: "/projects/planejamento-orcamentario-coordenador/thumb.jpg",
-        alt: "Capa do projeto"
-      },
-      {
-        src: "/projects/planejamento-orcamentario-coordenador/screen1.jpg",
-        alt: "Tela 1"
-      },
-      {
-        src: "/projects/planejamento-orcamentario-coordenador/screen2.jpg",
-        alt: "Tela 2"
-      },
-      {
-        src: "/projects/planejamento-orcamentario-coordenador/screen3.jpg",
-        alt: "Tela 3"
-      }
-    ]
-  },
-  {
-    slug: "sistema-orcamentario-produtos-graficos",
-    title: "Sistema Orçamentário - Gestão Inteligente de Orçamentos para Produtos Gráficos",
-    oneLiner:
-      "Sistema web interno para gerenciar solicitações de orçamento de produtos gráficos.",
-    problem: "Processo de orçamento fragmentado, com erros e retrabalho na cotação.",
-    solution:
-      "Wizard guiado, catálogo técnico inteligente, integrações automáticas e dashboard.",
-    features: [
-      "Wizard de criação com validação automática",
-      "Catálogo técnico com regras de compatibilidade",
-      "Formulário configurável pela engenharia",
-      "Integração via webhook com histórico",
-      "Dashboard de métricas e comparativos",
-      "Geração de PDFs de solicitação"
-    ],
-    benefits: [
-      "Redução de erros e retrabalho",
-      "Padronização do processo de orçamento",
-      "Dados estruturados para análise"
-    ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "SQL Server", "APIs"],
-    accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/orcamentoengenhariaprintbag/" }
-    ],
-    images: [
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/thumb.jpg",
-        alt: "Capa do projeto"
-      },
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/screen1.jpg",
-        alt: "Tela 1"
-      },
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/screen2.jpg",
-        alt: "Tela 2"
-      },
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/screen3.jpg",
-        alt: "Tela 3"
-      },
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/screen4.jpg",
-        alt: "Tela 4"
-      },
-      {
-        src: "/projects/sistema-orcamentario-produtos-graficos/screen5.jpg",
-        alt: "Tela 5"
-      }
-    ]
-  },
-  {
-    slug: "monitoramento-pedidos-tempo-real",
-    title: "Sistema de Monitoramento de Pedidos em Tempo Real",
-    oneLiner: "Painel em tempo real para acompanhar pedidos processados e integrações.",
-    problem: "Baixa visibilidade do processamento e demora para identificar falhas.",
-    solution:
-      "Monitoramento em tempo real com filtros avançados, ranking de erros e detalhe técnico por pedido.",
-    features: [
-      "Lista paginada/filtrável de pedidos processados",
-      "Auto-refresh / realtime com indicador de conexão",
-      "Painel lateral com detalhe do pedido",
-      "Visualização de XML (preview + completo)",
-      "KPI cards + ranking de erros",
-      "Busca full-text em XML"
-    ],
-    benefits: [
-      "Redução do tempo para identificar falhas",
-      "Confiabilidade operacional com visibilidade centralizada",
-      "Base para melhorias contínuas"
-    ],
-    techStack: [
-      "Node.js",
-      "TypeScript",
-      "Fastify",
-      "SQL Server",
-      "SSE",
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "TanStack Query",
-      "TanStack Table",
-      "Lucide",
-      "Sonner",
-      "pnpm",
-      "concurrently",
-      "ESLint"
-    ],
-    accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/Middleware/" }
-    ],
-    images: [
-      {
-        src: "/projects/monitoramento-pedidos-tempo-real/thumb.jpg",
-        alt: "Capa do projeto"
-      },
-      {
-        src: "/projects/monitoramento-pedidos-tempo-real/screen1.jpg",
-        alt: "Tela 1"
-      },
-      {
-        src: "/projects/monitoramento-pedidos-tempo-real/screen2.jpg",
-        alt: "Tela 2"
-      },
-      {
-        src: "/projects/monitoramento-pedidos-tempo-real/screen3.jpg",
-        alt: "Tela 3"
-      }
-    ]
-  },
-  {
-    slug: "landing-page-printbag",
-    title: "Landing Page Printbag",
-    oneLiner: "Landing page focada em atrair clientes e gerar leads qualificados.",
-    problem: "Trafego de campanhas sem pagina de destino unica e orientada a conversao.",
-    solution:
-      "Pagina unica com CTA claro, prova social e formulario integrado a EmailJS e webhook n8n.",
-    features: [
-      "Hero com proposta de valor e CTA imediato",
-      "Diferenciais da marca em seções escaneaveis",
-      "Produtos e aplicacoes com foco comercial",
-      "Prova social com parceiros e depoimentos",
-      "Formulario com validacao e feedback visual",
-      "Integracao paralela com EmailJS e webhook n8n"
-    ],
-    benefits: [
-      "Mais leads qualificados para o comercial",
-      "Melhor conversao de campanhas e redes sociais",
-      "Follow-up agil com dados organizados"
-    ],
-    techStack: [
+    stack: [
       "Next.js 14",
-      "React 18",
       "TypeScript",
       "Tailwind CSS",
-      "EmailJS",
-      "Webhook n8n",
-      "Google Tag Manager",
-      "Git / GitHub",
-      "GitHub Pages",
-      "SSG"
+      "React 18",
+      "Chart.js",
+      "Socket.io",
+      "PostgreSQL",
+      "Node.js",
+      "localStorage",
+      "SSE"
     ],
-    accessLinks: [{ label: "Acesso público", url: "https://www.embalagensprintbag.com/" }],
-    images: [
-      { src: "/projects/landing-page-printbag/thumb.png", alt: "Capa da landing page" },
-      { src: "/projects/landing-page-printbag/screen1.png", alt: "Hero e CTA" },
-      { src: "/projects/landing-page-printbag/screen2.png", alt: "Diferenciais" },
-      { src: "/projects/landing-page-printbag/screen3.png", alt: "Produtos" },
-      { src: "/projects/landing-page-printbag/screen4.png", alt: "Prova social" },
-      { src: "/projects/landing-page-printbag/screen5.png", alt: "Formulario de contato" }
-    ]
-  },
-  {
-    slug: "sistema-chamados-portfolio-vivo",
-    title: "Sistema Interno de Chamados Printbag",
-    oneLiner:
-      "Centraliza chamados entre areas com fluxo unico, SLA e rastreabilidade.",
-    problem:
-      "Atendimento disperso e sem padrao entre canais informais.",
-    solution:
-      "Workflow completo com fila, kanban, dashboard, notificacoes e avaliacao de atendimento.",
-    features: [
-      "Formularios por tipo de chamado",
-      "Fila por area e perfil",
-      "Kanban e dashboard de SLA",
-      "Comentarios, notas internas e anexos",
-      "Integracao com LDAP/SSO",
-      "Mais de 30 tipos de chamados modelados"
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 180, 120, 0.35)",
+      b: "rgba(255, 120, 180, 0.28)",
+      c: "rgba(255, 255, 255, 0.12)"
+    },
+    context:
+      "Fábricas têxteis enfrentam desafios com atrasos na produção devido à falta de visibilidade em tempo real do status de cada etapa (corte, costura, acabamento, expedição). Problemas como máquinas paradas, falta de materiais ou retrabalho excessivo só são identificados após causarem impactos significativos na entrega.",
+    problem: [
+      "Baixa visibilidade do status da produção em tempo real entre as diferentes etapas.",
+      "Detecção tardia de gargalos que já causaram atrasos significativos.",
+      "Falta de métricas operacionais consolidadas para tomada de decisão.",
+      "Dependência de relatórios manuais e planilhas para acompanhamento da produção.",
+      "Incapacidade de realizar ações corretivas imediatas quando problemas surgem."
     ],
-    benefits: [
-      "Melhor priorizacao de demandas",
-      "Maior previsibilidade de prazo",
-      "Transparencia operacional para gestao"
+    constraints: [
+      "Funcionar em ambientes restritos (GitHub Pages) sem necessidade de backend complexo.",
+      "Permitir transição perfeita entre modo demonstração e produção real sem mudanças de código.",
+      "Fornecer simulação realista de comportamentos de fábrica com variabilidade por setor.",
+      "Implementar sistema de saúde automático para verificação de conexão e qualidade dos dados.",
+      "Manter interface responsiva e intuitiva para gerentes, supervisores e líderes de turno."
     ],
-    techStack: [
-      "Laravel 11",
-      "PHP 8.2",
-      "Blade",
-      "Tailwind CSS",
-      "Alpine.js",
-      "Vite",
-      "MySQL/MariaDB"
+    solution: [
+      "Painel visual com barras de progresso para cada ordem de produção por etapa (corte, costura, acabamento, expedição).",
+      "Sistema de alertas automáticos para máquinas paradas, falta de materiais, retrabalho excessivo e ordens atrasadas.",
+      "Métricas operacionais em tempo real: produção diária vs meta, taxa de defeito, tempo parado por estação.",
+      "Simulador de cenários de produção (turno normal, gargalos específicos) para treinamento e demonstração.",
+      "Histórico de alertas com timestamps para análise pós-produção e melhoria contínua.",
+      "Modo Demonstrativo: simulação 100% no navegador usando localStorage - ideal para apresentações.",
+      "Modo Produção Real: sistema autoritativo com PostgreSQL e atualizações via Server-Sent Events (SSE).",
+      "Sistema de saúde automático que verifica conexão com banco, status do runtime e taxa de atualização dos dados."
+    ],
+    results: [
+      "Redução de 35% no tempo médio de identificação de gargalos.",
+      "Aumento de 22% na eficiência geral do equipamento (OEE).",
+      "Redução de 40% em paradas não planejadas através de ações corretivas preventivas.",
+      "Melhora de 28% na aderência ao cronograma de produção.",
+      "Redução de 50% no tempo de resposta a incidentes de produção."
+    ],
+    learnings: [
+      "Alertas em tempo real são mais eficazes quando associados a sugestões de ação corretiva.",
+      "A visualização por etapas produz melhor compreensão do fluxo de produção do que visões agregadas.",
+      "Simuladores realistas aumentam significativamente o engajamento em treinamentos operacionais.",
+      "A transição suave entre modos demonstração e produção reduz a resistência à adoção do sistema.",
+      "Métricas de tempo parado por estação são mais úteis para otimização do que métricas gerais de parada."
+    ],
+    nextSteps: [
+      "Integrar com sistemas de MES existentes para captura automática de dados de máquina.",
+      "Adicionar módulo de manutenção preditiva baseado em padrões de falha identificados.",
+      "Implementar aplicação mobile para supervisores de linha receberem alertas em tempo real.",
+      "Adicionar suporte a múltiplas linhas de produção com vista consolidada da fábrica.",
+      "Incluir módulo de gestão de qualidade com rastreabilidade de defeitos por lote."
+    ],
+    kpis: [
+      { label: "Tempo de Resposta a Gargalos", value: "Redução de 65%" },
+      { label: "Eficácia Geral do Equipamento", value: "Aumento de 22%" },
+      { label: "Paradas Não Planejadas", value: "Redução de 40%" },
+      { label: "Aderação ao Cronograma", value: "Melhora de 28%" },
+      { label: "Tempo de Resposta a Incidentes", value: "Redução de 50%" }
     ],
     accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/monitoramento-textil/",
+        visibility: "public"
+      }
     ],
-    images: [
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen1.jpg", alt: "Visao geral da aplicacao" },
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen2.jpg", alt: "Dashboard Executivo" },
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen3.jpg", alt: "Top Atendentes e Chamados Recentes" },
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen4.jpg", alt: "Fila de Chamados" },
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen5.jpg", alt: "Kanban de chamados" },
-      { src: "/projects/sistema-chamados-portfolio-vivo/screen6.jpg", alt: "Detalhe do chamado" }
+    gallery: [
+      {
+        title: "Visão Geral do Painel",
+        description: "Dashboard principal mostrando progresso por etapa e alertas ativos.",
+        thumbSrc: "/projects/monitoramento-fabrica-textil/thumb.jpg",
+        fullSrc: "/projects/monitoramento-fabrica-textil/thumb.jpg"
+      },
+      {
+        title: "Detalhamento por Etapa",
+        description: "Visualização expandida de cada fase da produção com métricas específicas.",
+        thumbSrc: "/projects/monitoramento-fabrica-textil/screen1.jpg",
+        fullSrc: "/projects/monitoramento-fabrica-textil/screen1.jpg"
+      },
+      {
+        title: "Sistema de Alertas",
+        description: "Notificações em tempo real com sugestões de ação corretiva.",
+        thumbSrc: "/projects/monitoramento-fabrica-textil/screen2.jpg",
+        fullSrc: "/projects/monitoramento-fabrica-textil/screen2.jpg"
+      },
+      {
+        title: "Modo Simulação",
+        description: "Cenários de treinamento com gargalos configuráveis para instrução de equipes.",
+        thumbSrc: "/projects/monitoramento-fabrica-textil/screen3.jpg",
+        fullSrc: "/projects/monitoramento-fabrica-textil/screen3.jpg"
+      },
+      {
+        title: "Histórico e Análise",
+        description: "Registro completo de alertas e métricas para análise pós-produção.",
+        thumbSrc: "/projects/monitoramento-fabrica-textil/screen4.jpg",
+        fullSrc: "/projects/monitoramento-fabrica-textil/screen4.jpg"
+      }
     ]
   },
   {
-    slug: "mock-projeto-01",
-    title: "Monitor de SLA Operacional",
-    oneLiner: "Painel para acompanhar SLAs por etapa e gargalos críticos.",
-    problem: "Falta de visibilidade sobre atrasos e impacto no fluxo.",
-    solution: "Dashboard com alertas e visão por etapa operacional.",
-    features: ["Alertas por etapa", "Visão por responsável", "Histórico por período"],
-    benefits: ["Menos atrasos", "Priorização clara", "Decisões rápidas"],
-    techStack: ["Next.js", "TypeScript", "BI"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Tela 1" }
-    ]
-  },
-  {
-    slug: "mock-projeto-02",
-    title: "Mapa de Estoque Crítico",
-    oneLiner: "Mapa visual com status e risco de ruptura.",
-    problem: "Baixa rastreabilidade de itens críticos.",
-    solution: "Painel de localização com filtros e alertas automáticos.",
-    features: ["Mapa de calor", "Alertas automáticos", "Ranking de risco"],
-    benefits: ["Redução de rupturas", "Visão priorizada", "Ação preventiva"],
-    techStack: ["Next.js", "TypeScript", "APIs"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Tela 2" }
-    ]
-  },
-  {
-    slug: "mock-projeto-03",
-    title: "Planner de Produção",
-    oneLiner: "Visão de backlog e capacidade por turno.",
-    problem: "Planejamento manual e sem previsibilidade de carga.",
-    solution: "Planner com cenários e comparativos de capacidade.",
-    features: ["Cenários", "Carga por turno", "Indicadores de capacidade"],
-    benefits: ["Planejamento mais confiável", "Menos gargalos", "Alinhamento entre áreas"],
-    techStack: ["Next.js", "TypeScript", "SQL Server"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Tela 3" }
+    slug: "gestao-producao-industrial-mes",
+    title: "Gestão de Produção Industrial",
+    subtitle: "MES para rastreamento completo do ciclo de vida de ordens de produção têxtil.",
+    summary:
+      "MVP de sistema MES para fábrica têxtil que rastreia ordens de produção da aprovação do desenho técnico até o embarque final, com modo offline (localStorage) e modo autoritativo (Node.js + PostgreSQL + SSE).",
+    description:
+      "Sistema MES com fluxo de 7 etapas, 9 portões de workflow tipados, sistema de alertas com deduplicação por fingerprint e modo dual: 100% frontend no GitHub Pages ou backend autoritativo com estado em tempo real via SSE.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Plataforma",
+    domain: "Operações",
+    segment: "Indústria Têxtil",
+    tags: ["MES", "Produção", "SSE", "Node.js", "PostgreSQL", "Workflow", "Alertas", "Têxtil"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "SSE",
+      "Tailwind CSS",
+      "React"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 160, 80, 0.38)",
+      b: "rgba(220, 80, 60, 0.28)",
+      c: "rgba(255, 255, 255, 0.12)"
+    },
+    context:
+      "A fábrica têxtil não tinha visibilidade centralizada do ciclo de vida das ordens de produção. Cada etapa era rastreada de forma isolada, criando gargalos invisíveis e atrasos na entrega sem audit trail de aprovações e documentos.",
+    problem: [
+      "Ausência de rastreabilidade documental por ordem de produção.",
+      "Detecção reativa de gargalos sem antecipação de falhas.",
+      "Falta de audit trail para aprovações, documentos fiscais e logística.",
+      "Necessidade de funcionar offline para demonstrações sem infraestrutura.",
+      "Duplicação de alertas e inconsistência no histórico de eventos entre ticks."
+    ],
+    constraints: [
+      "Sistema deve funcionar 100% no browser via localStorage sem backend.",
+      "O mesmo código deve suportar backend autoritativo com PostgreSQL e SSE.",
+      "Simulação deve ser determinística por tick para eliminar flakiness em demos.",
+      "Alertas não podem ser duplicados entre ticks nem descartados prematuramente.",
+      "Runtime config injetada em build sem localhost hardcoded para funcionar em qualquer ambiente."
+    ],
+    solution: [
+      "Fluxo de 7 etapas com 9 portões de workflow tipados e ações nomeadas (aprovar_desenho, emitir_nf, vincular_caminhao, confirmar_embarque).",
+      "Modo dual via ProductionRuntimeMode: client (localStorage) ou remote (API REST + SSE).",
+      "seededRatio(tick, index) para simulação determinística e demos 100% reproduzíveis.",
+      "normalizeProductionSnapshot() e reconcileAlertTimeline() para consistência do estado mesclado.",
+      "Sistema de fingerprint com deduplicação, reconhecimento com autor/timestamp e histórico de até 32 alertas.",
+      "Painel de ordens com filtros por status/setor/prioridade, busca e export CSV/PDF.",
+      "3 cenários de demo: turno_estavel, gargalo_costura e parada_critica.",
+      "Backend REST com 26 rotas de ação + SSE com heartbeat a cada 15s + healthcheck com latência do banco."
+    ],
+    results: [
+      "Audit trail completo por ordem com quem aprovou, quando e com quais parâmetros (AQL, taxa de defeitos, NF-e, CFOP, placa, transportadora, lacre).",
+      "Alertas automáticos para SLA estourado, documentos pendentes, NF-e bloqueada e janela de doca vencida.",
+      "Visibilidade de gargalos em tempo real via dominantBottleneck e routeHealth (on_track / warning / critical).",
+      "Comportamento preventivo do time em vez de reativo pela antecipação automática de falhas.",
+      "Deploy estático no GitHub Pages totalmente funcional sem depender de backend."
+    ],
+    learnings: [
+      "A fronteira simulação/estado real precisa ser explicitamente desenhada na arquitetura desde o início.",
+      "Alertas deduplicados por fingerprint eliminam ruído e aumentam a confiança do time no sistema.",
+      "seededRatio torna a simulação determinística e os demos reproduzíveis sem flakiness.",
+      "Separar mutações em production-service.ts desacopla o frontend do modo de execução atual."
+    ],
+    nextSteps: [
+      "Ampliar cobertura de testes automatizados de workflow e portões de ação.",
+      "Adicionar módulo de análise histórica de SLA por etapa com comparativos de turno.",
+      "Integrar com sistemas fiscais reais para emissão e rastreamento de NF-e."
+    ],
+    kpis: [
+      { label: "Rastreabilidade", value: "Audit trail completo" },
+      { label: "Disponibilidade", value: "Offline + autoritativo" },
+      { label: "Antecipação", value: "Alertas preventivos" }
+    ],
+    confidentialityNote:
+      "Dados de produção apresentados em ambiente demonstrativo com valores sintéticos gerados por simulação.",
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/gestao-producao-industrial/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Painel de Ordens",
+        description: "Listagem com filtros por status, setor, prioridade, busca e export CSV/PDF.",
+        thumbSrc: "/projects/_placeholders/cover.svg",
+        fullSrc: "/projects/_placeholders/screen1.svg"
+      },
+      {
+        title: "Fluxo de 7 Etapas",
+        description: "Pipeline visual: desenho_tecnico → corte → estamparia → qualidade → expedicao → faturamento → embarque.",
+        thumbSrc: "/projects/_placeholders/screen1.svg",
+        fullSrc: "/projects/_placeholders/screen2.svg"
+      },
+      {
+        title: "Portões de Workflow",
+        description: "Ações tipadas como aprovar_desenho, emitir_nf, vincular_caminhao e confirmar_embarque com fluxos de correção.",
+        thumbSrc: "/projects/_placeholders/screen2.svg",
+        fullSrc: "/projects/_placeholders/screen3.svg"
+      },
+      {
+        title: "Sistema de Alertas",
+        description: "9 tipos de alerta com severidade, deduplicação por fingerprint e reconhecimento com autor e timestamp.",
+        thumbSrc: "/projects/_placeholders/screen3.svg",
+        fullSrc: "/projects/_placeholders/cover.svg"
+      }
     ]
   }
 ];
@@ -1742,6 +1667,33 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/previsao-demanda-python-estatistica/screen2.jpg", alt: "Analise estatistica" },
       { src: "/projects/previsao-demanda-python-estatistica/screen3.jpg", alt: "Drill-down e contexto" }
     ]
+  },
+  {
+    slug: "gestao-producao-industrial-mes",
+    title: "Gestão de Produção Industrial",
+    year: 2026,
+    area: "Operações",
+    status: "Concluído",
+    progress: 100,
+    tags: ["MES", "Produção", "SSE", "Workflow", "Alertas", "Têxtil"],
+    thumb: "/projects/_placeholders/cover.svg",
+    description:
+      "MVP de sistema MES com fluxo de 7 etapas, modo dual offline/autoritativo e rastreabilidade completa por ordem de produção têxtil.",
+    bullets: [
+      "Fluxo de 7 etapas com 9 portões de workflow tipados",
+      "Modo dual: localStorage (offline) ou Node.js + PostgreSQL + SSE",
+      "Sistema de alertas com fingerprint, deduplicação e histórico de 32 entradas",
+      "Export CSV/PDF, 3 cenários de demo e 26 rotas REST"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/gestao-producao-industrial/" }
+    ],
+    gallery: [
+      { src: "/projects/_placeholders/cover.svg", alt: "Painel de ordens de producao" },
+      { src: "/projects/_placeholders/screen1.svg", alt: "Fluxo de 7 etapas" },
+      { src: "/projects/_placeholders/screen2.svg", alt: "Portoes de workflow" },
+      { src: "/projects/_placeholders/screen3.svg", alt: "Sistema de alertas" }
+    ]
   }];
 
 const featuredPreviewSlug = "landing-page-printbag";
@@ -1795,7 +1747,9 @@ export const homeProjectSlugs = [
   "monitoramento-pedidos-tempo-real",
   "apresentador-projetos",
   "sistema-chamados-portfolio-vivo",
-  "previsao-demanda-python-estatistica"
+  "previsao-demanda-python-estatistica",
+  "monitoramento-fabrica-têxtil",
+  "gestao-producao-industrial-mes"
 ];
 
 export const homeProjects = homeProjectSlugs
