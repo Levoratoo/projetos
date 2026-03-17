@@ -1174,8 +1174,8 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(255, 160, 80, 0.38)",
-      b: "rgba(220, 80, 60, 0.28)",
+      a: "rgba(120, 210, 255, 0.3)",
+      b: "rgba(120, 255, 200, 0.25)",
       c: "rgba(255, 255, 255, 0.12)"
     },
     context:
@@ -1238,28 +1238,28 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        title: "Painel de Ordens",
-        description: "Listagem com filtros por status, setor, prioridade, busca e export CSV/PDF.",
-        thumbSrc: "/projects/_placeholders/cover.svg",
-        fullSrc: "/projects/_placeholders/screen1.svg"
+        title: "Pipeline de 7 Etapas",
+        description: "Fluxo ponta a ponta da engenharia ao embarque com autoalimentacao e drill-down por ordem.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen1.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen1.jpg"
       },
       {
-        title: "Fluxo de 7 Etapas",
-        description: "Pipeline visual: desenho_tecnico → corte → estamparia → qualidade → expedicao → faturamento → embarque.",
-        thumbSrc: "/projects/_placeholders/screen1.svg",
-        fullSrc: "/projects/_placeholders/screen2.svg"
+        title: "Drill-down da Expedicao",
+        description: "Controle da etapa com backlog, SLA, documentos e microgerenciamento por OP.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen2.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen2.jpg"
       },
       {
-        title: "Portões de Workflow",
-        description: "Ações tipadas como aprovar_desenho, emitir_nf, vincular_caminhao e confirmar_embarque com fluxos de correção.",
-        thumbSrc: "/projects/_placeholders/screen2.svg",
-        fullSrc: "/projects/_placeholders/screen3.svg"
+        title: "Cards de Embarque",
+        description: "Status por OP com NF, caminhao, doca, volumes e saida prevista.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen3.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen3.jpg"
       },
       {
-        title: "Sistema de Alertas",
-        description: "9 tipos de alerta com severidade, deduplicação por fingerprint e reconhecimento com autor e timestamp.",
-        thumbSrc: "/projects/_placeholders/screen3.svg",
-        fullSrc: "/projects/_placeholders/cover.svg"
+        title: "Apontamento Manual",
+        description: "Registro de producao, paradas, qualidade e transicoes de etapa com impacto imediato na operacao.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen4.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen4.jpg"
       }
     ]
   }];
@@ -1612,10 +1612,10 @@ export const projectsLite: ProjectLite[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/gestao-producao-industrial/" }
     ],
     images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Painel de ordens de producao" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Fluxo de 7 etapas" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Portoes de workflow" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Sistema de alertas" }
+      { src: "/projects/gestao-producao-industrial-mes/screen1.jpg", alt: "Pipeline de 7 etapas" },
+      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da Expedicao" },
+      { src: "/projects/gestao-producao-industrial-mes/screen3.jpg", alt: "Cards de embarque" },
+      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento manual" }
     ]
   }
 ];
@@ -1896,7 +1896,7 @@ export const previewProjects: PreviewProject[] = [
     status: "Concluído",
     progress: 100,
     tags: ["MES", "Produção", "SSE", "Workflow", "Alertas", "Têxtil"],
-    thumb: "/projects/_placeholders/cover.svg",
+    thumb: "/projects/gestao-producao-industrial-mes/thumb.jpg",
     description:
       "MVP de sistema MES com fluxo de 7 etapas, modo dual offline/autoritativo e rastreabilidade completa por ordem de produção têxtil.",
     bullets: [
@@ -1909,10 +1909,10 @@ export const previewProjects: PreviewProject[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/gestao-producao-industrial/" }
     ],
     gallery: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Painel de ordens de producao" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Fluxo de 7 etapas" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Portoes de workflow" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Sistema de alertas" }
+      { src: "/projects/gestao-producao-industrial-mes/screen1.jpg", alt: "Pipeline de 7 etapas" },
+      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da Expedicao" },
+      { src: "/projects/gestao-producao-industrial-mes/screen3.jpg", alt: "Cards de embarque" },
+      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento manual" }
     ]
   }];
 
