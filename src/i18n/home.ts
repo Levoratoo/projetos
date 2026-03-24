@@ -28,6 +28,9 @@ export const homeCopy = {
     gridVer: "Ver →",
     splitListLabel: "Projetos",
     splitPreviewCta: "Ver projeto completo →",
+    previewHighlights: "Destaques",
+    previewFullDesc: "Ver descrição completa",
+    previewGalleryAria: "Ver imagem",
     footerCredit: "Site desenvolvido por Pedro Levorato",
   },
   en: {
@@ -57,6 +60,9 @@ export const homeCopy = {
     gridVer: "View →",
     splitListLabel: "Projects",
     splitPreviewCta: "View full project →",
+    previewHighlights: "Highlights",
+    previewFullDesc: "View full description",
+    previewGalleryAria: "View image",
     footerCredit: "Site developed by Pedro Levorato",
   },
   es: {
@@ -86,6 +92,9 @@ export const homeCopy = {
     gridVer: "Ver →",
     splitListLabel: "Proyectos",
     splitPreviewCta: "Ver proyecto completo →",
+    previewHighlights: "Aspectos destacados",
+    previewFullDesc: "Ver descripción completa",
+    previewGalleryAria: "Ver imagen",
     footerCredit: "Sitio desarrollado por Pedro Levorato",
   },
   zh: {
@@ -113,6 +122,9 @@ export const homeCopy = {
     gridVer: "查看 →",
     splitListLabel: "项目",
     splitPreviewCta: "查看完整项目 →",
+    previewHighlights: "亮点",
+    previewFullDesc: "查看完整描述",
+    previewGalleryAria: "查看图片",
     footerCredit: "网站由 Pedro Levorato 开发",
   },
   de: {
@@ -142,6 +154,9 @@ export const homeCopy = {
     gridVer: "Ansehen →",
     splitListLabel: "Projekte",
     splitPreviewCta: "Vollständiges Projekt ansehen →",
+    previewHighlights: "Highlights",
+    previewFullDesc: "Vollständige Beschreibung ansehen",
+    previewGalleryAria: "Bild ansehen",
     footerCredit: "Website von Pedro Levorato entwickelt",
   },
   ja: {
@@ -170,6 +185,9 @@ export const homeCopy = {
     gridVer: "見る →",
     splitListLabel: "プロジェクト",
     splitPreviewCta: "プロジェクト全体を見る →",
+    previewHighlights: "ハイライト",
+    previewFullDesc: "詳細を見る",
+    previewGalleryAria: "画像を見る",
     footerCredit: "Pedro Levorato が開発",
   },
 } as const;

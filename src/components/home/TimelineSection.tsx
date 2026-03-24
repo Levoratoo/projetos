@@ -41,6 +41,8 @@ function StickyPreview({
   project: PreviewProject;
   onOpen: () => void;
 }) {
+  const { locale } = useLocale();
+  const tPreview = tHome(locale);
   const { closePreview } = useProjectPreview();
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -100,7 +102,7 @@ function StickyPreview({
                         ? "opacity-100 ring-2 ring-glow/50"
                         : "opacity-55 ring-1 ring-white/6 hover:opacity-90 hover:ring-glow/30"
                     }`}
-                    aria-label={`Ver ${item.alt}`}
+                    aria-label={`${tPreview.previewGalleryAria}: ${item.alt}`}
                   >
                     <Image src={item.src} alt={item.alt} fill className="object-cover" sizes="72px" />
                   </button>
@@ -127,7 +129,7 @@ function StickyPreview({
 
           {bullets && bullets.length > 0 && (
             <div className="section-shell mt-4 rounded-[18px] p-4">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-400">Destaques</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-400">{tPreview.previewHighlights}</p>
               <ul className="mt-2.5 space-y-1.5 text-[12px] text-neutral-200">
                 {bullets.slice(0, 4).map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
@@ -160,7 +162,7 @@ function StickyPreview({
               border: "1px solid rgba(255,72,72,0.35)",
             }}
           >
-            <span>Ver descrição completa</span>
+            <span>{tPreview.previewFullDesc}</span>
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
         </div>

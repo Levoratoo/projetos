@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Award, Quote, ExternalLink, Briefcase, Music2, Download } from "lucide-react";
 import { useLocale } from "@/state/locale";
@@ -84,8 +85,8 @@ function BioBlock() {
             {t.linkedinCta}
           </a>
 
-          <a
-            href={`/curriculo.html?lang=${locale}`}
+          <Link
+            href={`/curriculo?lang=${locale}`}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(255,59,59,0.3)] bg-[rgba(255,59,59,0.04)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/60 transition-all duration-200 hover:border-[rgba(255,59,59,0.75)] hover:bg-[rgba(255,59,59,0.1)] hover:text-white"
@@ -94,8 +95,8 @@ function BioBlock() {
               className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-y-0.5"
               aria-hidden
             />
-            Baixar Currículo
-          </a>
+            {t.downloadCv}
+          </Link>
         </div>
       </motion.div>
     </div>
@@ -261,8 +262,8 @@ function RecommendationsBlock() {
         {recommendations.map((rec, i) => {
           const href = rec.authorUrl ?? LINKEDIN_RECOMMENDATIONS_URL;
           const ariaLabel = rec.authorUrl
-            ? `${rec.author} — ver perfil no LinkedIn`
-            : `Recomendação de ${rec.author} — ver recomendações no LinkedIn`;
+            ? `${rec.author} — ${t.recAriaProfile}`
+            : `${rec.author} — ${t.recAriaAll}`;
           return (
             <motion.a
               key={rec.id}
