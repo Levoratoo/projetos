@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { ProjectActions } from "@/components/ProjectActions";
@@ -35,7 +35,7 @@ export function ProjectHeroBlock({
   return (
     <div
       className={cn(
-        "rounded-[32px] border border-white/10 bg-white/5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur",
+        "section-shell rounded-[32px]",
         isHome ? "p-10 md:p-12 lg:p-14" : "p-8 md:p-12"
       )}
     >
@@ -46,24 +46,24 @@ export function ProjectHeroBlock({
         )}
       >
         <div className={cn(isHome && "lg:col-span-7 2xl:col-span-8")}>
-          <p className="text-xs uppercase tracking-[0.35em] text-glow/70">
+          <p className="text-xs uppercase tracking-[0.35em] text-glow/75">
             LEVORATO PROJECTS
           </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-mist/60">
+          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-mist/52">
             {project.area} · {project.title} · {project.area}
           </p>
           <h2
             className={cn(
-              "mt-4 font-semibold text-white",
+              "mt-4 font-display uppercase leading-[0.94] tracking-[0.04em] text-white",
               isHome ? "text-[clamp(32px,3.8vw,56px)]" : "text-[clamp(28px,3.6vw,44px)]"
             )}
           >
-            <span className="shineText shineTextProject">{project.title}</span>
+            <span className="shineText shineTextProject underline-flame">{project.title}</span>
           </h2>
           {project.description ? (
             <p
               className={cn(
-                "mt-4 text-mist/80",
+                "mt-6 text-mist/76",
                 isHome ? "text-base sm:text-lg" : "text-sm sm:text-base"
               )}
             >
@@ -83,13 +83,7 @@ export function ProjectHeroBlock({
             )}
           >
             {buildTags(project).map((tag) => (
-              <span
-                key={tag}
-                className={cn(
-                  "rounded-full border border-white/10 bg-white/5",
-                  isHome ? "px-4 py-2" : "px-3 py-1"
-                )}
-              >
+              <span key={tag} className={cn("data-chip", isHome ? "px-4 py-2" : "px-3 py-1")}>
                 {tag}
               </span>
             ))}
@@ -103,15 +97,16 @@ export function ProjectHeroBlock({
 
         <div
           className={cn(
-            "rounded-3xl border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
+            "relative overflow-hidden rounded-3xl bg-[linear-gradient(180deg,rgba(17,7,9,0.86),rgba(8,3,4,0.9))] shadow-[0_20px_60px_rgba(0,0,0,0.5)]",
             isHome ? "p-6 md:p-7 lg:p-8 lg:col-span-5 2xl:col-span-4" : "p-5"
           )}
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-mist/70">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(255,62,62,0.16),transparent_28%)]" />
+          <p className="relative text-xs uppercase tracking-[0.3em] text-mist/70">
             Preview do projeto
           </p>
-          <div className="mt-4 w-full max-w-[520px]">
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+          <div className="relative mt-4 w-full max-w-[520px]">
+            <div className="preview-frame relative aspect-square w-full overflow-hidden rounded-2xl bg-black/20">
               <Image
                 src={project.thumb || withBasePath("/projects/_placeholders/cover.svg")}
                 alt={project.title}
@@ -123,7 +118,7 @@ export function ProjectHeroBlock({
               />
             </div>
           </div>
-          <div className={cn(isHome ? "mt-6" : "mt-4")}>
+          <div className={cn("relative", isHome ? "mt-6" : "mt-4")}>
             <ProjectActions
               slug={project.slug}
               accessUrl={access?.url}

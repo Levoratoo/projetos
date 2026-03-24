@@ -1,13 +1,14 @@
-﻿"use client";
+"use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 type ProjectActionsProps = {
   slug: string;
   accessUrl?: string | null;
   onPreview: () => void;
-  onViewFull?: () => void;
+  /** Ex.: fechar modal de prévia antes de seguir o <Link> “Ver descrição completa” */
+  onBeforeNavigateToCase?: () => void;
   className?: string;
 };
 
@@ -34,20 +35,12 @@ export function ProjectActions({
   slug,
   accessUrl,
   onPreview,
-  onViewFull,
+  onBeforeNavigateToCase,
   className
 }: ProjectActionsProps) {
-  const router = useRouter();
   const hasAccess = isPublicProjectUrl(accessUrl);
-  const viewHref = `/projetos/${slug}`;
-
-  const handleViewFull = () => {
-    if (onViewFull) {
-      onViewFull();
-      return;
-    }
-    router.push(viewHref);
-  };
+  /** trailingSlash no next.config — href alinhado ao export estático */
+  const caseHref = `/projetos/${slug}/`;
 
   return (
     <div className={cn("flex flex-wrap items-center gap-3", className)}>
@@ -56,19 +49,19 @@ export function ProjectActions({
         onClick={onPreview}
         data-preview-focusable
         data-drawer-focusable
-        className="inline-flex items-center justify-center rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.25em] text-mist/70 transition hover:border-glow/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+        className="ghost-button ghost-button--sm px-4 py-2 text-xs uppercase tracking-[0.25em] text-mist/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
       >
         Prévia
       </button>
-      <button
-        type="button"
-        onClick={handleViewFull}
+      <Link
+        href={caseHref}
         data-preview-focusable
         data-drawer-focusable
-        className="inline-flex items-center justify-center rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.25em] text-mist/70 transition hover:border-glow/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+        onClick={() => onBeforeNavigateToCase?.()}
+        className="ghost-button ghost-button--sm inline-flex px-4 py-2 text-xs uppercase tracking-[0.25em] text-mist/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
       >
         Ver descrição completa
-      </button>
+      </Link>
       {hasAccess ? (
         <a
           href={accessUrl ?? undefined}
@@ -76,7 +69,7 @@ export function ProjectActions({
           rel="noreferrer"
           data-preview-focusable
           data-drawer-focusable
-          className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+          className="primary-cta primary-cta--sm primary-cta--glass px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
         >
           Ir para o projeto
         </a>
@@ -89,7 +82,7 @@ export function ProjectActions({
             data-preview-focusable
             data-drawer-focusable
             aria-disabled="true"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-400/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink/70 opacity-70 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+            className="primary-cta primary-cta--sm primary-cta--glass primary-cta--muted px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
           >
             Ir para o projeto
           </button>

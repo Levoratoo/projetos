@@ -45,7 +45,7 @@ export function ProjectProgress({
       {showLabel ? (
         <p
           className={cn(
-            "uppercase tracking-[0.26em] text-emerald-200/70",
+            "uppercase tracking-[0.26em] text-glow/78",
             styles.label
           )}
         >
@@ -56,7 +56,7 @@ export function ProjectProgress({
         {showPercent ? (
           <span
             className={cn(
-              "min-w-[44px] font-semibold text-emerald-100",
+              "min-w-[44px] font-semibold text-white",
               styles.percent
             )}
           >
@@ -65,7 +65,7 @@ export function ProjectProgress({
         ) : null}
         <div className={cn("relative w-full overflow-hidden rounded-full bg-white/10", styles.bar)}>
           <div
-            className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.25)]"
+            className="h-full rounded-full bg-[linear-gradient(90deg,#ff3434_0%,#ff7878_45%,#d21524_100%)] shadow-[0_0_22px_rgba(255,59,59,0.26)]"
             style={{ width: `${clamped}%` }}
           />
           <div className="progress-shine motion-reduce:opacity-0" />

@@ -46,10 +46,13 @@ export function HomeScrollProjects() {
   return (
     <section ref={containerRef} className="relative scroll-smooth bg-[#0b0f0c]">
       <div className="pointer-events-none sticky top-0 z-30 h-[2px] w-full bg-white/10">
-        <div className="h-full bg-emerald-300" style={{ width: `${Math.round(progress * 100)}%` }} />
+        <div
+          className="h-full bg-[linear-gradient(90deg,#ff3434_0%,#ff7878_45%,#d21524_100%)]"
+          style={{ width: `${Math.round(progress * 100)}%` }}
+        />
       </div>
 
-      <div className="bg-[radial-gradient(circle_at_top,_rgba(86,255,146,0.12),_transparent_60%),linear-gradient(180deg,rgba(8,12,10,0.9),rgba(8,12,10,0.9))]">
+      <div className="bg-[radial-gradient(circle_at_top,_rgba(255,59,59,0.14),_transparent_60%),linear-gradient(180deg,rgba(8,4,5,0.92),rgba(8,4,5,0.92))]">
         <Container>
           <div className="snap-y snap-mandatory md:snap-mandatory">
             {previewProjects.map((project, index) => (

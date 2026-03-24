@@ -17,7 +17,7 @@ function HomeContent() {
   }, [pathname, closePreview]);
 
   return (
-    <main className="bg-[#0b0f0c]">
+    <main className="bg-black">
       <SnapHome />
       <ProjectPreviewModal open={isOpen} slug={activeSlug} onClose={closePreview} />
     </main>

@@ -1,4 +1,4 @@
-﻿# Vitrine de Projetos Printbag
+# Vitrine de Projetos Printbag
 
 Portfolio moderno e premium com foco em performance, cases e resultados.
 
@@ -25,6 +25,30 @@ npm run dev
 npm run build
 npm run start
 ```
+
+### GitHub Pages (CSS e assets)
+
+Este projeto usa `output: "export"` com `basePath`/`assetPrefix` definidos em `next.config.mjs`.
+
+- **No GitHub Actions** o workflow define `NEXT_PUBLIC_BASE_PATH=/<nome-do-repo>` antes do build — os links em `out/` ficam como `/<repo>/_next/...` e o CSS carrega.
+- **Se você gerar `out/` localmente** e publicar em `https://<user>.github.io/<repo>/` **sem** essa variável, o HTML apontará para `/_next/...` na raiz do domínio e o **CSS/JS pode dar 404** (página parece “sem estilo”).
+
+Para testar o build igual ao deploy:
+
+```bash
+# Windows PowerShell (troque pelo nome do repositório)
+$env:NEXT_PUBLIC_BASE_PATH="/nome-do-repo"; npm run build
+```
+
+### Pasta `app/` na raiz
+
+O Next.js **prioriza** `./app` em relação a `./src/app` (`find-pages-dir`). O dev server também tenta ler a pasta `app` na raiz; em **Windows**, se ela não existir, pode ocorrer `ENOENT: scandir ...\app` e os `/_next/static/...` passam a dar **404** (página em branco ou “Internal Server Error”).
+
+Por isso existe uma pasta **`app/`** só com **reexportações** para `src/app` (implementação única). Não apague `app/` sem mover o código ou ajustar o projeto.
+
+### Cache do webpack (`.next`)
+
+Se aparecer erro ao renomear `*.pack.gz` no cache, pare o `npm run dev`, apague a pasta **`.next`** e suba de novo.
 
 ## Estrutura principal
 ```

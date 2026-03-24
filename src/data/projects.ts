@@ -146,8 +146,8 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "SQL Server", "APIs REST"],
     cover: {
       kind: "gradient",
-      a: "rgba(140, 255, 180, 0.4)",
-      b: "rgba(80, 220, 255, 0.3)",
+      a: "rgba(168, 85, 247, 0.5)",
+      b: "rgba(124, 58, 237, 0.35)",
       c: "rgba(255, 255, 255, 0.16)"
     },
     context:
@@ -337,6 +337,12 @@ export const projects: Project[] = [
         description: "Previsto vs realizado por categoria.",
         thumbSrc: "/projects/planejamento-orcamentario-coordenador/screen4.jpg",
         fullSrc: "/projects/planejamento-orcamentario-coordenador/screen4.jpg"
+      },
+      {
+        title: "Acesso ao sistema",
+        description: "Tela de login e credenciais de acesso.",
+        thumbSrc: "/projects/planejamento-orcamentario-coordenador/screen5.jpg",
+        fullSrc: "/projects/planejamento-orcamentario-coordenador/screen5.jpg"
       }
     ]
   },
@@ -671,6 +677,242 @@ export const projects: Project[] = [
         description: "Captura com validacao e integracoes.",
         thumbSrc: "/projects/landing-page-printbag/screen5.png",
         fullSrc: "/projects/landing-page-printbag/screen5.png"
+      }
+    ]
+  },
+  {
+    slug: "donacica-hot-dog",
+    title: "Dona Ciça Hot Dog — Landing Page",
+    subtitle: "Presença digital própria para converter tráfego em pedidos no iFood.",
+    summary:
+      "Landing page de alta conversão para a marca Dona Ciça: impacto visual forte, cardápio real e CTAs para pedir no iFood, sem depender só da plataforma.",
+    description:
+      "Site estático como casa da marca: credibilidade, fotos reais, copy forte e um único foco — levar o visitante a pedir no iFood.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Landing Page",
+    domain: "Marketing",
+    segment: "Food / Brand",
+    tags: [
+      "Landing Page",
+      "Conversão",
+      "iFood",
+      "React",
+      "Vite",
+      "Framer Motion",
+      "GitHub Pages"
+    ],
+    stack: [
+      "React 19",
+      "TypeScript",
+      "Vite 8",
+      "Tailwind CSS 3",
+      "Framer Motion",
+      "Lucide React",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 130, 50, 0.38)",
+      b: "rgba(200, 28, 42, 0.32)",
+      c: "rgba(255, 200, 120, 0.14)"
+    },
+    context:
+      "A Dona Ciça já vende bem pelo iFood, mas depender só de plataforma de delivery é arriscado: o algoritmo muda, a taxa sobe ou o concorrente aparece em primeiro. O site é a presença digital própria da marca — um lugar que existe independente de qualquer plataforma, que passa credibilidade e faz o cliente sentir que está lidando com uma marca de verdade, não só mais um cadastro no aplicativo. Não é loja e não tem checkout: é uma landing de alta conversão com um objetivo claro — fazer o visitante clicar em Pedir no iFood.",
+    problem: [
+      "Dependência exclusiva de marketplaces para visibilidade e conversão.",
+      "Marca sem canal próprio que reforce confiança além do card do app.",
+      "Necessidade de impacto visual forte no mobile, onde está a maior parte do tráfego."
+    ],
+    constraints: [
+      "Sem e-commerce próprio: conversão via iFood e WhatsApp.",
+      "Infraestrutura zero — deploy estático gratuito.",
+      "Conteúdo e preços alinhados ao catálogo real do iFood."
+    ],
+    solution: [
+      "Hero com marca em destaque, copy forte e três CTAs (iFood, cardápio, WhatsApp).",
+      "Diferenciais em cards; cardápio com abas (Tradicionais, Promoções, Combos), fotos e preços reais.",
+      "Sobre a marca com foto real e prova social (nota 5.0); benefícios com marquee animado.",
+      "CTA final e footer com logo, links e WhatsApp; partículas, gradiente e ilustração com animação.",
+      "Fonte única de textos e dados em siteContent; assets organizados; build otimizado pelo Vite.",
+      "Deploy no GitHub Pages — 100% gratuito, sem servidor nem mensalidade."
+    ],
+    results: [
+      "Credibilidade quando alguém pesquisa a marca: aparece um site profissional, não só o iFood.",
+      "Link próprio para Instagram, WhatsApp, panfleto e qualquer canal.",
+      "Cada seção empurra para o pedido; botão flutuante no mobile conforme a rolagem.",
+      "Confiança com ingredientes e preços reais e foto da Dona Ciça — o cliente chega ao iFood já convencido."
+    ],
+    learnings: [
+      "Landing com uma ação principal mantém a jornada clara do visitante.",
+      "Centralizar textos e cardápio em um único módulo reduz retrabalho na manutenção."
+    ],
+    nextSteps: [
+      "Medir conversões por origem (UTM) e refinar CTAs.",
+      "Testes A/B de headline e ordem das seções no mobile."
+    ],
+    kpis: [
+      { label: "Objetivo", value: "Pedir no iFood" },
+      { label: "Deploy", value: "GitHub Pages" },
+      { label: "Stack", value: "React 19 + Vite 8" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/donacicasite/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero e marca",
+        description: "Tipografia forte, gradiente e CTAs para iFood, cardápio e WhatsApp.",
+        thumbSrc: "/projects/donacica-hot-dog/thumb.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen1.jpg"
+      },
+      {
+        title: "Impacto visual",
+        description: "Partículas, glow e hierarquia pensada para mobile.",
+        thumbSrc: "/projects/donacica-hot-dog/screen2.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen2.jpg"
+      },
+      {
+        title: "Diferenciais e cardápio",
+        description: "Cards da marca e abas do cardápio com fotos e preços reais.",
+        thumbSrc: "/projects/donacica-hot-dog/screen3.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen3.jpg"
+      },
+      {
+        title: "Sobre a marca",
+        description: "Foto real e prova social com avaliação 5.0.",
+        thumbSrc: "/projects/donacica-hot-dog/screen4.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen4.jpg"
+      },
+      {
+        title: "Benefícios e movimento",
+        description: "Marquee com frases da marca e reforço de conversão.",
+        thumbSrc: "/projects/donacica-hot-dog/screen5.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen5.jpg"
+      },
+      {
+        title: "CTA final e rodapé",
+        description: "Última conversão antes do footer com links e créditos.",
+        thumbSrc: "/projects/donacica-hot-dog/screen6.jpg",
+        fullSrc: "/projects/donacica-hot-dog/screen6.jpg"
+      }
+    ]
+  },
+  {
+    slug: "new-talent",
+    title: "New Talent — Site institucional",
+    subtitle: "Landing para escola de DJ, produção musical e locação — conversão e WhatsApp.",
+    summary:
+      "Site estático com visual de palco/estúdio, página única com cursos, produtos em abas, unidades (Maringá, Londrina, Balneário Camboriú) e atalhos constantes para WhatsApp e Instagram.",
+    description:
+      "Primeira impressão forte para quem busca curso de DJ ou serviços: texto direto, microanimações, partículas no hero e jornada pensada para mobile e lead rápido.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site institucional",
+    domain: "Marketing",
+    segment: "Educação / Música",
+    tags: [
+      "Landing Page",
+      "HTML/CSS/JS",
+      "GitHub Pages",
+      "WhatsApp",
+      "SEO",
+      "Mobile first"
+    ],
+    stack: [
+      "HTML5 semântico",
+      "CSS (variáveis de tema)",
+      "JavaScript (vanilla)",
+      "Canvas (partículas)",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(60, 120, 255, 0.38)",
+      b: "rgba(140, 40, 200, 0.28)",
+      c: "rgba(120, 200, 255, 0.12)"
+    },
+    context:
+      "A New Talent é escola de DJ e também atua com produção musical e locação de equipamento. O site é uma landing institucional: primeira impressão forte, visual de música eletrônica / palco / estúdio (fundo escuro, azul, animação no hero), texto direto e muitos atalhos para o WhatsApp. Não é o site cinza de escola com PDF escondido — é pensado para quem está no celular, rolando rápido e querendo entender a marca e já falar com alguém.",
+    problem: [
+      "Sem um lugar único na internet, a escola some na busca e mistura informação de uma cidade com outra.",
+      "Leads se perdem porque ninguém explica no privado toda vez o que oferecem, onde atendem e como começar.",
+      "Dependência de indicação ou atendimento manual no Zap para explicar tudo."
+    ],
+    constraints: [
+      "Projeto 100% estático — sem servidor e sem banco.",
+      "Conteúdo editável no HTML; links de WhatsApp/Instagram por unidade quando fechados.",
+      "Prioridade absoluta a performance e leitura no celular."
+    ],
+    solution: [
+      "Página única: hero com impacto, cursos, produtos em abas (DJ, produção musical, locação), unidades com história por cidade (desde 2013 / 2018 / 2022).",
+      "Seções “pra quem é”, “como funciona”, CTA final e footer com navegação clara.",
+      "Vários botões de conversão + WhatsApp flutuante + link para Instagram.",
+      "SEO básico: título, descrição, Open Graph e hierarquia de headings.",
+      "Menu fixo e menu mobile, scroll suave, microanimações, partículas no hero, contador de números, parallax leve nos orbs no desktop.",
+      "Deploy em GitHub Pages a partir da raiz do repositório (branch main ou /docs, conforme configuração)."
+    ],
+    results: [
+      "Quem entra entende em segundos a proposta, as linhas (DJ / produção / locação) e que há mais de uma unidade.",
+      "Caminho curto para conversar (WhatsApp) — menos “não sei se é pra mim ou na minha cidade”.",
+      "Cara de marca séria e atual; site leve e estático carrega rápido no 4G — essencial com tráfego majoritário mobile."
+    ],
+    learnings: [
+      "Intersection Observer e JS vanilla bastam para entrada animada sem framework pesado.",
+      "Comentários no HTML nos pontos de troca de links reduzem retrabalho quando o cliente fecha dados por unidade."
+    ],
+    nextSteps: [
+      "Medir cliques por seção e refinar ordem dos CTAs no mobile.",
+      "Expandir metadados locais (schema) se a busca por cidade crescer."
+    ],
+    kpis: [
+      { label: "Formato", value: "Página única estática" },
+      { label: "Deploy", value: "GitHub Pages" },
+      { label: "Stack", value: "HTML + CSS + JS" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/sitenewtalent/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero e identidade",
+        description: "Visual escuro, azul e animação com partículas no fundo.",
+        thumbSrc: "/projects/new-talent/thumb.jpg",
+        fullSrc: "/projects/new-talent/screen1.jpg"
+      },
+      {
+        title: "Cursos e narrativa",
+        description: "Blocos de conteúdo e hierarquia para leitura rápida.",
+        thumbSrc: "/projects/new-talent/screen2.jpg",
+        fullSrc: "/projects/new-talent/screen2.jpg"
+      },
+      {
+        title: "Produtos em abas",
+        description: "DJ, produção musical e locação em uma única seção com abas.",
+        thumbSrc: "/projects/new-talent/screen3.jpg",
+        fullSrc: "/projects/new-talent/screen3.jpg"
+      },
+      {
+        title: "Unidades e história",
+        description: "Maringá, Londrina e Balneário Camboriú com linha do tempo da marca.",
+        thumbSrc: "/projects/new-talent/screen4.jpg",
+        fullSrc: "/projects/new-talent/screen4.jpg"
+      },
+      {
+        title: "Conversão e rodapé",
+        description: "CTA final, links e presença de WhatsApp e redes.",
+        thumbSrc: "/projects/new-talent/screen5.jpg",
+        fullSrc: "/projects/new-talent/screen5.jpg"
       }
     ]
   },
@@ -1150,11 +1392,11 @@ export const projects: Project[] = [
   {
     slug: "gestao-producao-industrial-mes",
     title: "Gestão de Produção Industrial",
-    subtitle: "MES para rastreamento completo do ciclo de vida de ordens de produção têxtil.",
+    subtitle: "MES têxtil — centro de comando da fábrica, da engenharia ao embarque.",
     summary:
-      "MVP de sistema MES para fábrica têxtil que rastreia ordens de produção da aprovação do desenho técnico até o embarque final, com modo offline (localStorage) e modo autoritativo (Node.js + PostgreSQL + SSE).",
+      "Painel tipo centro de comando: ordens de produção percorrem desenho técnico, corte, estamparia, qualidade, expedição, faturamento e embarque — com visão rápida do que flui, do que trava e do que pode estourar prazo.",
     description:
-      "Sistema MES com fluxo de 7 etapas, 9 portões de workflow tipados, sistema de alertas com deduplicação por fingerprint e modo dual: 100% frontend no GitHub Pages ou backend autoritativo com estado em tempo real via SSE.",
+      "Fluxo de 7 etapas com status por etapa, painéis com filtros, alertas de risco, ações de workflow e correções de exceção; simulação em cadência previsível e modo local (frontend) ou remoto (API + PostgreSQL + SSE).",
     year: 2026,
     status: "Concluído",
     progress: 100,
@@ -1164,13 +1406,14 @@ export const projects: Project[] = [
     tags: ["MES", "Produção", "SSE", "Node.js", "PostgreSQL", "Workflow", "Alertas", "Têxtil"],
     stack: [
       "Next.js",
+      "React",
       "TypeScript",
       "Node.js",
       "Express",
       "PostgreSQL",
       "SSE",
       "Tailwind CSS",
-      "React"
+      "Vitest"
     ],
     cover: {
       kind: "gradient",
@@ -1179,53 +1422,49 @@ export const projects: Project[] = [
       c: "rgba(255, 255, 255, 0.12)"
     },
     context:
-      "A fábrica têxtil não tinha visibilidade centralizada do ciclo de vida das ordens de produção. Cada etapa era rastreada de forma isolada, criando gargalos invisíveis e atrasos na entrega sem audit trail de aprovações e documentos.",
+      "O site funciona como um centro de comando de fábrica têxtil: mostra as ordens de produção atravessando a operação inteira — do desenho técnico ao corte, estamparia, qualidade, expedição, faturamento e embarque. O gestor abre e enxerga rápido o que está fluindo, o que está travado e o que vai estourar prazo.",
     problem: [
-      "Ausência de rastreabilidade documental por ordem de produção.",
-      "Detecção reativa de gargalos sem antecipação de falhas.",
-      "Falta de audit trail para aprovações, documentos fiscais e logística.",
-      "Necessidade de funcionar offline para demonstrações sem infraestrutura.",
-      "Duplicação de alertas e inconsistência no histórico de eventos entre ticks."
+      "Falta de previsibilidade e rastreabilidade ponta a ponta no fluxo.",
+      "Informação que parecia aleatória na simulação vira dor real: OP atrasada sem contexto, gargalo que ninguém vê a tempo, documento que trava embarque no fim.",
+      "Muita decisão reativa e pouca visão única da cadeia — antes, sem audit trail claro de aprovações e documentos.",
+      "Necessidade de demo confiável sem infraestrutura (modo local) e, depois, modo autoritativo com estado em tempo real."
     ],
     constraints: [
-      "Sistema deve funcionar 100% no browser via localStorage sem backend.",
-      "O mesmo código deve suportar backend autoritativo com PostgreSQL e SSE.",
-      "Simulação deve ser determinística por tick para eliminar flakiness em demos.",
-      "Alertas não podem ser duplicados entre ticks nem descartados prematuramente.",
-      "Runtime config injetada em build sem localhost hardcoded para qualquer ambiente."
+      "Deve rodar como frontend puro (localStorage) para demonstração estática.",
+      "O mesmo domínio deve operar com backend Express + PostgreSQL + SSE em produção.",
+      "Simulação determinística por cadência/tick para comportamento reproduzível na demo.",
+      "Alertas sem duplicação entre ticks; estado normalizado ao mesclar simulação e servidor.",
+      "Configuração de runtime injetável no build (sem localhost fixo)."
     ],
     solution: [
-      "Fluxo de 7 etapas com 9 portões de workflow tipados e ações nomeadas (aprovar_desenho, emitir_nf, vincular_caminhao, confirmar_embarque).",
-      "Modo dual via ProductionRuntimeMode: client (localStorage) ou remote (API REST + SSE).",
-      "seededRatio(tick, index) para simulação determinística e demos 100% reproduzíveis.",
-      "normalizeProductionSnapshot() e reconcileAlertTimeline() para consistência do estado mesclado.",
-      "Sistema de fingerprint com deduplicação, reconhecimento com autor/timestamp e histórico de até 32 alertas.",
-      "Painel de ordens com filtros por status/setor/prioridade, busca e export CSV/PDF.",
-      "3 cenários de demo: turno_estavel, gargalo_costura e parada_critica.",
-      "Backend REST com 26 rotas de ação + SSE com heartbeat a cada 15s + healthcheck com latência do banco."
+      "Fluxo completo de 7 etapas com status claro por etapa e 9 portões de workflow tipados.",
+      "Painéis de ordens com filtros e visão executiva/operacional; export CSV/PDF e cenários de demo (ex.: turno estável, gargalo, parada crítica).",
+      "Alertas automáticos de risco: SLA estourado, documento pendente, doca atrasada, NF bloqueada etc., com deduplicação por fingerprint e histórico rastreável.",
+      "Ações de workflow (aprovar desenho, emitir NF, vincular caminhão, confirmar embarque) e correções de exceção (reabrir qualidade, corrigir nota, reagendar doca, trocar caminhão).",
+      "Simulação em cadência previsível: as OPs nascem no início e avançam de forma sequencial e determinística.",
+      "Modo local (frontend puro) e modo remoto (REST + SSE, fallback de polling quando necessário); dezenas de rotas de ação e heartbeat SSE.",
+      "Domínio estruturado em workflow, contratos tipados e estado normalizado; testes automatizados no domínio (Vitest) para estabilidade das regras."
     ],
     results: [
-      "Audit trail completo por ordem com quem aprovou, quando e com quais parâmetros (AQL, taxa de defeitos, NF-e, CFOP, placa, transportadora, lacre).",
-      "Alertas automáticos para SLA estourado, documentos pendentes, NF-e bloqueada e janela de doca vencida.",
-      "Visibilidade de gargalos em tempo real via dominantBottleneck e routeHealth (on_track / warning / critical).",
-      "Comportamento preventivo do time em vez de reativo pela antecipação automática de falhas.",
-      "Deploy estático no GitHub Pages totalmente funcional sem depender de backend."
+      "Mais clareza para a operação: todos entendem em qual etapa cada OP está.",
+      "Menos surpresa de última hora — riscos aparecem antes, com alertas e contexto.",
+      "Melhor decisão: priorização por gargalo real, não por achismo.",
+      "Mais confiança na demo e no sistema: comportamento consistente, reproduzível e auditável.",
+      "Deploy estático no GitHub Pages utilizável sem backend; opção remota para dados e tempo real."
     ],
     learnings: [
-      "A fronteira simulação/estado real precisa ser explicitamente desenhada na arquitetura desde o início.",
-      "Alertas deduplicados por fingerprint eliminam ruído e aumentam a confiança do time no sistema.",
-      "seededRatio torna a simulação determinística e os demos reproduzíveis sem flakiness.",
-      "Separar mutações em production-service.ts desacopla o frontend do modo de execução atual."
+      "Simulação determinística e contratos tipados no domínio evitam ‘flakiness’ e discussões sem fim em demo.",
+      "Separar claramente modo cliente vs remoto desacopla UX da infraestrutura atual."
     ],
     nextSteps: [
-      "Ampliar cobertura de testes automatizados de workflow e portões de ação.",
-      "Adicionar módulo de análise histórica de SLA por etapa com comparativos de turno.",
-      "Integrar com sistemas fiscais reais para emissão e rastreamento de NF-e."
+      "Ampliar testes de workflow e portões de ação.",
+      "Análise histórica de SLA por etapa e comparativos de turno.",
+      "Integração com emissão fiscal real quando o ambiente permitir."
     ],
     kpis: [
-      { label: "Rastreabilidade", value: "Audit trail completo" },
-      { label: "Disponibilidade", value: "Offline + autoritativo" },
-      { label: "Antecipação", value: "Alertas preventivos" }
+      { label: "Fluxo", value: "7 etapas ponta a ponta" },
+      { label: "Modos", value: "Local + remoto (SSE)" },
+      { label: "Risco", value: "Alertas antecipados" }
     ],
     confidentialityNote:
       "Dados de produção apresentados em ambiente demonstrativo com valores sintéticos gerados por simulação.",
@@ -1238,28 +1477,201 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        title: "Pipeline de 7 Etapas",
-        description: "Fluxo ponta a ponta da engenharia ao embarque com autoalimentacao e drill-down por ordem.",
+        title: "Pipeline de 7 etapas",
+        description: "Fluxo ponta a ponta da engenharia ao embarque com visão por ordem.",
         thumbSrc: "/projects/gestao-producao-industrial-mes/screen1.jpg",
         fullSrc: "/projects/gestao-producao-industrial-mes/screen1.jpg"
       },
       {
-        title: "Drill-down da Expedicao",
-        description: "Controle da etapa com backlog, SLA, documentos e microgerenciamento por OP.",
+        title: "Drill-down da expedição",
+        description: "Backlog, SLA, documentos e acompanhamento por OP.",
         thumbSrc: "/projects/gestao-producao-industrial-mes/screen2.jpg",
         fullSrc: "/projects/gestao-producao-industrial-mes/screen2.jpg"
       },
       {
-        title: "Cards de Embarque",
-        description: "Status por OP com NF, caminhao, doca, volumes e saida prevista.",
+        title: "Cards de embarque",
+        description: "Status por OP com NF, caminhão, doca e saída prevista.",
         thumbSrc: "/projects/gestao-producao-industrial-mes/screen3.jpg",
         fullSrc: "/projects/gestao-producao-industrial-mes/screen3.jpg"
       },
       {
-        title: "Apontamento Manual",
-        description: "Registro de producao, paradas, qualidade e transicoes de etapa com impacto imediato na operacao.",
+        title: "Apontamento e qualidade",
+        description: "Produção, paradas e transições de etapa com impacto na operação.",
         thumbSrc: "/projects/gestao-producao-industrial-mes/screen4.jpg",
         fullSrc: "/projects/gestao-producao-industrial-mes/screen4.jpg"
+      },
+      {
+        title: "Painel operacional",
+        description: "Filtros, priorização e leitura rápida do que trava ou flui.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen5.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen5.jpg"
+      },
+      {
+        title: "Alertas e riscos",
+        description: "SLA, documentos pendentes e sinais antes do estouro de prazo.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen6.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen6.jpg"
+      },
+      {
+        title: "Workflow e ações",
+        description: "Aprovações, exceções e correções no fluxo da OP.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen7.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen7.jpg"
+      },
+      {
+        title: "Visão executiva",
+        description: "Resumo para gestão: gargalos, rotas e saúde do pipeline.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen8.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen8.jpg"
+      },
+      {
+        title: "Detalhe da ordem",
+        description: "Contexto completo da OP em uma tela.",
+        thumbSrc: "/projects/gestao-producao-industrial-mes/screen9.jpg",
+        fullSrc: "/projects/gestao-producao-industrial-mes/screen9.jpg"
+      }
+    ]
+  },
+  {
+    slug: "press-kit-levorato-dj",
+    title: "Press Kit Digital — LEVORATO DJ",
+    subtitle: "Site de press kit para conversão de bookings e apresentação profissional da marca.",
+    summary:
+      "Site estático de press kit para o DJ e produtor Pedro Levorato: identidade, história, música e contato em uma única URL pública para contratantes, assessores e promoters.",
+    description:
+      "Cartão de visita digital completo que vende o artista antes mesmo de uma conversa acontecer — visual agressivo, sets on-demand e galeria de fotos para download.",
+    year: 2025,
+    status: "Concluído",
+    progress: 100,
+    type: "Site estático",
+    domain: "Marketing",
+    segment: "Música / Entretenimento",
+    tags: [
+      "Press Kit",
+      "HTML/CSS/JS",
+      "GitHub Pages",
+      "DJ",
+      "Booking",
+      "Música"
+    ],
+    stack: [
+      "HTML5 semântico",
+      "CSS3 (variáveis customizadas)",
+      "JavaScript vanilla",
+      "Intersection Observer API",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(220, 30, 50, 0.42)",
+      b: "rgba(180, 10, 30, 0.32)",
+      c: "rgba(255, 60, 80, 0.15)"
+    },
+    context:
+      "O artista não tinha presença digital estruturada para o mercado de bookings. As informações estavam espalhadas em redes sociais, sem um ponto centralizado que transmitisse autoridade e identidade de marca para quem fosse contratar. Precisava de algo que vendesse antes mesmo de uma conversa acontecer.",
+    problem: [
+      "Sem presença digital estruturada, o artista perdia credibilidade na hora de fechar bookings.",
+      "Informações espalhadas em redes sociais sem narrativa de marca clara.",
+      "Contratantes e promoters precisavam perguntar tudo manualmente — fotos, sets, história, contato."
+    ],
+    constraints: [
+      "Site 100% estático, sem backend — deploy simples via GitHub Pages.",
+      "Funcionar perfeitamente em mobile, onde a maioria dos contratantes acessa.",
+      "Galeria de fotos com download nativo, sem dependência de serviços externos."
+    ],
+    solution: [
+      "Hero com identidade visual forte: foto, título, partículas animadas e efeitos neon.",
+      "Linha do tempo interativa com 3 capítulos da trajetória (2011, 2022, 2025).",
+      "Carrossel horizontal infinito de fotos dos lugares onde já tocou.",
+      "Seção de músicas com sistema de abas — 6 sets no SoundCloud e 6 tracks autorais no Spotify.",
+      "Seção 'Sobre' com bio, tags de estilo musical e foto profissional.",
+      "Galeria em alta qualidade com download individual e pacote .zip.",
+      "Booking com botões diretos para WhatsApp, Instagram e e-mail.",
+      "Design 100% responsivo com 5 breakpoints e tratamento especial para touch devices."
+    ],
+    results: [
+      "Centralizou toda a identidade profissional do artista em um único link compartilhável.",
+      "Contratantes acessam sets, lançamentos, histórico e contato sem fricção.",
+      "Galeria de download eliminou o processo manual de envio de fotos por mensagem.",
+      "Estética agressiva e premium reforçou o posicionamento no mercado de Minimal Bass underground.",
+      "Aumentou percepção de profissionalismo e facilita a tomada de decisão do contratante."
+    ],
+    learnings: [
+      "Partículas geradas via JS puro (180 instâncias via @keyframes) têm performance comparável a libs pesadas.",
+      "Intersection Observer + CSS keyframes bastam para reveal profissional sem framework.",
+      "Cálculo dinâmico de posição via JS resolve timeline animada sem depender de bibliotecas de scroll."
+    ],
+    nextSteps: [
+      "Adicionar analytics para medir origem dos contatos de booking.",
+      "Versão em inglês para alcance internacional."
+    ],
+    kpis: [
+      { label: "Formato", value: "Site estático" },
+      { label: "Deploy", value: "GitHub Pages" },
+      { label: "Partículas JS", value: "180 instâncias" },
+      { label: "Breakpoints", value: "5 (960→520px)" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/presskitlevoratodj",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero e identidade",
+        description: "Foto do artista, partículas animadas e efeitos neon com identidade forte.",
+        thumbSrc: "/projects/press-kit-levorato-dj/thumb.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen1.jpg"
+      },
+      {
+        title: "Linha do tempo",
+        description: "3 capítulos da trajetória: 2011, 2022 e 2025 com spine animada.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen2.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen2.jpg"
+      },
+      {
+        title: "Carrossel de lugares",
+        description: "Fotos dos venues onde já tocou em loop infinito horizontal.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen3.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen3.jpg"
+      },
+      {
+        title: "Seção de músicas",
+        description: "Abas SoundCloud (sets) e Spotify (autorais) integradas.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen4.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen4.jpg"
+      },
+      {
+        title: "Galeria e download",
+        description: "Fotos profissionais com download individual e pacote .zip.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen5.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen5.jpg"
+      },
+      {
+        title: "Booking e contato",
+        description: "CTAs diretos para WhatsApp, Instagram e e-mail.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen6.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen6.jpg"
+      },
+      {
+        title: "Mobile e responsividade",
+        description: "Layout adaptado para celular com todos os breakpoints.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen7.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen7.jpg"
+      },
+      {
+        title: "Seção Sobre",
+        description: "Bio do artista, tags de estilo musical e foto profissional.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen8.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen8.jpg"
+      },
+      {
+        title: "Detalhes visuais",
+        description: "Efeitos neon, animações e identidade visual da marca.",
+        thumbSrc: "/projects/press-kit-levorato-dj/screen9.jpg",
+        fullSrc: "/projects/press-kit-levorato-dj/screen9.jpg"
       }
     ]
   }];
@@ -1345,6 +1757,14 @@ export const projectsLite: ProjectLite[] = [
       {
         src: "/projects/planejamento-orcamentario-coordenador/screen3.jpg",
         alt: "Tela 3"
+      },
+      {
+        src: "/projects/planejamento-orcamentario-coordenador/screen4.jpg",
+        alt: "Tela 4"
+      },
+      {
+        src: "/projects/planejamento-orcamentario-coordenador/screen5.jpg",
+        alt: "Tela 5"
       }
     ]
   },
@@ -1502,6 +1922,91 @@ export const projectsLite: ProjectLite[] = [
     ]
   },
   {
+    slug: "donacica-hot-dog",
+    title: "Dona Ciça Hot Dog — Landing Page",
+    oneLiner:
+      "Landing de alta conversão para presença própria da marca e pedidos no iFood.",
+    problem:
+      "Marca forte no delivery mas sem site próprio que converta e gere confiança fora do app.",
+    solution:
+      "Landing estática com impacto visual, cardápio real, CTAs para iFood e deploy gratuito no GitHub Pages.",
+    features: [
+      "Hero com marca, copy e CTAs (iFood, cardápio, WhatsApp)",
+      "Diferenciais, cardápio em abas com fotos e preços reais",
+      "Sobre com foto real e prova social",
+      "Animações com Framer Motion e assets da marca",
+      "Fonte única de conteúdo em siteContent",
+      "Build com Vite e hospedagem em GitHub Pages"
+    ],
+    benefits: [
+      "Credibilidade em buscas e redes",
+      "Link próprio da marca em qualquer canal",
+      "Conversão guiada até o pedido no iFood"
+    ],
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "Vite 8",
+      "Tailwind CSS 3",
+      "Framer Motion",
+      "Lucide React",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/donacicasite/" }
+    ],
+    images: [
+      { src: "/projects/donacica-hot-dog/thumb.jpg", alt: "Hero Dona Ciça" },
+      { src: "/projects/donacica-hot-dog/screen1.jpg", alt: "Hero e CTAs" },
+      { src: "/projects/donacica-hot-dog/screen2.jpg", alt: "Impacto visual" },
+      { src: "/projects/donacica-hot-dog/screen3.jpg", alt: "Diferenciais e cardápio" },
+      { src: "/projects/donacica-hot-dog/screen4.jpg", alt: "Sobre a marca" },
+      { src: "/projects/donacica-hot-dog/screen5.jpg", alt: "Benefícios" },
+      { src: "/projects/donacica-hot-dog/screen6.jpg", alt: "CTA e footer" }
+    ]
+  },
+  {
+    slug: "new-talent",
+    title: "New Talent — Site institucional",
+    oneLiner:
+      "Landing estática para escola de DJ e serviços, com foco em lead e WhatsApp.",
+    problem:
+      "Marca invisível na busca e leads perdidos sem um lugar único que explique ofertas e unidades.",
+    solution:
+      "Site em HTML/CSS/JS puro, uma página, abas de produtos, unidades e deploy no GitHub Pages.",
+    features: [
+      "Hero com partículas (canvas) e visual de palco/estúdio",
+      "Cursos, produtos em abas (DJ, produção, locação) e unidades por cidade",
+      "Menu fixo, mobile, scroll suave e microanimações (Intersection Observer)",
+      "WhatsApp flutuante, CTAs e Instagram",
+      "SEO básico e Open Graph",
+      "Manutenção direta no HTML com comentários para links por unidade"
+    ],
+    benefits: [
+      "Proposta clara em segundos",
+      "Conversão rápida no celular",
+      "Zero custo de servidor"
+    ],
+    techStack: [
+      "HTML5",
+      "CSS (variáveis)",
+      "JavaScript vanilla",
+      "Canvas",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/sitenewtalent/" }
+    ],
+    images: [
+      { src: "/projects/new-talent/thumb.jpg", alt: "Hero New Talent" },
+      { src: "/projects/new-talent/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/new-talent/screen2.jpg", alt: "Cursos e narrativa" },
+      { src: "/projects/new-talent/screen3.jpg", alt: "Produtos em abas" },
+      { src: "/projects/new-talent/screen4.jpg", alt: "Unidades" },
+      { src: "/projects/new-talent/screen5.jpg", alt: "CTA e footer" }
+    ]
+  },
+  {
     slug: "sistema-chamados-portfolio-vivo",
     title: "Sistema Interno de Chamados Printbag",
     oneLiner:
@@ -1545,77 +2050,85 @@ export const projectsLite: ProjectLite[] = [
     ]
   },
   {
-    slug: "mock-projeto-01",
-    title: "Monitor de SLA Operacional",
-    oneLiner: "Painel para acompanhar SLAs por etapa e gargalos críticos.",
-    problem: "Falta de visibilidade sobre atrasos e impacto no fluxo.",
-    solution: "Dashboard com alertas e visão por etapa operacional.",
-    features: ["Alertas por etapa", "Visão por responsável", "Histórico por período"],
-    benefits: ["Menos atrasos", "Priorização clara", "Decisões rápidas"],
-    techStack: ["Next.js", "TypeScript", "BI"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen1.svg", alt: "Tela 1" }
-    ]
-  },
-  {
-    slug: "mock-projeto-02",
-    title: "Mapa de Estoque Crítico",
-    oneLiner: "Mapa visual com status e risco de ruptura.",
-    problem: "Baixa rastreabilidade de itens críticos.",
-    solution: "Painel de localização com filtros e alertas automáticos.",
-    features: ["Mapa de calor", "Alertas automáticos", "Ranking de risco"],
-    benefits: ["Redução de rupturas", "Visão priorizada", "Ação preventiva"],
-    techStack: ["Next.js", "TypeScript", "APIs"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen2.svg", alt: "Tela 2" }
-    ]
-  },
-  {
-    slug: "mock-projeto-03",
-    title: "Planner de Produção",
-    oneLiner: "Visão de backlog e capacidade por turno.",
-    problem: "Planejamento manual e sem previsibilidade de carga.",
-    solution: "Planner com cenários e comparativos de capacidade.",
-    features: ["Cenários", "Carga por turno", "Indicadores de capacidade"],
-    benefits: ["Planejamento mais confiável", "Menos gargalos", "Alinhamento entre áreas"],
-    techStack: ["Next.js", "TypeScript", "SQL Server"],
-    accessLinks: [],
-    images: [
-      { src: "/projects/_placeholders/cover.svg", alt: "Capa do projeto" },
-      { src: "/projects/_placeholders/screen3.svg", alt: "Tela 3" }
-    ]
-  },
-  {
     slug: "gestao-producao-industrial-mes",
     title: "Gestão de Produção Industrial",
-    oneLiner: "MES para rastrear ordens de produção têxtil da aprovação do desenho até o embarque.",
-    problem: "Falta de rastreabilidade e visibilidade centralizada do ciclo de vida das ordens.",
-    solution: "Fluxo de 7 etapas com 9 portões de workflow, modo dual offline/autoritativo e alertas preventivos.",
+    oneLiner:
+      "MES têxtil — centro de comando da OP do desenho ao embarque, com alertas e fluxo de 7 etapas.",
+    problem:
+      "Pouca previsibilidade e rastreabilidade; decisão reativa e risco de trava no fim do processo.",
+    solution:
+      "Painéis, alertas de SLA, workflow com ações e exceções; simulação determinística; modo local ou remoto com SSE.",
     features: [
-      "Fluxo de 7 etapas com 9 portões de workflow tipados",
-      "Modo dual: localStorage (offline) ou Node.js + PostgreSQL + SSE",
-      "Sistema de alertas com fingerprint e deduplicação",
-      "Export CSV/PDF e 3 cenários de demo",
-      "26 rotas REST + SSE com heartbeat"
+      "7 etapas: desenho → corte → estamparia → qualidade → expedição → faturamento → embarque",
+      "Alertas automáticos (SLA, documento, doca, NF) e ações de workflow",
+      "Modo dual: frontend local ou Node + PostgreSQL + SSE (com fallback de polling)",
+      "Simulação em cadência previsível; domínio com testes (Vitest)"
     ],
     benefits: [
-      "Audit trail completo por ordem de produção",
-      "Antecipação de falhas por alertas preventivos",
-      "Visibilidade de gargalos em tempo real"
+      "Visão do que flui, trava ou estoura prazo",
+      "Priorização por gargalo real",
+      "Demo e sistema com comportamento reproduzível"
     ],
-    techStack: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "SSE"],
+    techStack: ["Next.js", "React", "TypeScript", "Node.js", "Express", "PostgreSQL", "SSE", "Vitest"],
     accessLinks: [
       { label: "Acesso público", url: "https://levoratoo.github.io/gestao-producao-industrial/" }
     ],
     images: [
+      { src: "/projects/gestao-producao-industrial-mes/thumb.jpg", alt: "Capa MES produção" },
       { src: "/projects/gestao-producao-industrial-mes/screen1.jpg", alt: "Pipeline de 7 etapas" },
-      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da Expedicao" },
+      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da expedição" },
       { src: "/projects/gestao-producao-industrial-mes/screen3.jpg", alt: "Cards de embarque" },
-      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento manual" }
+      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento e qualidade" },
+      { src: "/projects/gestao-producao-industrial-mes/screen5.jpg", alt: "Painel operacional" },
+      { src: "/projects/gestao-producao-industrial-mes/screen6.jpg", alt: "Alertas e riscos" },
+      { src: "/projects/gestao-producao-industrial-mes/screen7.jpg", alt: "Workflow e ações" },
+      { src: "/projects/gestao-producao-industrial-mes/screen8.jpg", alt: "Visão executiva" },
+      { src: "/projects/gestao-producao-industrial-mes/screen9.jpg", alt: "Detalhe da ordem" }
+    ]
+  },
+  {
+    slug: "press-kit-levorato-dj",
+    title: "Press Kit Digital — LEVORATO DJ",
+    oneLiner:
+      "Press kit estático para conversão de bookings: identidade, música, galeria e contato em um link.",
+    problem:
+      "Artista sem presença digital estruturada — informações espalhadas em redes sociais sem ponto centralizado que transmitisse autoridade para contratantes.",
+    solution:
+      "Site estático completo publicado via GitHub Pages com hero neon, timeline de trajetória, carrossel de venues, sets embeds e galeria para download.",
+    features: [
+      "Hero com foto, partículas animadas (180 instâncias JS) e efeitos neon",
+      "Timeline interativa com spine animada — 3 capítulos (2011, 2022, 2025)",
+      "Carrossel infinito de fotos dos venues; galeria com download individual e .zip",
+      "Seção de músicas com abas: 6 sets (SoundCloud) e 6 tracks autorais (Spotify)",
+      "Booking com botões diretos para WhatsApp, Instagram e e-mail",
+      "5 breakpoints responsive + tratamento hover:none para touch"
+    ],
+    benefits: [
+      "Identidade profissional em um único link compartilhável",
+      "Contratantes acessam tudo sem friccão — sem perguntar fotos ou sets",
+      "Estética premium reforça posicionamento no Minimal Bass underground"
+    ],
+    techStack: [
+      "HTML5 semântico",
+      "CSS3 (variáveis customizadas, @keyframes)",
+      "JavaScript vanilla",
+      "Intersection Observer API",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/presskitlevoratodj" }
+    ],
+    images: [
+      { src: "/projects/press-kit-levorato-dj/thumb.jpg", alt: "Hero LEVORATO DJ" },
+      { src: "/projects/press-kit-levorato-dj/screen1.jpg", alt: "Hero e identidade neon" },
+      { src: "/projects/press-kit-levorato-dj/screen2.jpg", alt: "Timeline de trajetória" },
+      { src: "/projects/press-kit-levorato-dj/screen3.jpg", alt: "Carrossel de venues" },
+      { src: "/projects/press-kit-levorato-dj/screen4.jpg", alt: "Seção de músicas e abas" },
+      { src: "/projects/press-kit-levorato-dj/screen5.jpg", alt: "Galeria e download" },
+      { src: "/projects/press-kit-levorato-dj/screen6.jpg", alt: "Booking e contato" },
+      { src: "/projects/press-kit-levorato-dj/screen7.jpg", alt: "Mobile e responsividade" },
+      { src: "/projects/press-kit-levorato-dj/screen8.jpg", alt: "Seção Sobre" },
+      { src: "/projects/press-kit-levorato-dj/screen9.jpg", alt: "Detalhes visuais" }
     ]
   }
 ];
@@ -1701,6 +2214,10 @@ export const previewProjects: PreviewProject[] = [
       {
         src: "/projects/planejamento-orcamentario-coordenador/screen4.jpg",
         alt: "Relatórios comparativos"
+      },
+      {
+        src: "/projects/planejamento-orcamentario-coordenador/screen5.jpg",
+        alt: "Acesso ao sistema"
       }
     ]
   },
@@ -1862,8 +2379,83 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/landing-page-printbag/screen4.png", alt: "Prova social e parceiros" },
       { src: "/projects/landing-page-printbag/screen5.png", alt: "Contato e formulário" }
     ]
-  }
-,
+  },
+  {
+    slug: "donacica-hot-dog",
+    title: "Dona Ciça Hot Dog — Landing Page",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Landing Page",
+      "Conversão",
+      "iFood",
+      "React 19",
+      "Vite",
+      "Framer Motion",
+      "GitHub Pages"
+    ],
+    thumb: "/projects/donacica-hot-dog/thumb.jpg",
+    description:
+      "Landing page da Dona Ciça: presença digital própria para credibilidade e conversão direta para o iFood, com cardápio real e impacto visual forte no mobile.",
+    bullets: [
+      "Objetivo único: levar o visitante a pedir no iFood (sem checkout próprio).",
+      "Hero com tipografia forte, partículas, gradiente e CTAs para iFood, cardápio e WhatsApp.",
+      "Cardápio em abas com fotos, ingredientes e preços alinhados ao iFood.",
+      "Sobre a marca com foto real, nota 5.0 e footer com links da marca.",
+      "React 19 + Vite 8 + Tailwind + Framer Motion; deploy gratuito no GitHub Pages."
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/donacicasite/" }
+    ],
+    gallery: [
+      { src: "/projects/donacica-hot-dog/thumb.jpg", alt: "Hero Dona Ciça" },
+      { src: "/projects/donacica-hot-dog/screen1.jpg", alt: "Hero e CTAs" },
+      { src: "/projects/donacica-hot-dog/screen2.jpg", alt: "Impacto visual e partículas" },
+      { src: "/projects/donacica-hot-dog/screen3.jpg", alt: "Diferenciais e cardápio" },
+      { src: "/projects/donacica-hot-dog/screen4.jpg", alt: "Sobre a marca" },
+      { src: "/projects/donacica-hot-dog/screen5.jpg", alt: "Benefícios e marquee" },
+      { src: "/projects/donacica-hot-dog/screen6.jpg", alt: "CTA final e rodapé" }
+    ]
+  },
+  {
+    slug: "new-talent",
+    title: "New Talent — Site institucional",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Landing Page",
+      "HTML/CSS/JS",
+      "GitHub Pages",
+      "WhatsApp",
+      "DJ",
+      "Mobile first"
+    ],
+    thumb: "/projects/new-talent/thumb.jpg",
+    description:
+      "Landing institucional da New Talent: escola de DJ, produção e locação — visual de palco, uma página, abas de produtos, três unidades e conversão para WhatsApp.",
+    bullets: [
+      "Hero com animação, partículas (canvas) e estética eletrônica / estúdio.",
+      "Cursos, produtos em abas (DJ, produção musical, locação) e histórico por unidade (Maringá, Londrina, BC).",
+      "Menu fixo, mobile, scroll suave, microanimações e contador no hero.",
+      "Vários CTAs + WhatsApp flutuante + Instagram; SEO e Open Graph.",
+      "Stack: HTML semântico, CSS com variáveis, JS vanilla (main.js); deploy estático no GitHub Pages."
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/sitenewtalent/" }
+    ],
+    gallery: [
+      { src: "/projects/new-talent/thumb.jpg", alt: "Hero New Talent" },
+      { src: "/projects/new-talent/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/new-talent/screen2.jpg", alt: "Cursos e narrativa" },
+      { src: "/projects/new-talent/screen3.jpg", alt: "Produtos em abas" },
+      { src: "/projects/new-talent/screen4.jpg", alt: "Unidades e história" },
+      { src: "/projects/new-talent/screen5.jpg", alt: "CTA e rodapé" }
+    ]
+  },
   {
     slug: "previsao-demanda-python-estatistica",
     title: "Previsao de Demanda (Python + Estatistica)",
@@ -1898,21 +2490,69 @@ export const previewProjects: PreviewProject[] = [
     tags: ["MES", "Produção", "SSE", "Workflow", "Alertas", "Têxtil"],
     thumb: "/projects/gestao-producao-industrial-mes/thumb.jpg",
     description:
-      "MVP de sistema MES com fluxo de 7 etapas, modo dual offline/autoritativo e rastreabilidade completa por ordem de produção têxtil.",
+      "Centro de comando da fábrica têxtil: OPs do desenho ao embarque, com painéis, alertas de risco, workflow e simulação previsível — Next.js ou modo remoto com Express, PostgreSQL e SSE.",
     bullets: [
-      "Fluxo de 7 etapas com 9 portões de workflow tipados",
-      "Modo dual: localStorage (offline) ou Node.js + PostgreSQL + SSE",
-      "Sistema de alertas com fingerprint, deduplicação e histórico de 32 entradas",
-      "Export CSV/PDF, 3 cenários de demo e 26 rotas REST"
+      "Visão do fluxo completo: desenho, corte, estamparia, qualidade, expedição, faturamento, embarque.",
+      "Painéis com filtros; alertas SLA/documento/doca; ações e correções de exceção.",
+      "Simulação determinística; OPs nascem no início e avançam em cadência.",
+      "Stack: Next.js/React + TS, Node/Express + PostgreSQL, SSE e polling de fallback; testes no domínio."
     ],
     accessLinks: [
       { label: "Acesso público", url: "https://levoratoo.github.io/gestao-producao-industrial/" }
     ],
     gallery: [
+      { src: "/projects/gestao-producao-industrial-mes/thumb.jpg", alt: "Capa MES produção" },
       { src: "/projects/gestao-producao-industrial-mes/screen1.jpg", alt: "Pipeline de 7 etapas" },
-      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da Expedicao" },
+      { src: "/projects/gestao-producao-industrial-mes/screen2.jpg", alt: "Drill-down da expedição" },
       { src: "/projects/gestao-producao-industrial-mes/screen3.jpg", alt: "Cards de embarque" },
-      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento manual" }
+      { src: "/projects/gestao-producao-industrial-mes/screen4.jpg", alt: "Apontamento e qualidade" },
+      { src: "/projects/gestao-producao-industrial-mes/screen5.jpg", alt: "Painel operacional" },
+      { src: "/projects/gestao-producao-industrial-mes/screen6.jpg", alt: "Alertas e riscos" },
+      { src: "/projects/gestao-producao-industrial-mes/screen7.jpg", alt: "Workflow e ações" },
+      { src: "/projects/gestao-producao-industrial-mes/screen8.jpg", alt: "Visão executiva" },
+      { src: "/projects/gestao-producao-industrial-mes/screen9.jpg", alt: "Detalhe da ordem" }
+    ]
+  },
+  {
+    slug: "press-kit-levorato-dj",
+    title: "Press Kit Digital — LEVORATO DJ",
+    year: 2025,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Press Kit",
+      "HTML/CSS/JS",
+      "GitHub Pages",
+      "DJ",
+      "Booking",
+      "Música"
+    ],
+    thumb: "/projects/press-kit-levorato-dj/thumb.jpg",
+    description:
+      "Press kit digital completo para o DJ Pedro Levorato — hero neon, timeline de trajetória, sets embeds, galeria com download e CTAs de booking em uma única URL pública.",
+    bullets: [
+      "Hero com partículas animadas (180 instâncias JS) e efeitos neon de identidade forte.",
+      "Linha do tempo interativa com 3 capítulos: 2011, 2022 e 2025.",
+      "Carrossel infinito de venues + seção de músicas com abas SoundCloud / Spotify.",
+      "Galeria em alta qualidade com download individual e pacote .zip.",
+      "Booking direto via WhatsApp, Instagram e e-mail; 5 breakpoints responsivos.",
+      "Stack: HTML5, CSS3 com @keyframes, JS vanilla, Intersection Observer; deploy no GitHub Pages."
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/presskitlevoratodj" }
+    ],
+    gallery: [
+      { src: "/projects/press-kit-levorato-dj/thumb.jpg", alt: "Hero LEVORATO DJ" },
+      { src: "/projects/press-kit-levorato-dj/screen1.jpg", alt: "Hero e identidade neon" },
+      { src: "/projects/press-kit-levorato-dj/screen2.jpg", alt: "Timeline de trajetória" },
+      { src: "/projects/press-kit-levorato-dj/screen3.jpg", alt: "Carrossel de venues" },
+      { src: "/projects/press-kit-levorato-dj/screen4.jpg", alt: "Seção de músicas e abas" },
+      { src: "/projects/press-kit-levorato-dj/screen5.jpg", alt: "Galeria e download" },
+      { src: "/projects/press-kit-levorato-dj/screen6.jpg", alt: "Booking e contato" },
+      { src: "/projects/press-kit-levorato-dj/screen7.jpg", alt: "Mobile e responsividade" },
+      { src: "/projects/press-kit-levorato-dj/screen8.jpg", alt: "Seção Sobre" },
+      { src: "/projects/press-kit-levorato-dj/screen9.jpg", alt: "Detalhes visuais" }
     ]
   }];
 
@@ -1960,7 +2600,10 @@ normalizeProjectAssets(projects);
 normalizeProjectsLiteAssets(projectsLite);
 normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
+  "press-kit-levorato-dj",
   "landing-page-printbag",
+  "donacica-hot-dog",
+  "new-talent",
   "dashboard-separacao-estoque",
   "planejamento-orcamentario-coordenador",
   "sistema-orcamentario-produtos-graficos",

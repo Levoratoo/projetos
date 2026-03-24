@@ -114,7 +114,7 @@ export function HeroMotion({ children, className }: HeroMotionProps) {
         style={{
           opacity: enabled ? 0.35 : 0,
           background:
-            "radial-gradient(circle at var(--mx) var(--my), rgba(52, 255, 176, 0.10), transparent 55%)"
+            "radial-gradient(circle at var(--mx) var(--my), rgba(255, 62, 62, 0.14), transparent 55%)"
         }}
       />
       {children}

@@ -18,7 +18,8 @@ function buildCover(cover: { a: string; b: string; c?: string }) {
     ? `, radial-gradient(circle at 50% 0%, ${cover.c}, transparent 60%)`
     : "";
 
-  return `radial-gradient(circle at 20% 20%, ${cover.a}, transparent 60%), radial-gradient(circle at 80% 40%, ${cover.b}, transparent 55%)${glow}, linear-gradient(180deg, rgba(8,9,12,0.9), rgba(8,9,12,0.4))`;
+  /** Topo com presença bordô (antes: cinza frio que “apagava” o vermelho) */
+  return `radial-gradient(ellipse 110% 55% at 50% -8%, rgba(140, 14, 32, 0.55), transparent 58%), radial-gradient(circle at 20% 20%, ${cover.a}, transparent 60%), radial-gradient(circle at 80% 40%, ${cover.b}, transparent 55%)${glow}, linear-gradient(180deg, rgba(32, 6, 12, 0.82), rgba(10, 4, 7, 0.88))`;
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
@@ -59,10 +60,13 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "dashboard-separacao-estoque" ||
     project.slug === "monitoramento-pedidos-tempo-real" ||
     project.slug === "landing-page-printbag" ||
+    project.slug === "donacica-hot-dog" ||
+    project.slug === "new-talent" ||
     project.slug === "previsao-demanda-python-estatistica" ||
     project.slug === "sistema-orcamentario-produtos-graficos" ||
     project.slug === "apresentador-projetos" ||
-    project.slug === "sistema-chamados-portfolio-vivo"
+    project.slug === "sistema-chamados-portfolio-vivo" ||
+    project.slug === "gestao-producao-industrial-mes"
       ? [{ id: "visao-tecnica", label: "Visão técnica" }]
       : []),
     { id: "galeria", label: "Galeria" }
@@ -80,7 +84,7 @@ export default function ProjectPage({ params }: PageProps) {
 
   return (
     <main className="relative pb-16">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(20,34,28,0.55),_transparent_60%),radial-gradient(circle_at_20%_80%,_rgba(18,28,24,0.45),_transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_120%_70%_at_50%_0%,rgba(180,24,42,0.42),transparent_55%),radial-gradient(circle_at_top,_rgba(130,14,28,0.38),transparent_52%),radial-gradient(circle_at_20%_80%,_rgba(255,59,59,0.14),_transparent_42%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.18] [background-image:url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27120%27 height=%27120%27 viewBox=%270 0 120 120%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27120%27 height=%27120%27 filter=%27url(%23n)%27 opacity=%270.5%27/%3E%3C/svg%3E')]" />
 
       <section className="relative overflow-hidden py-12 sm:py-16">
@@ -88,7 +92,7 @@ export default function ProjectPage({ params }: PageProps) {
           className="absolute inset-0 opacity-80"
           style={{ background: buildCover(project.cover) }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(86,255,146,0.12),_rgba(11,15,14,0.92))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_0%,rgba(255,72,82,0.32),transparent_50%),radial-gradient(circle_at_50%_0%,rgba(200,32,52,0.28),transparent_45%),radial-gradient(circle_at_top,_rgba(255,59,59,0.22),_rgba(18,6,10,0.88))]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:80px_80px]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
         <Container>
@@ -97,7 +101,7 @@ export default function ProjectPage({ params }: PageProps) {
               <div>
                 <Link
                   href="/#home-hero"
-                  className="inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-black/40 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-100 shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:border-emerald-300/70 hover:bg-black/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+                  className="ghost-button px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-mist/80 shadow-[0_10px_24px_rgba(0,0,0,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                 >
                   Voltar para o início
                 </Link>
@@ -225,7 +229,7 @@ export default function ProjectPage({ params }: PageProps) {
             <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
             <CaseSection id="impacto">
-              <section className="relative rounded-[32px] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(40,80,60,0.35),_rgba(12,14,13,0.9))] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+              <section className="relative rounded-[32px] border border-white/10 bg-[radial-gradient(circle_at_50%_0%,rgba(200,32,48,0.38),rgba(12,4,7,0.94))] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
                 <div className="pointer-events-none absolute -top-10 left-8 h-24 w-24 rounded-full bg-glow/20 blur-3xl" />
                 <div className="flex flex-wrap items-end justify-between gap-4">
                   <div>
@@ -651,6 +655,266 @@ export default function ProjectPage({ params }: PageProps) {
               </CaseSection>
             ) : null}
 
+            {project.slug === "donacica-hot-dog" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Stack, arquitetura e performance
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      A landing da Dona Ciça foi pensada para ser performática, sem custo de infraestrutura e fácil de manter. A interface é{" "}
+                      <strong className="text-white">React 19</strong> com{" "}
+                      <strong className="text-white">TypeScript</strong>, com componentes reutilizáveis e tipagem forte em todo o fluxo. O build usa{" "}
+                      <strong className="text-white">Vite 8</strong>, gerando bundles enxutos e dev server rápido; o output estático vai direto para o{" "}
+                      <strong className="text-white">GitHub Pages</strong>, sem servidor nem banco — tudo servido pelo CDN do GitHub.
+                    </p>
+                    <p>
+                      <strong className="text-white">Conteúdo e organização.</strong> Os textos, links, dados do cardápio e metadados vivem em um único lugar (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">siteContent</code>
+                      ), como fonte da verdade: alterar preço, descrição ou CTA não espalha mudança por dezenas de arquivos. Cada seção da página é um componente em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">sections/</code>
+                      , com responsabilidade isolada (hero, diferenciais, cardápio, sobre, benefícios, CTA, footer). Fotos ficam em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">assets/</code>
+                      , com nomes semânticos; UI base (botão, badge, card) em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">components/ui/</code>
+                      .
+                    </p>
+                    <p>
+                      <strong className="text-white">Estilo e movimento.</strong>{" "}
+                      <strong className="text-white">Tailwind CSS 3</strong> mantém o visual consistente e evita CSS espaguete.{" "}
+                      <strong className="text-white">Framer Motion</strong> cuida das entradas, do hero, do underline animado e dos elementos que precisam de movimento suave sem gambiarra.{" "}
+                      <strong className="text-white">Lucide React</strong> fornece ícones leves e uniformes.
+                    </p>
+                    <p>
+                      <strong className="text-white">Performance no browser.</strong> O build final separa chunks (vendor React, Framer Motion, código da aplicação), permitindo carregamento em paralelo. Imagens passam pelo pipeline do Vite. Sem backend próprio, a página abre rápido mesmo em conexões móveis — o que importa, já que o tráfego principal vem do celular.
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Camada</th>
+                          <th className="px-4 py-3 font-medium">Tecnologia</th>
+                          <th className="px-4 py-3 font-medium">Por quê</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">UI</td>
+                          <td className="px-4 py-3">React 19 + TypeScript</td>
+                          <td className="px-4 py-3">Componentes reutilizáveis e tipagem forte</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Build</td>
+                          <td className="px-4 py-3">Vite 8</td>
+                          <td className="px-4 py-3">Bundle enxuto, HMR rápido</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Estilos</td>
+                          <td className="px-4 py-3">Tailwind CSS 3</td>
+                          <td className="px-4 py-3">Utilitário, consistente</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Animações</td>
+                          <td className="px-4 py-3">Framer Motion</td>
+                          <td className="px-4 py-3">Movimento declarativo e suave</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Ícones</td>
+                          <td className="px-4 py-3">Lucide React</td>
+                          <td className="px-4 py-3">Leve e uniforme</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Deploy</td>
+                          <td className="px-4 py-3">GitHub Pages</td>
+                          <td className="px-4 py-3">Gratuito, estático, zero servidor</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "new-talent" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    HTML, CSS, JavaScript e deploy estático
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O site foi montado como projeto{" "}
+                      <strong className="text-white">100% estático</strong>:{" "}
+                      <strong className="text-white">HTML semântico</strong>,{" "}
+                      <strong className="text-white">CSS</strong> com variáveis para cores/tema e{" "}
+                      <strong className="text-white">JavaScript vanilla</strong> concentrado em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">main.js</code>
+                      . Não há build obrigatório nem runtime de servidor — os arquivos na raiz do repositório são servidos pelo{" "}
+                      <strong className="text-white">GitHub Pages</strong> (branch{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">main</code> ou pasta{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">/docs</code>
+                      , conforme a configuração do repo). Publicação:{" "}
+                      <a
+                        href="https://levoratoo.github.io/sitenewtalent/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-glow underline decoration-glow/45 underline-offset-2 hover:text-white"
+                      >
+                        levoratoo.github.io/sitenewtalent
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      <strong className="text-white">O que o JS faz.</strong> Comportamento da navbar ao rolar, menu
+                      hambúrguer, destaque do link da seção ativa, scroll suave para âncoras, troca de abas na seção
+                      Produtos, animações de entrada com{" "}
+                      <strong className="text-white">Intersection Observer</strong>,{" "}
+                      <strong className="text-white">canvas</strong> com partículas no hero, contador animado dos números do
+                      hero e parallax leve nos orbs no desktop.
+                    </p>
+                    <p>
+                      <strong className="text-white">Manutenção.</strong> Textos e links são editados direto no HTML;
+                      comentários no código indicam onde atualizar WhatsApp, Instagram e e-mail quando os dados forem
+                      fechados por unidade — sem painel nem banco.
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Camada</th>
+                          <th className="px-4 py-3 font-medium">Tecnologia</th>
+                          <th className="px-4 py-3 font-medium">Função</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Marcação</td>
+                          <td className="px-4 py-3">HTML5 semântico</td>
+                          <td className="px-4 py-3">Estrutura, SEO e hierarquia de headings</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Estilo</td>
+                          <td className="px-4 py-3">CSS + variáveis</td>
+                          <td className="px-4 py-3">Tema escuro/azul, responsivo</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Comportamento</td>
+                          <td className="px-4 py-3">JavaScript (vanilla)</td>
+                          <td className="px-4 py-3">Navegação, abas, animações, canvas</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Deploy</td>
+                          <td className="px-4 py-3">GitHub Pages</td>
+                          <td className="px-4 py-3">Hospedagem estática gratuita</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "gestao-producao-industrial-mes" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Arquitetura, tempo real e domínio
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O <strong className="text-white">frontend</strong> é{" "}
+                      <strong className="text-white">Next.js</strong> com{" "}
+                      <strong className="text-white">React</strong> e{" "}
+                      <strong className="text-white">TypeScript</strong>, com UI alinhada ao fluxo operacional. O{" "}
+                      <strong className="text-white">backend</strong> usa{" "}
+                      <strong className="text-white">Node.js</strong> com{" "}
+                      <strong className="text-white">Express</strong> (TypeScript) e{" "}
+                      <strong className="text-white">PostgreSQL</strong> como fonte autoritativa quando o modo remoto está ativo.
+                    </p>
+                    <p>
+                      A atualização em tempo real usa{" "}
+                      <strong className="text-white">SSE (Server-Sent Events)</strong>, com{" "}
+                      <strong className="text-white">fallback de polling</strong> quando o canal de eventos não está disponível — assim o painel acompanha o estado sem depender só de refresh manual.
+                    </p>
+                    <p>
+                      O <strong className="text-white">domínio</strong> está organizado em torno de{" "}
+                      <strong className="text-white">workflow</strong>,{" "}
+                      <strong className="text-white">contratos tipados</strong> entre camadas e{" "}
+                      <strong className="text-white">estado normalizado</strong> ao reconciliar simulação e servidor. A{" "}
+                      <strong className="text-white">simulação</strong> é{" "}
+                      <strong className="text-white">determinística</strong>, com progressão de eventos por cadência/tick para demos estáveis.
+                    </p>
+                    <p>
+                      A base de regras é coberta por{" "}
+                      <strong className="text-white">testes automatizados no domínio</strong> (ex.: Vitest), reduzindo regressão quando novas etapas ou portões de workflow são adicionados.
+                    </p>
+                    <p>
+                      <strong className="text-white">Demonstração pública:</strong>{" "}
+                      <a
+                        href="https://levoratoo.github.io/gestao-producao-industrial/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-glow underline decoration-glow/45 underline-offset-2 hover:text-white"
+                      >
+                        levoratoo.github.io/gestao-producao-industrial
+                      </a>
+                      .
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Camada</th>
+                          <th className="px-4 py-3 font-medium">Tecnologia</th>
+                          <th className="px-4 py-3 font-medium">Papel</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Frontend</td>
+                          <td className="px-4 py-3">Next.js, React, TypeScript</td>
+                          <td className="px-4 py-3">Painéis, workflow e modo local/remoto</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Backend</td>
+                          <td className="px-4 py-3">Node.js, Express, TypeScript</td>
+                          <td className="px-4 py-3">API REST, regras e persistência</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Dados</td>
+                          <td className="px-4 py-3">PostgreSQL</td>
+                          <td className="px-4 py-3">Estado autoritativo (modo remoto)</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Tempo real</td>
+                          <td className="px-4 py-3">SSE + polling fallback</td>
+                          <td className="px-4 py-3">Atualização contínua do painel</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Qualidade</td>
+                          <td className="px-4 py-3">Vitest (domínio)</td>
+                          <td className="px-4 py-3">Estabilidade das regras de negócio</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
             {project.slug === "apresentador-projetos" ? (
               <CaseSection id="visao-tecnica">
                 <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
@@ -1043,7 +1307,7 @@ export default function ProjectPage({ params }: PageProps) {
           <Container>
             <div className="flex flex-wrap items-center justify-between gap-4 rounded-[28px] border border-white/5 bg-white/5 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.35)] backdrop-blur sm:p-8">
               <Link
-                href="/projetos"
+                href="/projetos/"
                 className="text-xs uppercase tracking-[0.25em] text-mist/70 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
               >
                 Voltar para projetos
@@ -1051,7 +1315,7 @@ export default function ProjectPage({ params }: PageProps) {
               <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
                 {prevHomeSlug ? (
                   <Link
-                    href={`/projetos/${prevHomeSlug}`}
+                    href={`/projetos/${prevHomeSlug}/`}
                     className="rounded-full border border-white/10 px-4 py-2 text-mist/70 transition hover:-translate-y-0.5 hover:border-glow/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                   >
                     Anterior
@@ -1059,7 +1323,7 @@ export default function ProjectPage({ params }: PageProps) {
                 ) : null}
                 {nextHomeSlug ? (
                   <Link
-                    href={`/projetos/${nextHomeSlug}`}
+                    href={`/projetos/${nextHomeSlug}/`}
                     className="rounded-full border border-white/10 px-4 py-2 text-mist/70 transition hover:-translate-y-0.5 hover:border-glow/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                   >
                     Próximo

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 0.0.0.0 -p 3003",
+    "clean": "node scripts/clean-next.mjs",
+    "dev": "next dev -H 0.0.0.0 -p 3020",
+    "dev:clean": "npm run clean && next dev -H 0.0.0.0 -p 3020",
     "build": "next build",
     "start": "next start",
     "assets:setup": "node scripts/setup-assets.mjs",

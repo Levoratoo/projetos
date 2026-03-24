@@ -15,7 +15,7 @@ export function RequestCTA({
   return (
     <div
       className={cn(
-        "rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_24px_60px_rgba(0,0,0,0.4)] backdrop-blur",
+        "section-shell rounded-[32px] p-8",
         className
       )}
     >
@@ -35,7 +35,7 @@ export function RequestCTA({
           <Link
             href={`${projectUrl}/solicitar`}
             aria-label="Fazer solicitação"
-            className="inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-ink shadow-[0_12px_30px_rgba(16,185,129,0.25)] transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow sm:w-auto"
+            className="primary-cta w-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow sm:w-auto"
           >
             Fazer solicitação
           </Link>

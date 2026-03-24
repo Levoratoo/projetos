@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ export function ProjectCard({ project, variant = "grid" }: ProjectCardProps) {
       className="h-full"
     >
       <Link
-        href={`/projetos/${project.slug}`}
+        href={`/projetos/${project.slug}/`}
         className={cn(
           "group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#101010]/70 backdrop-blur transition",
           "hover:border-glow/40"

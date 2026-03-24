@@ -1,21 +1,27 @@
-﻿import "./globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
-import { Sora, Manrope } from "next/font/google";
-import { Footer } from "@/components/Footer";
+import { Bebas_Neue, Inter } from "next/font/google";
+import { AmbientSparks } from "@/components/AmbientSparks";
 import { Providers } from "@/app/providers";
 import { withBasePath } from "@/lib/basePath";
 
-const display = Sora({ subsets: ["latin"], variable: "--font-display" });
-const body = Manrope({ subsets: ["latin"], variable: "--font-body" });
+const display = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display"
+});
+const body = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
   title: "Portfólio de Projetos",
   description:
     "Portfólio premium de projetos Printbag com foco em performance, design e resultados.",
   icons: {
-    icon: withBasePath("/favicon.png"),
-    shortcut: withBasePath("/favicon.png"),
-    apple: withBasePath("/favicon.png")
+    icon: [
+      { url: withBasePath("/favicon.svg"), type: "image/svg+xml" },
+    ],
+    shortcut: withBasePath("/favicon.svg"),
+    apple: withBasePath("/favicon.svg"),
   },
   openGraph: {
     title: "Portfólio de Projetos",
@@ -33,11 +39,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
-      <body className="min-h-screen bg-[#0b0f0e]">
-        <div className="relative min-h-screen">
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(166,255,179,0.12),_transparent_55%),radial-gradient(circle_at_20%_80%,_rgba(255,255,255,0.08),_transparent_60%)]" />
-          <Providers>{children}</Providers>
-          <Footer />
+      <body className="min-h-screen bg-[var(--bg-base)]">
+        <div className="relative isolate min-h-screen overflow-hidden">
+          <div className="ambient-backdrop pointer-events-none fixed inset-0" />
+          <AmbientSparks className="z-[14]" />
+          <div className="relative z-10">
+            <Providers>{children}</Providers>
+          </div>
         </div>
       </body>
     </html>

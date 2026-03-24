@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { ProjectActions } from "@/components/ProjectActions";
 import { ProjectProgress } from "@/components/ProjectProgress";
 import { useProjectPreview } from "@/state/projectPreview";
 import { previewProjects } from "@/data/projects";
@@ -40,7 +39,6 @@ export function ProjectPreviewModal({
 }: ProjectPreviewModalProps) {
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const lastFocusRef = useRef<HTMLElement | null>(null);
-  const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(0);
   const reducedMotion = useReducedMotion();
   const [entered, setEntered] = useState(false);
@@ -104,130 +102,129 @@ export function ProjectPreviewModal({
   const gallery = project.gallery ?? [];
   const hero = gallery[activeIndex] ?? { src: project.thumb, alt: project.title };
   const accessUrl = project.accessLinks?.[0]?.url ?? null;
-  const kicker = `${project.area} · ${project.year} · ${project.status}`;
-  const handleViewFull = () => {
-    const href = `/projetos/${project.slug}`;
-    closePreview();
-    window.requestAnimationFrame(() => {
-      router.push(href);
-    });
-  };
-
+  const kicker = `${project.area} \u00b7 ${project.year} \u00b7 ${project.status}`;
   return (
     <div
-      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/70 backdrop-blur-xl saturate-150"
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/82 backdrop-blur-2xl saturate-150"
       role="dialog"
       aria-modal="true"
-      aria-label="Prévia do projeto"
+      aria-label="Pr\u00e9via do projeto"
       onClick={onClose}
     >
-      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_180px_rgba(0,0,0,0.75)]" />
+      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_200px_rgba(0,0,0,0.8)]" />
       <div
-        className={`relative w-[min(1200px,92vw)] h-[86vh] max-h-[860px] overflow-hidden rounded-3xl border border-white/10 bg-[#0f1211] shadow-[0_40px_120px_rgba(0,0,0,0.65)] transition-all duration-200 ${
+        className={`relative h-[86vh] max-h-[860px] w-[min(1240px,92vw)] overflow-hidden rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,6,8,0.96),rgba(6,3,4,0.96))] shadow-[0_40px_120px_rgba(0,0,0,0.65)] transition-all duration-200 ${
           entered || reducedMotion ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
         } max-md:h-[92vh]`}
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(86,255,146,0.12),transparent_55%)]" />
-        <div className="grid h-full grid-cols-1 gap-0 lg:grid-cols-12">
-          <div className="relative order-last flex h-full flex-col p-6 md:p-8 lg:order-first lg:col-span-4">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-emerald-200/70">
-                  {kicker}
-                </p>
-                <h3 className="mt-3 text-[clamp(22px,2.8vw,32px)] font-semibold leading-[1.05] text-white">
-                  <span className="shineText shineTextProject">{project.title}</span>
-                </h3>
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(255,59,59,0.14),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.12] tech-grid" />
+        <div className="grid h-full grid-cols-1 grid-rows-[1fr_1fr] gap-0 lg:grid-cols-12 lg:grid-rows-none">
+          <div className="relative order-last flex min-h-0 flex-col border-t border-white/10 lg:order-first lg:col-span-4 lg:border-t-0 lg:border-r lg:border-white/10">
+            {/* Scrollable content area */}
+            <div className="scrollbar-glow flex-1 overflow-y-auto p-6 md:p-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-glow/74">{kicker}</p>
+                  <h3 className="mt-3 font-display text-[clamp(28px,4vw,48px)] uppercase leading-[0.92] tracking-[0.04em] text-white">
+                    <span className="shineText shineTextProject underline-flame">
+                      {project.title}
+                    </span>
+                  </h3>
+                </div>
               </div>
+
+              {project.description ? (
+                <p className="mt-4 max-w-[54ch] text-sm leading-relaxed text-white/78 line-clamp-3">
+                  {project.description}
+                </p>
+              ) : null}
+
+              <ProjectProgress
+                value={project.progress}
+                size="sm"
+                showLabel={false}
+                className="mt-4 max-w-[240px]"
+              />
+
+              {project.bullets ? (
+                <div className="section-shell mt-5 rounded-[24px] p-4">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-neutral-400">
+                    Destaques
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-neutral-200">
+                    {project.bullets.slice(0, 4).map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-glow" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {project.tags?.length ? (
+                <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.22em] text-mist/70">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="data-chip px-3 py-1">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
             </div>
 
-            {project.description ? (
-              <p className="mt-4 max-w-[54ch] text-sm leading-relaxed text-white/80 line-clamp-4">
-                {project.description}
-              </p>
-            ) : null}
-            <ProjectProgress
-              value={project.progress}
-              size="sm"
-              showLabel={false}
-              className="mt-4 max-w-[240px]"
-            />
-
-            {project.bullets ? (
-              <div className="mt-6 rounded-2xl border-l-2 border-emerald-300/50 bg-white/5 p-4">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-neutral-400">
-                  Destaques
-                </p>
-                <ul className="mt-3 space-y-2 text-sm text-neutral-200">
-                  {project.bullets.slice(0, 4).map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-glow" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-
-            {project.tags?.length ? (
-              <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.22em] text-mist/70">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur transition hover:border-white/20 hover:bg-white/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            ) : null}
-
-            <div className="mt-auto border-t border-white/10 bg-black/30 backdrop-blur-md pt-5 pb-4">
-              <ProjectActions
-                slug={project.slug}
-                accessUrl={accessUrl}
-                onPreview={() => openPreview(project.slug)}
-                onViewFull={handleViewFull}
-                className="[&>button:first-child]:hidden"
-              />
+            {/* Fixed footer button — always visible */}
+            <div className="shrink-0 border-t border-white/10 bg-[rgba(6,3,4,0.96)] px-6 py-4 md:px-8">
+              <Link
+                href={`/projetos/${project.slug}/`}
+                onClick={closePreview}
+                data-preview-focusable
+                className="primary-cta primary-cta--sm primary-cta--glass group flex w-full items-center justify-between px-4 py-3 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+                style={{
+                  background: "linear-gradient(165deg, rgba(255,72,72,0.42) 0%, rgba(220,30,30,0.32) 45%, rgba(140,12,24,0.55) 100%)",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), 0 0 32px rgba(255,59,59,0.38), 0 0 8px rgba(255,59,59,0.55), 0 8px 24px rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(255,72,72,0.35)",
+                }}
+              >
+                <span>Ver descrição completa</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </Link>
             </div>
           </div>
 
-          <div className="relative order-first flex h-full flex-col gap-4 border-b border-white/10 p-6 md:border-b-0 md:border-l md:border-white/10 lg:order-last lg:col-span-8 lg:p-7">
+          <div className="relative order-first flex min-h-0 flex-col gap-4 overflow-y-auto p-6 lg:order-last lg:col-span-8 lg:p-7">
             <div className="flex items-center justify-between">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-mist/60">
-                Preview
-              </p>
+              <span />
               <button
                 ref={closeRef}
                 onClick={onClose}
                 data-preview-focusable
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white shadow-[0_12px_30px_rgba(0,0,0,0.45)] transition hover:border-glow/40 hover:bg-white/10 hover:text-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
-                aria-label="Fechar pr?via"
+                className="ghost-circle inline-flex h-10 w-10 items-center justify-center text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+                aria-label="Fechar pr\u00e9via"
               >
                 X
               </button>
             </div>
 
-            <div className="flex flex-1">
-              <div className="relative w-full flex-1 min-h-[42vh] max-h-[70vh] overflow-hidden rounded-2xl border border-white/10 bg-black/20 aspect-[16/10]">
-                <Image
-                  src={hero.src}
-                  alt={hero.alt}
-                  fill
-                  className="object-contain saturate-[0.9] brightness-[0.9] transition"
-                  sizes="(max-width: 768px) 92vw, (max-width: 1280px) 36vw, 420px"
-                />
-                <div className="absolute inset-0 bg-black/35" />
-                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              </div>
+            {/* Main image — capped so thumbnails never get cut */}
+            <div className="preview-frame relative min-h-0 w-full flex-1 overflow-hidden rounded-[24px] bg-black/20" style={{ maxHeight: "58vh" }}>
+              <Image
+                src={hero.src}
+                alt={hero.alt}
+                fill
+                className="object-contain saturate-[0.92] brightness-[0.9] transition"
+                sizes="(max-width: 768px) 92vw, (max-width: 1280px) 36vw, 420px"
+              />
+              <div className="absolute inset-0 bg-black/38" />
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/64 via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/72 via-transparent to-transparent" />
             </div>
 
             {gallery.length > 1 ? (
-              <div className="mt-1">
-                <div className="flex gap-3 overflow-x-auto pb-2 max-md:snap-x max-md:snap-mandatory">
+              <div className="mt-3 shrink-0">
+                <div className="scrollbar-glow flex gap-3 overflow-x-auto pb-2 max-md:snap-x max-md:snap-mandatory">
                   {gallery.map((item, index) => {
                     const isActive = index === activeIndex;
                     return (
@@ -236,10 +233,10 @@ export function ProjectPreviewModal({
                         type="button"
                         onClick={() => setActiveIndex(index)}
                         data-preview-focusable
-                        className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-xl border transition ${
+                        className={`preview-frame relative h-16 w-24 shrink-0 overflow-hidden rounded-xl transition ${
                           isActive
-                            ? "border-emerald-300/60 opacity-100 ring-1 ring-emerald-300/40"
-                            : "border-white/10 opacity-70 hover:opacity-100 hover:border-emerald-300/40"
+                            ? "opacity-100 ring-2 ring-glow/45"
+                            : "opacity-70 ring-1 ring-white/5 hover:opacity-100 hover:ring-glow/30"
                         } max-md:snap-start`}
                         aria-label={`Visualizar ${item.alt}`}
                       >
@@ -254,11 +251,9 @@ export function ProjectPreviewModal({
                     );
                   })}
                 </div>
-                <p className="mt-2 text-xs text-mist/60">
-                  Toque em uma miniatura para trocar a tela.
-                </p>
               </div>
             ) : null}
+
           </div>
         </div>
       </div>

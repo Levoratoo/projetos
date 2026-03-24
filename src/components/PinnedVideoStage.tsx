@@ -108,7 +108,7 @@ export function PinnedVideoStage({ src, poster, heightClass = "h-[320vh]" }: Pin
               aria-hidden="true"
             />
           ) : (
-            <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(86,255,146,0.12),_transparent_55%),linear-gradient(180deg,rgba(8,10,12,0.9),rgba(8,10,12,0.55))]">
+            <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,59,59,0.14),_transparent_55%),linear-gradient(180deg,rgba(8,4,5,0.92),rgba(8,4,5,0.6))]">
               {poster ? (
                 <img
                   src={resolvedPoster}
@@ -181,14 +181,14 @@ export function PinnedVideoStage({ src, poster, heightClass = "h-[320vh]" }: Pin
                   <span
                     key={chapter.slug}
                     className={`h-2 w-2 rounded-full transition ${
-                      index === active ? "bg-emerald-300" : "bg-white/20"
+                      index === active ? "bg-glow" : "bg-white/20"
                     }`}
                   />
                 ))}
               </div>
               <div className="h-[2px] flex-1 bg-white/10">
                 <div
-                  className="h-full bg-emerald-300 transition-all"
+                  className="h-full bg-[linear-gradient(90deg,#ff3434_0%,#ff7878_45%,#d21524_100%)] transition-all"
                   style={{ width: `${Math.round(progress * 100)}%` }}
                 />
               </div>

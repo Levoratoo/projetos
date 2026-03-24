@@ -90,7 +90,7 @@ export function StoryCopy() {
                 <div className="pointer-events-auto pt-4">
                   <Link
                     href="#cases"
-                    className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+                    className="primary-cta px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                   >
                     Ver cases
                   </Link>
@@ -124,7 +124,7 @@ export function StoryCopyStatic() {
                 <div className="pointer-events-auto pt-2">
                   <Link
                     href="#cases"
-                    className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+                    className="primary-cta px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                   >
                     Ver cases
                   </Link>
