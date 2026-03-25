@@ -80,11 +80,11 @@ export function HomeHero() {
           </div>
         </Container>
 
-        {/* Mesmo centro do blur/gradiente principal: ellipse … at 86% 48% (HomeCosmicBackdrop) */}
+        {/* Órbitas: no mobile centradas atrás do bloco de texto; no desktop à direita como antes */}
         <div
           role="navigation"
           aria-label={t.heroOrbitsAria}
-          className="hero-solar-system pointer-events-none absolute left-[min(86%,calc(100%-14rem))] top-[48%] z-[6] hidden h-[min(420px,78vw)] w-[min(420px,78vw)] -translate-x-1/2 -translate-y-1/2 xl:h-[440px] xl:w-[440px] lg:block"
+          className="hero-solar-system pointer-events-none absolute z-[6] block -translate-x-1/2 -translate-y-1/2 max-lg:left-1/2 max-lg:top-[56%] max-lg:h-[min(280px,72vw)] max-lg:w-[min(280px,72vw)] max-lg:opacity-[0.88] sm:max-lg:top-[54%] sm:max-lg:h-[min(320px,68vw)] sm:max-lg:w-[min(320px,68vw)] lg:left-[min(86%,calc(100%-14rem))] lg:top-[48%] lg:h-[min(420px,78vw)] lg:w-[min(420px,78vw)] lg:opacity-100 xl:h-[440px] xl:w-[440px]"
         >
           {projectOrbits.map((orbit) => (
             <div
