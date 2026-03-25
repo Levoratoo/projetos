@@ -261,9 +261,9 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(120, 210, 255, 0.35)",
-      b: "rgba(120, 255, 200, 0.28)",
-      c: "rgba(255, 255, 255, 0.12)"
+      a: "rgba(118, 28, 48, 0.5)",
+      b: "rgba(72, 16, 36, 0.36)",
+      c: "rgba(255, 210, 218, 0.14)"
     },
     context:
       "Antes, o planejamento era feito em planilhas, gerando dificuldade de acompanhar mudanças, falta de controle de permissões, consolidação manual, risco de perda de dados e baixa visibilidade do previsto vs realizado. O sistema centraliza cenários, centros de custo e contas contábeis, permitindo planejamento mensal, justificativas e governança.",
@@ -371,9 +371,9 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "SQL Server", "APIs"],
     cover: {
       kind: "gradient",
-      a: "rgba(120, 210, 255, 0.3)",
-      b: "rgba(120, 255, 200, 0.25)",
-      c: "rgba(255, 255, 255, 0.12)"
+      a: "rgba(52, 132, 96, 0.5)",
+      b: "rgba(28, 78, 56, 0.38)",
+      c: "rgba(200, 235, 215, 0.12)"
     },
     context:
       "O processo de orçamento era fragmentado, com alto risco de erro na coleta de dados e pouca visibilidade sobre métricas e integrações.",
@@ -489,9 +489,9 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(140, 255, 180, 0.4)",
-      b: "rgba(80, 220, 255, 0.3)",
-      c: "rgba(255, 255, 255, 0.16)"
+      a: "rgba(118, 28, 48, 0.5)",
+      b: "rgba(72, 16, 36, 0.36)",
+      c: "rgba(255, 210, 218, 0.14)"
     },
     context:
       "O sistema centraliza o acompanhamento de pedidos e importações diretamente do banco de dados, atualizando automaticamente a cada poucos segundos. Ele mostra o que está processando com sucesso, o que falhou e por quê, permitindo identificar gargalos e agir rápido sem depender de planilhas ou checagens manuais.",
@@ -1073,9 +1073,9 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     cover: {
       kind: "gradient",
-      a: "rgba(90, 255, 170, 0.38)",
-      b: "rgba(90, 150, 255, 0.22)",
-      c: "rgba(255, 255, 255, 0.12)"
+      a: "rgba(118, 28, 48, 0.5)",
+      b: "rgba(72, 16, 36, 0.36)",
+      c: "rgba(255, 210, 218, 0.14)"
     },
     context:
       "O portfolio interno precisava de uma linguagem unica, com acesso rapido a cases e apresentacao consistente para areas internas.",
@@ -1180,9 +1180,9 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(120, 255, 200, 0.34)",
-      b: "rgba(90, 150, 255, 0.26)",
-      c: "rgba(255, 255, 255, 0.12)"
+      a: "rgba(168, 48, 230, 0.52)",
+      b: "rgba(88, 22, 155, 0.42)",
+      c: "rgba(230, 190, 255, 0.14)"
     },
     context:
       "O sistema foi desenhado para reduzir ruido operacional com formularios por tipo de chamado, filas por area/perfil e filtros inteligentes, diminuindo retrabalho e demandas fora de contexto.",
@@ -1310,9 +1310,9 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(120, 255, 200, 0.32)",
-      b: "rgba(100, 170, 255, 0.28)",
-      c: "rgba(255, 255, 255, 0.14)"
+      a: "rgba(52, 108, 195, 0.5)",
+      b: "rgba(24, 52, 112, 0.42)",
+      c: "rgba(170, 205, 255, 0.13)"
     },
     context:
       "O planejamento de demanda dependia de planilhas isoladas, com baixa rastreabilidade de execucao e pouca leitura executiva do resultado. O objetivo foi separar claramente o fluxo de geracao (Python) da camada de interpretacao (Estatistica), com governanca e usabilidade.",

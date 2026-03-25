@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Award, Quote, ExternalLink, Briefcase, Music2, Download } from "lucide-react";
 import { useLocale } from "@/state/locale";
 import { tAbout } from "@/i18n/about";
+import { recommendationQuoteText } from "@/i18n/recommendationTranslations";
 import {
   type CertItem,
   experiences,
@@ -281,7 +282,7 @@ function RecommendationsBlock() {
             />
             <div className="relative z-10 flex items-start justify-between gap-2">
               <p className="text-[13px] leading-[1.65] text-white/72 italic pr-2">
-                &ldquo;{rec.text}&rdquo;
+                &ldquo;{recommendationQuoteText(rec.id, rec.text, locale)}&rdquo;
               </p>
               <ExternalLink
                 className="h-3.5 w-3.5 shrink-0 text-white/35 transition-colors group-hover:text-[rgba(255,88,88,0.85)]"
