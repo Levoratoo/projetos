@@ -1639,3 +1639,24 @@ a.hero-orbit__dot:focus-visible {
 .scrollbar-glow::-webkit-scrollbar-thumb:hover {
   background: var(--glow-ember);
 }
+
+/* Impressão / PDF: seletor de idioma é fixed — motores de PDF ignoram só print:hidden em alguns casos */
+@media print {
+  [data-floating-lang-switcher],
+  [data-floating-lang-switcher] * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    max-width: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    clip-path: inset(100%) !important;
+    position: absolute !important;
+    left: -99999px !important;
+    top: 0 !important;
+    z-index: -9999 !important;
+  }
+}

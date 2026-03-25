@@ -9,14 +9,18 @@ import { HeroMotion } from "@/components/HeroMotion";
 import { homeProjects } from "@/data/projects";
 import { buildHeroOrbits } from "@/components/home/heroOrbits";
 import { tHome } from "@/i18n/home";
+import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useLocale } from "@/state/locale";
-
-const HERO_CHIPS = ["Next.js", "TypeScript", "SQL Server", "Dashboards", "Automação"];
 
 export function HomeHero() {
   const { locale } = useLocale();
   const t = tHome(locale);
   const projectOrbits = useMemo(() => buildHeroOrbits(homeProjects), []);
+  const heroChips = useMemo(
+    () =>
+      ["Next.js", "TypeScript", "SQL Server", "Dashboards", t.heroChipAutomation] as const,
+    [t.heroChipAutomation]
+  );
 
   return (
     <section className="home-hero relative min-h-screen overflow-hidden bg-black pt-8">
@@ -50,7 +54,7 @@ export function HomeHero() {
                 </p>
 
                 <div className="mt-10 flex max-w-full flex-wrap gap-x-4 gap-y-3 sm:mt-12 sm:gap-x-5 sm:gap-y-4 xl:max-w-[960px]">
-                  {HERO_CHIPS.map((chip) => (
+                  {heroChips.map((chip) => (
                     <span
                       key={chip}
                       className="hero-chip min-h-[44px] px-4 py-2 text-[11px] tracking-[0.24em] sm:text-[12px]"
@@ -99,7 +103,9 @@ export function HomeHero() {
               aria-hidden
             />
           ))}
-          {projectOrbits.map((orbit) => (
+          {projectOrbits.map((orbit) => {
+            const lp = getLocalizedPreview(orbit.project, locale);
+            return (
             <span
               key={orbit.project.slug}
               className="hero-orbit"
@@ -124,13 +130,14 @@ export function HomeHero() {
               >
                 <a
                   href={`#${orbit.hash}`}
-                  title={orbit.project.title}
-                  aria-label={`${t.heroOrbitJump} ${orbit.project.title}`}
+                  title={lp.title}
+                  aria-label={`${t.heroOrbitJump} ${lp.title}`}
                   className="hero-orbit__dot hero-orbit__dot--ball pointer-events-auto"
                 />
               </span>
             </span>
-          ))}
+            );
+          })}
         </div>
       </HeroMotion>
 

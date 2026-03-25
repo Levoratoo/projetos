@@ -1,10 +1,13 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ProjectActions } from "@/components/ProjectActions";
 import { previewProjects } from "@/data/projects";
+import { tHome } from "@/i18n/home";
+import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useProjectPreview } from "@/state/projectPreview";
+import { useLocale } from "@/state/locale";
 
 const motionProps = {
   initial: { opacity: 0, y: 16, filter: "blur(6px)" },
@@ -19,6 +22,9 @@ type ProjectChapterProps = {
 };
 
 export function ProjectChapter({ project, priority }: ProjectChapterProps) {
+  const { locale } = useLocale();
+  const t = tHome(locale);
+  const lp = getLocalizedPreview(project, locale);
   const { openPreview } = useProjectPreview();
   const access = project.accessLinks?.[0];
 
@@ -51,7 +57,7 @@ export function ProjectChapter({ project, priority }: ProjectChapterProps) {
             ) : null}
 
             <div className="mt-6 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.25em] text-mist/70">
-              {project.tags.slice(0, 4).map((tag) => (
+              {lp.tags.slice(0, 4).map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-white/10 bg-white/5 px-3 py-1"
@@ -64,12 +70,12 @@ export function ProjectChapter({ project, priority }: ProjectChapterProps) {
 
           <motion.div {...motionProps} className="rounded-3xl border border-white/10 bg-black/40 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
             <p className="text-xs uppercase tracking-[0.3em] text-mist/70">
-              Preview do projeto
+              {t.previewPanelKicker}
             </p>
             <div className="mt-4 overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src={project.thumb}
-                alt={project.title}
+                alt={lp.title}
                 width={960}
                 height={540}
                 className="h-auto w-full object-cover"

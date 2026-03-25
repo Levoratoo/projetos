@@ -15,6 +15,7 @@ import {
 } from "@/data/about";
 import { Container } from "@/components/Container";
 import { HomeCosmicBackdrop } from "@/components/home/HomeCosmicBackdrop";
+import { withBasePath } from "@/lib/basePath";
 
 /* ─── Motion helpers ─────────────────────────────────────────────────────── */
 const fadeUp = (delay = 0) => ({
@@ -54,7 +55,7 @@ function BioBlock() {
       <motion.div {...fadeUp(0.04)} className="flex justify-center sm:justify-start">
         <div className="relative w-48 sm:w-full aspect-[3/4] sm:aspect-square overflow-hidden rounded-2xl border border-[rgba(255,88,88,0.25)] shadow-[0_0_40px_rgba(255,59,59,0.14),0_8px_32px_rgba(0,0,0,0.5)]">
           <Image
-            src="/about/pedro.jpg"
+            src={withBasePath("/about/pedro.jpg")}
             alt="Pedro Levorato"
             fill
             sizes="(max-width: 640px) 192px, (max-width: 1024px) 240px, 260px"

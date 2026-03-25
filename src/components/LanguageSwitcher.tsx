@@ -2,6 +2,7 @@
 
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLocale, type Locale } from "@/state/locale";
 
 const SH = 30 / 13;
@@ -238,6 +239,9 @@ export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const { locale, setLocale } = useLocale();
+  const pathname = usePathname() ?? "";
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const current = OPTIONS.find((o) => o.locale === locale) ?? OPTIONS[0];
 
@@ -265,13 +269,19 @@ export function LanguageSwitcher() {
   function select(next: Locale) {
     setLocale(next);
     setOpen(false);
+    if (/(^|\/)curriculo(\/|$)/.test(pathname)) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("lang", next);
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    }
   }
 
   const triggerClip = `${rawId}-t`;
   const Chevron = open ? ChevronUp : ChevronDown;
 
   return (
-    <div ref={rootRef} className="relative select-none">
+    <div ref={rootRef} className="relative select-none print:hidden">
       {/* ── Pílula trigger ── */}
       <button
         type="button"

@@ -41,8 +41,8 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen bg-[var(--bg-base)]">
         <div className="relative isolate min-h-screen overflow-hidden">
-          <div className="ambient-backdrop pointer-events-none fixed inset-0" />
-          <AmbientSparks className="z-[14]" />
+          <div className="ambient-backdrop pointer-events-none fixed inset-0 print:hidden" />
+          <AmbientSparks className="z-[14] print:hidden" />
           <div className="relative z-10">
             <Providers>{children}</Providers>
           </div>

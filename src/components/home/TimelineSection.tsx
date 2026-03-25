@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { PreviewProject, projects as fullProjects, previewProjects } from "@/data/projects";
 import { tHome } from "@/i18n/home";
+import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useLocale } from "@/state/locale";
 import { useProjectPreview } from "@/state/projectPreview";
 import { HomeCosmicBackdrop } from "@/components/home/HomeCosmicBackdrop";
@@ -48,10 +49,11 @@ function StickyPreview({
 
   // Reset gallery index whenever the project changes
   const full = previewProjects.find((p) => p.slug === project.slug) ?? project;
+  const lp = getLocalizedPreview(full, locale);
   const gallery = (full as PreviewProject & { gallery?: { src: string; alt: string }[] }).gallery ?? [];
-  const hero = gallery[activeIndex] ?? { src: project.thumb, alt: project.title };
-  const kicker = `${project.area} · ${project.year} · ${project.status}`;
-  const bullets = (full as PreviewProject & { bullets?: string[] }).bullets;
+  const hero = gallery[activeIndex] ?? { src: project.thumb, alt: lp.title };
+  const kicker = `${lp.area} · ${project.year} · ${lp.statusLabel}`;
+  const bullets = lp.bullets;
 
   return (
     <AnimatePresence mode="wait">
@@ -116,12 +118,12 @@ function StickyPreview({
         <div className="scrollbar-glow max-h-[28vh] overflow-y-auto px-6 pb-2">
           <p className="text-[10px] uppercase tracking-[0.3em] text-glow/74">{kicker}</p>
           <h3 className="mt-2 font-display text-[clamp(20px,2.4vw,32px)] uppercase leading-[0.95] tracking-[0.04em] text-white">
-            <span className="shineText shineTextProject">{project.title}</span>
+            <span className="shineText shineTextProject">{lp.title}</span>
           </h3>
 
-          {project.description && (
+          {lp.description && (
             <p className="mt-3 text-[12.5px] leading-relaxed text-white/72 line-clamp-3">
-              {project.description}
+              {lp.description}
             </p>
           )}
 
@@ -141,9 +143,9 @@ function StickyPreview({
             </div>
           )}
 
-          {project.tags?.length > 0 && (
+          {lp.tags?.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-1.5 text-[10px] uppercase tracking-[0.2em] text-mist/70">
-              {project.tags.map((tag) => (
+              {lp.tags.map((tag) => (
                 <span key={tag} className="data-chip px-2.5 py-1">{tag}</span>
               ))}
             </div>
@@ -185,6 +187,8 @@ function ProjectListItem({
   onHover: () => void;
   onOpen: () => void;
 }) {
+  const { locale } = useLocale();
+  const lp = getLocalizedPreview(project, locale);
   const accent = getAccent(project.slug);
   const num = String(index + 1).padStart(2, "0");
 
@@ -219,7 +223,7 @@ function ProjectListItem({
           <div className="relative h-[46px] w-[72px] shrink-0 overflow-hidden rounded-lg">
             <img
               src={project.thumb}
-              alt={project.title}
+              alt={lp.title}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               draggable={false}
             />
@@ -245,14 +249,14 @@ function ProjectListItem({
                 className="truncate text-[12.5px] font-semibold leading-snug transition-colors duration-200"
                 style={{ color: isActive ? "rgba(255,255,255,0.93)" : "rgba(255,255,255,0.55)" }}
               >
-                {project.title}
+                {lp.title}
               </p>
             </div>
             <p
               className="mt-0.5 truncate text-[10px] transition-colors duration-200"
               style={{ color: isActive ? replaceAlpha(accent, 0.65) : "rgba(255,255,255,0.22)" }}
             >
-              {project.area} · {project.year}
+              {lp.area} · {project.year}
             </p>
           </div>
 
@@ -283,6 +287,7 @@ function MobileCard({
 }) {
   const { locale } = useLocale();
   const t = tHome(locale);
+  const lp = getLocalizedPreview(project, locale);
   const accent = getAccent(project.slug);
   const num = String(index + 1).padStart(2, "0");
 
@@ -304,7 +309,7 @@ function MobileCard({
       <div className="relative h-44 w-full overflow-hidden">
         <img
           src={project.thumb}
-          alt={project.title}
+          alt={lp.title}
           className="h-full w-full object-cover"
           loading="lazy"
           draggable={false}
@@ -352,18 +357,18 @@ function MobileCard({
           className="mb-1 text-[9px] font-bold uppercase tracking-[0.3em]"
           style={{ color: replaceAlpha(accent, 0.65) }}
         >
-          {project.area}
+          {lp.area}
         </p>
         <h3 className="mb-2 text-[14px] font-bold leading-snug text-white/92">
-          {project.title}
+          {lp.title}
         </h3>
-        {project.description && (
+        {lp.description && (
           <p className="mb-3 line-clamp-2 text-[11.5px] leading-relaxed text-white/38">
-            {project.description}
+            {lp.description}
           </p>
         )}
         <div className="flex flex-wrap gap-1 mb-3">
-          {project.tags.slice(0, 3).map((tag) => (
+          {lp.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
               className="rounded-full px-2 py-[2px] text-[9.5px] font-medium"

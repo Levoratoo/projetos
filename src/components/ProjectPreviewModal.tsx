@@ -6,6 +6,9 @@ import Image from "next/image";
 import { ProjectProgress } from "@/components/ProjectProgress";
 import { useProjectPreview } from "@/state/projectPreview";
 import { previewProjects } from "@/data/projects";
+import { tHome } from "@/i18n/home";
+import { getLocalizedPreview } from "@/i18n/previewProjects";
+import { useLocale } from "@/state/locale";
 
 type ProjectPreviewModalProps = {
   open: boolean;
@@ -42,7 +45,9 @@ export function ProjectPreviewModal({
   const [activeIndex, setActiveIndex] = useState(0);
   const reducedMotion = useReducedMotion();
   const [entered, setEntered] = useState(false);
-  const { openPreview, closePreview } = useProjectPreview();
+  const { locale } = useLocale();
+  const t = tHome(locale);
+  const { closePreview } = useProjectPreview();
 
   useEffect(() => {
     if (!open) return;
@@ -99,16 +104,17 @@ export function ProjectPreviewModal({
   const project = previewProjects.find((item) => item.slug === slug);
   if (!project) return null;
 
+  const lp = getLocalizedPreview(project, locale);
   const gallery = project.gallery ?? [];
-  const hero = gallery[activeIndex] ?? { src: project.thumb, alt: project.title };
+  const hero = gallery[activeIndex] ?? { src: project.thumb, alt: lp.title };
   const accessUrl = project.accessLinks?.[0]?.url ?? null;
-  const kicker = `${project.area} \u00b7 ${project.year} \u00b7 ${project.status}`;
+  const kicker = `${lp.area} \u00b7 ${project.year} \u00b7 ${lp.statusLabel}`;
   return (
     <div
       className="fixed inset-0 z-[70] flex items-center justify-center bg-black/82 backdrop-blur-2xl saturate-150"
       role="dialog"
       aria-modal="true"
-      aria-label="Pr\u00e9via do projeto"
+      aria-label={t.previewPanelKicker}
       onClick={onClose}
     >
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_200px_rgba(0,0,0,0.8)]" />
@@ -129,15 +135,15 @@ export function ProjectPreviewModal({
                   <p className="text-xs uppercase tracking-[0.3em] text-glow/74">{kicker}</p>
                   <h3 className="mt-3 font-display text-[clamp(28px,4vw,48px)] uppercase leading-[0.92] tracking-[0.04em] text-white">
                     <span className="shineText shineTextProject underline-flame">
-                      {project.title}
+                      {lp.title}
                     </span>
                   </h3>
                 </div>
               </div>
 
-              {project.description ? (
+              {lp.description ? (
                 <p className="mt-4 max-w-[54ch] text-sm leading-relaxed text-white/78 line-clamp-3">
-                  {project.description}
+                  {lp.description}
                 </p>
               ) : null}
 
@@ -148,13 +154,13 @@ export function ProjectPreviewModal({
                 className="mt-4 max-w-[240px]"
               />
 
-              {project.bullets ? (
+              {lp.bullets ? (
                 <div className="section-shell mt-5 rounded-[24px] p-4">
                   <p className="text-[11px] uppercase tracking-[0.3em] text-neutral-400">
-                    Destaques
+                    {t.previewHighlights}
                   </p>
                   <ul className="mt-3 space-y-2 text-sm text-neutral-200">
-                    {project.bullets.slice(0, 4).map((item) => (
+                    {lp.bullets.slice(0, 4).map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-glow" />
                         <span>{item}</span>
@@ -164,9 +170,9 @@ export function ProjectPreviewModal({
                 </div>
               ) : null}
 
-              {project.tags?.length ? (
+              {lp.tags?.length ? (
                 <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.22em] text-mist/70">
-                  {project.tags.map((tag) => (
+                  {lp.tags.map((tag) => (
                     <span key={tag} className="data-chip px-3 py-1">
                       {tag}
                     </span>
@@ -188,7 +194,7 @@ export function ProjectPreviewModal({
                   border: "1px solid rgba(255,72,72,0.35)",
                 }}
               >
-                <span>Ver descrição completa</span>
+                <span>{t.previewFullDesc}</span>
                 <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
               </Link>
             </div>
@@ -202,7 +208,7 @@ export function ProjectPreviewModal({
                 onClick={onClose}
                 data-preview-focusable
                 className="ghost-circle inline-flex h-10 w-10 items-center justify-center text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
-                aria-label="Fechar pr\u00e9via"
+                aria-label={t.previewCloseAria}
               >
                 X
               </button>
@@ -238,7 +244,7 @@ export function ProjectPreviewModal({
                             ? "opacity-100 ring-2 ring-glow/45"
                             : "opacity-70 ring-1 ring-white/5 hover:opacity-100 hover:ring-glow/30"
                         } max-md:snap-start`}
-                        aria-label={`Visualizar ${item.alt}`}
+                        aria-label={`${t.previewGalleryAria}: ${item.alt}`}
                       >
                         <Image
                           src={item.src}

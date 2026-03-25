@@ -4,16 +4,23 @@ import Image from "next/image";
 import { ProjectActions } from "@/components/ProjectActions";
 import { ProjectProgress } from "@/components/ProjectProgress";
 import { type PreviewProject } from "@/data/projects";
+import { tHome } from "@/i18n/home";
+import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useProjectPreview } from "@/state/projectPreview";
+import { useLocale } from "@/state/locale";
 import { cn } from "@/lib/utils";
 import { withBasePath } from "@/lib/basePath";
 
-function buildTags(project: PreviewProject) {
+function buildTags(
+  project: PreviewProject,
+  t: ReturnType<typeof tHome>,
+  lp: ReturnType<typeof getLocalizedPreview>
+) {
   return [
-    `Área: ${project.area}`,
-    `Ano: ${project.year}`,
-    `Status: ${project.status}`,
-    ...(project.tags.length ? [`Tags: ${project.tags.join(" / ")}`] : [])
+    `${t.metaArea}: ${lp.area}`,
+    `${t.metaYear}: ${project.year}`,
+    `${t.metaStatus}: ${lp.statusLabel}`,
+    ...(lp.tags.length ? [`${t.metaTags}: ${lp.tags.join(" / ")}`] : []),
   ];
 }
 
@@ -28,6 +35,9 @@ export function ProjectHeroBlock({
   variant = "home",
   priorityImage = false
 }: ProjectHeroBlockProps) {
+  const { locale } = useLocale();
+  const t = tHome(locale);
+  const lp = getLocalizedPreview(project, locale);
   const { openPreview } = useProjectPreview();
   const access = project.accessLinks?.[0];
   const isHome = variant === "home";
@@ -50,7 +60,7 @@ export function ProjectHeroBlock({
             LEVORATO PROJECTS
           </p>
           <p className="mt-4 text-xs uppercase tracking-[0.3em] text-mist/52">
-            {project.area} · {project.title} · {project.area}
+            {lp.area} · {lp.title} · {project.year}
           </p>
           <h2
             className={cn(
@@ -58,21 +68,21 @@ export function ProjectHeroBlock({
               isHome ? "text-[clamp(32px,3.8vw,56px)]" : "text-[clamp(28px,3.6vw,44px)]"
             )}
           >
-            <span className="shineText shineTextProject underline-flame">{project.title}</span>
+            <span className="shineText shineTextProject underline-flame">{lp.title}</span>
           </h2>
-          {project.description ? (
+          {lp.description ? (
             <p
               className={cn(
                 "mt-6 text-mist/76",
                 isHome ? "text-base sm:text-lg" : "text-sm sm:text-base"
               )}
             >
-              {project.description}
+              {lp.description}
             </p>
           ) : null}
-          {project.bullets?.length ? (
+          {lp.bullets?.length ? (
             <p className={cn("mt-4 text-mist/80", isHome ? "text-base" : "text-sm")}>
-              {project.bullets[0]}
+              {lp.bullets[0]}
             </p>
           ) : null}
 
@@ -82,7 +92,7 @@ export function ProjectHeroBlock({
               isHome ? "text-[clamp(12px,1.1vw,14px)]" : "text-[11px]"
             )}
           >
-            {buildTags(project).map((tag) => (
+            {buildTags(project, t, lp).map((tag) => (
               <span key={tag} className={cn("data-chip", isHome ? "px-4 py-2" : "px-3 py-1")}>
                 {tag}
               </span>
@@ -103,13 +113,13 @@ export function ProjectHeroBlock({
         >
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(255,62,62,0.16),transparent_28%)]" />
           <p className="relative text-xs uppercase tracking-[0.3em] text-mist/70">
-            Preview do projeto
+            {t.previewPanelKicker}
           </p>
           <div className="relative mt-4 w-full max-w-[520px]">
             <div className="preview-frame relative aspect-square w-full overflow-hidden rounded-2xl bg-black/20">
               <Image
                 src={project.thumb || withBasePath("/projects/_placeholders/cover.svg")}
-                alt={project.title}
+                alt={lp.title}
                 fill
                 className="object-cover"
                 priority={priorityImage}

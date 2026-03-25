@@ -1,6 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useLocale } from "@/state/locale";
+import type { Locale } from "@/state/locale";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 /* ── Types ─────────────────────────────────────────────────────────────────── */
 type Lang = "pt" | "en" | "es" | "zh" | "de" | "ja";
@@ -202,31 +206,58 @@ const CERTS: Cert[] = [
 
 const VALID_LANGS: Lang[] = ["pt", "en", "es", "zh", "de", "ja"];
 
-function detectLang(): Lang {
+function normalizeLangParam(raw: string | null): Lang | null {
+  if (raw == null || raw === "") return null;
+  const v = raw.trim().toLowerCase();
+  if (v === "pt-br" || v === "pt_br") return "pt";
+  if (VALID_LANGS.includes(v as Lang)) return v as Lang;
+  return null;
+}
+
+function readStoredLang(): Lang | null {
   try {
-    const param = new URLSearchParams(window.location.search).get("lang") as Lang;
-    if (VALID_LANGS.includes(param)) return param;
-    const stored = localStorage.getItem("printbag-locale") as Lang;
-    if (VALID_LANGS.includes(stored)) return stored;
-  } catch { /* ignore */ }
-  return "pt";
+    const stored = localStorage.getItem("printbag-locale");
+    if (stored && VALID_LANGS.includes(stored as Lang)) return stored as Lang;
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+/**
+ * Prioridade: ?lang= na URL → idioma ativo do app (LocaleProvider = home/switcher) → localStorage.
+ * O storage sozinho não pode ganhar ao locale: senão um `pt` antigo sobrescreve o site em inglês.
+ */
+function resolveLang(locale: Locale, searchParams: URLSearchParams): Lang {
+  const fromUrl = normalizeLangParam(searchParams.get("lang"));
+  if (fromUrl) return fromUrl;
+  if (locale !== "pt") return locale;
+  const fromStore = readStoredLang();
+  if (fromStore) return fromStore;
+  return locale;
 }
 
 /* ── CV Component ───────────────────────────────────────────────────────────── */
-function CurriculoContent() {
-  const [lang, setLang] = useState<Lang>("pt");
+function CurriculoInner() {
+  const { locale } = useLocale();
+  const searchParams = useSearchParams();
+  /** Sempre null no 1º render (SSR + hidratação) — nunca ler searchParams no useState inicial, senão cliente e servidor divergem. */
+  const [lang, setLang] = useState<Lang | null>(null);
   const printedRef = useRef(false);
 
   useEffect(() => {
-    setLang(detectLang());
-  }, []);
+    setLang(resolveLang(locale, searchParams));
+  }, [locale, searchParams]);
 
   useEffect(() => {
+    if (lang === null) return;
     if (printedRef.current) return;
     printedRef.current = true;
     const id = window.setTimeout(() => window.print(), 800);
     return () => window.clearTimeout(id);
-  }, []);
+  }, [lang]);
+
+  if (lang === null) return null;
 
   const t = T[lang];
 
@@ -236,7 +267,8 @@ function CurriculoContent() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: "Segoe UI", Arial, sans-serif; font-size: 11.5px; line-height: 1.6; color: #1a1a1a; background: #f4f4f4; }
         .cv { background: #fff; max-width: 820px; margin: 24px auto; padding: 40px 44px 36px; box-shadow: 0 4px 32px rgba(0,0,0,.12); }
-        .print-btn { display: flex; align-items: center; gap: 6px; margin-bottom: 28px; background: #c0392b; color: #fff; border: none; border-radius: 999px; padding: 8px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; cursor: pointer; }
+        .cv-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 28px; }
+        .print-btn { display: flex; align-items: center; gap: 6px; margin-bottom: 0; background: #c0392b; color: #fff; border: none; border-radius: 999px; padding: 8px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; cursor: pointer; }
         .print-btn:hover { background: #e74c3c; }
         header { border-bottom: 2px solid #c0392b; padding-bottom: 12px; margin-bottom: 20px; }
         header h1 { font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
@@ -271,14 +303,34 @@ function CurriculoContent() {
         @media print {
           body { background: white; }
           .cv { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
+          .cv-toolbar { display: none !important; }
           .print-btn { display: none !important; }
           .exp-item { page-break-inside: avoid; }
           @page { margin: 14mm 16mm; }
+          [data-floating-lang-switcher],
+          [data-floating-lang-switcher] * {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            clip-path: inset(100%) !important;
+            position: absolute !important;
+            left: -99999px !important;
+            z-index: -9999 !important;
+          }
         }
       `}</style>
 
       <div className="cv">
-        <button className="print-btn" onClick={() => window.print()}>{t.printBtn}</button>
+        <div className="cv-toolbar">
+          <button type="button" className="print-btn" onClick={() => window.print()}>{t.printBtn}</button>
+          <Suspense fallback={null}>
+            <LanguageSwitcher />
+          </Suspense>
+        </div>
 
         <header>
           <h1>Pedro Henrique Levorato França</h1>
@@ -357,5 +409,9 @@ function CurriculoContent() {
 }
 
 export default function CurriculoPage() {
-  return <CurriculoContent />;
+  return (
+    <Suspense fallback={null}>
+      <CurriculoInner />
+    </Suspense>
+  );
 }
