@@ -39,7 +39,7 @@ export function ProjectActions({
   className
 }: ProjectActionsProps) {
   const hasAccess = isPublicProjectUrl(accessUrl);
-  /** trailingSlash no next.config — href alinhado ao export estático */
+  /** trailingSlash no next.config, href alinhado ao export estático */
   const caseHref = `/projetos/${slug}/`;
 
   return (

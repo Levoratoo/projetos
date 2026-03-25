@@ -269,12 +269,10 @@ export function LanguageSwitcher() {
   function select(next: Locale) {
     setLocale(next);
     setOpen(false);
-    if (/(^|\/)curriculo(\/|$)/.test(pathname)) {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set("lang", next);
-      const qs = params.toString();
-      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-    }
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("lang", next);
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
   }
 
   const triggerClip = `${rawId}-t`;

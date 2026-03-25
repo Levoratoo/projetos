@@ -1,4 +1,4 @@
-﻿export type ProjectRequestValues = {
+export type ProjectRequestValues = {
   title: string;
   sector: string;
   requester: string;
@@ -14,8 +14,8 @@
 
 export function buildTeamsSummary(values: ProjectRequestValues) {
   const deadlineText = values.deadline ? values.deadline : "não definido";
-  const stakeholders = (values.stakeholders ?? "").trim() || "—";
-  const notes = (values.notesLinks ?? "").trim() || "—";
+  const stakeholders = (values.stakeholders ?? "").trim() || "-";
+  const notes = (values.notesLinks ?? "").trim() || "-";
 
   return `[TÍTULO] ${values.title}
 

@@ -715,11 +715,11 @@ select option {
     inset 14px 18px 40px rgba(255, 220, 200, 0.12),
     0 0 28px rgba(255, 70, 50, 0.55),
     0 0 56px rgba(255, 40, 30, 0.22);
-  /* Não animar filter aqui — brightness no pai pode anular o filter:url() dos filhos */
+  /* Não animar filter aqui, brightness no pai pode anular o filter:url() dos filhos */
   animation: heroRedSunTwinkle 4.2s ease-in-out infinite;
 }
 
-/* Turbulência SVG (url #heroSunBoilFilter) — superfície irregular em movimento */
+/* Turbulência SVG (url #heroSunBoilFilter), superfície irregular em movimento */
 .hero-red-sun__filter-wrap {
   position: absolute;
   inset: 0;
@@ -973,7 +973,7 @@ select option {
   isolation: isolate;
 }
 
-/* Traço fino bordô — raio = metade do diâmetro da trajetória da bolinha */
+/* Traço fino bordô, raio = metade do diâmetro da trajetória da bolinha */
 .hero-orbit-ring {
   position: absolute;
   left: 50%;
@@ -1012,7 +1012,7 @@ select option {
 }
 
 /*
- * Braço: rotação contínua (não desativar em prefers-reduced-motion — é o efeito pedido).
+ * Braço: rotação contínua (não desativar em prefers-reduced-motion, é o efeito pedido).
  */
 .hero-orbit__arm {
   display: block;
@@ -1640,7 +1640,7 @@ a.hero-orbit__dot:focus-visible {
   background: var(--glow-ember);
 }
 
-/* Impressão / PDF: seletor de idioma é fixed — motores de PDF ignoram só print:hidden em alguns casos */
+/* Impressão / PDF: seletor de idioma é fixed, motores de PDF ignoram só print:hidden em alguns casos */
 @media print {
   [data-floating-lang-switcher],
   [data-floating-lang-switcher] * {

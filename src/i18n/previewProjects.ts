@@ -184,7 +184,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
   },
   "sistema-orcamentario-produtos-graficos": {
     en: {
-      title: "Budget system — graphic products",
+      title: "Budget system, graphic products",
       area: "Engineering",
       description:
         "Internal web app to manage graphic product quote requests, centralizing creation and review.",
@@ -198,7 +198,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Budget", "Graphic products", "Wizard", "Technical catalog"],
     },
     es: {
-      title: "Sistema presupuestario — productos gráficos",
+      title: "Sistema presupuestario, productos gráficos",
       area: "Ingeniería",
       description:
         "Aplicación web interna para gestionar solicitudes de presupuesto de productos gráficos, centralizando creación y análisis.",
@@ -212,7 +212,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Presupuesto", "Productos gráficos", "Asistente", "Catálogo técnico"],
     },
     zh: {
-      title: "预算系统 — 印刷品",
+      title: "预算系统, 印刷品",
       area: "工程",
       description:
         "内部 Web 应用，管理印刷品报价申请，集中创建与审核。",
@@ -226,7 +226,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["预算", "印刷品", "向导", "技术型录"],
     },
     de: {
-      title: "Budgetsystem — grafische Produkte",
+      title: "Budgetsystem, grafische Produkte",
       area: "Engineering",
       description:
         "Interne Web-App zur Verwaltung von Angebotsanfragen für grafische Produkte – zentralisierte Erstellung und Prüfung.",
@@ -240,7 +240,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Budget", "Grafikprodukte", "Wizard", "Technischer Katalog"],
     },
     ja: {
-      title: "予算システム — グラフィック製品",
+      title: "予算システム, グラフィック製品",
       area: "エンジニアリング",
       description:
         "グラフィック製品の見積依頼を管理する社内 Web アプリ。作成とレビューを一元化。",
@@ -465,7 +465,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "Printbag landing page",
       area: "Marketing",
       description:
-        "Conversion-focused landing page to attract clients and qualified leads — not corporate brochureware.",
+        "Conversion-focused landing page to attract clients and qualified leads, not corporate brochureware.",
       bullets: [
         "Single-page structure built for sales action",
         "Validated form with visual feedback and parallel submit",
@@ -504,7 +504,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "Printbag Landing Page",
       area: "Marketing",
       description:
-        "Conversion-orientierte Landing Page für Kunden und qualifizierte Leads — kein reines Image-Portal.",
+        "Conversion-orientierte Landing Page für Kunden und qualifizierte Leads, kein reines Image-Portal.",
       bullets: [
         "Ein-Pager-Struktur für Vertriebsaktionen",
         "Validiertes Formular mit Feedback und Parallelversand",
@@ -529,7 +529,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
   },
   "donacica-hot-dog": {
     en: {
-      title: "Dona Ciça Hot Dog — landing page",
+      title: "Dona Ciça Hot Dog, landing page",
       area: "Marketing",
       description:
         "Dona Ciça’s landing page: own digital presence for credibility and direct conversion to iFood, with a real menu and strong mobile visuals.",
@@ -543,7 +543,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing page", "Conversion", "iFood", "React 19", "Vite", "Framer Motion", "GitHub Pages"],
     },
     es: {
-      title: "Dona Ciça Hot Dog — landing page",
+      title: "Dona Ciça Hot Dog, landing page",
       area: "Marketing",
       description:
         "Landing de Dona Ciça: presencia digital propia para credibilidad y conversión directa a iFood, con menú real y fuerte impacto visual en móvil.",
@@ -557,7 +557,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing", "Conversión", "iFood", "React 19", "Vite", "Framer Motion", "GitHub Pages"],
     },
     zh: {
-      title: "Dona Ciça 热狗 — 落地页",
+      title: "Dona Ciça 热狗, 落地页",
       area: "营销",
       description:
         "Dona Ciça 落地页：自有数字形象，建立信任并直接导向 iFood 下单，含真实菜单与强移动端视觉。",
@@ -571,7 +571,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["落地页", "转化", "iFood", "React 19", "Vite", "Framer Motion", "GitHub Pages"],
     },
     de: {
-      title: "Dona Ciça Hot Dog — Landing Page",
+      title: "Dona Ciça Hot Dog, Landing Page",
       area: "Marketing",
       description:
         "Landing Page von Dona Ciça: eigene digitale Präsenz für Vertrauen und direkte Conversion zu iFood, mit echtem Menü und starker Mobile-Optik.",
@@ -585,7 +585,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing Page", "Conversion", "iFood", "React 19", "Vite", "Framer Motion", "GitHub Pages"],
     },
     ja: {
-      title: "Dona Ciça Hot Dog — ランディング",
+      title: "Dona Ciça Hot Dog, ランディング",
       area: "マーケティング",
       description:
         "Dona Ciça の LP。信頼と iFood への直接コンバージョンのための独自のデジタルプレゼンス。実メニューとモバイルの強いビジュアル。",
@@ -601,10 +601,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
   },
   "new-talent": {
     en: {
-      title: "New Talent — institutional site",
+      title: "New Talent, institutional site",
       area: "Marketing",
       description:
-        "New Talent institutional landing: DJ school, production and rental — stage look, single page, product tabs, three locations and WhatsApp conversion.",
+        "New Talent institutional landing: DJ school, production and rental, stage look, single page, product tabs, three locations and WhatsApp conversion.",
       bullets: [
         "Hero with animation, particles (canvas) and electronic/studio look.",
         "Courses, tabbed products (DJ, music production, rental) and history per city.",
@@ -615,10 +615,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing page", "HTML/CSS/JS", "GitHub Pages", "WhatsApp", "DJ", "Mobile first"],
     },
     es: {
-      title: "New Talent — sitio institucional",
+      title: "New Talent, sitio institucional",
       area: "Marketing",
       description:
-        "Landing institucional de New Talent: escuela de DJ, producción y alquiler — look de escenario, una página, pestañas de productos, tres sedes y conversión a WhatsApp.",
+        "Landing institucional de New Talent: escuela de DJ, producción y alquiler, look de escenario, una página, pestañas de productos, tres sedes y conversión a WhatsApp.",
       bullets: [
         "Hero con animación, partículas (canvas) y estética electrónica/estudio.",
         "Cursos, productos en pestañas (DJ, producción, alquiler) e historia por ciudad.",
@@ -629,10 +629,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing", "HTML/CSS/JS", "GitHub Pages", "WhatsApp", "DJ", "Mobile first"],
     },
     zh: {
-      title: "New Talent — 机构站",
+      title: "New Talent, 机构站",
       area: "营销",
       description:
-        "New Talent 机构落地页：DJ 学校、制作与租赁 — 舞台感、单页、产品标签、三地点与 WhatsApp 转化。",
+        "New Talent 机构落地页：DJ 学校、制作与租赁, 舞台感、单页、产品标签、三地点与 WhatsApp 转化。",
       bullets: [
         "Hero 动效、粒子(canvas)、电子/工作室视觉。",
         "课程、标签页产品（DJ、音乐制作、租赁）与按城市历史。",
@@ -643,10 +643,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["落地页", "HTML/CSS/JS", "GitHub Pages", "WhatsApp", "DJ", "Mobile first"],
     },
     de: {
-      title: "New Talent — institutional site",
+      title: "New Talent, institutional site",
       area: "Marketing",
       description:
-        "Institutionelle Landing Page von New Talent: DJ-Schule, Produktion und Vermietung — Bühnenlook, One-Pager, Produkt-Tabs, drei Standorte und WhatsApp-Conversion.",
+        "Institutionelle Landing Page von New Talent: DJ-Schule, Produktion und Vermietung, Bühnenlook, One-Pager, Produkt-Tabs, drei Standorte und WhatsApp-Conversion.",
       bullets: [
         "Hero mit Animation, Partikeln (Canvas) und elektro-/Studio-Look.",
         "Kurse, Tabs für DJ/Produktion/Vermietung und Historie pro Stadt.",
@@ -657,10 +657,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Landing Page", "HTML/CSS/JS", "GitHub Pages", "WhatsApp", "DJ", "Mobile first"],
     },
     ja: {
-      title: "New Talent — インサイト",
+      title: "New Talent, インサイト",
       area: "マーケティング",
       description:
-        "New Talent のインサイト：DJ スクール、制作、レンタル — ステージ風のビジュアル、1ページ、タブ、3拠点、WhatsApp へのコンバージョン。",
+        "New Talent のインサイト：DJ スクール、制作、レンタル, ステージ風のビジュアル、1ページ、タブ、3拠点、WhatsApp へのコンバージョン。",
       bullets: [
         "アニメーション、パーティクル(canvas)、エレクトロ/スタジオ風ビジュアル。",
         "コース、タブ（DJ・制作・レンタル）、都市別の沿革。",
@@ -743,7 +743,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "Industrial production management (MES)",
       area: "Operations",
       description:
-        "Command center for the textile factory: work orders from design to shipping, with panels, risk alerts, workflow and predictable simulation — Next.js or remote mode with Express, PostgreSQL and SSE.",
+        "Command center for the textile factory: work orders from design to shipping, with panels, risk alerts, workflow and predictable simulation, Next.js or remote mode with Express, PostgreSQL and SSE.",
       bullets: [
         "Full flow from design, cutting, printing, quality, dispatch, billing to shipping.",
         "Panels with filters; SLA/document/dock alerts; exception actions.",
@@ -756,7 +756,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "Gestión de producción industrial (MES)",
       area: "Operaciones",
       description:
-        "Centro de comando de la fábrica textil: OPs del diseño al embarque, con paneles, alertas de riesgo, workflow y simulación previsible — Next.js o modo remoto con Express, PostgreSQL y SSE.",
+        "Centro de comando de la fábrica textil: OPs del diseño al embarque, con paneles, alertas de riesgo, workflow y simulación previsible, Next.js o modo remoto con Express, PostgreSQL y SSE.",
       bullets: [
         "Flujo completo: diseño, corte, estampación, calidad, expedición, facturación, embarque.",
         "Paneles con filtros; alertas SLA/documento/muelle; acciones de excepción.",
@@ -769,7 +769,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "工业生产管理（MES）",
       area: "运营",
       description:
-        "纺织厂指挥中心：从设计到发货的工单，含面板、风险告警、工作流与可预测仿真 — Next.js 或 Express + PostgreSQL + SSE 远程模式。",
+        "纺织厂指挥中心：从设计到发货的工单，含面板、风险告警、工作流与可预测仿真, Next.js 或 Express + PostgreSQL + SSE 远程模式。",
       bullets: [
         "全流程：设计、裁剪、印花、质检、发运、开票、装船。",
         "带筛选的面板；SLA/单证/月台告警；异常处理。",
@@ -782,7 +782,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "Industrielle Produktionssteuerung (MES)",
       area: "Operations",
       description:
-        "Kommandozentrale der Textilfabrik: Aufträge vom Entwurf bis zur Auslieferung, mit Panels, Risikoalarmen, Workflow und Simulation — Next.js oder Remote mit Express, PostgreSQL und SSE.",
+        "Kommandozentrale der Textilfabrik: Aufträge vom Entwurf bis zur Auslieferung, mit Panels, Risikoalarmen, Workflow und Simulation, Next.js oder Remote mit Express, PostgreSQL und SSE.",
       bullets: [
         "Gesamter Flow: Entwurf, Zuschnitt, Druck, Qualität, Versand, Abrechnung, Ladung.",
         "Panels mit Filtern; SLA-/Dokument-/Dock-Alarme; Ausnahmeaktionen.",
@@ -795,7 +795,7 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       title: "生産管理（MES）",
       area: "オペレーション",
       description:
-        "テキスタイル工場の司令塔：設計から出荷までのオーダ、パネル、リスクアラート、ワークフロー、再現可能なシミュレーション — Next.js または Express + PostgreSQL + SSE のリモートモード。",
+        "テキスタイル工場の司令塔：設計から出荷までのオーダ、パネル、リスクアラート、ワークフロー、再現可能なシミュレーション, Next.js または Express + PostgreSQL + SSE のリモートモード。",
       bullets: [
         "設計・裁断・プリント・品質・出荷・請求・積み込みまでのフルフロー。",
         "フィルタ付きパネル；SLA/ドック/ドキュメントの警告；例外アクション。",
@@ -807,10 +807,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
   },
   "press-kit-levorato-dj": {
     en: {
-      title: "Digital press kit — LEVORATO DJ",
+      title: "Digital press kit, LEVORATO DJ",
       area: "Marketing",
       description:
-        "Full digital press kit for DJ Pedro Levorato — neon hero, career timeline, embedded sets, gallery with download and booking CTAs in one public URL.",
+        "Full digital press kit for DJ Pedro Levorato, neon hero, career timeline, embedded sets, gallery with download and booking CTAs in one public URL.",
       bullets: [
         "Hero with animated particles (180 JS instances) and strong neon identity.",
         "Interactive timeline with three chapters: 2011, 2022 and 2025.",
@@ -822,10 +822,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Press kit", "HTML/CSS/JS", "GitHub Pages", "DJ", "Booking", "Music"],
     },
     es: {
-      title: "Press kit digital — LEVORATO DJ",
+      title: "Press kit digital, LEVORATO DJ",
       area: "Marketing",
       description:
-        "Press kit digital completo para el DJ Pedro Levorato — hero neón, línea de tiempo, sets embebidos, galería con descarga y CTAs de booking en una sola URL pública.",
+        "Press kit digital completo para el DJ Pedro Levorato, hero neón, línea de tiempo, sets embebidos, galería con descarga y CTAs de booking en una sola URL pública.",
       bullets: [
         "Hero con partículas animadas (180 instancias JS) e identidad neón fuerte.",
         "Línea de tiempo interactiva con tres capítulos: 2011, 2022 y 2025.",
@@ -837,10 +837,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Press kit", "HTML/CSS/JS", "GitHub Pages", "DJ", "Booking", "Música"],
     },
     zh: {
-      title: "数字宣传资料 — LEVORATO DJ",
+      title: "数字宣传资料, LEVORATO DJ",
       area: "营销",
       description:
-        "DJ Pedro Levorato 的完整数字宣传资料 — 霓虹 Hero、职业时间线、嵌入 set、可下载图库与预订 CTA，单一公开 URL。",
+        "DJ Pedro Levorato 的完整数字宣传资料, 霓虹 Hero、职业时间线、嵌入 set、可下载图库与预订 CTA，单一公开 URL。",
       bullets: [
         "带动画粒子（180 个 JS 实例）与强霓虹识别。",
         "互动时间线三章：2011、2022、2025。",
@@ -852,10 +852,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["宣传资料", "HTML/CSS/JS", "GitHub Pages", "DJ", "预订", "音乐"],
     },
     de: {
-      title: "Digitales Presskit — LEVORATO DJ",
+      title: "Digitales Presskit, LEVORATO DJ",
       area: "Marketing",
       description:
-        "Vollständiges digitales Presskit für DJ Pedro Levorato — Neon-Hero, Karriere-Timeline, eingebettete Sets, Galerie mit Download und Booking-CTAs unter einer öffentlichen URL.",
+        "Vollständiges digitales Presskit für DJ Pedro Levorato, Neon-Hero, Karriere-Timeline, eingebettete Sets, Galerie mit Download und Booking-CTAs unter einer öffentlichen URL.",
       bullets: [
         "Hero mit animierten Partikeln (180 JS-Instanzen) und starker Neon-Identität.",
         "Interaktive Timeline mit drei Kapiteln: 2011, 2022 und 2025.",
@@ -867,10 +867,10 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["Presskit", "HTML/CSS/JS", "GitHub Pages", "DJ", "Booking", "Musik"],
     },
     ja: {
-      title: "デジタルプレスキット — LEVORATO DJ",
+      title: "デジタルプレスキット, LEVORATO DJ",
       area: "マーケティング",
       description:
-        "DJ Pedro Levorato 向けの完全デジタルプレスキット — ネオンヒーロー、キャリアタイムライン、埋め込みセット、ダウンロード付きギャラリーとブッキング CTA を1つの公開 URL に。",
+        "DJ Pedro Levorato 向けの完全デジタルプレスキット, ネオンヒーロー、キャリアタイムライン、埋め込みセット、ダウンロード付きギャラリーとブッキング CTA を1つの公開 URL に。",
       bullets: [
         "アニメーション粒子（JS 180 インスタンス）と強いネオンアイデンティティ。",
         "2011 / 2022 / 2025 の3章インタラクティブタイムライン。",

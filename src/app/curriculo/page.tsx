@@ -24,7 +24,8 @@ interface Project {
 const T: Record<Lang, {
   subtitle: string; printBtn: string; hSummary: string; hExperience: string;
   hProjects: string; hCerts: string; hEducation: string;
-  verify: string; pdfCert: string; summary: string;
+  verify: string;
+  summary: string;
   experiences: Exp[]; education: Edu[];
 }> = {
   pt: {
@@ -36,8 +37,7 @@ const T: Record<Lang, {
     hCerts: "Certificações",
     hEducation: "Educação",
     verify: "verificar",
-    pdfCert: "certificado PDF",
-    summary: "Analista de Negócios Sênior e trabalho com tecnologia há 6 anos, basicamente tentando convencer sistema, processo e gente a trabalharem juntos sem gerar terapia coletiva. Integro coisas que não conversam, automatizo o que ninguém quer fazer manualmente e tento fazer a tecnologia ajudar — em vez de atrapalhar ainda mais.",
+    summary: "Analista de Negócios Sênior e trabalho com tecnologia há 6 anos, basicamente tentando convencer sistema, processo e gente a trabalharem juntos sem gerar terapia coletiva. Integro coisas que não conversam, automatizo o que ninguém quer fazer manualmente e tento fazer a tecnologia ajudar, em vez de atrapalhar ainda mais.",
     experiences: [
       { role: "Analista de Negócios Sênior / Desenvolvedor Full Stack", company: "Printbag Embalagens", period: "Ago 2025 – atual · Camboriú, SC", desc: "Desenvolvimento de sistemas, automações, integrações, ERP e e-commerce. Se tem processo repetitivo, planilha que virou gambiarra oficial ou sistema que \"quase conversa\"… normalmente chega pra mim. Entender o caos, integrar as coisas, automatizar o possível e deixar tudo rodando mais liso." },
       { role: "Gerente de Projetos – PJ", company: "Rede Ufit Academia", period: "Ago 2025 – Out 2025 · Itapema, SC", desc: "Organizei o caos tecnológico pra rede crescer sem surtar. Implementei soluções de IA pra automatizar fluxo comercial, atendimento e captação de leads, conectando WhatsApp, RD Station e sistemas internos." },
@@ -61,10 +61,9 @@ const T: Record<Lang, {
     hCerts: "Certifications",
     hEducation: "Education",
     verify: "verify",
-    pdfCert: "PDF certificate",
     summary: "Senior Business Analyst with 6 years in tech, bridging the gap between systems, processes and people. I integrate things that don't talk to each other, automate what no one wants to do manually, and make sure technology helps rather than gets in the way.",
     experiences: [
-      { role: "Senior Business Analyst / Full Stack Developer", company: "Printbag Embalagens", period: "Aug 2025 – present · Camboriú, SC", desc: "Systems development, automation, integrations, ERP and e-commerce. If there's a repetitive process, a spreadsheet that became the unofficial workaround, or a system that \"almost works\" — it usually lands on my desk. Understand the chaos, integrate things, automate what's possible, keep everything running smoothly." },
+      { role: "Senior Business Analyst / Full Stack Developer", company: "Printbag Embalagens", period: "Aug 2025 – present · Camboriú, SC", desc: "Systems development, automation, integrations, ERP and e-commerce. If there's a repetitive process, a spreadsheet that became the unofficial workaround, or a system that \"almost works\", it usually lands on my desk. Understand the chaos, integrate things, automate what's possible, keep everything running smoothly." },
       { role: "Project Manager – Freelance", company: "Rede Ufit Academia", period: "Aug 2025 – Oct 2025 · Itapema, SC", desc: "Organized the tech chaos so the network could grow. Implemented AI solutions to automate sales flow, customer service and lead capture, connecting WhatsApp, RD Station and internal systems." },
       { role: "Project Manager – Freelance", company: "Sankhya Gestão de Negócios", period: "Jun 2024 – Aug 2025 · Balneário Camboriú, SC", desc: "Implementation, integration and support for new and active clients. Helped companies move the ERP from \"project mode\" into real daily operations. Aligning expectations, solving problems and adapting the system to the client's reality." },
       { role: "Systems Analyst", company: "Banana Brasil", period: "Feb 2023 – Oct 2024 · Jaraguá do Sul, SC", desc: "ERP guardian. Database maintenance, team support, internal solution development and process automation. Translating technology for people who just wanted to get their work done." },
@@ -86,7 +85,6 @@ const T: Record<Lang, {
     hCerts: "Certificaciones",
     hEducation: "Educación",
     verify: "verificar",
-    pdfCert: "certificado PDF",
     summary: "Analista de Negocios Senior con 6 años en tecnología. Integro sistemas que no se comunican, automatizo tareas manuales y hago que la tecnología ayude en lugar de complicar.",
     experiences: [
       { role: "Analista de Negocios Senior / Desarrollador Full Stack", company: "Printbag Embalagens", period: "Ago 2025 – actual · Camboriú, SC", desc: "Desarrollo de sistemas, automatizaciones, integraciones, ERP y e-commerce. Entiendo el caos, integro las piezas y automatizo todo lo posible." },
@@ -111,7 +109,6 @@ const T: Record<Lang, {
     hCerts: "认证证书",
     hEducation: "教育背景",
     verify: "验证",
-    pdfCert: "PDF 证书",
     summary: "高级业务分析师，拥有 6 年技术经验，专注于系统集成、流程自动化和业务技术融合。擅长需求分析、ERP 实施和数据驱动决策。",
     experiences: [
       { role: "高级业务分析师 / 全栈开发者", company: "Printbag Embalagens", period: "2025年8月 – 至今", desc: "负责系统开发、自动化、集成、ERP 和电商平台建设，优化重复性流程并推动数字化转型。" },
@@ -136,7 +133,6 @@ const T: Record<Lang, {
     hCerts: "Zertifizierungen",
     hEducation: "Ausbildung",
     verify: "verifizieren",
-    pdfCert: "PDF-Zertifikat",
     summary: "Senior Business Analyst mit 6 Jahren Technologieerfahrung. Ich integriere Systeme, automatisiere manuelle Prozesse und sorge dafür, dass Technologie hilft statt hindert.",
     experiences: [
       { role: "Senior Business Analyst / Full Stack Entwickler", company: "Printbag Embalagens", period: "Aug 2025 – heute · Camboriú, SC", desc: "Systementwicklung, Automatisierung, Integrationen, ERP und E-Commerce. Chaotische Prozesse strukturieren, integrieren und optimieren." },
@@ -161,7 +157,6 @@ const T: Record<Lang, {
     hCerts: "認定資格",
     hEducation: "学歴",
     verify: "確認する",
-    pdfCert: "PDF証明書",
     summary: "テクノロジー業界6年のシニアビジネスアナリスト。システム統合、プロセス自動化、ERP実装を専門とし、ビジネスとテクノロジーの橋渡し役として価値ある成果を届けます。",
     experiences: [
       { role: "シニアビジネスアナリスト / フルスタック開発者", company: "Printbag Embalagens", period: "2025年8月 – 現在", desc: "システム開発、自動化、連携、ERPおよびEコマースを担当。複雑なプロセスを整理し自動化。" },
@@ -181,27 +176,26 @@ const T: Record<Lang, {
 
 /* ── Projects ───────────────────────────────────────────────────────────────── */
 const PROJECTS: Project[] = [
-  { title: "Press Kit Digital — LEVORATO DJ", year: 2025, tags: "HTML/CSS/JS · GitHub Pages · DJ · Booking", link: "https://levoratoo.github.io/presskitlevoratodj", desc: { pt: "Press kit digital com hero neon animado, timeline de trajetória, sets embeds, galeria com download e CTAs de booking.", en: "Digital press kit with animated neon hero, career timeline, embedded sets, downloadable gallery and booking CTAs.", es: "Press kit digital con hero neon, timeline, sets incrustados, galería y CTAs de booking.", zh: "数字宣传册：动态霓虹主图、职业时间线、曲目嵌入、可下载图库和预约功能。", de: "Digitales Press-Kit mit Neon-Hero, Karriere-Timeline, eingebetteten Sets, Galerie und Booking-CTAs.", ja: "ネオンヒーロー、タイムライン、セット埋め込み、ダウンロードギャラリー付きデジタルプレスキット。" } },
+  { title: "Press Kit Digital, LEVORATO DJ", year: 2025, tags: "HTML/CSS/JS · GitHub Pages · DJ · Booking", link: "https://levoratoo.github.io/presskitlevoratodj", desc: { pt: "Press kit digital com hero neon animado, timeline de trajetória, sets embeds, galeria com download e CTAs de booking.", en: "Digital press kit with animated neon hero, career timeline, embedded sets, downloadable gallery and booking CTAs.", es: "Press kit digital con hero neon, timeline, sets incrustados, galería y CTAs de booking.", zh: "数字宣传册：动态霓虹主图、职业时间线、曲目嵌入、可下载图库和预约功能。", de: "Digitales Press-Kit mit Neon-Hero, Karriere-Timeline, eingebetteten Sets, Galerie und Booking-CTAs.", ja: "ネオンヒーロー、タイムライン、セット埋め込み、ダウンロードギャラリー付きデジタルプレスキット。" } },
   { title: "Landing Page Printbag", year: 2026, tags: "Landing Page · Leads · EmailJS · N8N · GTM", link: "https://www.embalagensprintbag.com/", desc: { pt: "Landing page de conversão com formulário validado, EmailJS, webhook N8N e rastreamento GTM.", en: "Conversion landing page with validated form, EmailJS, N8N webhook and GTM tracking.", es: "Landing page de conversión con formulario, EmailJS, webhook N8N y seguimiento GTM.", zh: "转化型落地页，含表单验证、EmailJS、N8N Webhook 和 GTM 追踪。", de: "Conversion-Landingpage mit Formular, EmailJS, N8N-Webhook und GTM-Tracking.", ja: "フォーム検証・EmailJS・N8N Webhook・GTM追跡付きのコンバージョン LP。" } },
-  { title: "Dona Çiça Hot Dog — Landing Page", year: 2026, tags: "React · Landing Page · WhatsApp", link: "https://levoratoo.github.io/donacicasite/", desc: { pt: "Site para food truck com cardápio interativo e integração WhatsApp.", en: "Food truck site with interactive menu and WhatsApp integration.", es: "Sitio para food truck con menú interactivo e integración WhatsApp.", zh: "餐车网站，含互动菜单和 WhatsApp 集成。", de: "Food-Truck-Website mit interaktivem Menü und WhatsApp-Integration.", ja: "インタラクティブメニューとWhatsApp連携付きフードトラックサイト。" } },
+  { title: "Dona Çiça Hot Dog, Landing Page", year: 2026, tags: "React · Landing Page · WhatsApp", link: "https://levoratoo.github.io/donacicasite/", desc: { pt: "Site para food truck com cardápio interativo e integração WhatsApp.", en: "Food truck site with interactive menu and WhatsApp integration.", es: "Sitio para food truck con menú interactivo e integración WhatsApp.", zh: "餐车网站，含互动菜单和 WhatsApp 集成。", de: "Food-Truck-Website mit interaktivem Menü und WhatsApp-Integration.", ja: "インタラクティブメニューとWhatsApp連携付きフードトラックサイト。" } },
   { title: "New Talent – Site Institucional", year: 2026, tags: "React · Next.js · SEO · WhatsApp", link: "https://levoratoo.github.io/sitenewtalent/", desc: { pt: "Site institucional escola de DJ com três unidades, abas de produtos e conversão para WhatsApp.", en: "Institutional site for a DJ school with three units, product tabs and WhatsApp conversion.", es: "Sitio institucional escuela de DJ con tres unidades y conversión WhatsApp.", zh: "DJ学校官网，含三个校区、产品选项卡和 WhatsApp 转化功能。", de: "Institutionelle Website einer DJ-Schule mit drei Standorten und WhatsApp-Conversion.", ja: "3拠点展開のDJスクール公式サイト。WhatsApp誘導機能付き。" } },
   { title: "Dashboard de Análise de Pedidos e Estoque", year: 2023, tags: "Next.js · TypeScript · SQL Server", link: "https://levoratoo.github.io/estoqueemtemporeal/", desc: { pt: "Dashboard web para pedidos pendentes e estoque em tempo real, substituindo planilhas.", en: "Web dashboard for real-time pending orders and inventory, replacing spreadsheets.", es: "Dashboard web para pedidos pendientes e inventario en tiempo real.", zh: "实时采购订单和库存管理 Web 仪表板，替代电子表格。", de: "Web-Dashboard für Echtzeitbestellungen und Lagerbestand.", ja: "リアルタイム注文・在庫管理ダッシュボード。スプレッドシートを代替。" } },
   { title: "Sistema de Planejamento Orçamentário", year: 2026, tags: "Orçamento · Centros de Custo · Next.js", link: "https://levoratoo.github.io/orcamentario-custos/planejamento/", desc: { pt: "Controle orçamentário por centro de custo com fluxo de aprovação e comparativo previsto vs realizado.", en: "Budget control by cost center with approval workflow and planned vs. actual comparison.", es: "Control presupuestario por centro de costos con flujo de aprobación.", zh: "按成本中心进行预算控制，含审批流程和预算vs实际对比。", de: "Budgetkontrolle nach Kostenstellen mit Genehmigungsworkflow und Soll-Ist-Vergleich.", ja: "コストセンター別予算管理、承認ワークフローと計画vs実績比較付き。" } },
-  { title: "Sistema Orçamentário — Produtos Gráficos", year: 2026, tags: "Orçamento · Wizard · Catálogo · Webhook", link: "https://levoratoo.github.io/orcamentoengenhariaprintbag/", desc: { pt: "Wizard guiado para orçamento de embalagens com catálogo técnico e dashboard de métricas.", en: "Guided wizard for packaging quotation with technical catalog and metrics dashboard.", es: "Wizard para cotización de embalajes con catálogo técnico y dashboard.", zh: "包装报价向导，含技术目录和指标仪表板。", de: "Geführter Assistent für Verpackungsangebote mit technischem Katalog.", ja: "包装見積もりウィザード。技術カタログと指標ダッシュボード付き。" } },
+  { title: "Sistema Orçamentário, Produtos Gráficos", year: 2026, tags: "Orçamento · Wizard · Catálogo · Webhook", link: "https://levoratoo.github.io/orcamentoengenhariaprintbag/", desc: { pt: "Wizard guiado para orçamento de embalagens com catálogo técnico e dashboard de métricas.", en: "Guided wizard for packaging quotation with technical catalog and metrics dashboard.", es: "Wizard para cotización de embalajes con catálogo técnico y dashboard.", zh: "包装报价向导，含技术目录和指标仪表板。", de: "Geführter Assistent für Verpackungsangebote mit technischem Katalog.", ja: "包装見積もりウィザード。技術カタログと指標ダッシュボード付き。" } },
   { title: "Sistema de Monitoramento de Pedidos", year: 2026, tags: "Monitoramento · Real Time · SQL Server", link: "https://levoratoo.github.io/Middleware/", desc: { pt: "Dashboard com alertas e filtros dinâmicos para acompanhamento de pedidos em tempo real.", en: "Dashboard with alerts and dynamic filters for real-time order monitoring.", es: "Dashboard con alertas y filtros dinámicos para seguimiento de pedidos en tiempo real.", zh: "含实时告警和动态筛选的订单监控仪表板。", de: "Dashboard mit Echtzeit-Alerts und dynamischen Filtern.", ja: "リアルタイムアラートと動的フィルター付き注文監視ダッシュボード。" } },
   { title: "Sistema Interno de Chamados", year: 2026, tags: "Chamados · Teams · Next.js · SQL Server", link: "https://levoratoo.github.io/sistemas-de-chamado/", desc: { pt: "Sistema de gestão de chamados com integração Microsoft Teams e fluxo de aprovação.", en: "Internal ticketing system with Microsoft Teams integration and approval workflow.", es: "Sistema de gestión de tickets con integración Microsoft Teams.", zh: "内部工单系统，集成 Microsoft Teams 和审批流程。", de: "Internes Ticketsystem mit Microsoft Teams-Integration.", ja: "Microsoft Teams連携と承認フロー付き社内チケット管理システム。" } },
-  { title: "Gestão da Produção Industrial — MES", year: 2026, tags: "MES · Produção · Pipeline · Next.js", link: "https://levoratoo.github.io/gestao-producao-industrial/", desc: { pt: "MES com pipeline de 7 etapas, apontamento, controle de qualidade e painel operacional.", en: "MES with 7-stage pipeline, production tracking, quality control and operational panel.", es: "MES con pipeline de 7 etapas, registro de producción y control de calidad.", zh: "MES系统，含7阶段流水线、生产记录、质量控制和运营面板。", de: "MES mit 7-Stufen-Pipeline, Produktionserfassung und Qualitätskontrolle.", ja: "7段階パイプライン・生産記録・品質管理付きMESシステム。" } },
+  { title: "Gestão da Produção Industrial, MES", year: 2026, tags: "MES · Produção · Pipeline · Next.js", link: "https://levoratoo.github.io/gestao-producao-industrial/", desc: { pt: "MES com pipeline de 7 etapas, apontamento, controle de qualidade e painel operacional.", en: "MES with 7-stage pipeline, production tracking, quality control and operational panel.", es: "MES con pipeline de 7 etapas, registro de producción y control de calidad.", zh: "MES系统，含7阶段流水线、生产记录、质量控制和运营面板。", de: "MES mit 7-Stufen-Pipeline, Produktionserfassung und Qualitätskontrolle.", ja: "7段階パイプライン・生産記録・品質管理付きMESシステム。" } },
 ];
 
 const CERTS: Cert[] = [
-  { name: "Project Management Professional (PMP)®", issuer: "PMI", url: null, kind: "verify" },
-  { name: "Talking to AI: Prompt Engineering for Project Managers", issuer: "Credly", url: "https://www.credly.com/badges/42894808-ab3a-4a94-8fe6-04ec2f22eda6/linked_in_profile", kind: "verify" },
-  { name: "Generative AI Overview for Project Managers", issuer: "Credly", url: "https://www.credly.com/badges/db7faca4-8d3a-441c-bc13-b29bdd62255e/linked_in_profile", kind: "verify" },
-  { name: "Practical Application of Gen AI for Project Managers", issuer: "Credly", url: "https://www.credly.com/badges/930f82eb-ea65-4de5-b3e6-987c218bf921/linked_in_profile", kind: "verify" },
+  { name: "Talking to AI: Prompt Engineering for Project Managers", issuer: "PMI", url: "https://www.credly.com/badges/42894808-ab3a-4a94-8fe6-04ec2f22eda6/linked_in_profile", kind: "verify" },
+  { name: "Generative AI Overview for Project Managers", issuer: "PMI", url: "https://www.credly.com/badges/db7faca4-8d3a-441c-bc13-b29bdd62255e/linked_in_profile", kind: "verify" },
+  { name: "Practical Application of Gen AI for Project Managers", issuer: "PMI", url: "https://www.credly.com/badges/930f82eb-ea65-4de5-b3e6-987c218bf921/linked_in_profile", kind: "verify" },
   { name: "Scrum Fundamentals Certified (SFC™)", issuer: "SCRUMstudy", url: "https://www.scrumstudy.com/certification/verify?type=SFC&number=895606", kind: "verify" },
   { name: "Six Sigma Yellow Belt (SSYB™)", issuer: "6sigmastudy", url: "https://www.6sigmastudy.com/certification/verify?type=SSYB&number=1134705", kind: "verify" },
-  { name: "Business Analysis Fundamentals with AI Certified", issuer: "SCRUMstudy", url: "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/BusinessAnalysisFundamentalswithAICertified-PedroHenriqueLevorato%20Fran%C3%A7a-1134709.pdf", kind: "pdf" },
-  { name: "Kanban Essentials with AI Certified", issuer: "SCRUMstudy", url: "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/KanbanEssentialswithAICertified-PedroHenriqueLevorato%20Fran%C3%A7a-1134711.pdf", kind: "pdf" },
+  { name: "Business Analysis Fundamentals with AI Certified", issuer: "SCRUMstudy", url: "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/BusinessAnalysisFundamentalswithAICertified-PedroHenriqueLevoratoFran%C3%A7a-1134709.pdf", kind: "pdf" },
+  { name: "Kanban Essentials with AI Certified", issuer: "SCRUMstudy", url: "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/KanbanEssentialswithAICertified-PedroHenriqueLevoratoFran%C3%A7a-1134711.pdf", kind: "pdf" },
 ];
 
 const VALID_LANGS: Lang[] = ["pt", "en", "es", "zh", "de", "ja"];
@@ -241,7 +235,7 @@ function resolveLang(locale: Locale, searchParams: URLSearchParams): Lang {
 function CurriculoInner() {
   const { locale } = useLocale();
   const searchParams = useSearchParams();
-  /** Sempre null no 1º render (SSR + hidratação) — nunca ler searchParams no useState inicial, senão cliente e servidor divergem. */
+  /** Sempre null no 1º render (SSR + hidratação), nunca ler searchParams no useState inicial, senão cliente e servidor divergem. */
   const [lang, setLang] = useState<Lang | null>(null);
   const printedRef = useRef(false);
 
@@ -267,14 +261,21 @@ function CurriculoInner() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: "Segoe UI", Arial, sans-serif; font-size: 11.5px; line-height: 1.6; color: #1a1a1a; background: #f4f4f4; }
         .cv { background: #fff; max-width: 820px; margin: 24px auto; padding: 40px 44px 36px; box-shadow: 0 4px 32px rgba(0,0,0,.12); }
-        .cv-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 28px; }
+        .cv-toolbar { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 28px; }
+        .cv-toolbar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
         .print-btn { display: flex; align-items: center; gap: 6px; margin-bottom: 0; background: #c0392b; color: #fff; border: none; border-radius: 999px; padding: 8px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; cursor: pointer; }
         .print-btn:hover { background: #e74c3c; }
         header { border-bottom: 2px solid #c0392b; padding-bottom: 12px; margin-bottom: 20px; }
         header h1 { font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
         .subtitle { font-size: 12px; font-weight: 700; color: #c0392b; margin-top: 3px; }
         .contacts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; font-size: 10.5px; color: #555; }
+        .contacts-highlight { color: #c0392b; }
         .contacts a { color: #c0392b; text-decoration: none; }
+        .contacts a:hover { text-decoration: underline; }
+        .cert-link { color: #c0392b; text-decoration: none; }
+        .cert-link:hover { text-decoration: underline; }
+        .cv-screen-only { }
+        .cv-print-only { display: none; }
         section { margin-bottom: 20px; }
         h2 { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .28em; color: #c0392b; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-bottom: 12px; }
         .bio { font-size: 11.5px; line-height: 1.65; color: #333; }
@@ -294,7 +295,6 @@ function CurriculoInner() {
         .cert-item { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 7px; }
         .cert-name { font-weight: 600; font-size: 11.5px; }
         .cert-meta { font-size: 10.5px; color: #555; white-space: nowrap; display: flex; gap: 6px; }
-        .cert-link { color: #c0392b; text-decoration: none; }
         .edu-item { margin-bottom: 8px; }
         .edu-degree { font-weight: 700; font-size: 12px; }
         .edu-school { font-size: 11px; color: #c0392b; }
@@ -305,7 +305,18 @@ function CurriculoInner() {
           .cv { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
           .cv-toolbar { display: none !important; }
           .print-btn { display: none !important; }
-          .exp-item { page-break-inside: avoid; }
+          .exp-item { page-break-inside: avoid; break-inside: avoid; }
+          .cert-item,
+          .proj-item {
+            page-break-inside: avoid;
+            break-inside: avoid;
+          }
+          .cert-meta { white-space: normal !important; }
+          .cv-screen-only { display: none !important; }
+          .cv-print-only { display: inline !important; }
+          .cv .contacts span,
+          .cv .proj-link,
+          .cv footer { text-decoration: none !important; }
           @page { margin: 14mm 16mm; }
           [data-floating-lang-switcher],
           [data-floating-lang-switcher] * {
@@ -326,21 +337,36 @@ function CurriculoInner() {
 
       <div className="cv">
         <div className="cv-toolbar">
-          <button type="button" className="print-btn" onClick={() => window.print()}>{t.printBtn}</button>
-          <Suspense fallback={null}>
-            <LanguageSwitcher />
-          </Suspense>
+          <div className="cv-toolbar-row">
+            <button type="button" className="print-btn" onClick={() => window.print()}>{t.printBtn}</button>
+            <Suspense fallback={null}>
+              <LanguageSwitcher />
+            </Suspense>
+          </div>
         </div>
 
         <header>
           <h1>Pedro Henrique Levorato França</h1>
           <div className="subtitle">{t.subtitle}</div>
           <div className="contacts">
-            <span>Itajaí, SC — Brasil</span>
+            <span>Itajaí, SC, Brasil</span>
             <span>(44) 9 8839-2703</span>
-            <a href="mailto:levorato157@gmail.com">levorato157@gmail.com</a>
-            <a href="https://www.linkedin.com/in/pedrolevorato/" target="_blank" rel="noreferrer">linkedin.com/in/pedrolevorato</a>
-            <a href="https://github.com/levoratoo" target="_blank" rel="noreferrer">github.com/levoratoo</a>
+            <span className="cv-screen-only contacts-highlight">
+              <a href="mailto:levorato157@gmail.com">levorato157@gmail.com</a>
+            </span>
+            <span className="cv-print-only contacts-highlight">levorato157@gmail.com</span>
+            <span className="cv-screen-only contacts-highlight">
+              <a href="https://www.linkedin.com/in/pedrolevorato/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/pedrolevorato
+              </a>
+            </span>
+            <span className="cv-print-only contacts-highlight">linkedin.com/in/pedrolevorato</span>
+            <span className="cv-screen-only contacts-highlight">
+              <a href="https://github.com/levoratoo" target="_blank" rel="noopener noreferrer">
+                github.com/levoratoo
+              </a>
+            </span>
+            <span className="cv-print-only contacts-highlight">github.com/levoratoo</span>
           </div>
         </header>
 
@@ -373,7 +399,19 @@ function CurriculoInner() {
               </div>
               <div className="proj-desc">{p.desc[lang]}</div>
               <div className="proj-tags">{p.tags}</div>
-              {p.link && <a className="proj-link" href={p.link} target="_blank" rel="noreferrer">{p.link.replace(/^https?:\/\//, "")}</a>}
+              {p.link && (
+                <>
+                  <a
+                    className="cv-screen-only proj-link"
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {p.link.replace(/^https?:\/\//, "")}
+                  </a>
+                  <span className="cv-print-only proj-link">{p.link.replace(/^https?:\/\//, "")}</span>
+                </>
+              )}
             </div>
           ))}
         </section>
@@ -384,8 +422,18 @@ function CurriculoInner() {
             <div className="cert-item" key={i}>
               <span className="cert-name">{c.name}</span>
               <span className="cert-meta">
-                {c.issuer}
-                {c.url && <>{" · "}<a className="cert-link" href={c.url} target="_blank" rel="noreferrer">{c.kind === "pdf" ? t.pdfCert : t.verify}</a></>}
+                <span className="cv-screen-only">
+                  {c.issuer}
+                  {c.url ? (
+                    <>
+                      {" · "}
+                      <a className="cert-link" href={c.url} target="_blank" rel="noopener noreferrer">
+                        {t.verify}
+                      </a>
+                    </>
+                  ) : null}
+                </span>
+                <span className="cv-print-only">{c.issuer}</span>
               </span>
             </div>
           ))}
@@ -402,7 +450,10 @@ function CurriculoInner() {
           ))}
         </section>
 
-        <footer>Pedro Henrique Levorato França · (44) 9 8839-2703 · levorato157@gmail.com · linkedin.com/in/pedrolevorato</footer>
+        <footer>
+          Pedro Henrique Levorato França · Itajaí, SC, Brasil · (44) 9 8839-2703 · levorato157@gmail.com ·
+          linkedin.com/in/pedrolevorato · github.com/levoratoo
+        </footer>
       </div>
     </>
   );

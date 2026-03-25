@@ -1,16 +1,24 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { Container } from "@/components/Container";
 import { tHome } from "@/i18n/home";
 import { useLocale } from "@/state/locale";
+import { cn } from "@/lib/utils";
 
 export function Footer() {
   const { locale } = useLocale();
   const t = tHome(locale);
+  const pathname = usePathname() ?? "";
+  const hideOnCurriculoPrint = /(^|\/)curriculo(\/|$)/.test(pathname);
+
   return (
     <footer
       id="contato"
-      className="relative border-t border-white/10 bg-[linear-gradient(180deg,rgba(8,3,4,0.94),rgba(4,2,3,0.98))]"
+      className={cn(
+        "relative border-t border-white/10 bg-[linear-gradient(180deg,rgba(8,3,4,0.94),rgba(4,2,3,0.98))]",
+        hideOnCurriculoPrint && "print:hidden"
+      )}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,59,59,0.14),transparent_42%)]" />
       <Container>

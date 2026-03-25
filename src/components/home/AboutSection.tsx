@@ -212,9 +212,8 @@ function certKindLabel(kind: CertItem["kind"], t: ReturnType<typeof tAbout>): st
     case "credly":
       return t.certKindCredly;
     case "verify":
-      return t.certKindVerify;
     case "pdf":
-      return t.certKindPdf;
+      return t.certKindVerify;
     default:
       return "";
   }
@@ -263,8 +262,8 @@ function RecommendationsBlock() {
         {recommendations.map((rec, i) => {
           const href = rec.authorUrl ?? LINKEDIN_RECOMMENDATIONS_URL;
           const ariaLabel = rec.authorUrl
-            ? `${rec.author} — ${t.recAriaProfile}`
-            : `${rec.author} — ${t.recAriaAll}`;
+            ? `${rec.author}, ${t.recAriaProfile}`
+            : `${rec.author}, ${t.recAriaAll}`;
           return (
             <motion.a
               key={rec.id}
@@ -290,7 +289,7 @@ function RecommendationsBlock() {
               />
             </div>
             <p className="relative z-10 mt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[rgba(255,88,88,0.7)] group-hover:text-[rgba(255,88,88,0.95)]">
-              — {rec.author}
+              {rec.author}
             </p>
             {rec.roleLine ? (
               <p className="relative z-10 mt-1 text-[10px] leading-snug text-white/40">

@@ -22,12 +22,12 @@ export function buildRequestSummary(
   values: RequestFormValues,
   project: RelatedProjectInfo
 ) {
-  const tagsText = project.tags.length > 0 ? project.tags.join(", ") : "—";
+  const tagsText = project.tags.length > 0 ? project.tags.join(", ") : "-";
   const prazoText = values.prazoDesejado || "não definido";
-  const linksText = values.linksNotas || "—";
-  const acessoText = values.urlAcessoDashboard || "—";
+  const linksText = values.linksNotas || "-";
+  const acessoText = values.urlAcessoDashboard || "-";
 
-  return `[TÍTULO] Solicitação de Projeto — ${values.nomeSolicitacao}
+  return `[TÍTULO] Solicitação de Projeto, ${values.nomeSolicitacao}
 
 Solicitante: ${values.solicitante}
 Área: ${values.area}
@@ -49,7 +49,7 @@ Link/Contexto:
 ${linksText}
 
 Projeto relacionado (portfólio):
-${project.nomeProjeto} — ${tagsText} — ${project.urlProjeto}
+${project.nomeProjeto}, ${tagsText}, ${project.urlProjeto}
 Acesso/Preview (se houver):
 ${acessoText}`;
 }

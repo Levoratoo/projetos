@@ -1,4 +1,4 @@
-/** Dados estruturados da seção "Sobre mim" — agnósticos de idioma. */
+/** Dados estruturados da seção "Sobre mim", agnósticos de idioma. */
 
 export type ExperienceItem = {
   id: string;
@@ -101,22 +101,22 @@ export const certifications: CertItem[] = [
   {
     id: "prompt-ai",
     name: "Talking to AI: Prompt Engineering for Project Managers",
-    issuer: "Credly",
-    kind: "credly",
+    issuer: "PMI",
+    kind: "verify",
     url: "https://www.credly.com/badges/42894808-ab3a-4a94-8fe6-04ec2f22eda6/linked_in_profile",
   },
   {
     id: "gen-ai-overview",
     name: "Generative AI Overview for Project Managers",
-    issuer: "Credly",
-    kind: "credly",
+    issuer: "PMI",
+    kind: "verify",
     url: "https://www.credly.com/badges/db7faca4-8d3a-441c-bc13-b29bdd62255e/linked_in_profile",
   },
   {
     id: "gen-ai-practical",
     name: "Practical Application of Gen AI for Project Managers",
-    issuer: "Credly",
-    kind: "credly",
+    issuer: "PMI",
+    kind: "verify",
     url: "https://www.credly.com/badges/930f82eb-ea65-4de5-b3e6-987c218bf921/linked_in_profile",
   },
   {

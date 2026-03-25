@@ -3,7 +3,7 @@ import type { PreviewProject } from "@/data/projects";
 /** Quantos planetas no hero (resto dos projetos só nas secções abaixo) */
 export const HERO_ORBIT_MAX = 5;
 
-/** Segundos por volta — uma velocidade por planeta (índice 0 = órbita mais interna) */
+/** Segundos por volta, uma velocidade por planeta (índice 0 = órbita mais interna) */
 const ORBIT_DURATION_BY_INDEX: readonly number[] = [8.5, 15, 10.5, 18, 12];
 
 /** Bolinha + linha de órbita: bordô / vermelho do site */

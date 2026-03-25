@@ -127,7 +127,10 @@ export function ProjectPreviewModal({
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(255,59,59,0.14),transparent_55%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] tech-grid" />
         <div className="grid h-full grid-cols-1 grid-rows-[1fr_1fr] gap-0 lg:grid-cols-12 lg:grid-rows-none">
-          <div className="relative order-last flex min-h-0 flex-col border-t border-white/10 lg:order-first lg:col-span-4 lg:border-t-0 lg:border-r lg:border-white/10">
+          <div
+            key={`${slug}-${locale}`}
+            className="relative order-last flex min-h-0 flex-col border-t border-white/10 lg:order-first lg:col-span-4 lg:border-t-0 lg:border-r lg:border-white/10"
+          >
             {/* Scrollable content area */}
             <div className="scrollbar-glow flex-1 overflow-y-auto p-6 md:p-8">
               <div className="flex items-start justify-between gap-4">
@@ -181,7 +184,7 @@ export function ProjectPreviewModal({
               ) : null}
             </div>
 
-            {/* Fixed footer button — always visible */}
+            {/* Fixed footer button, always visible */}
             <div className="shrink-0 border-t border-white/10 bg-[rgba(6,3,4,0.96)] px-6 py-4 md:px-8">
               <Link
                 href={`/projetos/${project.slug}/`}
@@ -214,7 +217,7 @@ export function ProjectPreviewModal({
               </button>
             </div>
 
-            {/* Main image — capped so thumbnails never get cut */}
+            {/* Main image, capped so thumbnails never get cut */}
             <div className="preview-frame relative min-h-0 w-full flex-1 overflow-hidden rounded-[24px] bg-black/20" style={{ maxHeight: "58vh" }}>
               <Image
                 src={hero.src}

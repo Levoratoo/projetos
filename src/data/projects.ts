@@ -682,12 +682,12 @@ export const projects: Project[] = [
   },
   {
     slug: "donacica-hot-dog",
-    title: "Dona Ciça Hot Dog — Landing Page",
+    title: "Dona Ciça Hot Dog, Landing Page",
     subtitle: "Presença digital própria para converter tráfego em pedidos no iFood.",
     summary:
       "Landing page de alta conversão para a marca Dona Ciça: impacto visual forte, cardápio real e CTAs para pedir no iFood, sem depender só da plataforma.",
     description:
-      "Site estático como casa da marca: credibilidade, fotos reais, copy forte e um único foco — levar o visitante a pedir no iFood.",
+      "Site estático como casa da marca: credibilidade, fotos reais, copy forte e um único foco, levar o visitante a pedir no iFood.",
     year: 2026,
     status: "Concluído",
     progress: 100,
@@ -719,7 +719,7 @@ export const projects: Project[] = [
       c: "rgba(255, 200, 120, 0.14)"
     },
     context:
-      "A Dona Ciça já vende bem pelo iFood, mas depender só de plataforma de delivery é arriscado: o algoritmo muda, a taxa sobe ou o concorrente aparece em primeiro. O site é a presença digital própria da marca — um lugar que existe independente de qualquer plataforma, que passa credibilidade e faz o cliente sentir que está lidando com uma marca de verdade, não só mais um cadastro no aplicativo. Não é loja e não tem checkout: é uma landing de alta conversão com um objetivo claro — fazer o visitante clicar em Pedir no iFood.",
+      "A Dona Ciça já vende bem pelo iFood, mas depender só de plataforma de delivery é arriscado: o algoritmo muda, a taxa sobe ou o concorrente aparece em primeiro. O site é a presença digital própria da marca, um lugar que existe independente de qualquer plataforma, que passa credibilidade e faz o cliente sentir que está lidando com uma marca de verdade, não só mais um cadastro no aplicativo. Não é loja e não tem checkout: é uma landing de alta conversão com um objetivo claro, fazer o visitante clicar em Pedir no iFood.",
     problem: [
       "Dependência exclusiva de marketplaces para visibilidade e conversão.",
       "Marca sem canal próprio que reforce confiança além do card do app.",
@@ -727,7 +727,7 @@ export const projects: Project[] = [
     ],
     constraints: [
       "Sem e-commerce próprio: conversão via iFood e WhatsApp.",
-      "Infraestrutura zero — deploy estático gratuito.",
+      "Infraestrutura zero, deploy estático gratuito.",
       "Conteúdo e preços alinhados ao catálogo real do iFood."
     ],
     solution: [
@@ -736,13 +736,13 @@ export const projects: Project[] = [
       "Sobre a marca com foto real e prova social (nota 5.0); benefícios com marquee animado.",
       "CTA final e footer com logo, links e WhatsApp; partículas, gradiente e ilustração com animação.",
       "Fonte única de textos e dados em siteContent; assets organizados; build otimizado pelo Vite.",
-      "Deploy no GitHub Pages — 100% gratuito, sem servidor nem mensalidade."
+      "Deploy no GitHub Pages, 100% gratuito, sem servidor nem mensalidade."
     ],
     results: [
       "Credibilidade quando alguém pesquisa a marca: aparece um site profissional, não só o iFood.",
       "Link próprio para Instagram, WhatsApp, panfleto e qualquer canal.",
       "Cada seção empurra para o pedido; botão flutuante no mobile conforme a rolagem.",
-      "Confiança com ingredientes e preços reais e foto da Dona Ciça — o cliente chega ao iFood já convencido."
+      "Confiança com ingredientes e preços reais e foto da Dona Ciça, o cliente chega ao iFood já convencido."
     ],
     learnings: [
       "Landing com uma ação principal mantém a jornada clara do visitante.",
@@ -805,8 +805,8 @@ export const projects: Project[] = [
   },
   {
     slug: "new-talent",
-    title: "New Talent — Site institucional",
-    subtitle: "Landing para escola de DJ, produção musical e locação — conversão e WhatsApp.",
+    title: "New Talent, Site institucional",
+    subtitle: "Landing para escola de DJ, produção musical e locação, conversão e WhatsApp.",
     summary:
       "Site estático com visual de palco/estúdio, página única com cursos, produtos em abas, unidades (Maringá, Londrina, Balneário Camboriú) e atalhos constantes para WhatsApp e Instagram.",
     description:
@@ -839,14 +839,14 @@ export const projects: Project[] = [
       c: "rgba(120, 200, 255, 0.12)"
     },
     context:
-      "A New Talent é escola de DJ e também atua com produção musical e locação de equipamento. O site é uma landing institucional: primeira impressão forte, visual de música eletrônica / palco / estúdio (fundo escuro, azul, animação no hero), texto direto e muitos atalhos para o WhatsApp. Não é o site cinza de escola com PDF escondido — é pensado para quem está no celular, rolando rápido e querendo entender a marca e já falar com alguém.",
+      "A New Talent é escola de DJ e também atua com produção musical e locação de equipamento. O site é uma landing institucional: primeira impressão forte, visual de música eletrônica / palco / estúdio (fundo escuro, azul, animação no hero), texto direto e muitos atalhos para o WhatsApp. Não é o site cinza de escola com PDF escondido, é pensado para quem está no celular, rolando rápido e querendo entender a marca e já falar com alguém.",
     problem: [
       "Sem um lugar único na internet, a escola some na busca e mistura informação de uma cidade com outra.",
       "Leads se perdem porque ninguém explica no privado toda vez o que oferecem, onde atendem e como começar.",
       "Dependência de indicação ou atendimento manual no Zap para explicar tudo."
     ],
     constraints: [
-      "Projeto 100% estático — sem servidor e sem banco.",
+      "Projeto 100% estático, sem servidor e sem banco.",
       "Conteúdo editável no HTML; links de WhatsApp/Instagram por unidade quando fechados.",
       "Prioridade absoluta a performance e leitura no celular."
     ],
@@ -860,8 +860,8 @@ export const projects: Project[] = [
     ],
     results: [
       "Quem entra entende em segundos a proposta, as linhas (DJ / produção / locação) e que há mais de uma unidade.",
-      "Caminho curto para conversar (WhatsApp) — menos “não sei se é pra mim ou na minha cidade”.",
-      "Cara de marca séria e atual; site leve e estático carrega rápido no 4G — essencial com tráfego majoritário mobile."
+      "Caminho curto para conversar (WhatsApp), menos “não sei se é pra mim ou na minha cidade”.",
+      "Cara de marca séria e atual; site leve e estático carrega rápido no 4G, essencial com tráfego majoritário mobile."
     ],
     learnings: [
       "Intersection Observer e JS vanilla bastam para entrada animada sem framework pesado.",
@@ -1392,9 +1392,9 @@ export const projects: Project[] = [
   {
     slug: "gestao-producao-industrial-mes",
     title: "Gestão de Produção Industrial",
-    subtitle: "MES têxtil — centro de comando da fábrica, da engenharia ao embarque.",
+    subtitle: "MES têxtil, centro de comando da fábrica, da engenharia ao embarque.",
     summary:
-      "Painel tipo centro de comando: ordens de produção percorrem desenho técnico, corte, estamparia, qualidade, expedição, faturamento e embarque — com visão rápida do que flui, do que trava e do que pode estourar prazo.",
+      "Painel tipo centro de comando: ordens de produção percorrem desenho técnico, corte, estamparia, qualidade, expedição, faturamento e embarque, com visão rápida do que flui, do que trava e do que pode estourar prazo.",
     description:
       "Fluxo de 7 etapas com status por etapa, painéis com filtros, alertas de risco, ações de workflow e correções de exceção; simulação em cadência previsível e modo local (frontend) ou remoto (API + PostgreSQL + SSE).",
     year: 2026,
@@ -1422,11 +1422,11 @@ export const projects: Project[] = [
       c: "rgba(255, 255, 255, 0.12)"
     },
     context:
-      "O site funciona como um centro de comando de fábrica têxtil: mostra as ordens de produção atravessando a operação inteira — do desenho técnico ao corte, estamparia, qualidade, expedição, faturamento e embarque. O gestor abre e enxerga rápido o que está fluindo, o que está travado e o que vai estourar prazo.",
+      "O site funciona como um centro de comando de fábrica têxtil: mostra as ordens de produção atravessando a operação inteira, do desenho técnico ao corte, estamparia, qualidade, expedição, faturamento e embarque. O gestor abre e enxerga rápido o que está fluindo, o que está travado e o que vai estourar prazo.",
     problem: [
       "Falta de previsibilidade e rastreabilidade ponta a ponta no fluxo.",
       "Informação que parecia aleatória na simulação vira dor real: OP atrasada sem contexto, gargalo que ninguém vê a tempo, documento que trava embarque no fim.",
-      "Muita decisão reativa e pouca visão única da cadeia — antes, sem audit trail claro de aprovações e documentos.",
+      "Muita decisão reativa e pouca visão única da cadeia, antes, sem audit trail claro de aprovações e documentos.",
       "Necessidade de demo confiável sem infraestrutura (modo local) e, depois, modo autoritativo com estado em tempo real."
     ],
     constraints: [
@@ -1447,7 +1447,7 @@ export const projects: Project[] = [
     ],
     results: [
       "Mais clareza para a operação: todos entendem em qual etapa cada OP está.",
-      "Menos surpresa de última hora — riscos aparecem antes, com alertas e contexto.",
+      "Menos surpresa de última hora, riscos aparecem antes, com alertas e contexto.",
       "Melhor decisão: priorização por gargalo real, não por achismo.",
       "Mais confiança na demo e no sistema: comportamento consistente, reproduzível e auditável.",
       "Deploy estático no GitHub Pages utilizável sem backend; opção remota para dados e tempo real."
@@ -1534,12 +1534,12 @@ export const projects: Project[] = [
   },
   {
     slug: "press-kit-levorato-dj",
-    title: "Press Kit Digital — LEVORATO DJ",
+    title: "Press Kit Digital, LEVORATO DJ",
     subtitle: "Site de press kit para conversão de bookings e apresentação profissional da marca.",
     summary:
       "Site estático de press kit para o DJ e produtor Pedro Levorato: identidade, história, música e contato em uma única URL pública para contratantes, assessores e promoters.",
     description:
-      "Cartão de visita digital completo que vende o artista antes mesmo de uma conversa acontecer — visual agressivo, sets on-demand e galeria de fotos para download.",
+      "Cartão de visita digital completo que vende o artista antes mesmo de uma conversa acontecer, visual agressivo, sets on-demand e galeria de fotos para download.",
     year: 2025,
     status: "Concluído",
     progress: 100,
@@ -1572,10 +1572,10 @@ export const projects: Project[] = [
     problem: [
       "Sem presença digital estruturada, o artista perdia credibilidade na hora de fechar bookings.",
       "Informações espalhadas em redes sociais sem narrativa de marca clara.",
-      "Contratantes e promoters precisavam perguntar tudo manualmente — fotos, sets, história, contato."
+      "Contratantes e promoters precisavam perguntar tudo manualmente, fotos, sets, história, contato."
     ],
     constraints: [
-      "Site 100% estático, sem backend — deploy simples via GitHub Pages.",
+      "Site 100% estático, sem backend, deploy simples via GitHub Pages.",
       "Funcionar perfeitamente em mobile, onde a maioria dos contratantes acessa.",
       "Galeria de fotos com download nativo, sem dependência de serviços externos."
     ],
@@ -1583,7 +1583,7 @@ export const projects: Project[] = [
       "Hero com identidade visual forte: foto, título, partículas animadas e efeitos neon.",
       "Linha do tempo interativa com 3 capítulos da trajetória (2011, 2022, 2025).",
       "Carrossel horizontal infinito de fotos dos lugares onde já tocou.",
-      "Seção de músicas com sistema de abas — 6 sets no SoundCloud e 6 tracks autorais no Spotify.",
+      "Seção de músicas com sistema de abas, 6 sets no SoundCloud e 6 tracks autorais no Spotify.",
       "Seção 'Sobre' com bio, tags de estilo musical e foto profissional.",
       "Galeria em alta qualidade com download individual e pacote .zip.",
       "Booking com botões diretos para WhatsApp, Instagram e e-mail.",
@@ -1923,7 +1923,7 @@ export const projectsLite: ProjectLite[] = [
   },
   {
     slug: "donacica-hot-dog",
-    title: "Dona Ciça Hot Dog — Landing Page",
+    title: "Dona Ciça Hot Dog, Landing Page",
     oneLiner:
       "Landing de alta conversão para presença própria da marca e pedidos no iFood.",
     problem:
@@ -1967,7 +1967,7 @@ export const projectsLite: ProjectLite[] = [
   },
   {
     slug: "new-talent",
-    title: "New Talent — Site institucional",
+    title: "New Talent, Site institucional",
     oneLiner:
       "Landing estática para escola de DJ e serviços, com foco em lead e WhatsApp.",
     problem:
@@ -2053,7 +2053,7 @@ export const projectsLite: ProjectLite[] = [
     slug: "gestao-producao-industrial-mes",
     title: "Gestão de Produção Industrial",
     oneLiner:
-      "MES têxtil — centro de comando da OP do desenho ao embarque, com alertas e fluxo de 7 etapas.",
+      "MES têxtil, centro de comando da OP do desenho ao embarque, com alertas e fluxo de 7 etapas.",
     problem:
       "Pouca previsibilidade e rastreabilidade; decisão reativa e risco de trava no fim do processo.",
     solution:
@@ -2088,16 +2088,16 @@ export const projectsLite: ProjectLite[] = [
   },
   {
     slug: "press-kit-levorato-dj",
-    title: "Press Kit Digital — LEVORATO DJ",
+    title: "Press Kit Digital, LEVORATO DJ",
     oneLiner:
       "Press kit estático para conversão de bookings: identidade, música, galeria e contato em um link.",
     problem:
-      "Artista sem presença digital estruturada — informações espalhadas em redes sociais sem ponto centralizado que transmitisse autoridade para contratantes.",
+      "Artista sem presença digital estruturada, informações espalhadas em redes sociais sem ponto centralizado que transmitisse autoridade para contratantes.",
     solution:
       "Site estático completo publicado via GitHub Pages com hero neon, timeline de trajetória, carrossel de venues, sets embeds e galeria para download.",
     features: [
       "Hero com foto, partículas animadas (180 instâncias JS) e efeitos neon",
-      "Timeline interativa com spine animada — 3 capítulos (2011, 2022, 2025)",
+      "Timeline interativa com spine animada, 3 capítulos (2011, 2022, 2025)",
       "Carrossel infinito de fotos dos venues; galeria com download individual e .zip",
       "Seção de músicas com abas: 6 sets (SoundCloud) e 6 tracks autorais (Spotify)",
       "Booking com botões diretos para WhatsApp, Instagram e e-mail",
@@ -2105,7 +2105,7 @@ export const projectsLite: ProjectLite[] = [
     ],
     benefits: [
       "Identidade profissional em um único link compartilhável",
-      "Contratantes acessam tudo sem friccão — sem perguntar fotos ou sets",
+      "Contratantes acessam tudo sem friccão, sem perguntar fotos ou sets",
       "Estética premium reforça posicionamento no Minimal Bass underground"
     ],
     techStack: [
@@ -2382,7 +2382,7 @@ export const previewProjects: PreviewProject[] = [
   },
   {
     slug: "donacica-hot-dog",
-    title: "Dona Ciça Hot Dog — Landing Page",
+    title: "Dona Ciça Hot Dog, Landing Page",
     year: 2026,
     area: "Marketing",
     status: "Concluído",
@@ -2421,7 +2421,7 @@ export const previewProjects: PreviewProject[] = [
   },
   {
     slug: "new-talent",
-    title: "New Talent — Site institucional",
+    title: "New Talent, Site institucional",
     year: 2026,
     area: "Marketing",
     status: "Concluído",
@@ -2436,7 +2436,7 @@ export const previewProjects: PreviewProject[] = [
     ],
     thumb: "/projects/new-talent/thumb.jpg",
     description:
-      "Landing institucional da New Talent: escola de DJ, produção e locação — visual de palco, uma página, abas de produtos, três unidades e conversão para WhatsApp.",
+      "Landing institucional da New Talent: escola de DJ, produção e locação, visual de palco, uma página, abas de produtos, três unidades e conversão para WhatsApp.",
     bullets: [
       "Hero com animação, partículas (canvas) e estética eletrônica / estúdio.",
       "Cursos, produtos em abas (DJ, produção musical, locação) e histórico por unidade (Maringá, Londrina, BC).",
@@ -2490,7 +2490,7 @@ export const previewProjects: PreviewProject[] = [
     tags: ["MES", "Produção", "SSE", "Workflow", "Alertas", "Têxtil"],
     thumb: "/projects/gestao-producao-industrial-mes/thumb.jpg",
     description:
-      "Centro de comando da fábrica têxtil: OPs do desenho ao embarque, com painéis, alertas de risco, workflow e simulação previsível — Next.js ou modo remoto com Express, PostgreSQL e SSE.",
+      "Centro de comando da fábrica têxtil: OPs do desenho ao embarque, com painéis, alertas de risco, workflow e simulação previsível, Next.js ou modo remoto com Express, PostgreSQL e SSE.",
     bullets: [
       "Visão do fluxo completo: desenho, corte, estamparia, qualidade, expedição, faturamento, embarque.",
       "Painéis com filtros; alertas SLA/documento/doca; ações e correções de exceção.",
@@ -2515,7 +2515,7 @@ export const previewProjects: PreviewProject[] = [
   },
   {
     slug: "press-kit-levorato-dj",
-    title: "Press Kit Digital — LEVORATO DJ",
+    title: "Press Kit Digital, LEVORATO DJ",
     year: 2025,
     area: "Marketing",
     status: "Concluído",
@@ -2530,7 +2530,7 @@ export const previewProjects: PreviewProject[] = [
     ],
     thumb: "/projects/press-kit-levorato-dj/thumb.jpg",
     description:
-      "Press kit digital completo para o DJ Pedro Levorato — hero neon, timeline de trajetória, sets embeds, galeria com download e CTAs de booking em uma única URL pública.",
+      "Press kit digital completo para o DJ Pedro Levorato, hero neon, timeline de trajetória, sets embeds, galeria com download e CTAs de booking em uma única URL pública.",
     bullets: [
       "Hero com partículas animadas (180 instâncias JS) e efeitos neon de identidade forte.",
       "Linha do tempo interativa com 3 capítulos: 2011, 2022 e 2025.",

@@ -5,7 +5,7 @@ export const aboutCopy = {
     sectionKicker: "PEDRO LEVORATO",
     sectionTitle: "Sobre mim",
     bioText:
-      `Analista de Negócios Sênior com alma de dev: pego o "dá pra fazer?" e devolvo em sistema funcionando. Atuo na intersecção entre negócio e tecnologia — mapeio processos, levanto requisitos e entrego soluções que geram impacto real em ERP, automação, BI e integrações. 4 anos de experiência em empresas de diferentes setores, sempre com foco em eficiência e orientação a dados.`,
+      "Analista de Negócios Sênior e trabalho com tecnologia há 6 anos, basicamente tentando convencer sistema, processo e gente a trabalharem juntos sem gerar terapia coletiva. Integro coisas que não conversam, automatizo o que ninguém quer fazer manualmente e tento fazer a tecnologia ajudar, em vez de atrapalhar ainda mais.",
     linkedinCta: "Ver perfil no LinkedIn",
     pressKitCta: "Ver Press Kit Musical",
     downloadCv: "Baixar Currículo",
@@ -26,13 +26,12 @@ export const aboutCopy = {
     roleIceti: "Administração – Consultorias Júniores",
     certKindCredly: "Badge digital (Credly)",
     certKindVerify: "Verificação oficial",
-    certKindPdf: "Certificado PDF",
   },
   en: {
     sectionKicker: "PEDRO LEVORATO",
     sectionTitle: "About me",
     bioText:
-      `Senior Business Analyst with a developer's mindset: I take "can we do this?" and return a working system. I operate at the intersection of business and technology — mapping processes, gathering requirements and delivering solutions that create real impact in ERP, automation, BI and integrations. 4+ years of experience across multiple industries, always focused on efficiency and data-driven decisions.`,
+      "Senior Business Analyst with 6 years in tech, bridging the gap between systems, processes and people. I integrate things that don't talk to each other, automate what no one wants to do manually, and make sure technology helps rather than gets in the way.",
     linkedinCta: "View LinkedIn profile",
     pressKitCta: "View Music Press Kit",
     downloadCv: "Download CV",
@@ -53,13 +52,12 @@ export const aboutCopy = {
     roleIceti: "Administration – Junior Consulting",
     certKindCredly: "Digital badge (Credly)",
     certKindVerify: "Official verification",
-    certKindPdf: "PDF certificate",
   },
   es: {
     sectionKicker: "PEDRO LEVORATO",
     sectionTitle: "Sobre mí",
     bioText:
-      `Analista de Negocios Senior con mentalidad de desarrollador: recibo el "¿se puede hacer?" y entrego un sistema funcionando. Actúo en la intersección entre negocio y tecnología — mapeo procesos, levanto requisitos y entrego soluciones con impacto real en ERP, automatización, BI e integraciones. Más de 4 años de experiencia en empresas de distintos sectores, siempre enfocado en eficiencia y datos.`,
+      "Analista de Negocios Senior con 6 años en tecnología. Integro sistemas que no se comunican, automatizo tareas manuales y hago que la tecnología ayude en lugar de complicar.",
     linkedinCta: "Ver perfil en LinkedIn",
     pressKitCta: "Ver Press Kit Musical",
     downloadCv: "Descargar CV",
@@ -80,7 +78,6 @@ export const aboutCopy = {
     roleIceti: "Administración – Consultoría Junior",
     certKindCredly: "Insignia digital (Credly)",
     certKindVerify: "Verificación oficial",
-    certKindPdf: "Certificado PDF",
   },
   zh: {
     sectionKicker: "PEDRO LEVORATO",
@@ -107,13 +104,12 @@ export const aboutCopy = {
     roleIceti: "行政管理 – 青年咨询",
     certKindCredly: "数字徽章（Credly）",
     certKindVerify: "官方验证",
-    certKindPdf: "PDF 证书",
   },
   de: {
     sectionKicker: "PEDRO LEVORATO",
     sectionTitle: "Über mich",
     bioText:
-      `Senior Business Analyst mit Entwickler-Mentalität: Ich nehme ein "Kann man das machen?" und liefere ein funktionierendes System zurück. Ich arbeite an der Schnittstelle zwischen Business und Technologie — ich analysiere Prozesse, erhebe Anforderungen und liefere Lösungen mit realem Mehrwert in ERP, Automatisierung, BI und Integrationen. Über 4 Jahre Erfahrung in verschiedenen Branchen, stets mit Fokus auf Effizienz und datengetriebene Entscheidungen.`,
+      "Senior Business Analyst mit 6 Jahren Technologieerfahrung. Ich integriere Systeme, automatisiere manuelle Prozesse und sorge dafür, dass Technologie hilft statt hindert.",
     linkedinCta: "LinkedIn-Profil ansehen",
     pressKitCta: "Musik-Pressemappe ansehen",
     downloadCv: "Lebenslauf herunterladen",
@@ -134,13 +130,12 @@ export const aboutCopy = {
     roleIceti: "Verwaltung – Junior-Consulting",
     certKindCredly: "Digitales Abzeichen (Credly)",
     certKindVerify: "Offizielle Verifizierung",
-    certKindPdf: "PDF-Zertifikat",
   },
   ja: {
     sectionKicker: "PEDRO LEVORATO",
     sectionTitle: "私について",
     bioText:
-      "開発者マインドを持つシニアビジネスアナリスト。「できますか？」という問いを受け取り、動くシステムとして返します。ビジネスとテクノロジーの交差点で活動し、プロセスのマッピング、要件定義、ERP・自動化・BI・システム連携における実際のインパクトをもたらすソリューション提供を担当。4年以上の多業種経験を持ち、効率性とデータドリブンな意思決定を常に重視しています。",
+      "テクノロジー業界6年のシニアビジネスアナリスト。システム統合、プロセス自動化、ERP実装を専門とし、ビジネスとテクノロジーの橋渡し役として価値ある成果を届けます。",
     linkedinCta: "LinkedInプロフィールを見る",
     pressKitCta: "音楽プレスキットを見る",
     downloadCv: "履歴書をダウンロード",
@@ -161,7 +156,6 @@ export const aboutCopy = {
     roleIceti: "管理部門 – ジュニアコンサルティング",
     certKindCredly: "デジタルバッジ（Credly）",
     certKindVerify: "公式検証",
-    certKindPdf: "PDF 証明書",
   },
 } as const;
 

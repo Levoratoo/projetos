@@ -83,7 +83,7 @@ function DeckCard({
 
   // Each card has its own scroll window (staggered)
   const s0 = index * 0.043;                        // card begins moving
-  const s1 = s0 + 0.068;                           // peak — right in front of camera
+  const s1 = s0 + 0.068;                           // peak, right in front of camera
   const s2 = s0 + 0.18;                            // arcing down to table
   const s3 = Math.min(s0 + 0.27, 0.66);            // settled on table
 
@@ -301,7 +301,7 @@ export function ProjectCardDeck({
           }}
         />
 
-        {/* Section header — stays flat above the tilt */}
+        {/* Section header, stays flat above the tilt */}
         <motion.div
           className="relative z-30 pt-14 text-center"
           initial={{ opacity: 0, y: -12 }}
@@ -328,7 +328,7 @@ export function ProjectCardDeck({
           )}
         </motion.div>
 
-        {/* Perspective wrapper — needed for the 3D rotateX tilt effect */}
+        {/* Perspective wrapper, needed for the 3D rotateX tilt effect */}
         <div
           className="absolute inset-0"
           style={{ perspective: "1100px", perspectiveOrigin: "50% 68%" }}
@@ -338,7 +338,7 @@ export function ProjectCardDeck({
             style={{ rotateX: tableRotateX }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            {/* Table surface — fades in as stage tilts */}
+            {/* Table surface, fades in as stage tilts */}
             <motion.div
               className="pointer-events-none absolute inset-0"
               style={{ opacity: tableShineOpacity }}

@@ -1,4 +1,4 @@
-﻿export type SolicitarProjetoData = {
+export type SolicitarProjetoData = {
   solicitanteNome: string;
   areaSetor: string;
   tipo: string;
@@ -17,7 +17,7 @@ export function buildResumoSolicitacao(data: SolicitarProjetoData) {
   const observacoes = data.observacoes?.trim() || "(nenhuma)";
   const dadosDisponiveis = data.dadosDisponiveis?.trim() || "(não informado)";
 
-  return `Assunto: [SOLICITACAO] ${data.tipo} — ${data.areaSetor} — ${data.objetivoCurto}
+  return `Assunto: [SOLICITACAO] ${data.tipo}, ${data.areaSetor}, ${data.objetivoCurto}
 
 Solicitante: ${data.solicitanteNome}
 Area/Setor: ${data.areaSetor}

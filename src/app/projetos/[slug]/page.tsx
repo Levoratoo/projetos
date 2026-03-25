@@ -670,18 +670,17 @@ export default function ProjectPage({ params }: PageProps) {
                       <strong className="text-white">React 19</strong> com{" "}
                       <strong className="text-white">TypeScript</strong>, com componentes reutilizáveis e tipagem forte em todo o fluxo. O build usa{" "}
                       <strong className="text-white">Vite 8</strong>, gerando bundles enxutos e dev server rápido; o output estático vai direto para o{" "}
-                      <strong className="text-white">GitHub Pages</strong>, sem servidor nem banco — tudo servido pelo CDN do GitHub.
+                      <strong className="text-white">GitHub Pages</strong>, sem servidor nem banco, tudo servido pelo CDN do GitHub.
                     </p>
                     <p>
                       <strong className="text-white">Conteúdo e organização.</strong> Os textos, links, dados do cardápio e metadados vivem em um único lugar (
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">siteContent</code>
                       ), como fonte da verdade: alterar preço, descrição ou CTA não espalha mudança por dezenas de arquivos. Cada seção da página é um componente em{" "}
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">sections/</code>
-                      , com responsabilidade isolada (hero, diferenciais, cardápio, sobre, benefícios, CTA, footer). Fotos ficam em{" "}
+                      {", com responsabilidade isolada (hero, diferenciais, cardápio, sobre, benefícios, CTA, footer). Fotos ficam em "}
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">assets/</code>
-                      , com nomes semânticos; UI base (botão, badge, card) em{" "}
-                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">components/ui/</code>
-                      .
+                      {", com nomes semânticos; UI base (botão, badge, card) em "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">components/ui/</code>.
                     </p>
                     <p>
                       <strong className="text-white">Estilo e movimento.</strong>{" "}
@@ -690,7 +689,7 @@ export default function ProjectPage({ params }: PageProps) {
                       <strong className="text-white">Lucide React</strong> fornece ícones leves e uniformes.
                     </p>
                     <p>
-                      <strong className="text-white">Performance no browser.</strong> O build final separa chunks (vendor React, Framer Motion, código da aplicação), permitindo carregamento em paralelo. Imagens passam pelo pipeline do Vite. Sem backend próprio, a página abre rápido mesmo em conexões móveis — o que importa, já que o tráfego principal vem do celular.
+                      <strong className="text-white">Performance no browser.</strong> O build final separa chunks (vendor React, Framer Motion, código da aplicação), permitindo carregamento em paralelo. Imagens passam pelo pipeline do Vite. Sem backend próprio, a página abre rápido mesmo em conexões móveis, o que importa, já que o tráfego principal vem do celular.
                     </p>
                   </div>
                   <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
@@ -757,11 +756,11 @@ export default function ProjectPage({ params }: PageProps) {
                       <strong className="text-white">CSS</strong> com variáveis para cores/tema e{" "}
                       <strong className="text-white">JavaScript vanilla</strong> concentrado em{" "}
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">main.js</code>
-                      . Não há build obrigatório nem runtime de servidor — os arquivos na raiz do repositório são servidos pelo{" "}
+                      . Não há build obrigatório nem runtime de servidor, os arquivos na raiz do repositório são servidos pelo{" "}
                       <strong className="text-white">GitHub Pages</strong> (branch{" "}
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">main</code> ou pasta{" "}
                       <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">/docs</code>
-                      , conforme a configuração do repo). Publicação:{" "}
+                      {", conforme a configuração do repo). Publicação: "}
                       <a
                         href="https://levoratoo.github.io/sitenewtalent/"
                         target="_blank"
@@ -783,7 +782,7 @@ export default function ProjectPage({ params }: PageProps) {
                     <p>
                       <strong className="text-white">Manutenção.</strong> Textos e links são editados direto no HTML;
                       comentários no código indicam onde atualizar WhatsApp, Instagram e e-mail quando os dados forem
-                      fechados por unidade — sem painel nem banco.
+                      fechados por unidade, sem painel nem banco.
                     </p>
                   </div>
                   <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
@@ -846,7 +845,7 @@ export default function ProjectPage({ params }: PageProps) {
                     <p>
                       A atualização em tempo real usa{" "}
                       <strong className="text-white">SSE (Server-Sent Events)</strong>, com{" "}
-                      <strong className="text-white">fallback de polling</strong> quando o canal de eventos não está disponível — assim o painel acompanha o estado sem depender só de refresh manual.
+                      <strong className="text-white">fallback de polling</strong> quando o canal de eventos não está disponível, assim o painel acompanha o estado sem depender só de refresh manual.
                     </p>
                     <p>
                       O <strong className="text-white">domínio</strong> está organizado em torno de{" "}

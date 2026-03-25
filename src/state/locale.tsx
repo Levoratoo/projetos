@@ -5,9 +5,11 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
 } from "react";
+import { useSearchParams } from "next/navigation";
 
 export type Locale = "pt" | "en" | "es" | "zh" | "de" | "ja";
 
@@ -24,6 +26,15 @@ function isLocale(v: string | null): v is Locale {
     v === "de" ||
     v === "ja"
   );
+}
+
+/** `?lang=` na URL (mesma prioridade que no currículo), exportado para `LocaleUrlSync`. */
+export function localeFromSearchParam(raw: string | null): Locale | null {
+  if (raw == null || raw === "") return null;
+  const v = raw.trim().toLowerCase();
+  if (v === "pt-br" || v === "pt_br") return "pt";
+  if (isLocale(v)) return v;
+  return null;
 }
 
 function localeToHtmlLang(locale: Locale): string {
@@ -54,7 +65,10 @@ const LocaleContext = createContext<LocaleContextValue | null>(null);
 function readStoredLocale(): Locale {
   if (typeof window === "undefined") return "pt";
   try {
-    const v = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw == null) return "pt";
+    const v = raw.trim().toLowerCase();
+    if (v === "pt-br" || v === "pt_br") return "pt";
     if (isLocale(v)) return v;
   } catch {
     /* ignore */
@@ -62,12 +76,25 @@ function readStoredLocale(): Locale {
   return "pt";
 }
 
+/** URL `?lang=` vence o storage (evita PT no seletor e texto em EN por storage antigo). */
+function readInitialLocale(): Locale {
+  if (typeof window === "undefined") return "pt";
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = localeFromSearchParam(params.get("lang"));
+    if (fromUrl) return fromUrl;
+  } catch {
+    /* ignore */
+  }
+  return readStoredLocale();
+}
+
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("pt");
   const [ready, setReady] = useState(false);
 
-  useEffect(() => {
-    setLocaleState(readStoredLocale());
+  useLayoutEffect(() => {
+    setLocaleState(readInitialLocale());
     setReady(true);
   }, []);
 
@@ -108,4 +135,18 @@ export function useLocale() {
     throw new Error("useLocale must be used within LocaleProvider");
   }
   return ctx;
+}
+
+/**
+ * Mantém o idioma alinhado ao `?lang=` em navegações client-side (voltar/avançar, links com query).
+ * Deve ficar dentro de `LocaleProvider` e `Suspense` (usa `useSearchParams`).
+ */
+export function LocaleUrlSync() {
+  const { setLocale } = useLocale();
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const fromUrl = localeFromSearchParam(searchParams.get("lang"));
+    if (fromUrl) setLocale(fromUrl);
+  }, [searchParams, setLocale]);
+  return null;
 }

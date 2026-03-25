@@ -1,6 +1,6 @@
-﻿export const siteCopy = {
+export const siteCopy = {
   hero: {
-    headline: "Portfólio — sistemas e dashboards para operação",
+    headline: "Portfólio, sistemas e dashboards para operação",
     subheadline:
       "Casos reais de integração, visibilidade operacional e governança de dados.",
     primaryCta: "Ver projetos",

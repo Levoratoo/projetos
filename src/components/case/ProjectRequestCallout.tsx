@@ -52,7 +52,7 @@ export function ProjectRequestCallout() {
             Solicitação interna
           </h2>
           <p className="mt-2 text-sm text-neutral-300">
-            Solicitação interna — gera um resumo pra enviar no Teams.
+            Solicitação interna, gera um resumo pra enviar no Teams.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em]">
