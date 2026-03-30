@@ -28,6 +28,7 @@ function getAccent(slug: string): string {
 // ── Filter types ──────────────────────────────────────────────────────────────
 const SITE_SLUGS = new Set([
   "landing-page-printbag",
+  "site-institucional-printbag",
   "donacica-hot-dog",
   "new-talent",
   "press-kit-levorato-dj",

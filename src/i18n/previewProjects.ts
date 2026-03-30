@@ -527,6 +527,109 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["ランディング", "リード", "コンバージョン", "EmailJS", "n8n", "GTM"],
     },
   },
+  "site-institucional-printbag": {
+    en: {
+      title: "Printbag corporate website",
+      area: "Marketing",
+      description:
+        "Institutional front-end for Printbag: packaging manufacturer with ESG narrative, credibility (badges, brands) and a clear path from solutions to contact and store.",
+      bullets: [
+        "Hero with YouTube, overlay and CTAs; stats and certification badges",
+        "About with timeline; Solutions with products, finishes and commercial benefits",
+        "ESG, Privacy, Contact and Careers; link to loja.printbag.com.br",
+        "Vite + React + TypeScript, Tailwind and shadcn/ui, Framer Motion, React Router, TanStack Query",
+      ],
+      tags: [
+        "Corporate",
+        "ESG",
+        "Vite",
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "shadcn/ui",
+        "GitHub Pages",
+      ],
+    },
+    es: {
+      title: "Sitio institucional Printbag",
+      area: "Marketing",
+      description:
+        "Front institucional de Printbag: fabricante con narrativa ESG, credibilidad (sellos, marcas) y recorrido claro hacia contacto y tienda.",
+      bullets: [
+        "Hero con YouTube, overlay y CTAs; métricas y sellos de certificación",
+        "Sobre con línea de tiempo; Soluciones con productos, acabados y ventajas",
+        "ESG, Privacidad, Contacto y Trabaja con nosotros; enlace a loja.printbag.com.br",
+        "Vite + React + TypeScript, Tailwind y shadcn/ui, Framer Motion, React Router, TanStack Query",
+      ],
+      tags: [
+        "Institucional",
+        "ESG",
+        "Vite",
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "shadcn/ui",
+        "GitHub Pages",
+      ],
+    },
+    zh: {
+      title: "Printbag 企业官网",
+      area: "营销",
+      description:
+        "Printbag 机构站：包装制造商，ESG 叙事、可信度（徽章与客户品牌）以及从解决方案到联系与门店的清晰路径。",
+      bullets: [
+        "Hero：YouTube、遮罩与 CTA；数据与认证徽章",
+        "关于：时间线；解决方案：产品、工艺与商业优势",
+        "ESG、隐私、联系与招聘；链接 loja.printbag.com.br",
+        "Vite + React + TypeScript、Tailwind 与 shadcn/ui、Framer Motion、React Router、TanStack Query",
+      ],
+      tags: ["企业站", "ESG", "Vite", "React", "Tailwind", "Framer Motion", "shadcn/ui", "GitHub Pages"],
+    },
+    de: {
+      title: "Printbag Unternehmenswebsite",
+      area: "Marketing",
+      description:
+        "Institutionelles Frontend für Printbag: Verpackungshersteller mit ESG-Narrativ, Glaubwürdigkeit (Siegel, Marken) und klarem Weg zu Kontakt und Shop.",
+      bullets: [
+        "Hero mit YouTube, Overlay und CTAs; Kennzahlen und Zertifikats-Siegel",
+        "Über uns mit Zeitleiste; Lösungen mit Produkten, Veredelungen und Vorteilen",
+        "ESG, Datenschutz, Kontakt und Karriere; Link zu loja.printbag.com.br",
+        "Vite + React + TypeScript, Tailwind und shadcn/ui, Framer Motion, React Router, TanStack Query",
+      ],
+      tags: [
+        "Institutionell",
+        "ESG",
+        "Vite",
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "shadcn/ui",
+        "GitHub Pages",
+      ],
+    },
+    ja: {
+      title: "Printbag コーポレートサイト",
+      area: "マーケティング",
+      description:
+        "Printbag のインストラクチャルフロント：包装メーカー、ESG ストーリー、信頼（バッジ・ブランド）、ソリューションから問い合わせ・店舗への明確な導線。",
+      bullets: [
+        "ヒーロー：YouTube、オーバーレイ、CTA；数値と認証バッジ",
+        "会社案内：タイムライン；ソリューション：商品、加工、商業メリット",
+        "ESG、プライバシー、採用・お問い合わせ；loja.printbag.com.br へリンク",
+        "Vite + React + TypeScript、Tailwind と shadcn/ui、Framer Motion、React Router、TanStack Query",
+      ],
+      tags: [
+        "コーポレート",
+        "ESG",
+        "Vite",
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "shadcn/ui",
+        "GitHub Pages",
+      ],
+    },
+  },
   "donacica-hot-dog": {
     en: {
       title: "Dona Ciça Hot Dog, landing page",

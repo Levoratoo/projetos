@@ -60,6 +60,7 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "dashboard-separacao-estoque" ||
     project.slug === "monitoramento-pedidos-tempo-real" ||
     project.slug === "landing-page-printbag" ||
+    project.slug === "site-institucional-printbag" ||
     project.slug === "donacica-hot-dog" ||
     project.slug === "new-talent" ||
     project.slug === "previsao-demanda-python-estatistica" ||
@@ -650,6 +651,105 @@ export default function ProjectPage({ params }: PageProps) {
                         <span>Versionamento e deploy: Git, GitHub, GitHub Pages e SSG</span>
                       </li>
                     </ul>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "site-institucional-printbag" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Stack, arquitetura e deploy estático
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O site institucional foi construído como aplicação multi-página no cliente com{" "}
+                      <strong className="text-white">Vite 5</strong>,{" "}
+                      <strong className="text-white">React 18</strong> e{" "}
+                      <strong className="text-white">TypeScript</strong>, priorizando bundle enxuto, tipagem forte e DX rápida. A navegação usa{" "}
+                      <strong className="text-white">React Router</strong> (<code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">BrowserRouter</code>
+                      ) com páginas em <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">src/pages/</code>
+                      {", shell com "}
+                      <strong className="text-white">Layout</strong>, <strong className="text-white">Header</strong> e{" "}
+                      <strong className="text-white">Footer</strong>, incluindo submenu no header para a hierarquia de conteúdo (Home, Sobre, Soluções, ESG, Contato).
+                    </p>
+                    <p>
+                      <strong className="text-white">UI e design system.</strong>{" "}
+                      <strong className="text-white">Tailwind CSS</strong> define tokens visuais e grid responsivo;{" "}
+                      <strong className="text-white">shadcn/ui</strong> (componentes sobre{" "}
+                      <strong className="text-white">Radix</strong>) acelera acessibilidade e consistência;{" "}
+                      <strong className="text-white">lucide-react</strong> padroniza ícones. Imagens entram como módulos no pipeline do Vite para cache busting e otimização no build.
+                    </p>
+                    <p>
+                      <strong className="text-white">Estado e dados.</strong>{" "}
+                      <strong className="text-white">TanStack Query</strong> está preparado para consumo de API mesmo com conteúdo majoritariamente estático, deixando o projeto pronto para evoluir sem reestruturar a camada de dados.
+                    </p>
+                    <p>
+                      <strong className="text-white">Motion e UX.</strong>{" "}
+                      <strong className="text-white">Framer Motion</strong> cobre entradas, scroll e microinterações — reforçando escaneabilidade no mobile, ponto crítico para decisores B2B.
+                    </p>
+                    <p>
+                      <strong className="text-white">Deploy.</strong> O build gera <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">dist/</code>
+                      {", alinhado a hospedagem estática (ex.: GitHub Pages) com "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">basename</code>
+                      {" no router coerente com "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">BASE_URL</code>
+                      {", cópia de "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">404.html</code>
+                      {" para fallback de SPA em refresh em rotas internas, e workflow para publicação na branch "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">gh-pages</code>.
+                    </p>
+                    <p>
+                      <strong className="text-white">Qualidade.</strong>{" "}
+                      ESLint e TypeScript no fluxo de desenvolvimento; organização por página/feature e convenções compartilhadas com o ecossistema Tailwind/shadcn.
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Camada</th>
+                          <th className="px-4 py-3 font-medium">Tecnologia</th>
+                          <th className="px-4 py-3 font-medium">Papel</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">App</td>
+                          <td className="px-4 py-3">Vite 5 + React 18 + TypeScript</td>
+                          <td className="px-4 py-3">SPA multi-página, build rápido</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Roteamento</td>
+                          <td className="px-4 py-3">React Router</td>
+                          <td className="px-4 py-3">Navegação cliente, basename para subpath</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">UI</td>
+                          <td className="px-4 py-3">Tailwind + shadcn/ui (Radix)</td>
+                          <td className="px-4 py-3">Layout, acessibilidade, grid</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Dados</td>
+                          <td className="px-4 py-3">TanStack Query</td>
+                          <td className="px-4 py-3">Pronto para APIs futuras</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Motion</td>
+                          <td className="px-4 py-3">Framer Motion</td>
+                          <td className="px-4 py-3">Entrada, scroll, microinterações</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90">Ícones</td>
+                          <td className="px-4 py-3">lucide-react</td>
+                          <td className="px-4 py-3">Iconografia consistente</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </section>
               </CaseSection>

@@ -681,6 +681,126 @@ export const projects: Project[] = [
     ]
   },
   {
+    slug: "site-institucional-printbag",
+    title: "Site institucional Printbag",
+    subtitle: "Embalagens e sacolas para marcas — tradição, inovação e sustentabilidade.",
+    summary:
+      "Front-end institucional da Printbag: fabricante nacional com narrativa de ESG, credibilidade (selos, marcas) e jornada clara de soluções para contato e loja.",
+    description:
+      "Site multi-página com hero em vídeo (YouTube), métricas de tradição, selos e certificações, linhas por segmento (Printmoda, Printfood), carrossel de clientes e rotas para Sobre, Soluções, ESG, Contato e Trabalhe conosco — integrado à loja externa.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site institucional",
+    domain: "Marketing",
+    segment: "Embalagens / B2B",
+    tags: [
+      "Institucional",
+      "ESG",
+      "Vite",
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Prova social",
+      "GitHub Pages"
+    ],
+    stack: [
+      "Vite 5",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Radix UI",
+      "lucide-react",
+      "React Router",
+      "TanStack Query",
+      "Framer Motion",
+      "ESLint",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(34, 120, 95, 0.38)",
+      b: "rgba(180, 140, 90, 0.24)",
+      c: "rgba(255, 255, 255, 0.1)"
+    },
+    context:
+      "Compradores B2B de embalagem comparam papel, acabamento, prazo e logística; sem um hub único alinhado ao discurso comercial, a descoberta vira troca de PDFs e mensagens soltas. A Printbag precisava diferenciar capacidade industrial, consistência de marca e agenda ESG sem parecer mais um catálogo frio do setor gráfico.",
+    problem: [
+      "Dispersão de informação: quem busca fornecedor compara muitos critérios ao mesmo tempo; sem mapa claro do portfólio, a negociação não escala.",
+      "Diferenciação fraca: sites do segmento tendem a se parecer; faltava traduzir tradição + inovação + sustentabilidade em experiência memorável.",
+      "Prova de competência: decisores exigem certificações, cases (marcas) e oferta legível — senão a confiança não fecha na primeira visita."
+    ],
+    constraints: [
+      "Prova social (marcas) e prova técnica (selos, prêmios) visíveis em poucos segundos.",
+      "Escaneabilidade e hierarquia forte no mobile; motion e microinterações sem poluir.",
+      "Deploy estático com base path coerente (GitHub Pages), SPA com fallback 404 para refresh em rotas."
+    ],
+    solution: [
+      "Home de alto impacto: hero com vídeo em destaque (YouTube), overlay, CTAs, stats (40+ anos, 500+ marcas, milhares de pontos de venda), selos (FSC, energia renovável, Abvtex, Two Sides, prêmio de excelência gráfica), linhas por verticais e carrossel de logos de clientes.",
+      "Sobre com história e linha do tempo; Soluções com produtos, acabamentos e vantagens (mínimo por formato, prova de cor, especialistas, entrega nacional, JIT, FSC quando aplicável).",
+      "Páginas ESG e Privacidade; Contato e Trabalhe conosco; link para loja.printbag.com.br como canal de conversão paralelo ao institucional.",
+      "Arquitetura em src/pages/, Layout com Header/Footer e submenu; TanStack Query preparado para API; Framer Motion para entrada e scroll; imagens importadas pelo pipeline do Vite."
+    ],
+    results: [
+      "Clareza de posicionamento: visitante associa a Printbag a fabricante nacional, ESG e atendimento a grandes marcas.",
+      "Menos atrito na descoberta: rota Soluções concentra produto, acabamento e benefícios.",
+      "Confiança reforçada por selos + logos como gatilhos B2B.",
+      "CTAs e caminhos para contato e loja sustentam o funil institucional → ação."
+    ],
+    learnings: [
+      "Institucional forte mistura narrativa emocional com prova auditável (selos, métricas, marcas).",
+      "Multi-página com Router exige basename e 404.html alinhados ao ambiente de hospedagem."
+    ],
+    nextSteps: [
+      "Medir leads e tempo de sessão com analytics e CRM.",
+      "Evoluir conteúdo de cases e materiais ricos a partir da mesma base de componentes."
+    ],
+    kpis: [
+      { label: "Modelo", value: "Site institucional multi-página" },
+      { label: "Stack", value: "Vite + React + TypeScript" },
+      { label: "Canais", value: "Contato + loja externa" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/printbag-magic-builder/",
+        visibility: "public"
+      },
+      {
+        label: "Loja Printbag",
+        url: "https://loja.printbag.com.br/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Home e hero",
+        description: "Vídeo em destaque, mensagem de valor e camada visual.",
+        thumbSrc: "/projects/site-institucional-printbag/thumb.jpg",
+        fullSrc: "/projects/site-institucional-printbag/thumb.jpg"
+      },
+      {
+        title: "Credibilidade e linhas",
+        description: "Métricas, selos e verticais (ex.: Printmoda / Printfood).",
+        thumbSrc: "/projects/site-institucional-printbag/screen1.jpg",
+        fullSrc: "/projects/site-institucional-printbag/screen1.jpg"
+      },
+      {
+        title: "Soluções e oferta",
+        description: "Vitrine de produtos, acabamentos e benefícios comerciais.",
+        thumbSrc: "/projects/site-institucional-printbag/screen2.jpg",
+        fullSrc: "/projects/site-institucional-printbag/screen2.jpg"
+      },
+      {
+        title: "Prova social",
+        description: "Marcas e continuidade da narrativa institucional.",
+        thumbSrc: "/projects/site-institucional-printbag/screen3.jpg",
+        fullSrc: "/projects/site-institucional-printbag/screen3.jpg"
+      }
+    ]
+  },
+  {
     slug: "donacica-hot-dog",
     title: "Dona Ciça Hot Dog, Landing Page",
     subtitle: "Presença digital própria para converter tráfego em pedidos no iFood.",
@@ -1922,6 +2042,51 @@ export const projectsLite: ProjectLite[] = [
     ]
   },
   {
+    slug: "site-institucional-printbag",
+    title: "Site institucional Printbag",
+    oneLiner:
+      "Institucional multi-página: ESG, credibilidade e jornada Soluções → contato/loja para embalagens e sacolas B2B.",
+    problem:
+      "Falta de um mapa único do portfólio alinhado ao discurso comercial e prova fraca de diferenciação e ESG na percepção.",
+    solution:
+      "Home com vídeo, stats e selos; Sobre e Soluções estruturadas; ESG, Contato e loja externa; stack Vite/React com motion e deploy estático.",
+    features: [
+      "Hero com YouTube, overlay e CTAs; stats e selos de credibilidade",
+      "Linhas por segmento e carrossel de marcas",
+      "Rotas Sobre, Soluções, ESG, Contato e Trabalhe conosco",
+      "Link para loja.printbag.com.br",
+      "Framer Motion, grid responsivo e submenu no header",
+      "TanStack Query preparado para consumo de API"
+    ],
+    benefits: [
+      "Posicionamento claro como fabricante nacional com agenda ESG",
+      "Menos idas e vindas para entender escopo (hub Soluções)",
+      "Confiança B2B com selos e logos"
+    ],
+    techStack: [
+      "Vite 5",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "lucide-react",
+      "React Router",
+      "TanStack Query",
+      "Framer Motion",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/printbag-magic-builder/" },
+      { label: "Loja Printbag", url: "https://loja.printbag.com.br/" }
+    ],
+    images: [
+      { src: "/projects/site-institucional-printbag/thumb.jpg", alt: "Home e hero" },
+      { src: "/projects/site-institucional-printbag/screen1.jpg", alt: "Credibilidade e linhas" },
+      { src: "/projects/site-institucional-printbag/screen2.jpg", alt: "Soluções e oferta" },
+      { src: "/projects/site-institucional-printbag/screen3.jpg", alt: "Prova social" }
+    ]
+  },
+  {
     slug: "donacica-hot-dog",
     title: "Dona Ciça Hot Dog, Landing Page",
     oneLiner:
@@ -2381,6 +2546,43 @@ export const previewProjects: PreviewProject[] = [
     ]
   },
   {
+    slug: "site-institucional-printbag",
+    title: "Site institucional Printbag",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Institucional",
+      "ESG",
+      "Vite",
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "shadcn/ui",
+      "GitHub Pages"
+    ],
+    thumb: "/projects/site-institucional-printbag/thumb.jpg",
+    description:
+      "Front institucional da Printbag: vídeo no hero, métricas e selos, linhas por segmento, marcas em carrossel e rotas Sobre, Soluções, ESG e Contato — com loja externa.",
+    bullets: [
+      "Hero com YouTube, overlay e CTAs; stats e selos (FSC, energia renovável, certificações)",
+      "Sobre com linha do tempo; Soluções com produtos, acabamentos e vantagens",
+      "ESG, Privacidade, Contato e Trabalhe conosco; link para loja.printbag.com.br",
+      "Vite + React + TypeScript, Tailwind e shadcn/ui, Framer Motion, React Router, TanStack Query"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/printbag-magic-builder/" },
+      { label: "Loja Printbag", url: "https://loja.printbag.com.br/" }
+    ],
+    gallery: [
+      { src: "/projects/site-institucional-printbag/thumb.jpg", alt: "Home e hero" },
+      { src: "/projects/site-institucional-printbag/screen1.jpg", alt: "Credibilidade e linhas" },
+      { src: "/projects/site-institucional-printbag/screen2.jpg", alt: "Soluções e oferta" },
+      { src: "/projects/site-institucional-printbag/screen3.jpg", alt: "Prova social" }
+    ]
+  },
+  {
     slug: "donacica-hot-dog",
     title: "Dona Ciça Hot Dog, Landing Page",
     year: 2026,
@@ -2602,6 +2804,7 @@ normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
   "press-kit-levorato-dj",
   "landing-page-printbag",
+  "site-institucional-printbag",
   "donacica-hot-dog",
   "new-talent",
   "dashboard-separacao-estoque",
