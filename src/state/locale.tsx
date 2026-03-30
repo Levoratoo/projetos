@@ -62,21 +62,11 @@ type LocaleContextValue = {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
-function readStoredLocale(): Locale {
-  if (typeof window === "undefined") return "pt";
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw == null) return "pt";
-    const v = raw.trim().toLowerCase();
-    if (v === "pt-br" || v === "pt_br") return "pt";
-    if (isLocale(v)) return v;
-  } catch {
-    /* ignore */
-  }
-  return "pt";
-}
-
-/** URL `?lang=` vence o storage (evita PT no seletor e texto em EN por storage antigo). */
+/**
+ * Idioma ao abrir o site: português por padrão; só outro idioma se `?lang=` estiver na URL.
+ * O que o usuário escolher no seletor continua sendo salvo em localStorage (para referência),
+ * mas não restauramos esse valor na próxima abertura — cada visita começa em PT até trocar de novo.
+ */
 function readInitialLocale(): Locale {
   if (typeof window === "undefined") return "pt";
   try {
@@ -86,7 +76,7 @@ function readInitialLocale(): Locale {
   } catch {
     /* ignore */
   }
-  return readStoredLocale();
+  return "pt";
 }
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {

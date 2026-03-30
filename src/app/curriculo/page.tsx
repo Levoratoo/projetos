@@ -208,27 +208,14 @@ function normalizeLangParam(raw: string | null): Lang | null {
   return null;
 }
 
-function readStoredLang(): Lang | null {
-  try {
-    const stored = localStorage.getItem("printbag-locale");
-    if (stored && VALID_LANGS.includes(stored as Lang)) return stored as Lang;
-  } catch {
-    /* ignore */
-  }
-  return null;
-}
-
 /**
- * Prioridade: ?lang= na URL → idioma ativo do app (LocaleProvider = home/switcher) → localStorage.
- * O storage sozinho não pode ganhar ao locale: senão um `pt` antigo sobrescreve o site em inglês.
+ * Prioridade: ?lang= na URL → idioma ativo do app (LocaleProvider / seletor).
+ * Alinhado ao padrão do site: abrir em português; o idioma do CV segue o seletor, não o localStorage antigo.
  */
 function resolveLang(locale: Locale, searchParams: URLSearchParams): Lang {
   const fromUrl = normalizeLangParam(searchParams.get("lang"));
   if (fromUrl) return fromUrl;
-  if (locale !== "pt") return locale;
-  const fromStore = readStoredLang();
-  if (fromStore) return fromStore;
-  return locale;
+  return locale as Lang;
 }
 
 /* ── CV Component ───────────────────────────────────────────────────────────── */
