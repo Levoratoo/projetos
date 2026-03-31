@@ -12,7 +12,7 @@ type ProjectActionsProps = {
   className?: string;
 };
 
-function isPublicProjectUrl(value?: string | null) {
+export function isPublicProjectUrl(value?: string | null) {
   if (!value) return false;
 
   try {

@@ -111,7 +111,6 @@ export default function ProjectPage({ params }: PageProps) {
                 </div>
               </div>
               <ProjectPreviewCard
-                slug={project.slug}
                 accessUrl={accessUrl}
                 previewSrc={previewSrc}
               />
@@ -1436,6 +1435,5 @@ export default function ProjectPage({ params }: PageProps) {
     </main>
   );
 }
-
 
 

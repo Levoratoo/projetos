@@ -1,24 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { ProjectActions } from "@/components/ProjectActions";
-import { useProjectPreview } from "@/state/projectPreview";
+import { isPublicProjectUrl } from "@/components/ProjectActions";
 import { cn } from "@/lib/utils";
 
 type ProjectPreviewCardProps = {
-  slug: string;
   accessUrl?: string | null;
   previewSrc?: string;
   className?: string;
 };
 
 export function ProjectPreviewCard({
-  slug,
   accessUrl,
   previewSrc,
   className
 }: ProjectPreviewCardProps) {
-  const { openPreview } = useProjectPreview();
+  const hasAccess = isPublicProjectUrl(accessUrl);
 
   return (
     <div
@@ -53,12 +50,49 @@ export function ProjectPreviewCard({
         </div>
       </div>
 
-      <div className="mt-4">
-        <ProjectActions
-          slug={slug}
-          accessUrl={accessUrl}
-          onPreview={() => openPreview(slug)}
-        />
+      <div className="mt-5">
+        {hasAccess ? (
+          <a
+            href={accessUrl ?? undefined}
+            target="_blank"
+            rel="noreferrer"
+            className="primary-cta group flex w-full items-center justify-between px-6 py-4 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow sm:text-base"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(201,12,26,0.98) 0%, rgba(148,8,22,0.98) 100%)",
+              border: "1px solid rgba(255,88,88,0.52)",
+              boxShadow:
+                "inset 0 1px 0 rgba(255,255,255,0.18), 0 0 0 1px rgba(255,58,58,0.18), 0 0 20px rgba(255,48,48,0.48), 0 16px 34px rgba(86,0,0,0.42)"
+            }}
+          >
+            <span>Ir para o projeto</span>
+            <span className="text-base transition-transform duration-200 group-hover:translate-x-1">
+              -&gt;
+            </span>
+          </a>
+        ) : (
+          <div className="flex flex-col gap-2">
+            <button
+              type="button"
+              disabled
+              title="Link indisponível"
+              aria-disabled="true"
+              className="primary-cta primary-cta--muted flex w-full items-center justify-center px-6 py-4 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow sm:text-base"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(90,16,22,0.94) 0%, rgba(64,10,14,0.96) 100%)",
+                border: "1px solid rgba(255,88,88,0.16)",
+                boxShadow:
+                  "inset 0 1px 0 rgba(255,255,255,0.05), 0 8px 24px rgba(0,0,0,0.34)"
+              }}
+            >
+              Ir para o projeto
+            </button>
+            <span className="text-[11px] uppercase tracking-[0.25em] text-mist/60">
+              Link indisponível
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
