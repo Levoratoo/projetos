@@ -764,7 +764,7 @@ export const projects: Project[] = [
     accessLinks: [
       {
         label: "Acesso público",
-        url: "https://levoratoo.github.io/printbag-magic-builder/",
+        url: "https://printbag.com.br/",
         visibility: "public"
       },
       {
@@ -1234,13 +1234,7 @@ export const projects: Project[] = [
     ],
     confidentialityNote:
       "Conteudo com imagens e descricoes sem dados sensiveis.",
-    accessLinks: [
-      {
-        label: "Acesso público",
-        url: "https://levoratoo.github.io/sistemas-de-chamado/",
-        visibility: "public"
-      }
-    ],
+    accessLinks: [],
     gallery: [
       {
         title: "Visao geral",
@@ -2076,7 +2070,7 @@ export const projectsLite: ProjectLite[] = [
       "GitHub Pages"
     ],
     accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/printbag-magic-builder/" },
+      { label: "Acesso público", url: "https://printbag.com.br/" },
       { label: "Loja Printbag", url: "https://loja.printbag.com.br/" }
     ],
     images: [
@@ -2478,9 +2472,7 @@ export const previewProjects: PreviewProject[] = [
       "Narrativa visual consistente para stakeholders",
       "Estrutura pronta para novos cases"
     ],
-    accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/sistemas-de-chamado/" }
-    ],
+    accessLinks: [],
     gallery: [
       { src: "/projects/apresentador-projetos/thumb.jpg", alt: "Visao geral do hub" },
       { src: "/projects/apresentador-projetos/screen1.jpg", alt: "Overlay de projetos" },
@@ -2572,7 +2564,7 @@ export const previewProjects: PreviewProject[] = [
       "Vite + React + TypeScript, Tailwind e shadcn/ui, Framer Motion, React Router, TanStack Query"
     ],
     accessLinks: [
-      { label: "Acesso público", url: "https://levoratoo.github.io/printbag-magic-builder/" },
+      { label: "Acesso público", url: "https://printbag.com.br/" },
       { label: "Loja Printbag", url: "https://loja.printbag.com.br/" }
     ],
     gallery: [
