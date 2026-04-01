@@ -59,10 +59,10 @@ export function ProjectPreviewCard({
             className="primary-cta group flex w-full items-center justify-between px-6 py-4 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow sm:text-base"
             style={{
               background:
-                "linear-gradient(180deg, rgba(201,12,26,0.98) 0%, rgba(148,8,22,0.98) 100%)",
-              border: "1px solid rgba(255,88,88,0.52)",
+                "linear-gradient(180deg, rgba(134,22,28,0.98) 0%, rgba(112,16,23,0.99) 48%, rgba(88,10,18,1) 100%)",
+              border: "1px solid rgba(255,116,116,0.28)",
               boxShadow:
-                "inset 0 1px 0 rgba(255,255,255,0.18), 0 0 0 1px rgba(255,58,58,0.18), 0 0 20px rgba(255,48,48,0.48), 0 16px 34px rgba(86,0,0,0.42)"
+                "inset 0 1px 0 rgba(255,214,214,0.18), inset 0 0 0 1px rgba(255,120,120,0.06), 0 0 0 1px rgba(255,88,88,0.12), 0 0 18px rgba(255,74,74,0.2), 0 14px 30px rgba(40,0,0,0.42)"
             }}
           >
             <span>Ir para o projeto</span>
