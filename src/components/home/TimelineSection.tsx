@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { PreviewProject, projects as fullProjects, previewProjects } from "@/data/projects";
 import { tHome } from "@/i18n/home";
 import { getLocalizedPreview } from "@/i18n/previewProjects";
@@ -48,7 +48,10 @@ function StickyPreview({
   const { closePreview } = useProjectPreview();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Reset gallery index whenever the project changes
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [project.slug]);
+
   const full = previewProjects.find((p) => p.slug === project.slug) ?? project;
   const lp = getLocalizedPreview(full, locale);
   const gallery = (full as PreviewProject & { gallery?: { src: string; alt: string }[] }).gallery ?? [];
@@ -57,16 +60,13 @@ function StickyPreview({
   const bullets = lp.bullets;
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={`${project.slug}-${locale}`}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -6 }}
-        transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,6,8,0.97),rgba(6,3,4,0.97))] shadow-[0_24px_80px_rgba(0,0,0,0.6)]"
-        onAnimationComplete={() => setActiveIndex(0)}
-      >
+    <motion.div
+      key={`${project.slug}-${locale}`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,6,8,0.97),rgba(6,3,4,0.97))] shadow-[0_24px_80px_rgba(0,0,0,0.6)]"
+    >
         {/* Subtle radial glow */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(255,59,59,0.1),transparent_55%)] rounded-[28px]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] tech-grid rounded-[28px]" />
@@ -169,8 +169,7 @@ function StickyPreview({
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
         </div>
-      </motion.div>
-    </AnimatePresence>
+    </motion.div>
   );
 }
 
@@ -206,7 +205,7 @@ function ProjectListItem({
           background: isActive ? replaceAlpha(accent, 0.1) : "transparent",
           border: `1px solid ${isActive ? replaceAlpha(accent, 0.35) : "rgba(255,255,255,0.06)"}`,
         }}
-        onMouseEnter={onHover}
+        onPointerEnter={onHover}
         onClick={onOpen}
       >
         {/* Active left bar */}
@@ -499,8 +498,8 @@ export function TimelineSection({
 
       {/* ── Desktop split panel (lg+) ── */}
       <div className="relative z-10 mx-auto hidden w-full max-w-[1600px] px-6 lg:flex lg:gap-8 xl:gap-10 2xl:px-12">
-        {/* Left: scrollable project list */}
-        <div className="w-[320px] shrink-0 xl:w-[360px] 2xl:w-[400px]">
+        {/* Left: scrollable project list — z-index above sticky preview so hover always wins after modal/back */}
+        <div className="relative z-20 w-[320px] shrink-0 xl:w-[360px] 2xl:w-[400px]">
           <p className="mb-3 text-[9px] font-bold uppercase tracking-[0.3em] text-white/25">
             {t.splitListLabel} · {filtered.length}
           </p>
@@ -524,8 +523,8 @@ export function TimelineSection({
         </div>
 
         {/* Right: sticky preview */}
-        <div className="flex-1">
-          <div className="sticky top-6">
+        <div className="relative z-10 min-w-0 flex-1">
+          <div className="sticky top-6 isolate">
             {activeProject && (
               <StickyPreview
                 project={activeProject}
