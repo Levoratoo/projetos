@@ -1822,9 +1822,9 @@ export const projects: Project[] = [
     ],
     cover: {
       kind: "gradient",
-      a: "rgba(140, 40, 100, 0.42)",
-      b: "rgba(80, 20, 70, 0.34)",
-      c: "rgba(255, 120, 140, 0.14)"
+      a: "rgba(124, 58, 237, 0.52)",
+      b: "rgba(67, 24, 122, 0.4)",
+      c: "rgba(196, 181, 253, 0.18)"
     },
     context:
       "O site nasceu para parar de dispersar informação (redes, PDFs, áudios em chats) e concentrar a marca num só sítio com aparência de produto profissional: vender o artista antes da primeira call — visual forte, leitura clara e tudo o que um contratante precisa num fluxo só. A narrativa reflete cerca de dois anos de projeto com som entre Tech House e Minimal Deep Tech e referência europeia (Dublin → Porto), sem inventar números de público ou gigs; textos, timeline, Sobre e media foram alinhados à proposta atual.",
@@ -3004,6 +3004,7 @@ normalizeProjectsLiteAssets(projectsLite);
 normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
   "press-kit-levorato-dj",
+  "claymoon-press-kit",
   "landing-page-printbag",
   "site-institucional-printbag",
   "donacica-hot-dog",
@@ -3015,8 +3016,7 @@ export const homeProjectSlugs = [
   "apresentador-projetos",
   "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica",
-  "gestao-producao-industrial-mes",
-  "claymoon-press-kit"
+  "gestao-producao-industrial-mes"
 ];
 
 export const homeProjects = homeProjectSlugs

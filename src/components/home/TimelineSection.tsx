@@ -32,6 +32,7 @@ const SITE_SLUGS = new Set([
   "donacica-hot-dog",
   "new-talent",
   "press-kit-levorato-dj",
+  "claymoon-press-kit",
 ]);
 
 type FilterTab = "todos" | "sites" | "industria";
