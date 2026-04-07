@@ -87,7 +87,7 @@ export default function ProjectPage({ params }: PageProps) {
             backgroundImage: `url(${withBasePath("/case-hero-bg.png")})`
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_0%,rgba(255,72,82,0.32),transparent_50%),radial-gradient(circle_at_50%_0%,rgba(200,32,52,0.28),transparent_45%),radial-gradient(circle_at_top,_rgba(255,59,59,0.22),_rgba(18,6,10,0.88))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_0%,rgba(255,72,82,0.22),transparent_50%),radial-gradient(circle_at_50%_0%,rgba(200,32,52,0.18),transparent_45%),radial-gradient(circle_at_top,_rgba(255,59,59,0.14),_rgba(18,6,10,0.72))]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:80px_80px]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
         <Container>
