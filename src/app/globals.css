@@ -159,7 +159,9 @@ select option {
   box-shadow:
     0 0 3px rgba(255, 255, 255, 0.95),
     0 0 9px rgba(180, 200, 255, 0.45);
-  animation-duration: calc(var(--spark-duration) * 0.88), 4.2s;
+  animation:
+    sparkDriftB calc(var(--spark-duration) * 0.78) ease-in-out infinite var(--spark-delay),
+    sparkPulse 2.8s ease-in-out infinite var(--spark-delay);
 }
 
 /* Estrelas douradas — luz do sol atrás do planeta */
@@ -168,7 +170,21 @@ select option {
   box-shadow:
     0 0 4px rgba(255, 255, 200, 0.95),
     0 0 11px rgba(255, 210, 100, 0.45);
-  animation-duration: calc(var(--spark-duration) * 1.12), 3.2s;
+  animation:
+    sparkDrift calc(var(--spark-duration) * 0.92) ease-in-out infinite var(--spark-delay),
+    sparkPulse 3.2s ease-in-out infinite var(--spark-delay);
+}
+
+/* Grupo rápido — movimento mais vivo */
+.spark:nth-child(4n) {
+  animation-duration: calc(var(--spark-duration) * 0.65), 2.4s;
+}
+
+/* Grupo lento — derive suave em arco maior */
+.spark:nth-child(9n) {
+  animation:
+    sparkDriftB calc(var(--spark-duration) * 1.3) ease-in-out infinite var(--spark-delay),
+    sparkPulse 4.5s ease-in-out infinite var(--spark-delay);
 }
 
 .glass {
@@ -1287,37 +1303,57 @@ a.hero-orbit__dot:focus-visible {
 }
 
 @keyframes sparkDrift {
-  0%,
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  20% {
+    transform: translate3d(18px, -28px, 0) scale(1.15);
+  }
+  45% {
+    transform: translate3d(-22px, 14px, 0) scale(0.88);
+  }
+  70% {
+    transform: translate3d(12px, -18px, 0) scale(1.1);
+  }
   100% {
     transform: translate3d(0, 0, 0) scale(1);
   }
+}
+
+@keyframes sparkDriftB {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
   25% {
-    transform: translate3d(2px, -4px, 0) scale(1.04);
+    transform: translate3d(-26px, -16px, 0) scale(1.2);
   }
   55% {
-    transform: translate3d(-3px, 3px, 0) scale(0.97);
+    transform: translate3d(20px, 22px, 0) scale(0.85);
   }
   80% {
-    transform: translate3d(2px, 1px, 0) scale(1.02);
+    transform: translate3d(-10px, -8px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
 @keyframes sparkPulse {
   0%,
   100% {
-    opacity: calc(var(--spark-opacity) * 0.45);
-    filter: brightness(0.75);
+    opacity: calc(var(--spark-opacity) * 0.3);
+    filter: brightness(0.6);
   }
-  40% {
-    opacity: calc(var(--spark-opacity) * 0.9);
-    filter: brightness(1.15);
+  45% {
+    opacity: calc(var(--spark-opacity) * 0.95);
+    filter: brightness(1.2);
   }
   50% {
     opacity: var(--spark-opacity);
-    filter: brightness(1.5);
+    filter: brightness(1.8);
   }
-  60% {
-    opacity: calc(var(--spark-opacity) * 0.85);
+  55% {
+    opacity: calc(var(--spark-opacity) * 0.9);
     filter: brightness(1.1);
   }
 }
