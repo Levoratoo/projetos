@@ -63,8 +63,6 @@ function BioBlock() {
             className="object-cover object-top"
             priority
           />
-          {/* Red glow overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,59,59,0.1),transparent_60%)]" />
         </div>
       </motion.div>
 
@@ -78,7 +76,7 @@ function BioBlock() {
             href="https://www.linkedin.com/in/pedrolevorato/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(255,59,59,0.45)] bg-[rgba(255,59,59,0.06)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/75 transition-all duration-200 hover:border-[rgba(255,59,59,0.85)] hover:bg-[rgba(255,59,59,0.12)] hover:text-white"
+            className="group inline-flex w-fit items-center gap-2 rounded-full border border-[#c42838] bg-[#1a080c] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/90 transition-all duration-200 hover:border-[#ff4a5a] hover:bg-[#2a1018] hover:text-white"
           >
             <ExternalLink
               className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
@@ -91,7 +89,7 @@ function BioBlock() {
             href={`/curriculo?lang=${locale}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(255,59,59,0.3)] bg-[rgba(255,59,59,0.04)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/60 transition-all duration-200 hover:border-[rgba(255,59,59,0.75)] hover:bg-[rgba(255,59,59,0.1)] hover:text-white"
+            className="group inline-flex w-fit items-center gap-2 rounded-full border border-[#8a2028] bg-[#120507] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/85 transition-all duration-200 hover:border-[#d03848] hover:bg-[#1c0c10] hover:text-white"
           >
             <Download
               className="h-3.5 w-3.5 shrink-0 transition-transform duration-200 group-hover:translate-y-0.5"
@@ -142,10 +140,10 @@ function ExperienceTimeline() {
                 <span
                   className={`flex h-[38px] w-[38px] items-center justify-center rounded-full border ${
                     isMusic
-                      ? "border-[rgba(168,85,247,0.7)] bg-[rgba(40,8,70,0.95)] shadow-[0_0_14px_rgba(168,85,247,0.28)]"
+                      ? "border-[#a855f7] bg-[#2a0d45] shadow-[0_0_14px_rgba(168,85,247,0.35)]"
                       : exp.current
-                      ? "border-[rgba(255,59,59,0.65)] bg-[rgba(80,8,18,0.95)] shadow-[0_0_14px_rgba(255,59,59,0.22)]"
-                      : "border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.05)]"
+                      ? "border-[#e03848] bg-[#501018] shadow-[0_0_14px_rgba(255,59,59,0.3)]"
+                      : "border-[#3a3438] bg-[#18161a]"
                   }`}
                 >
                   {isMusic ? (
@@ -163,10 +161,10 @@ function ExperienceTimeline() {
               <div
                 className={`rounded-xl border px-4 py-3 ${
                   isMusic
-                    ? "border-[rgba(168,85,247,0.25)] bg-[rgba(40,8,70,0.45)]"
+                    ? "border-[#5c2d8a] bg-[#241038]"
                     : exp.current
-                    ? "border-[rgba(255,59,59,0.2)] bg-[rgba(70,8,16,0.35)]"
-                    : "border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)]"
+                    ? "border-[#7a1824] bg-[#3a0c12]"
+                    : "border-[#2a2628] bg-[#141214]"
                 }`}
               >
                 <div className="flex items-start justify-between gap-3">
@@ -178,7 +176,7 @@ function ExperienceTimeline() {
                       href={exp.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[rgba(168,85,247,0.45)] bg-[rgba(168,85,247,0.1)] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[rgba(196,130,255,0.9)] transition-all hover:bg-[rgba(168,85,247,0.2)] hover:text-white"
+                      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[#8b5cf6] bg-[#2d1a4a] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#d8b4fe] transition-all hover:bg-[#3d2460] hover:text-white"
                     >
                       <ExternalLink className="h-2.5 w-2.5" aria-hidden />
                       Press Kit
@@ -234,9 +232,9 @@ function CertificationsGrid() {
           href={cert.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-3 rounded-xl border border-[rgba(255,59,59,0.18)] bg-[rgba(60,6,14,0.55)] px-4 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.35)] transition-colors duration-150 hover:border-[rgba(255,59,59,0.45)] hover:bg-[rgba(70,8,18,0.75)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+          className="group flex items-center gap-3 rounded-xl border border-[#6a1824] bg-[#2a080e] px-4 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.45)] transition-colors duration-150 hover:border-[#c42838] hover:bg-[#3a1018] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
         >
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[rgba(255,59,59,0.4)] bg-[rgba(90,10,22,0.8)]">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#8a2028] bg-[#4a0c16]">
             <Award className="h-[18px] w-[18px] text-[rgba(255,88,88,0.9)]" strokeWidth={1.6} />
           </span>
           <div className="min-w-0 flex-1">
@@ -273,7 +271,7 @@ function RecommendationsBlock() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={ariaLabel}
-              className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.05)] px-5 py-4 text-left shadow-[0_2px_12px_rgba(0,0,0,0.35)] transition-colors duration-200 hover:border-[rgba(255,59,59,0.35)] hover:bg-[rgba(255,255,255,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
+              className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[#2c282a] bg-[#141112] px-5 py-4 text-left shadow-[0_2px_12px_rgba(0,0,0,0.45)] transition-colors duration-200 hover:border-[#6a2028] hover:bg-[#1c181a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
             >
             <Quote
               className="absolute right-3 top-3 h-12 w-12 rotate-180 text-[rgba(255,59,59,0.1)] transition-opacity group-hover:opacity-80"

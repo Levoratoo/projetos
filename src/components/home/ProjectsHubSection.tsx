@@ -43,7 +43,7 @@ function renderBlurCollage(images: string[]) {
           />
         );
       })}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/78 via-black/36 to-black/84" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#050304] via-[#080506] to-[#060404]" />
     </div>
   );
 }
@@ -109,7 +109,7 @@ export function ProjectsHubSection() {
             {...motionProps}
             type="button"
             onClick={() => setActivePanel("systems")}
-            className="tech-frame tech-frame--green group relative flex min-h-[360px] flex-col overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(18,7,9,0.88),rgba(7,3,4,0.88))] p-9 text-left shadow-[0_30px_90px_rgba(0,0,0,0.55)] backdrop-blur-xl transition hover:border-glow/40 hover:shadow-[0_40px_110px_rgba(0,0,0,0.65)] md:min-h-[420px] md:p-10"
+            className="tech-frame tech-frame--green group relative flex min-h-[360px] flex-col overflow-hidden rounded-[36px] border border-white/10 bg-[#0f0608] p-9 text-left shadow-[0_30px_90px_rgba(0,0,0,0.55)] transition hover:border-glow/40 hover:shadow-[0_40px_110px_rgba(0,0,0,0.65)] md:min-h-[420px] md:p-10"
           >
             {renderBlurCollage(blurImages)}
             <div className="pointer-events-none absolute inset-0 z-[1] tech-grid" />
@@ -157,9 +157,9 @@ export function ProjectsHubSection() {
             transition={{ ...motionProps.transition, delay: 0.05 }}
             type="button"
             onClick={() => setActivePanel("bi")}
-            className="tech-frame tech-frame--blue group relative flex min-h-[360px] flex-col overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(18,9,8,0.88),rgba(7,3,4,0.88))] p-9 text-left shadow-[0_30px_90px_rgba(0,0,0,0.55)] backdrop-blur-xl transition hover:border-[rgba(255,141,114,0.35)] hover:shadow-[0_40px_110px_rgba(0,0,0,0.65)] md:min-h-[420px] md:p-10"
+            className="tech-frame tech-frame--blue group relative flex min-h-[360px] flex-col overflow-hidden rounded-[36px] border border-white/10 bg-[#0e0807] p-9 text-left shadow-[0_30px_90px_rgba(0,0,0,0.55)] transition hover:border-[rgba(255,141,114,0.35)] hover:shadow-[0_40px_110px_rgba(0,0,0,0.65)] md:min-h-[420px] md:p-10"
           >
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,141,114,0.14),transparent_50%),radial-gradient(circle_at_80%_30%,rgba(255,141,114,0.12),transparent_46%),linear-gradient(180deg,rgba(14,7,6,0.9),rgba(7,3,4,0.76))]" />
+            <div className="absolute inset-0 z-0 bg-[#100807]" />
             <div className="pointer-events-none absolute inset-0 z-[1] tech-grid" />
             <div className="pointer-events-none absolute inset-0 z-[2] tech-scan tech-scan--blue" />
             <div className="pointer-events-none absolute -top-20 right-8 z-[1] h-56 w-56 rounded-full bg-[rgba(255,141,114,0.2)] blur-[80px] animate-orb" />
@@ -187,7 +187,7 @@ export function ProjectsHubSection() {
 
       {activePanel ? (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/82 backdrop-blur-2xl"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-[#020101]/95"
           role="dialog"
           aria-modal="true"
           aria-label="Projetos"
@@ -195,7 +195,7 @@ export function ProjectsHubSection() {
         >
           <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_220px_rgba(0,0,0,0.78)]" />
           <div
-            className="tech-overlay relative h-[92vh] w-[min(1600px,96vw)] overflow-hidden rounded-[42px] border border-white/10 bg-[linear-gradient(180deg,rgba(15,6,8,0.96),rgba(7,3,4,0.96))] shadow-[0_50px_140px_rgba(0,0,0,0.7)]"
+            className="tech-overlay relative h-[92vh] w-[min(1600px,96vw)] overflow-hidden rounded-[42px] border border-white/10 bg-[#0c0607] shadow-[0_50px_140px_rgba(0,0,0,0.7)]"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="pointer-events-none absolute inset-0 opacity-30 tech-grid" />
@@ -257,11 +257,10 @@ export function ProjectsHubSection() {
                       {homeProjects.map((project) => (
                         <div
                           key={project.slug}
-                          className="tech-card group relative flex flex-col rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(19,8,11,0.72),rgba(8,3,4,0.68))] p-5 transition hover:border-glow/35 hover:bg-[linear-gradient(180deg,rgba(23,9,12,0.82),rgba(9,4,5,0.8))] md:flex-row md:gap-6"
+                          className="tech-card group relative flex flex-col rounded-[28px] border border-white/10 bg-[#12080a] p-5 transition hover:border-glow/35 hover:bg-[#181014] md:flex-row md:gap-6"
                         >
-                          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(255,62,62,0.16),transparent_56%),linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0))]" />
                           <div className="relative flex h-full flex-col md:flex-row md:items-stretch md:gap-6">
-                            <div className="preview-frame relative mb-4 h-28 overflow-hidden rounded-2xl bg-black/40 md:mb-0 md:h-auto md:w-56 md:flex-none">
+                            <div className="preview-frame relative mb-4 h-28 overflow-hidden rounded-2xl bg-[#0a0a0a] md:mb-0 md:h-auto md:w-56 md:flex-none">
                               <Image
                                 src={project.thumb}
                                 alt={project.title}
