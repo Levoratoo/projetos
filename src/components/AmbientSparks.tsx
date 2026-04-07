@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
-/** Só na hero: quantidade moderada para não pesar o scroll */
-const SPARK_COUNT = 220;
+/** Só na hero (layer não é global): densidade alta como antes, sem cobrir o resto da página */
+const SPARK_COUNT = 500;
 
 type Spark = {
   x: string;
