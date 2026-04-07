@@ -985,6 +985,78 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["プレスキット", "HTML/CSS/JS", "GitHub Pages", "DJ", "ブッキング", "音楽"],
     },
   },
+  "claymoon-press-kit": {
+    en: {
+      title: "ClayMoon.music, Digital press kit",
+      area: "Marketing",
+      description:
+        "Static press kit for ClayMoon.music: one URL with story, light media, sets, downloads and booking — Tech House / Minimal Deep Tech, European positioning and six languages.",
+      bullets: [
+        "One link for bookers and promoters: bio, story, sound, photos and contact.",
+        "Hero with particles, chapter timeline, About and Media (carousel on mobile).",
+        "Stage presence, gallery with downloads, sets and SoundCloud embedded in the layout.",
+        "Booking via WhatsApp, Instagram and email; i18n with centralized JS keys.",
+        "Static stack on GitHub Pages; video and images tuned for weight and compatibility.",
+      ],
+      tags: ["Press kit", "Marketing", "Static site", "GitHub Pages", "Music", "i18n", "Mobile first"],
+    },
+    es: {
+      title: "ClayMoon.music, Press kit digital",
+      area: "Marketing",
+      description:
+        "Press kit estático para ClayMoon.music: una URL con narrativa, media ligera, sets, descargas y booking — Tech House / Minimal Deep Tech, enfoque europeo y seis idiomas.",
+      bullets: [
+        "Un solo enlace para bookers y promotores: bio, historia, sonido, fotos y contacto.",
+        "Hero con partículas, timeline por capítulos, Sobre y Mídia (carrusel en móvil).",
+        "Presencia en cabina, galería con descargas, sets y SoundCloud integrados.",
+        "Booking por WhatsApp, Instagram y correo; i18n con claves centralizadas en JS.",
+        "Stack estático en GitHub Pages; vídeo e imágenes pensados para peso y compatibilidad.",
+      ],
+      tags: ["Press kit", "Marketing", "Sitio estático", "GitHub Pages", "Música", "i18n", "Mobile first"],
+    },
+    zh: {
+      title: "ClayMoon.music，数字宣传资料",
+      area: "营销",
+      description:
+        "ClayMoon.music 的静态宣传资料：单一 URL 呈现叙事、轻量媒体、set、下载与预订 — Tech House / Minimal Deep Tech、欧洲定位与六种语言。",
+      bullets: [
+        "为预订方与推广方提供单一链接：简介、故事、声音、照片与联系方式。",
+        "粒子 Hero、分章时间线、关于与媒体区（移动端轮播）。",
+        "舞台足迹、可下载图库、嵌入布局的 set 与 SoundCloud。",
+        "通过 WhatsApp、Instagram、邮件预订；i18n 使用集中式 JS 键。",
+        "GitHub Pages 静态托管；针对体积与兼容性优化视频与图片。",
+      ],
+      tags: ["宣传资料", "营销", "静态网站", "GitHub Pages", "音乐", "i18n", "移动优先"],
+    },
+    de: {
+      title: "ClayMoon.music, Digitales Presskit",
+      area: "Marketing",
+      description:
+        "Statisches Presskit für ClayMoon.music: eine URL mit Story, leichten Medien, Sets, Downloads und Booking — Tech House / Minimal Deep Tech, europäische Ausrichtung und sechs Sprachen.",
+      bullets: [
+        "Ein Link für Booker und Promoter: Bio, Geschichte, Sound, Fotos und Kontakt.",
+        "Hero mit Partikeln, Kapitel-Timeline, Über- und Medienbereich (Karussell auf dem Handy).",
+        "Bühnenpräsenz, Galerie mit Downloads, eingebettete Sets und SoundCloud.",
+        "Booking via WhatsApp, Instagram und E-Mail; i18n mit zentralisierten JS-Keys.",
+        "Statischer Stack auf GitHub Pages; Video und Bilder auf Gewicht und Kompatibilität abgestimmt.",
+      ],
+      tags: ["Presskit", "Marketing", "Statische Site", "GitHub Pages", "Musik", "i18n", "Mobile first"],
+    },
+    ja: {
+      title: "ClayMoon.music、デジタルプレスキット",
+      area: "マーケティング",
+      description:
+        "ClayMoon.music 向け静的プレスキット：ストーリー、軽量メディア、セット、ダウンロードとブッキングを1つの URL に — Tech House / Minimal Deep Tech、ヨーロッパ志向、6言語。",
+      bullets: [
+        "ブッカーとプロモーター向けの単一リンク：経歴、ストーリー、音源、写真と連絡先。",
+        "パーティクル Hero、章立てタイムライン、概要とメディア（モバイルはカルーセル）。",
+        "ステージ実績、ダウンロード付きギャラリー、レイアウトに埋め込んだセットと SoundCloud。",
+        "WhatsApp、Instagram、メールでブッキング；集中管理した JS キーで i18n。",
+        "GitHub Pages の静的スタック；動画と画像は容量と互換性を考慮。",
+      ],
+      tags: ["プレスキット", "マーケティング", "静的サイト", "GitHub Pages", "音楽", "i18n", "モバイルファースト"],
+    },
+  },
 };
 
 export function getLocalizedPreview(

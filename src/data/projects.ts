@@ -1788,6 +1788,133 @@ export const projects: Project[] = [
         fullSrc: "/projects/press-kit-levorato-dj/screen9.jpg"
       }
     ]
+  },
+  {
+    slug: "claymoon-press-kit",
+    title: "ClayMoon.music, Press kit digital",
+    subtitle:
+      "Site estático de apresentação e contacto para DJ/produtor: uma URL com identidade, história, som, media e booking.",
+    summary:
+      "Press kit digital para ClayMoon.music — um único link com narrativa, Tech House / Minimal Deep Tech, timeline, mídia leve, sets e canais de booking para bookers e promotores decidirem rápido.",
+    description:
+      "Site estático hospedado no GitHub Pages: hero com partículas, capítulos de história, Sobre consolidado, vídeos (grelha no desktop e carrossel no mobile), galeria com downloads, SoundCloud, contacto e internacionalização em seis idiomas.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site estático",
+    domain: "Marketing",
+    segment: "Música / Entretenimento",
+    tags: [
+      "Press Kit",
+      "Marketing",
+      "Site estático",
+      "GitHub Pages",
+      "Música",
+      "i18n",
+      "Mobile first"
+    ],
+    stack: [
+      "HTML5 semântico",
+      "CSS3 (layout responsivo, animações)",
+      "JavaScript vanilla",
+      "Traduções centralizadas (JS)",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(140, 40, 100, 0.42)",
+      b: "rgba(80, 20, 70, 0.34)",
+      c: "rgba(255, 120, 140, 0.14)"
+    },
+    context:
+      "O site nasceu para parar de dispersar informação (redes, PDFs, áudios em chats) e concentrar a marca num só sítio com aparência de produto profissional: vender o artista antes da primeira call — visual forte, leitura clara e tudo o que um contratante precisa num fluxo só. A narrativa reflete cerca de dois anos de projeto com som entre Tech House e Minimal Deep Tech e referência europeia (Dublin → Porto), sem inventar números de público ou gigs; textos, timeline, Sobre e media foram alinhados à proposta atual.",
+    problem: [
+      "Informação espalhada: bio num sítio, fotos noutro, sets perdidos em links soltos.",
+      "Falta de um único link que transmita autoridade e clareza musical para quem decide em minutos.",
+      "Identidade em transição: era preciso uma voz única (ClayMoon) e tradução para quem não fala português.",
+      "Media pesada (vídeo): hospedar tudo no GitHub Pages obrigou compressão e decisões de layout em vez de ficheiros enormes no repositório."
+    ],
+    constraints: [
+      "Site 100% estático no GitHub Pages, sem backend.",
+      "Performance e leitura fortes no telemóvel (muitos bookers abrem o link no telemóvel).",
+      "Internacionalização mantendo chaves centralizadas e persistência de idioma sem recarregar mal."
+    ],
+    solution: [
+      "Hero com identidade visual, partículas e CTA para som e contacto.",
+      "História em capítulos (timeline) com fotos estáticas e texto coerente com a trajetória.",
+      "Sobre consolidado (Europa, Porto, Tech House / Minimal Deep Tech).",
+      "Secção Mídia com vídeos: carrossel no mobile e grelha no desktop, pensada para leveza.",
+      "Presença em palco, galeria e downloads do press kit visual.",
+      "Sets em destaque e SoundCloud integrados no layout.",
+      "Booking com WhatsApp, Instagram e e-mail.",
+      "Seis idiomas com chaves em JS e preferência de idioma persistida.",
+      "Micro-interações (glitch nos títulos, hover, scroll suave) sem pesar um site estático.",
+      "Crédito do desenvolvedor e favicon alinhados à marca."
+    ],
+    results: [
+      "Um link único para enviar em mails e bios — menos fricção entre sets, contacto e media.",
+      "Perceção mais profissional para contratantes que julgam pelo primeiro clique.",
+      "Decisão mais rápida para quem precisa de EN/ES/ZH/DE/JA sem página duplicada manualmente.",
+      "Deploy contínuo via Git: atualizações simples e histórico no repositório."
+    ],
+    learnings: [
+      "Com GitHub Pages, vídeo e imagens pesadas exigem compressão e padrões de layout diferentes por breakpoint.",
+      "Chaves de tradução num único ficheiro reduzem erro ao acrescentar secções."
+    ],
+    nextSteps: [
+      "Medir visitas e origem dos cliques de booking (analytics leve, compatível com estático).",
+      "Refinar ordem dos blocos no mobile conforme dados reais de scroll."
+    ],
+    kpis: [
+      { label: "Idiomas", value: "6" },
+      { label: "Deploy", value: "GitHub Pages" },
+      { label: "Formato", value: "Site estático" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/claymoon/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero e identidade",
+        description: "INSERT COIN, groove retrô e CTAs para ouvir e booking.",
+        thumbSrc: "/projects/claymoon-press-kit/thumb.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen1.jpg"
+      },
+      {
+        title: "História em capítulos",
+        description: "Timeline com narrativa 2024–2026 e fotos de contexto.",
+        thumbSrc: "/projects/claymoon-press-kit/screen2.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen2.jpg"
+      },
+      {
+        title: "Sobre e proposta",
+        description: "Bio, géneros e posicionamento Europa / Porto.",
+        thumbSrc: "/projects/claymoon-press-kit/screen3.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen3.jpg"
+      },
+      {
+        title: "Mídia e palco",
+        description: "Vídeos e presença em palco com layout adaptado ao ecrã.",
+        thumbSrc: "/projects/claymoon-press-kit/screen4.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen4.jpg"
+      },
+      {
+        title: "Sets e SoundCloud",
+        description: "Destaques e integração de sets no próprio site.",
+        thumbSrc: "/projects/claymoon-press-kit/screen5.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen5.jpg"
+      },
+      {
+        title: "Booking e rodapé",
+        description: "Contactos, créditos e fecho da página.",
+        thumbSrc: "/projects/claymoon-press-kit/screen6.jpg",
+        fullSrc: "/projects/claymoon-press-kit/screen6.jpg"
+      }
+    ]
   }];
 
 
@@ -2289,6 +2416,49 @@ export const projectsLite: ProjectLite[] = [
       { src: "/projects/press-kit-levorato-dj/screen8.jpg", alt: "Seção Sobre" },
       { src: "/projects/press-kit-levorato-dj/screen9.jpg", alt: "Detalhes visuais" }
     ]
+  },
+  {
+    slug: "claymoon-press-kit",
+    title: "ClayMoon.music, Press kit digital",
+    oneLiner:
+      "Press kit estático com identidade, timeline, mídia, sets e booking — seis idiomas, um link.",
+    problem:
+      "Informação dispersa entre redes e ficheiros; falta de um URL único com autoridade para bookers e promotores.",
+    solution:
+      "Site no GitHub Pages com narrativa em capítulos, mídia otimizada, SoundCloud, downloads e i18n com chaves em JS.",
+    features: [
+      "Hero com partículas e CTA para som e contacto",
+      "Timeline e Sobre alinhados à proposta Tech House / Minimal Deep Tech",
+      "Mídia: grelha no desktop e carrossel no mobile",
+      "Galeria e material de imprensa com downloads",
+      "Sets em destaque e integração SoundCloud",
+      "Booking: WhatsApp, Instagram e e-mail",
+      "Internacionalização (6 idiomas) com persistência de preferência",
+      "Micro-interações e scroll suave sem framework pesado"
+    ],
+    benefits: [
+      "Um link para mail e bios",
+      "Menos fricção para ouvir, ver e contactar",
+      "Leitura forte no telemóvel"
+    ],
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript vanilla",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/claymoon/" }
+    ],
+    images: [
+      { src: "/projects/claymoon-press-kit/thumb.jpg", alt: "Hero ClayMoon.music" },
+      { src: "/projects/claymoon-press-kit/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/claymoon-press-kit/screen2.jpg", alt: "História em capítulos" },
+      { src: "/projects/claymoon-press-kit/screen3.jpg", alt: "Sobre e proposta" },
+      { src: "/projects/claymoon-press-kit/screen4.jpg", alt: "Mídia e palco" },
+      { src: "/projects/claymoon-press-kit/screen5.jpg", alt: "Sets e SoundCloud" },
+      { src: "/projects/claymoon-press-kit/screen6.jpg", alt: "Booking e rodapé" }
+    ]
   }
 ];
 
@@ -2748,6 +2918,45 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/press-kit-levorato-dj/screen8.jpg", alt: "Seção Sobre" },
       { src: "/projects/press-kit-levorato-dj/screen9.jpg", alt: "Detalhes visuais" }
     ]
+  },
+  {
+    slug: "claymoon-press-kit",
+    title: "ClayMoon.music, Press kit digital",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Press Kit",
+      "Marketing",
+      "Site estático",
+      "GitHub Pages",
+      "Música",
+      "i18n",
+      "Mobile first"
+    ],
+    thumb: "/projects/claymoon-press-kit/thumb.jpg",
+    description:
+      "Press kit digital para ClayMoon.music: URL única com narrativa, mídia leve, sets, downloads e booking — Tech House / Minimal Deep Tech, referência europeia e seis idiomas.",
+    bullets: [
+      "Objetivo: um link só para bookers e promotores — bio, história, som, fotos e contacto.",
+      "Hero com partículas, timeline em capítulos, Sobre e secção Mídia (carrossel no mobile).",
+      "Presença em palco, galeria com downloads, sets e SoundCloud integrados no layout.",
+      "Booking por WhatsApp, Instagram e e-mail; i18n com chaves centralizadas em JS.",
+      "Stack estática no GitHub Pages; vídeo e imagens pensados para peso e compatibilidade."
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/claymoon/" }
+    ],
+    gallery: [
+      { src: "/projects/claymoon-press-kit/thumb.jpg", alt: "Hero ClayMoon.music" },
+      { src: "/projects/claymoon-press-kit/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/claymoon-press-kit/screen2.jpg", alt: "História em capítulos" },
+      { src: "/projects/claymoon-press-kit/screen3.jpg", alt: "Sobre e proposta" },
+      { src: "/projects/claymoon-press-kit/screen4.jpg", alt: "Mídia e palco" },
+      { src: "/projects/claymoon-press-kit/screen5.jpg", alt: "Sets e SoundCloud" },
+      { src: "/projects/claymoon-press-kit/screen6.jpg", alt: "Booking e rodapé" }
+    ]
   }];
 
 const featuredPreviewSlug = "landing-page-printbag";
@@ -2806,7 +3015,8 @@ export const homeProjectSlugs = [
   "apresentador-projetos",
   "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica",
-  "gestao-producao-industrial-mes"
+  "gestao-producao-industrial-mes",
+  "claymoon-press-kit"
 ];
 
 export const homeProjects = homeProjectSlugs
