@@ -1,162 +1,64 @@
 import { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
-/** 160 estrelas vermelhas distribuídas pelo viewport */
-const SPARKS = [
-  { x: "1%",  y: "6%",  size: "4px", delay: "-2.4s",  duration: "14s", opacity: "0.9"  },
-  { x: "3%",  y: "22%", size: "3px", delay: "-1.2s",  duration: "11s", opacity: "0.7"  },
-  { x: "5%",  y: "48%", size: "5px", delay: "-4.8s",  duration: "16s", opacity: "0.95" },
-  { x: "2%",  y: "71%", size: "3px", delay: "-3.0s",  duration: "13s", opacity: "0.75" },
-  { x: "7%",  y: "88%", size: "4px", delay: "-6.2s",  duration: "18s", opacity: "0.8"  },
-  { x: "4%",  y: "35%", size: "7px", delay: "-8.1s",  duration: "15s", opacity: "0.98" },
-  { x: "9%",  y: "14%", size: "3px", delay: "-5.2s",  duration: "12s", opacity: "0.65" },
-  { x: "11%", y: "57%", size: "4px", delay: "-7.6s",  duration: "17s", opacity: "0.85" },
-  { x: "8%",  y: "80%", size: "6px", delay: "-2.9s",  duration: "16s", opacity: "0.92" },
-  { x: "13%", y: "30%", size: "3px", delay: "-1.6s",  duration: "10s", opacity: "0.7"  },
-  { x: "15%", y: "95%", size: "5px", delay: "-6.8s",  duration: "14s", opacity: "0.82" },
-  { x: "17%", y: "42%", size: "8px", delay: "-9.3s",  duration: "19s", opacity: "0.99" },
-  { x: "19%", y: "10%", size: "3px", delay: "-3.4s",  duration: "12s", opacity: "0.68" },
-  { x: "21%", y: "66%", size: "4px", delay: "-8.7s",  duration: "15s", opacity: "0.87" },
-  { x: "20%", y: "82%", size: "3px", delay: "-4.5s",  duration: "17s", opacity: "0.65" },
-  { x: "24%", y: "24%", size: "5px", delay: "-2.1s",  duration: "11s", opacity: "0.93" },
-  { x: "26%", y: "52%", size: "3px", delay: "-7.3s",  duration: "16s", opacity: "0.72" },
-  { x: "23%", y: "4%",  size: "6px", delay: "-5.5s",  duration: "13s", opacity: "0.95" },
-  { x: "28%", y: "76%", size: "4px", delay: "-1.8s",  duration: "12s", opacity: "0.78" },
-  { x: "30%", y: "38%", size: "3px", delay: "-9.1s",  duration: "10s", opacity: "0.62" },
-  { x: "32%", y: "90%", size: "5px", delay: "-6.4s",  duration: "14s", opacity: "0.88" },
-  { x: "34%", y: "18%", size: "3px", delay: "-4.1s",  duration: "13s", opacity: "0.68" },
-  { x: "36%", y: "60%", size: "7px", delay: "-7.8s",  duration: "11s", opacity: "0.97" },
-  { x: "38%", y: "32%", size: "3px", delay: "-2.7s",  duration: "15s", opacity: "0.66" },
-  { x: "40%", y: "85%", size: "4px", delay: "-8.9s",  duration: "17s", opacity: "0.82" },
-  { x: "42%", y: "8%",  size: "5px", delay: "-3.7s",  duration: "12s", opacity: "0.92" },
-  { x: "44%", y: "46%", size: "3px", delay: "-6.1s",  duration: "11s", opacity: "0.68" },
-  { x: "46%", y: "72%", size: "6px", delay: "-4.4s",  duration: "15s", opacity: "0.94" },
-  { x: "48%", y: "20%", size: "3px", delay: "-2.5s",  duration: "13s", opacity: "0.64" },
-  { x: "50%", y: "94%", size: "4px", delay: "-9.4s",  duration: "10s", opacity: "0.78" },
-  { x: "52%", y: "55%", size: "5px", delay: "-5.8s",  duration: "17s", opacity: "0.9"  },
-  { x: "54%", y: "12%", size: "3px", delay: "-1.9s",  duration: "12s", opacity: "0.7"  },
-  { x: "56%", y: "36%", size: "8px", delay: "-8.2s",  duration: "14s", opacity: "0.98" },
-  { x: "58%", y: "78%", size: "3px", delay: "-3.8s",  duration: "11s", opacity: "0.68" },
-  { x: "60%", y: "26%", size: "4px", delay: "-7.1s",  duration: "16s", opacity: "0.84" },
-  { x: "62%", y: "64%", size: "5px", delay: "-6.6s",  duration: "12s", opacity: "0.91" },
-  { x: "64%", y: "6%",  size: "3px", delay: "-2.2s",  duration: "15s", opacity: "0.66" },
-  { x: "66%", y: "88%", size: "6px", delay: "-5.1s",  duration: "11s", opacity: "0.95" },
-  { x: "68%", y: "42%", size: "3px", delay: "-4.6s",  duration: "13s", opacity: "0.72" },
-  { x: "70%", y: "16%", size: "4px", delay: "-8.4s",  duration: "17s", opacity: "0.86" },
-  { x: "72%", y: "70%", size: "3px", delay: "-1.5s",  duration: "10s", opacity: "0.64" },
-  { x: "74%", y: "30%", size: "7px", delay: "-7.7s",  duration: "16s", opacity: "0.97" },
-  { x: "76%", y: "58%", size: "3px", delay: "-5.9s",  duration: "12s", opacity: "0.7"  },
-  { x: "78%", y: "2%",  size: "5px", delay: "-2.8s",  duration: "13s", opacity: "0.88" },
-  { x: "80%", y: "82%", size: "3px", delay: "-6.9s",  duration: "14s", opacity: "0.68" },
-  { x: "82%", y: "46%", size: "4px", delay: "-3.3s",  duration: "15s", opacity: "0.82" },
-  { x: "84%", y: "22%", size: "6px", delay: "-9.2s",  duration: "11s", opacity: "0.96" },
-  { x: "86%", y: "68%", size: "3px", delay: "-4.0s",  duration: "16s", opacity: "0.68" },
-  { x: "88%", y: "40%", size: "4px", delay: "-7.5s",  duration: "13s", opacity: "0.84" },
-  { x: "90%", y: "92%", size: "5px", delay: "-1.3s",  duration: "17s", opacity: "0.9"  },
-  { x: "92%", y: "14%", size: "3px", delay: "-6.7s",  duration: "10s", opacity: "0.66" },
-  { x: "94%", y: "54%", size: "4px", delay: "-3.6s",  duration: "14s", opacity: "0.8"  },
-  { x: "96%", y: "28%", size: "3px", delay: "-8.6s",  duration: "12s", opacity: "0.7"  },
-  { x: "98%", y: "76%", size: "5px", delay: "-5.3s",  duration: "15s", opacity: "0.88" },
-  { x: "10%", y: "98%", size: "4px", delay: "-2.0s",  duration: "11s", opacity: "0.78" },
-  { x: "22%", y: "3%",  size: "3px", delay: "-9.7s",  duration: "16s", opacity: "0.64" },
-  { x: "33%", y: "46%", size: "5px", delay: "-4.2s",  duration: "13s", opacity: "0.92" },
-  { x: "45%", y: "8%",  size: "3px", delay: "-7.0s",  duration: "12s", opacity: "0.68" },
-  { x: "55%", y: "30%", size: "4px", delay: "-3.1s",  duration: "18s", opacity: "0.86" },
-  { x: "67%", y: "84%", size: "7px", delay: "-8.0s",  duration: "11s", opacity: "0.97" },
-  { x: "79%", y: "50%", size: "3px", delay: "-5.0s",  duration: "14s", opacity: "0.7"  },
-  { x: "91%", y: "96%", size: "5px", delay: "-1.7s",  duration: "10s", opacity: "0.84" },
-  { x: "2%",  y: "40%", size: "3px", delay: "-6.3s",  duration: "17s", opacity: "0.68" },
-  { x: "14%", y: "20%", size: "8px", delay: "-9.0s",  duration: "13s", opacity: "0.99" },
-  { x: "35%", y: "62%", size: "3px", delay: "-4.7s",  duration: "15s", opacity: "0.64" },
-  { x: "47%", y: "16%", size: "4px", delay: "-2.3s",  duration: "12s", opacity: "0.82" },
-  { x: "59%", y: "48%", size: "3px", delay: "-7.9s",  duration: "11s", opacity: "0.72" },
-  { x: "71%", y: "32%", size: "5px", delay: "-5.6s",  duration: "15s", opacity: "0.92" },
-  { x: "83%", y: "74%", size: "3px", delay: "-3.5s",  duration: "13s", opacity: "0.68" },
-  { x: "95%", y: "44%", size: "4px", delay: "-8.5s",  duration: "17s", opacity: "0.82" },
-  { x: "37%", y: "4%",  size: "3px", delay: "-1.4s",  duration: "12s", opacity: "0.66" },
-  { x: "53%", y: "98%", size: "6px", delay: "-6.5s",  duration: "18s", opacity: "0.94" },
-  { x: "77%", y: "18%", size: "3px", delay: "-4.3s",  duration: "10s", opacity: "0.68" },
-  { x: "6%",  y: "62%", size: "4px", delay: "-9.6s",  duration: "15s", opacity: "0.8"  },
-  { x: "18%", y: "36%", size: "3px", delay: "-2.6s",  duration: "12s", opacity: "0.64" },
-  { x: "29%", y: "74%", size: "5px", delay: "-7.2s",  duration: "14s", opacity: "0.9"  },
-  { x: "41%", y: "50%", size: "3px", delay: "-5.7s",  duration: "11s", opacity: "0.7"  },
-  { x: "51%", y: "88%", size: "4px", delay: "-3.2s",  duration: "16s", opacity: "0.84" },
-  { x: "63%", y: "22%", size: "3px", delay: "-8.8s",  duration: "13s", opacity: "0.66" },
-  { x: "75%", y: "60%", size: "6px", delay: "-1.1s",  duration: "17s", opacity: "0.95" },
-  { x: "87%", y: "4%",  size: "3px", delay: "-6.0s",  duration: "12s", opacity: "0.68" },
-  { x: "99%", y: "34%", size: "4px", delay: "-4.9s",  duration: "15s", opacity: "0.8"  },
-  { x: "12%", y: "44%", size: "5px", delay: "-9.5s",  duration: "11s", opacity: "0.91" },
-  { x: "25%", y: "12%", size: "3px", delay: "-2.9s",  duration: "14s", opacity: "0.7"  },
-  { x: "39%", y: "70%", size: "4px", delay: "-7.4s",  duration: "13s", opacity: "0.82" },
-  { x: "49%", y: "34%", size: "3px", delay: "-5.4s",  duration: "16s", opacity: "0.66" },
-  { x: "61%", y: "80%", size: "7px", delay: "-3.9s",  duration: "10s", opacity: "0.96" },
-  { x: "73%", y: "48%", size: "3px", delay: "-8.3s",  duration: "15s", opacity: "0.7"  },
-  { x: "85%", y: "86%", size: "4px", delay: "-1.0s",  duration: "17s", opacity: "0.84" },
-  { x: "97%", y: "62%", size: "3px", delay: "-6.8s",  duration: "12s", opacity: "0.68" },
-  { x: "16%", y: "58%", size: "5px", delay: "-4.2s",  duration: "14s", opacity: "0.9"  },
-  { x: "27%", y: "28%", size: "3px", delay: "-9.1s",  duration: "11s", opacity: "0.64" },
-  { x: "43%", y: "92%", size: "4px", delay: "-2.4s",  duration: "13s", opacity: "0.8"  },
-  { x: "57%", y: "66%", size: "3px", delay: "-7.6s",  duration: "16s", opacity: "0.7"  },
-  { x: "69%", y: "10%", size: "6px", delay: "-5.2s",  duration: "15s", opacity: "0.94" },
-  { x: "81%", y: "38%", size: "3px", delay: "-3.4s",  duration: "12s", opacity: "0.66" },
-  { x: "93%", y: "84%", size: "5px", delay: "-8.7s",  duration: "18s", opacity: "0.88" },
-  { x: "8%",  y: "16%", size: "3px", delay: "-1.8s",  duration: "10s", opacity: "0.72" },
-  { x: "20%", y: "78%", size: "4px", delay: "-6.4s",  duration: "14s", opacity: "0.84" },
-  { x: "31%", y: "54%", size: "3px", delay: "-4.6s",  duration: "13s", opacity: "0.68" },
-  { x: "50%", y: "40%", size: "7px", delay: "-7.3s",  duration: "17s", opacity: "0.97" },
-  { x: "65%", y: "96%", size: "3px", delay: "-2.1s",  duration: "11s", opacity: "0.64" },
-  { x: "76%", y: "26%", size: "4px", delay: "-9.4s",  duration: "15s", opacity: "0.82" },
-  { x: "89%", y: "52%", size: "3px", delay: "-5.9s",  duration: "12s", opacity: "0.7"  },
-  { x: "4%",  y: "56%", size: "5px", delay: "-3.7s",  duration: "16s", opacity: "0.9"  },
-  { x: "15%", y: "8%",  size: "3px", delay: "-8.0s",  duration: "13s", opacity: "0.68" },
-  { x: "26%", y: "86%", size: "4px", delay: "-1.5s",  duration: "11s", opacity: "0.78" },
-  { x: "38%", y: "26%", size: "3px", delay: "-6.2s",  duration: "17s", opacity: "0.66" },
-  { x: "48%", y: "74%", size: "6px", delay: "-4.3s",  duration: "14s", opacity: "0.95" },
-  { x: "58%", y: "14%", size: "3px", delay: "-9.6s",  duration: "10s", opacity: "0.7"  },
-  { x: "70%", y: "56%", size: "5px", delay: "-2.7s",  duration: "15s", opacity: "0.88" },
-  { x: "80%", y: "94%", size: "3px", delay: "-7.8s",  duration: "12s", opacity: "0.64" },
-  { x: "92%", y: "24%", size: "4px", delay: "-5.1s",  duration: "16s", opacity: "0.82" },
-  { x: "10%", y: "68%", size: "3px", delay: "-3.2s",  duration: "13s", opacity: "0.7"  },
-  { x: "22%", y: "44%", size: "8px", delay: "-8.5s",  duration: "19s", opacity: "0.98" },
-  { x: "34%", y: "96%", size: "3px", delay: "-1.9s",  duration: "11s", opacity: "0.66" },
-  { x: "46%", y: "58%", size: "4px", delay: "-6.7s",  duration: "14s", opacity: "0.84" },
-  { x: "60%", y: "38%", size: "3px", delay: "-4.5s",  duration: "12s", opacity: "0.7"  },
-  { x: "72%", y: "80%", size: "5px", delay: "-9.3s",  duration: "17s", opacity: "0.9"  },
-  { x: "84%", y: "10%", size: "3px", delay: "-2.5s",  duration: "10s", opacity: "0.68" },
-  { x: "96%", y: "72%", size: "4px", delay: "-7.1s",  duration: "15s", opacity: "0.8"  },
-  { x: "6%",  y: "26%", size: "3px", delay: "-5.6s",  duration: "13s", opacity: "0.72" },
-  { x: "18%", y: "90%", size: "5px", delay: "-3.8s",  duration: "16s", opacity: "0.88" },
-  { x: "30%", y: "16%", size: "3px", delay: "-8.2s",  duration: "11s", opacity: "0.64" },
-  { x: "42%", y: "62%", size: "4px", delay: "-1.6s",  duration: "14s", opacity: "0.82" },
-  { x: "54%", y: "28%", size: "3px", delay: "-6.9s",  duration: "12s", opacity: "0.7"  },
-  { x: "66%", y: "72%", size: "6px", delay: "-4.8s",  duration: "17s", opacity: "0.94" },
-  { x: "78%", y: "44%", size: "3px", delay: "-9.7s",  duration: "10s", opacity: "0.68" },
-  { x: "90%", y: "8%",  size: "4px", delay: "-2.8s",  duration: "15s", opacity: "0.84" },
-  { x: "13%", y: "32%", size: "3px", delay: "-7.4s",  duration: "13s", opacity: "0.68" },
-  { x: "24%", y: "64%", size: "5px", delay: "-5.3s",  duration: "16s", opacity: "0.9"  },
-  { x: "36%", y: "14%", size: "3px", delay: "-3.1s",  duration: "12s", opacity: "0.66" },
-  { x: "47%", y: "82%", size: "4px", delay: "-8.6s",  duration: "11s", opacity: "0.8"  },
-  { x: "56%", y: "50%", size: "3px", delay: "-1.3s",  duration: "17s", opacity: "0.72" },
-  { x: "68%", y: "18%", size: "7px", delay: "-6.5s",  duration: "14s", opacity: "0.97" },
-  { x: "82%", y: "60%", size: "3px", delay: "-4.0s",  duration: "13s", opacity: "0.68" },
-  { x: "94%", y: "36%", size: "4px", delay: "-9.2s",  duration: "15s", opacity: "0.82" },
-  { x: "7%",  y: "74%", size: "3px", delay: "-2.3s",  duration: "11s", opacity: "0.7"  },
-  { x: "19%", y: "48%", size: "5px", delay: "-7.8s",  duration: "16s", opacity: "0.9"  },
-  { x: "28%", y: "6%",  size: "3px", delay: "-5.0s",  duration: "12s", opacity: "0.66" },
-  { x: "40%", y: "44%", size: "4px", delay: "-3.5s",  duration: "14s", opacity: "0.82" },
-  { x: "52%", y: "20%", size: "3px", delay: "-8.3s",  duration: "13s", opacity: "0.7"  },
-  { x: "64%", y: "92%", size: "6px", delay: "-1.0s",  duration: "17s", opacity: "0.94" },
-  { x: "74%", y: "36%", size: "3px", delay: "-6.1s",  duration: "11s", opacity: "0.68" },
-  { x: "86%", y: "66%", size: "4px", delay: "-4.7s",  duration: "15s", opacity: "0.84" },
-  { x: "98%", y: "18%", size: "3px", delay: "-9.0s",  duration: "12s", opacity: "0.7"  },
-] as const;
+const SPARK_COUNT = 500;
+
+type Spark = {
+  x: string;
+  y: string;
+  size: string;
+  delay: string;
+  duration: string;
+  opacity: string;
+};
+
+/** PRNG determinístico — mesmo resultado no servidor e no cliente (sem mismatch de hidratação) */
+function mulberry32(seed: number) {
+  return function next() {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function pickSize(rng: () => number): string {
+  const w = rng();
+  if (w < 0.32) return "3px";
+  if (w < 0.52) return "4px";
+  if (w < 0.68) return "5px";
+  if (w < 0.82) return "6px";
+  if (w < 0.92) return "7px";
+  return "8px";
+}
+
+function buildSparks(): readonly Spark[] {
+  const rng = mulberry32(0x4e62756c61); /* seed fixo: hidratação estável */
+  const out: Spark[] = [];
+  for (let i = 0; i < SPARK_COUNT; i++) {
+    const r = rng();
+    const r2 = rng();
+    const r3 = rng();
+    const rDur = rng();
+    const x = `${(r * 100).toFixed(2)}%`;
+    const y = `${(r2 * 100).toFixed(2)}%`;
+    const size = pickSize(rng);
+    const delay = `${-(r3 * 12).toFixed(2)}s`;
+    const duration = `${(9 + rDur * 14).toFixed(2)}s`;
+    const opacity = `${(0.48 + r2 * 0.52).toFixed(2)}`;
+    out.push({ x, y, size, delay, duration, opacity });
+  }
+  return out;
+}
+
+const SPARKS = buildSparks();
 
 export function AmbientSparks({ className }: { className?: string }) {
   return (
     <div className={cn("spark-field", className)} aria-hidden="true">
       {SPARKS.map((spark, index) => (
         <span
-          key={`${spark.x}-${spark.y}-${index}`}
+          key={index}
           className="spark"
           style={
             {

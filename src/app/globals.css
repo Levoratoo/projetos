@@ -1609,7 +1609,8 @@ a.hero-orbit__dot:focus-visible {
 }
 
 @media (max-width: 767px) {
-  .spark:nth-child(n + 28) {
+  /* 500 estrelas no desktop; no mobile mostra 280 para não matar GPU mas manter densidade */
+  .spark:nth-child(n + 281) {
     display: none;
   }
 
