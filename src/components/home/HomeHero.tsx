@@ -1,21 +1,16 @@
 "use client";
 
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import { useMemo } from "react";
 import { Container } from "@/components/Container";
 import { HomeCosmicBackdrop } from "@/components/home/HomeCosmicBackdrop";
 import { HeroMotion } from "@/components/HeroMotion";
-import { homeProjects } from "@/data/projects";
-import { buildHeroOrbits } from "@/components/home/heroOrbits";
 import { tHome } from "@/i18n/home";
-import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useLocale } from "@/state/locale";
 
 export function HomeHero() {
   const { locale } = useLocale();
   const t = tHome(locale);
-  const projectOrbits = useMemo(() => buildHeroOrbits(homeProjects), []);
   const heroChips = useMemo(
     () =>
       ["Next.js", "TypeScript", "SQL Server", "Dashboards", t.heroChipAutomation] as const,
@@ -30,7 +25,7 @@ export function HomeHero() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] tech-grid" />
         <Container className="relative w-full max-w-[1720px] px-6 sm:px-8 lg:px-10">
           <div className="relative flex min-h-[calc(100vh-40px)] items-center translate-y-0 opacity-100">
-            <div className="relative z-10 w-full max-w-[min(100%,1180px)] xl:max-w-[min(100%,1280px)] 2xl:max-w-[min(100%,1380px)] lg:pr-[min(18vw,200px)] xl:pr-[min(20vw,240px)] 2xl:pr-[min(22vw,280px)]">
+            <div className="relative z-10 w-full max-w-[min(100%,1180px)] xl:max-w-[min(100%,1280px)] 2xl:max-w-[min(100%,1380px)]">
               <p
                 className="text-[11px] uppercase tracking-[0.46em] text-white/66 sm:text-xs"
               >
@@ -79,66 +74,6 @@ export function HomeHero() {
             </div>
           </div>
         </Container>
-
-        {/* Órbitas: no mobile centradas atrás do bloco de texto; no desktop à direita como antes */}
-        <div
-          role="navigation"
-          aria-label={t.heroOrbitsAria}
-          className="hero-solar-system pointer-events-none absolute z-[6] block -translate-x-1/2 -translate-y-1/2 max-lg:left-1/2 max-lg:top-[56%] max-lg:h-[min(280px,72vw)] max-lg:w-[min(280px,72vw)] max-lg:opacity-[0.88] sm:max-lg:top-[54%] sm:max-lg:h-[min(320px,68vw)] sm:max-lg:w-[min(320px,68vw)] lg:left-[min(86%,calc(100%-14rem))] lg:top-[48%] lg:h-[min(420px,78vw)] lg:w-[min(420px,78vw)] lg:opacity-100 xl:h-[440px] xl:w-[440px]"
-        >
-          {projectOrbits.map((orbit) => (
-            <div
-              key={`ring-${orbit.project.slug}`}
-              className="hero-orbit-ring"
-              style={
-                {
-                  "--ring-d": orbit.ringDiameter,
-                  "--ring-stroke": orbit.ringStroke,
-                  "--ring-glow": orbit.ringGlow,
-                  "--orbit-ex": orbit.ex,
-                  "--orbit-ey": orbit.ey,
-                  "--orbit-plane-tilt": orbit.planeTilt
-                } as CSSProperties
-              }
-              aria-hidden
-            />
-          ))}
-          {projectOrbits.map((orbit) => {
-            const lp = getLocalizedPreview(orbit.project, locale);
-            return (
-            <span
-              key={orbit.project.slug}
-              className="hero-orbit"
-              style={
-                {
-                  "--orbit-radius": orbit.radius,
-                  "--orbit-size": orbit.size,
-                  "--orbit-duration": orbit.duration,
-                  "--orbit-delay": orbit.delay,
-                  "--orbit-angle": orbit.angle,
-                  "--planet-core": orbit.core,
-                  "--planet-glow": orbit.glow,
-                  "--dot-pulse-delay": orbit.dotPulseDelay,
-                  "--orbit-ex": orbit.ex,
-                  "--orbit-ey": orbit.ey,
-                  "--orbit-plane-tilt": orbit.planeTilt
-                } as CSSProperties
-              }
-            >
-              <span
-                className={`hero-orbit__arm ${orbit.retrograde ? "hero-orbit__arm--retro" : ""}`}
-              >
-                <a
-                  href={`#${orbit.hash}`}
-                  title={lp.title}
-                  aria-label={`${t.heroOrbitJump} ${lp.title}`}
-                  className="hero-orbit__dot hero-orbit__dot--ball pointer-events-auto"
-                />
-              </span>
-            </span>
-            );
-          })}
-        </div>
       </HeroMotion>
 
       <div className="pointer-events-none absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-white/60">
