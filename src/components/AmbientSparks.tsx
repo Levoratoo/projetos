@@ -1,7 +1,8 @@
 import { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
-const SPARK_COUNT = 500;
+/** Só na hero: quantidade moderada para não pesar o scroll */
+const SPARK_COUNT = 220;
 
 type Spark = {
   x: string;

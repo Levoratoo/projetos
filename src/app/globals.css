@@ -119,6 +119,13 @@ select option {
   mix-blend-mode: screen;
 }
 
+/* Variante hero: preso à secção, não cobre o resto do site */
+.spark-field.spark-field--hero {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+}
+
 .spark {
   position: absolute;
   left: var(--spark-x);
@@ -1609,8 +1616,8 @@ a.hero-orbit__dot:focus-visible {
 }
 
 @media (max-width: 767px) {
-  /* 500 estrelas no desktop; no mobile mostra 280 para não matar GPU mas manter densidade */
-  .spark:nth-child(n + 281) {
+  /* ~220 estrelas na hero; no mobile mostra as primeiras 140 */
+  .spark:nth-child(n + 141) {
     display: none;
   }
 

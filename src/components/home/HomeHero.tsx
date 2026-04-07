@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { Container } from "@/components/Container";
+import { AmbientSparks } from "@/components/AmbientSparks";
 import { HomeCosmicBackdrop } from "@/components/home/HomeCosmicBackdrop";
 import { HeroMotion } from "@/components/HeroMotion";
 import { tHome } from "@/i18n/home";
@@ -20,6 +21,10 @@ export function HomeHero() {
   return (
     <section className="home-hero relative isolate min-h-screen overflow-hidden pt-8">
       <HomeCosmicBackdrop />
+      {/* Estrelas só na hero (não fixed global — evita blend por cima do resto da página) */}
+      <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden print:hidden">
+        <AmbientSparks className="spark-field--hero h-full w-full" />
+      </div>
 
       <HeroMotion className="relative z-10 flex min-h-screen w-full items-center py-8">
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] tech-grid" />

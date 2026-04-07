@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
-import { AmbientSparks } from "@/components/AmbientSparks";
 import { Providers } from "@/app/providers";
 import { withBasePath } from "@/lib/basePath";
 
@@ -42,7 +41,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-[var(--bg-base)]">
         <div className="relative isolate min-h-screen overflow-hidden">
           <div className="ambient-backdrop pointer-events-none fixed inset-0 print:hidden" />
-          <AmbientSparks className="z-[14] print:hidden" />
           <div className="relative z-10">
             <Providers>{children}</Providers>
           </div>
