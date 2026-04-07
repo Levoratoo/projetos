@@ -127,60 +127,61 @@ select option {
   height: var(--spark-size);
   border-radius: 999px;
   opacity: var(--spark-opacity);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 210, 210, 0.75) 35%, rgba(255, 120, 120, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 200, 180, 0.98) 0%, rgba(255, 60, 40, 0.9) 45%, rgba(200, 20, 20, 0) 100%);
   box-shadow:
-    0 0 3px rgba(255, 255, 255, 0.9),
-    0 0 8px rgba(255, 190, 190, 0.5);
+    0 0 6px rgba(255, 80, 60, 0.95),
+    0 0 16px rgba(200, 30, 20, 0.6);
+  filter: saturate(1.3);
   animation:
     sparkDrift var(--spark-duration) ease-in-out infinite var(--spark-delay),
     sparkPulse 3.8s ease-in-out infinite var(--spark-delay);
 }
 
-/* Estrelas de tamanho médio — tom rosado quente */
+/* Vermelho vivo */
 .spark:nth-child(3n) {
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 180, 180, 0.7) 40%, rgba(255, 90, 90, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 220, 200, 0.98) 0%, rgba(255, 50, 30, 0.92) 44%, rgba(180, 10, 10, 0) 100%);
   box-shadow:
-    0 0 4px rgba(255, 240, 240, 0.95),
-    0 0 12px rgba(255, 160, 160, 0.45);
+    0 0 7px rgba(255, 70, 50, 0.95),
+    0 0 18px rgba(220, 30, 20, 0.55);
 }
 
-/* Estrelas grandes e brilhantes — halo mais amplo */
+/* Vermelho escuro / bordô — mais intenso */
 .spark:nth-child(5n) {
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 220, 200, 0.8) 30%, rgba(255, 100, 80, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 180, 160, 0.98) 0%, rgba(220, 40, 20, 0.94) 40%, rgba(160, 0, 0, 0) 100%);
   box-shadow:
-    0 0 5px rgba(255, 255, 255, 1),
-    0 0 14px rgba(255, 180, 160, 0.6),
-    0 0 28px rgba(255, 120, 100, 0.25);
+    0 0 8px rgba(255, 60, 40, 1),
+    0 0 20px rgba(200, 20, 10, 0.7),
+    0 0 36px rgba(180, 0, 0, 0.3);
 }
 
-/* Estrelas azuladas frias — variedade cromática da nebulosa */
+/* Laranja-vermelho — brilho quente */
 .spark:nth-child(7n) {
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(210, 220, 255, 0.75) 35%, rgba(120, 140, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 220, 160, 0.98) 0%, rgba(255, 100, 40, 0.9) 42%, rgba(200, 40, 0, 0) 100%);
   box-shadow:
-    0 0 3px rgba(255, 255, 255, 0.95),
-    0 0 9px rgba(180, 200, 255, 0.45);
+    0 0 6px rgba(255, 120, 60, 0.9),
+    0 0 16px rgba(220, 60, 20, 0.5);
   animation:
     sparkDriftB calc(var(--spark-duration) * 0.78) ease-in-out infinite var(--spark-delay),
     sparkPulse 2.8s ease-in-out infinite var(--spark-delay);
 }
 
-/* Estrelas douradas — luz do sol atrás do planeta */
+/* Vermelho profundo */
 .spark:nth-child(11n) {
-  background: radial-gradient(circle, rgba(255, 255, 220, 1) 0%, rgba(255, 230, 140, 0.75) 35%, rgba(255, 180, 50, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 160, 140, 0.98) 0%, rgba(200, 20, 20, 0.9) 48%, rgba(120, 0, 0, 0) 100%);
   box-shadow:
-    0 0 4px rgba(255, 255, 200, 0.95),
-    0 0 11px rgba(255, 210, 100, 0.45);
+    0 0 7px rgba(240, 50, 30, 0.95),
+    0 0 18px rgba(180, 10, 10, 0.6);
   animation:
     sparkDrift calc(var(--spark-duration) * 0.92) ease-in-out infinite var(--spark-delay),
     sparkPulse 3.2s ease-in-out infinite var(--spark-delay);
 }
 
-/* Grupo rápido — movimento mais vivo */
+/* Grupo rápido */
 .spark:nth-child(4n) {
   animation-duration: calc(var(--spark-duration) * 0.65), 2.4s;
 }
 
-/* Grupo lento — derive suave em arco maior */
+/* Grupo lento — derive em arco maior */
 .spark:nth-child(9n) {
   animation:
     sparkDriftB calc(var(--spark-duration) * 1.3) ease-in-out infinite var(--spark-delay),
