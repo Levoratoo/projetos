@@ -55,6 +55,7 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "site-institucional-printbag" ||
     project.slug === "donacica-hot-dog" ||
     project.slug === "new-talent" ||
+    project.slug === "claymoon-press-kit" ||
     project.slug === "previsao-demanda-python-estatistica" ||
     project.slug === "sistema-orcamentario-produtos-graficos" ||
     project.slug === "apresentador-projetos" ||
@@ -907,6 +908,136 @@ export default function ProjectPage({ params }: PageProps) {
                           <td className="px-4 py-3 text-white/90">Deploy</td>
                           <td className="px-4 py-3">GitHub Pages</td>
                           <td className="px-4 py-3">Hospedagem estática gratuita</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "claymoon-press-kit" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    Stack mínima, página única e deploy estático
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O site do ClayMoon.music foi desenvolvido como{" "}
+                      <strong className="text-white">aplicação estática</strong>, com foco em carga rápida, manutenção
+                      simples (sem build step nem framework) e boa leitura em{" "}
+                      <strong className="text-white">mobile</strong>, já que bookers e promotores abrem muitas vezes o
+                      link no telemóvel. Tecnicamente, a escolha de{" "}
+                      <strong className="text-white">HTML5 semântico</strong> +{" "}
+                      <strong className="text-white">CSS3</strong> +{" "}
+                      <strong className="text-white">JavaScript vanilla</strong> permitiu um único conjunto de ficheiros,
+                      fácil de versionar e publicar, com comportamento previsível em qualquer hospedagem estática. Deploy
+                      público:{" "}
+                      <a
+                        href="https://levoratoo.github.io/claymoon/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-glow underline decoration-glow/45 underline-offset-2 hover:text-white"
+                      >
+                        levoratoo.github.io/claymoon
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      <strong className="text-white">Arquitetura da aplicação.</strong> A estrutura segue a página única (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">index.html</code>
+                      ) com secções claras (hero, história/timeline, sobre, vídeos, palcos, música/SoundCloud, destaque de
+                      set, downloads, contacto). O CSS concentra tokens globais em variáveis (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">:root</code>
+                      ), layout responsivo com media queries e animações (partículas, glitch em títulos, carrosséis). O{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">script.js</code> agrega:
+                      sistema de internacionalização (vários objetos de strings por idioma,{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">data-i18n</code> /{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">data-i18n-aria</code>
+                      , persistência em <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">localStorage</code>
+                      ), <strong className="text-white">canvas</strong> para partículas no hero, scroll suave com
+                      compensação da navbar fixa (<code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">scroll-margin</code> + cálculo de offset), carrossel de vídeos no mobile e grelha no desktop, e pequenos módulos (tabs de streams/downloads, revelar ao scroll onde existir). Não há camada de “componentes” tipo React: o código está organizado por responsabilidades (i18n, navegação, media, timeline), o que mantém o projeto leve e transparente para quem edita conteúdo ou copy.
+                    </p>
+                    <p>
+                      O site é servido como <strong className="text-white">ficheiros estáticos</strong> (HTML/CSS/JS +
+                      imagens e vídeos), o que reduz latência, simplifica SEO básico e encaixa naturalmente em{" "}
+                      <strong className="text-white">GitHub Pages</strong> (ou qualquer CDN estática) com domínio
+                      personalizado se necessário.
+                    </p>
+                    <p>
+                      <strong className="text-white">Contacto e integrações externas.</strong> Ao contrário de uma
+                      landing com formulário e CRM, o fluxo de contacto é deliberadamente simples: links diretos (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">mailto</code>, WhatsApp,
+                      Instagram) e secção de booking visível, sem backend próprio. Os sets são incorporados via{" "}
+                      <strong className="text-white">iframes do SoundCloud</strong>, com parâmetros alinhados ao tema do
+                      site. A “integração” é embed + links, adequada a um press kit estável e barato de hospedar.
+                    </p>
+                    <p>
+                      <strong className="text-white">Gestão de assets e repositório.</strong> Imagens e vídeos vivem no
+                      repositório com caminhos relativos; ficheiros de vídeo muito pesados foram evitados no Git (limites
+                      do GitHub e performance), privilegiando MP4 comprimidos e regras em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">.gitignore</code> para não
+                      versionar brutos enormes. O cache do browser é contornado com query strings de versão em CSS/JS quando
+                      há alterações visíveis em produção.
+                    </p>
+                    <p>
+                      <strong className="text-white">Performance e experiência.</strong> Partículas no hero são pausadas ou
+                      reduzidas quando a secção não está visível (evita trabalho desnecessário no canvas). Vídeos usam{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">preload=&quot;metadata&quot;</code>{" "}
+                      e <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">playsinline</code> para
+                      iOS. O layout mobile recebeu atenção explícita (hero, navegação por âncoras, secção de vídeos), para o
+                      press kit não “partir” em ecrãs pequenos.
+                    </p>
+                    <p>
+                      <strong className="text-white">Internacionalização.</strong> Seis idiomas são tratados no cliente,
+                      com um único HTML e troca de texto via JavaScript, o que evita duplicar páginas por língua e mantém
+                      um só deploy.
+                    </p>
+                    <p>
+                      Assim, tecnicamente, o projeto combina stack mínima e portável (HTML/CSS/JS), arquitetura de página
+                      única bem secionada, i18n centralizada, media embebida e contacto por links, e deploy estático em
+                      GitHub Pages — alinhado ao objetivo: um link único, rápido e fácil de atualizar para a carreira do
+                      artista.
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Área</th>
+                          <th className="px-4 py-3 font-medium">Tecnologias</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Frontend</td>
+                          <td className="px-4 py-3">
+                            HTML5 semântico, CSS3 (variáveis, Flexbox/Grid, animações), JavaScript (ES5+ / vanilla)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Media / embeds</td>
+                          <td className="px-4 py-3">
+                            SoundCloud (iframe), vídeo HTML5 (
+                            <code className="rounded bg-white/10 px-1 py-0.5 text-[13px] text-glow/90">&lt;video&gt;</code>
+                            ), imagens otimizadas para web
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Internacionalização</td>
+                          <td className="px-4 py-3">
+                            Objetos de tradução em JS,{" "}
+                            <code className="rounded bg-white/10 px-1 py-0.5 text-[13px] text-glow/90">data-i18n</code>,{" "}
+                            <code className="rounded bg-white/10 px-1 py-0.5 text-[13px] text-glow/90">localStorage</code>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Versionamento e deploy</td>
+                          <td className="px-4 py-3">Git, GitHub, GitHub Pages (site estático)</td>
                         </tr>
                       </tbody>
                     </table>
