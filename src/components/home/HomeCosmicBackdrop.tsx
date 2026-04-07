@@ -1,10 +1,19 @@
+import { withBasePath } from "@/lib/basePath";
+
 /**
- * Mesmo plano de fundo do hero (preto + vermelho + partículas) para todas as seções da home.
+ * Hero da home: foto de fundo + véu escuro + vermelho + partículas (resto igual).
  */
 export function HomeCosmicBackdrop() {
   return (
     <>
-      <div className="absolute inset-0 -z-10 bg-black" aria-hidden />
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${withBasePath("/case-hero-bg.png")})`
+        }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 -z-10 bg-black/50" aria-hidden />
       <div
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_130%_55%_at_50%_-5%,rgba(160,22,38,0.42),transparent_52%),radial-gradient(ellipse_90%_80%_at_86%_48%,rgba(220,32,48,0.48),transparent_55%),radial-gradient(ellipse_55%_45%_at_72%_52%,rgba(255,72,72,0.22),transparent_50%),radial-gradient(circle_at_10%_20%,rgba(90,8,18,0.35),transparent_38%),radial-gradient(circle_at_30%_85%,rgba(40,0,8,0.25),transparent_40%)]"
         aria-hidden
