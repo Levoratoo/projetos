@@ -6,12 +6,12 @@ export const HERO_ORBIT_MAX = 5;
 /** Segundos por volta, uma velocidade por planeta (índice 0 = órbita mais interna) */
 const ORBIT_DURATION_BY_INDEX: readonly number[] = [8.5, 15, 10.5, 18, 12];
 
-/** Bolinha + linha de órbita: bordô / vermelho do site */
+/** Bolinha + linha de órbita: branco quente para contrastar com o fundo da nebulosa */
 const SITE_ORBIT = {
-  core: "#b01022",
-  glow: "rgba(255, 59, 59, 0.5)",
-  ringStroke: "rgba(200, 32, 48, 0.38)",
-  ringGlow: "rgba(255, 59, 59, 0.12)"
+  core: "#ffe8e8",
+  glow: "rgba(255, 180, 180, 0.85)",
+  ringStroke: "rgba(255, 210, 210, 0.45)",
+  ringGlow: "rgba(255, 160, 160, 0.35)"
 } as const;
 
 export type HeroOrbitConfig = {
