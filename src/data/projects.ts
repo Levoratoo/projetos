@@ -1881,8 +1881,8 @@ export const projects: Project[] = [
       {
         title: "Hero e identidade",
         description: "INSERT COIN, groove retrô e CTAs para ouvir e booking.",
-        thumbSrc: "/projects/claymoon-press-kit/cm-1.jpg",
-        fullSrc: "/projects/claymoon-press-kit/cm-1.jpg"
+        thumbSrc: "/projects/claymoon-press-kit/hero.png",
+        fullSrc: "/projects/claymoon-press-kit/hero.png"
       },
       {
         title: "História em capítulos",
@@ -2457,7 +2457,7 @@ export const projectsLite: ProjectLite[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/claymoon/" }
     ],
     images: [
-      { src: "/projects/claymoon-press-kit/cm-1.jpg", alt: "Hero ClayMoon.music" },
+      { src: "/projects/claymoon-press-kit/hero.png", alt: "Hero ClayMoon.music" },
       { src: "/projects/claymoon-press-kit/cm-2.jpg", alt: "História em capítulos" },
       { src: "/projects/claymoon-press-kit/cm-3.jpg", alt: "Sobre e proposta" },
       { src: "/projects/claymoon-press-kit/cm-4.jpg", alt: "Mídia e palco" },
@@ -2941,7 +2941,7 @@ export const previewProjects: PreviewProject[] = [
       "i18n",
       "Mobile first"
     ],
-    thumb: "/projects/claymoon-press-kit/cm-1.jpg",
+    thumb: "/projects/claymoon-press-kit/hero.png",
     description:
       "Press kit digital para ClayMoon.music: URL única com narrativa, mídia leve, sets, downloads e booking — Tech House / Minimal Deep Tech, referência europeia e seis idiomas.",
     bullets: [
@@ -2955,7 +2955,7 @@ export const previewProjects: PreviewProject[] = [
       { label: "Acesso público", url: "https://levoratoo.github.io/claymoon/" }
     ],
     gallery: [
-      { src: "/projects/claymoon-press-kit/cm-1.jpg", alt: "Hero ClayMoon.music" },
+      { src: "/projects/claymoon-press-kit/hero.png", alt: "Hero ClayMoon.music" },
       { src: "/projects/claymoon-press-kit/cm-2.jpg", alt: "História em capítulos" },
       { src: "/projects/claymoon-press-kit/cm-3.jpg", alt: "Sobre e proposta" },
       { src: "/projects/claymoon-press-kit/cm-4.jpg", alt: "Mídia e palco" },
