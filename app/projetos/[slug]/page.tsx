@@ -8,19 +8,11 @@ import { ProjectPreviewCard } from "@/components/case/ProjectPreviewCard";
 import { TourNavPills } from "@/components/case/TourNavPills";
 import { CaseSection } from "@/components/case/CaseSection";
 import { CinemaGallery } from "@/components/case/CinemaGallery";
+import { withBasePath } from "@/lib/basePath";
 
 type PageProps = {
   params: { slug: string };
 };
-
-function buildCover(cover: { a: string; b: string; c?: string }) {
-  const glow = cover.c
-    ? `, radial-gradient(circle at 50% 0%, ${cover.c}, transparent 60%)`
-    : "";
-
-  /** Topo com presença bordô (antes: cinza frio que “apagava” o vermelho) */
-  return `radial-gradient(ellipse 110% 55% at 50% -8%, rgba(140, 14, 32, 0.55), transparent 58%), radial-gradient(circle at 20% 20%, ${cover.a}, transparent 60%), radial-gradient(circle at 80% 40%, ${cover.b}, transparent 55%)${glow}, linear-gradient(180deg, rgba(32, 6, 12, 0.82), rgba(10, 4, 7, 0.88))`;
-}
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const project = projects.find((item) => item.slug === params.slug);
@@ -90,8 +82,10 @@ export default function ProjectPage({ params }: PageProps) {
 
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div
-          className="absolute inset-0 opacity-80"
-          style={{ background: buildCover(project.cover) }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${withBasePath("/case-hero-bg.png")})`
+          }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_0%,rgba(255,72,82,0.32),transparent_50%),radial-gradient(circle_at_50%_0%,rgba(200,32,52,0.28),transparent_45%),radial-gradient(circle_at_top,_rgba(255,59,59,0.22),_rgba(18,6,10,0.88))]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:80px_80px]" />
