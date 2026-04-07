@@ -127,45 +127,48 @@ select option {
   height: var(--spark-size);
   border-radius: 999px;
   opacity: var(--spark-opacity);
-  background: radial-gradient(circle, rgba(255, 210, 210, 0.98) 0%, rgba(255, 74, 74, 0.94) 45%, rgba(255, 42, 42, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 210, 210, 0.75) 35%, rgba(255, 120, 120, 0) 100%);
   box-shadow:
-    0 0 18px rgba(255, 58, 58, 0.98),
-    0 0 34px rgba(139, 12, 27, 0.62);
-  filter: saturate(1.25);
+    0 0 3px rgba(255, 255, 255, 0.9),
+    0 0 8px rgba(255, 190, 190, 0.5);
   animation:
     sparkDrift var(--spark-duration) ease-in-out infinite var(--spark-delay),
-    sparkPulse 3.1s ease-in-out infinite var(--spark-delay);
+    sparkPulse 3.8s ease-in-out infinite var(--spark-delay);
 }
 
+/* Estrelas de tamanho médio — tom rosado quente */
 .spark:nth-child(3n) {
-  background: radial-gradient(circle, rgba(255, 232, 232, 0.98) 0%, rgba(255, 96, 96, 0.95) 44%, rgba(255, 48, 48, 0) 100%);
-}
-
-.spark:nth-child(4n) {
-  background: radial-gradient(circle, rgba(255, 225, 210, 0.98) 0%, rgba(255, 138, 96, 0.94) 42%, rgba(255, 76, 50, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 180, 180, 0.7) 40%, rgba(255, 90, 90, 0) 100%);
   box-shadow:
-    0 0 18px rgba(255, 136, 102, 0.9),
-    0 0 32px rgba(168, 26, 23, 0.46);
+    0 0 4px rgba(255, 240, 240, 0.95),
+    0 0 12px rgba(255, 160, 160, 0.45);
 }
 
+/* Estrelas grandes e brilhantes — halo mais amplo */
 .spark:nth-child(5n) {
-  background: radial-gradient(circle, rgba(255, 210, 220, 0.98) 0%, rgba(255, 84, 118, 0.94) 42%, rgba(255, 58, 58, 0) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 220, 200, 0.8) 30%, rgba(255, 100, 80, 0) 100%);
   box-shadow:
-    0 0 16px rgba(255, 92, 124, 0.84),
-    0 0 30px rgba(142, 17, 40, 0.48);
+    0 0 5px rgba(255, 255, 255, 1),
+    0 0 14px rgba(255, 180, 160, 0.6),
+    0 0 28px rgba(255, 120, 100, 0.25);
 }
 
-.spark:nth-child(6n) {
-  width: calc(var(--spark-size) * 1.25);
-  height: calc(var(--spark-size) * 1.25);
-}
-
+/* Estrelas azuladas frias — variedade cromática da nebulosa */
 .spark:nth-child(7n) {
-  animation-duration: calc(var(--spark-duration) * 0.84), 2.7s;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(210, 220, 255, 0.75) 35%, rgba(120, 140, 255, 0) 100%);
+  box-shadow:
+    0 0 3px rgba(255, 255, 255, 0.95),
+    0 0 9px rgba(180, 200, 255, 0.45);
+  animation-duration: calc(var(--spark-duration) * 0.88), 4.2s;
 }
 
-.spark:nth-child(9n) {
-  animation-duration: calc(var(--spark-duration) * 1.18), 3.5s;
+/* Estrelas douradas — luz do sol atrás do planeta */
+.spark:nth-child(11n) {
+  background: radial-gradient(circle, rgba(255, 255, 220, 1) 0%, rgba(255, 230, 140, 0.75) 35%, rgba(255, 180, 50, 0) 100%);
+  box-shadow:
+    0 0 4px rgba(255, 255, 200, 0.95),
+    0 0 11px rgba(255, 210, 100, 0.45);
+  animation-duration: calc(var(--spark-duration) * 1.12), 3.2s;
 }
 
 .glass {
@@ -1286,23 +1289,36 @@ a.hero-orbit__dot:focus-visible {
 @keyframes sparkDrift {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(0.96);
+    transform: translate3d(0, 0, 0) scale(1);
   }
-  30% {
-    transform: translate3d(14px, -22px, 0) scale(1.18);
+  25% {
+    transform: translate3d(2px, -4px, 0) scale(1.04);
   }
-  65% {
-    transform: translate3d(-12px, 16px, 0) scale(0.9);
+  55% {
+    transform: translate3d(-3px, 3px, 0) scale(0.97);
+  }
+  80% {
+    transform: translate3d(2px, 1px, 0) scale(1.02);
   }
 }
 
 @keyframes sparkPulse {
   0%,
   100% {
-    opacity: calc(var(--spark-opacity) * 0.72);
+    opacity: calc(var(--spark-opacity) * 0.45);
+    filter: brightness(0.75);
+  }
+  40% {
+    opacity: calc(var(--spark-opacity) * 0.9);
+    filter: brightness(1.15);
   }
   50% {
     opacity: var(--spark-opacity);
+    filter: brightness(1.5);
+  }
+  60% {
+    opacity: calc(var(--spark-opacity) * 0.85);
+    filter: brightness(1.1);
   }
 }
 
