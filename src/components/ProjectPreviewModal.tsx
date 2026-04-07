@@ -9,6 +9,7 @@ import { previewProjects } from "@/data/projects";
 import { tHome } from "@/i18n/home";
 import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useLocale } from "@/state/locale";
+import { getPreviewChrome } from "@/lib/previewChrome";
 
 type ProjectPreviewModalProps = {
   open: boolean;
@@ -109,6 +110,7 @@ export function ProjectPreviewModal({
   const hero = gallery[activeIndex] ?? { src: project.thumb, alt: lp.title };
   const accessUrl = project.accessLinks?.[0]?.url ?? null;
   const kicker = `${lp.area} \u00b7 ${project.year} \u00b7 ${lp.statusLabel}`;
+  const chrome = getPreviewChrome(slug);
   return (
     <div
       className="fixed inset-0 z-[70] flex items-center justify-center bg-black/82 backdrop-blur-2xl saturate-150"
@@ -124,7 +126,12 @@ export function ProjectPreviewModal({
         } max-md:h-[92vh]`}
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(255,59,59,0.14),transparent_55%)]" />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: `radial-gradient(circle at 85% 85%, ${chrome.radial}, transparent 55%)`
+          }}
+        />
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] tech-grid" />
         <div className="grid h-full grid-cols-1 grid-rows-[1fr_1fr] gap-0 lg:grid-cols-12 lg:grid-rows-none">
           <div
@@ -192,9 +199,9 @@ export function ProjectPreviewModal({
                 data-preview-focusable
                 className="primary-cta primary-cta--sm primary-cta--glass group flex w-full items-center justify-between px-4 py-3 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
                 style={{
-                  background: "linear-gradient(165deg, rgba(255,72,72,0.42) 0%, rgba(220,30,30,0.32) 45%, rgba(140,12,24,0.55) 100%)",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), 0 0 32px rgba(255,59,59,0.38), 0 0 8px rgba(255,59,59,0.55), 0 8px 24px rgba(0,0,0,0.4)",
-                  border: "1px solid rgba(255,72,72,0.35)",
+                  background: chrome.ctaBackground,
+                  boxShadow: chrome.ctaShadow,
+                  border: chrome.ctaBorder
                 }}
               >
                 <span>{t.previewFullDesc}</span>

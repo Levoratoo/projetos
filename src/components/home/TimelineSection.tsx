@@ -11,6 +11,7 @@ import { useLocale } from "@/state/locale";
 import { useProjectPreview } from "@/state/projectPreview";
 import { HomeCosmicBackdrop } from "@/components/home/HomeCosmicBackdrop";
 import { ProjectProgress } from "@/components/ProjectProgress";
+import { getPreviewChrome } from "@/lib/previewChrome";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function replaceAlpha(rgba: string, alpha: number): string {
@@ -59,6 +60,7 @@ function StickyPreview({
   const hero = gallery[activeIndex] ?? { src: project.thumb, alt: lp.title };
   const kicker = `${lp.area} · ${project.year} · ${lp.statusLabel}`;
   const bullets = lp.bullets;
+  const chrome = getPreviewChrome(project.slug);
 
   return (
     <motion.div
@@ -69,7 +71,12 @@ function StickyPreview({
       className="overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,6,8,0.97),rgba(6,3,4,0.97))] shadow-[0_24px_80px_rgba(0,0,0,0.6)]"
     >
         {/* Subtle radial glow */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_85%,rgba(255,59,59,0.1),transparent_55%)] rounded-[28px]" />
+        <div
+          className="pointer-events-none absolute inset-0 rounded-[28px]"
+          style={{
+            background: `radial-gradient(circle at 85% 85%, ${chrome.radialSoft}, transparent 55%)`
+          }}
+        />
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] tech-grid rounded-[28px]" />
 
         {/* ── Image area ── */}
@@ -161,9 +168,9 @@ function StickyPreview({
             onClick={closePreview}
             className="primary-cta primary-cta--sm primary-cta--glass group flex w-full items-center justify-between px-4 py-3 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow"
             style={{
-              background: "linear-gradient(165deg, rgba(255,72,72,0.42) 0%, rgba(220,30,30,0.32) 45%, rgba(140,12,24,0.55) 100%)",
-              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), 0 0 32px rgba(255,59,59,0.38), 0 0 8px rgba(255,59,59,0.55), 0 8px 24px rgba(0,0,0,0.4)",
-              border: "1px solid rgba(255,72,72,0.35)",
+              background: chrome.ctaBackground,
+              boxShadow: chrome.ctaShadow,
+              border: chrome.ctaBorder
             }}
           >
             <span>{tPreview.previewFullDesc}</span>
