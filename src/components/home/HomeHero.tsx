@@ -23,7 +23,7 @@ export function HomeHero() {
   );
 
   return (
-    <section className="home-hero relative min-h-screen overflow-hidden pt-8">
+    <section className="home-hero relative isolate min-h-screen overflow-hidden pt-8">
       <HomeCosmicBackdrop />
 
       <HeroMotion className="relative z-10 flex min-h-screen w-full items-center py-8">
