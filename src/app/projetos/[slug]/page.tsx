@@ -125,29 +125,16 @@ export default function ProjectPage({ params }: PageProps) {
         <Container>
           <div className="grid gap-10 lg:gap-12">
             <CaseSection id="visao-geral">
-              <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
-                <div className="rounded-3xl border border-white/5 bg-black/30 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur">
-                  <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
-                    Visão geral
-                  </p>
-                  <h2 className="mt-3 text-[clamp(20px,2.6vw,30px)] font-semibold text-white">
-                    <span className="shineText shineTextProject">{project.title}</span>
-                  </h2>
-                  <p className="mt-3 max-w-[60ch] text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="rounded-3xl border border-white/5 bg-black/30 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur">
-                  <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
-                    Insight chave
-                  </p>
-                  <p className="mt-4 text-base font-semibold text-white">
-                    Atualização automática para decisões rápidas
-                  </p>
-                  <p className="mt-2 text-sm text-neutral-300">
-                    Dados consolidados em tempo real para reduzir retrabalho e acelerar prioridades.
-                  </p>
-                </div>
+              <div className="rounded-3xl border border-white/5 bg-black/30 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur">
+                <p className="text-[11px] uppercase tracking-[0.26em] text-neutral-400">
+                  Visão geral
+                </p>
+                <h2 className="mt-3 text-[clamp(20px,2.6vw,30px)] font-semibold text-white">
+                  <span className="shineText shineTextProject">{project.title}</span>
+                </h2>
+                <p className="mt-3 max-w-[60ch] text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                  {project.description}
+                </p>
               </div>
             </CaseSection>
 
