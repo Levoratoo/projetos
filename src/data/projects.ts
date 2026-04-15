@@ -1921,6 +1921,157 @@ export const projects: Project[] = [
         fullSrc: "/projects/claymoon-press-kit/cm-7.jpg"
       }
     ]
+  },
+  {
+    slug: "quint-press-kit",
+    title: "Quint (DJ & producer), Press kit digital",
+    subtitle:
+      "Cartão de visitas digital: um link com identidade techno/underground, timeline, palcos, sets, drops, autorais, imprensa e booking.",
+    summary:
+      "Press kit digital para Quint — paleta escura e roxa, hero com foto e logo, timeline, prova de palco, Park Art no YouTube, drops em vídeo com modal, autorais com Spotify, suporte de pista, abas de música, downloads (.zip), i18n e GitHub Pages.",
+    description:
+      "Site estático (HTML, CSS, JavaScript vanilla) publicado no GitHub Pages: fluxo único para curadoria, promoters e mídia — narrativa ordenada, embeds YouTube/Spotify, vídeos locais com posters e carga sob demanda, galeria de imprensa e booking direto (e-mail institucional, WhatsApp, redes), vários idiomas e metas para compartilhamento.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site estático",
+    domain: "Marketing",
+    segment: "Música / Entretenimento",
+    tags: [
+      "Press Kit",
+      "Marketing",
+      "Site estático",
+      "GitHub Pages",
+      "Música",
+      "i18n",
+      "Techno"
+    ],
+    stack: [
+      "HTML5 semântico",
+      "CSS3 (variáveis, clamp, animações)",
+      "JavaScript vanilla (ES5+)",
+      "YouTube / Spotify (embeds)",
+      "GitHub Pages"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(109, 40, 217, 0.52)",
+      b: "rgba(59, 7, 100, 0.42)",
+      c: "rgba(167, 139, 250, 0.2)"
+    },
+    context:
+      "Antes do hub, a presença digital do artista ficava espalhada entre Instagram, plataformas de áudio, vídeos soltos e fotos em pastas ou no telemóvel. Para o mercado de booking isso gera atrito: narrativa fraca, materiais duplicados ou desatualizados, e sensação de amadorismo quando não existe um endereço oficial do artista.",
+    problem: [
+      "Sem um ponto único de autoridade — tudo parecia improviso; difícil apontar um “press kit” oficial.",
+      "Informação e mídia em canais diferentes, sem vitrine que contasse a história na ordem certa.",
+      "Promoters pediam sempre as mesmas coisas por mensagem: fotos em alta, bio, links de sets e história — retrabalho para o artista e para quem contrata."
+    ],
+    constraints: [
+      "Site 100% estático no GitHub Pages, sem backend.",
+      "Vários vídeos locais: evitar baixar todos os MP4 de uma vez (posters, lazy load, modal).",
+      "Open Graph e URLs absolutas alinhadas ao deploy em path (/Quint/)."
+    ],
+    solution: [
+      "Hero com foto de fundo, tratamento visual (grão, scanner, glow), logo com animação controlada e CTAs (ouvir / booking).",
+      "Timeline “A história” com capítulos, imagens estáticas e carrosséis verticais.",
+      "Lugares com carrossel de palcos e foco nos principais eventos.",
+      "Park Art com embed do YouTube; aftermovie da formatura Volare integrado.",
+      "Drops: vídeos curtos com navegação, modal, posters/thumbs e MP4 sob demanda.",
+      "Autorais: carrossel de capas com Spotify ao clicar.",
+      "Suporte: vídeos de DJs tocando as tracks, mesma lógica visual dos Drops.",
+      "Músicas com abas SoundCloud / YouTube; Sobre com bio; downloads e pacote .zip para imprensa.",
+      "Booking com e-mail institucional, WhatsApp e redes; i18n (PT, EN, ES, ZH, DE, JA) com preferência persistida.",
+      "Open Graph, favicon, layout responsivo e refinamento do hero no mobile."
+    ],
+    results: [
+      "Identidade, história, mídia e contato centralizados num link compartilhável.",
+      "Galeria e .zip reduzem o envio manual de fotos por DM.",
+      "Contratantes ouvem sets, drops e autorais e veem suporte de pista sem sair da página.",
+      "Estética escura e roxa reforça posicionamento underground / techno.",
+      "Posters e lazy load melhoram primeira impressão em 4G e mobile."
+    ],
+    learnings: [
+      "Press kit com muitos vídeos locais exige combinação de poster + carga tardia; modais evitam prefetch de todos os MP4.",
+      "Traduções no cliente com data-i18n mantêm um único HTML e um único deploy."
+    ],
+    nextSteps: [
+      "Medir cliques de booking e origem com analytics leve, compatível com estático.",
+      "Rever peso de assets no repositório face aos limites do GitHub Pages."
+    ],
+    kpis: [
+      { label: "Formato", value: "HTML · CSS · JS" },
+      { label: "Deploy", value: "GitHub Pages" },
+      { label: "Idiomas", value: "6" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/Quint/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero e identidade",
+        description: "Foto de fundo, tratamento visual e CTAs para ouvir e booking.",
+        thumbSrc: "/projects/quint-press-kit/screen1.jpg",
+        fullSrc: "/projects/quint-press-kit/screen1.jpg"
+      },
+      {
+        title: "Timeline “A história”",
+        description: "Capítulos da trajetória com imagens e carrosséis onde faz sentido.",
+        thumbSrc: "/projects/quint-press-kit/screen2.jpg",
+        fullSrc: "/projects/quint-press-kit/screen2.jpg"
+      },
+      {
+        title: "Prova de palco",
+        description: "Lugares e eventos com carrossel e visual premium.",
+        thumbSrc: "/projects/quint-press-kit/screen3.jpg",
+        fullSrc: "/projects/quint-press-kit/screen3.jpg"
+      },
+      {
+        title: "Park Art e vídeo em destaque",
+        description: "Set no YouTube com contexto visual do evento.",
+        thumbSrc: "/projects/quint-press-kit/screen4.jpg",
+        fullSrc: "/projects/quint-press-kit/screen4.jpg"
+      },
+      {
+        title: "Drops na pista",
+        description: "Vídeos curtos, navegação e modal com carga sob demanda.",
+        thumbSrc: "/projects/quint-press-kit/screen5.jpg",
+        fullSrc: "/projects/quint-press-kit/screen5.jpg"
+      },
+      {
+        title: "Autorais",
+        description: "Capas em carrossel e Spotify embutido ao clicar.",
+        thumbSrc: "/projects/quint-press-kit/screen6.jpg",
+        fullSrc: "/projects/quint-press-kit/screen6.jpg"
+      },
+      {
+        title: "Suporte de pista",
+        description: "DJs tocando as tracks e texto de relevância.",
+        thumbSrc: "/projects/quint-press-kit/screen7.jpg",
+        fullSrc: "/projects/quint-press-kit/screen7.jpg"
+      },
+      {
+        title: "Músicas em abas",
+        description: "SoundCloud e YouTube sem dispersar o foco.",
+        thumbSrc: "/projects/quint-press-kit/screen8.jpg",
+        fullSrc: "/projects/quint-press-kit/screen8.jpg"
+      },
+      {
+        title: "Imprensa e downloads",
+        description: "Galeria em alta, miniaturas leves e opção de pacote .zip.",
+        thumbSrc: "/projects/quint-press-kit/screen9.jpg",
+        fullSrc: "/projects/quint-press-kit/screen9.jpg"
+      },
+      {
+        title: "Booking e redes",
+        description: "E-mail, WhatsApp e links para fechar contato.",
+        thumbSrc: "/projects/quint-press-kit/screen10.jpg",
+        fullSrc: "/projects/quint-press-kit/screen10.jpg"
+      }
+    ]
   }];
 
 
@@ -2465,6 +2616,50 @@ export const projectsLite: ProjectLite[] = [
       { src: "/projects/claymoon-press-kit/cm-6.jpg", alt: "Booking e contacto" },
       { src: "/projects/claymoon-press-kit/cm-7.jpg", alt: "Rodapé e créditos" }
     ]
+  },
+  {
+    slug: "quint-press-kit",
+    title: "Quint (DJ & producer), Press kit digital",
+    oneLiner:
+      "Press kit estático completo para DJ/produtor: techno/underground, timeline, palcos, embeds, drops, autorais, imprensa e booking — seis idiomas.",
+    problem:
+      "Bio, fotos e sets espalhados em redes e chats; falta de URL única com autoridade para booking.",
+    solution:
+      "Página única no GitHub Pages com narrativa ordenada, vídeos com lazy load, Spotify/YouTube, .zip para imprensa e i18n em JS.",
+    features: [
+      "Hero com foto, glow e CTAs; timeline em capítulos e carrosséis",
+      "Palcos e Park Art com YouTube; drops com modal e posters",
+      "Autorais com Spotify; suporte de pista; abas SoundCloud / YouTube",
+      "Downloads e galeria de imprensa com pacote .zip",
+      "Booking: e-mail, WhatsApp e redes; OG e favicon",
+      "Seis idiomas com data-i18n e preferência em localStorage"
+    ],
+    benefits: [
+      "Um link vende o artista antes da primeira conversa",
+      "Menos ida e volta por DM para fotos e sets",
+      "Performance pensada para mobile e 4G"
+    ],
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript vanilla",
+      "GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/Quint/" }
+    ],
+    images: [
+      { src: "/projects/quint-press-kit/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/quint-press-kit/screen2.jpg", alt: "Timeline A história" },
+      { src: "/projects/quint-press-kit/screen3.jpg", alt: "Prova de palco" },
+      { src: "/projects/quint-press-kit/screen4.jpg", alt: "Park Art e vídeo" },
+      { src: "/projects/quint-press-kit/screen5.jpg", alt: "Drops" },
+      { src: "/projects/quint-press-kit/screen6.jpg", alt: "Autorais" },
+      { src: "/projects/quint-press-kit/screen7.jpg", alt: "Suporte de pista" },
+      { src: "/projects/quint-press-kit/screen8.jpg", alt: "Músicas em abas" },
+      { src: "/projects/quint-press-kit/screen9.jpg", alt: "Imprensa e downloads" },
+      { src: "/projects/quint-press-kit/screen10.jpg", alt: "Booking e redes" }
+    ]
   }
 ];
 
@@ -2963,6 +3158,48 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/claymoon-press-kit/cm-6.jpg", alt: "Booking e contacto" },
       { src: "/projects/claymoon-press-kit/cm-7.jpg", alt: "Rodapé e créditos" }
     ]
+  },
+  {
+    slug: "quint-press-kit",
+    title: "Quint (DJ & producer), Press kit digital",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: [
+      "Press Kit",
+      "Marketing",
+      "Site estático",
+      "GitHub Pages",
+      "Música",
+      "i18n",
+      "Techno"
+    ],
+    thumb: "/projects/quint-press-kit/thumb.jpg",
+    description:
+      "Press kit digital para Quint: um link com identidade escura e roxa, timeline, palcos, Park Art, drops com modal, autorais no Spotify, suporte de pista, abas de música, downloads .zip e booking — techno / underground, seis idiomas.",
+    bullets: [
+      "Objetivo: vender o artista antes da primeira conversa — narrativa, mídia e contato num fluxo só.",
+      "Hero com foto, glow e logo; timeline, lugares, YouTube (Park Art, aftermovie), drops e modais.",
+      "Autorais e suporte de pista com embeds; abas SoundCloud / YouTube; imprensa com .zip.",
+      "Booking por e-mail institucional, WhatsApp e redes; OG, favicon e mobile refinado.",
+      "Stack: HTML/CSS/JS vanilla, i18n no cliente, lazy load de vídeo; deploy no GitHub Pages."
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/Quint/" }
+    ],
+    gallery: [
+      { src: "/projects/quint-press-kit/screen1.jpg", alt: "Hero e identidade" },
+      { src: "/projects/quint-press-kit/screen2.jpg", alt: "Timeline A história" },
+      { src: "/projects/quint-press-kit/screen3.jpg", alt: "Prova de palco" },
+      { src: "/projects/quint-press-kit/screen4.jpg", alt: "Park Art e vídeo" },
+      { src: "/projects/quint-press-kit/screen5.jpg", alt: "Drops" },
+      { src: "/projects/quint-press-kit/screen6.jpg", alt: "Autorais" },
+      { src: "/projects/quint-press-kit/screen7.jpg", alt: "Suporte de pista" },
+      { src: "/projects/quint-press-kit/screen8.jpg", alt: "Músicas em abas" },
+      { src: "/projects/quint-press-kit/screen9.jpg", alt: "Imprensa e downloads" },
+      { src: "/projects/quint-press-kit/screen10.jpg", alt: "Booking e redes" }
+    ]
   }];
 
 const featuredPreviewSlug = "landing-page-printbag";
@@ -3011,6 +3248,7 @@ normalizePreviewAssets(previewProjects);
 export const homeProjectSlugs = [
   "press-kit-levorato-dj",
   "claymoon-press-kit",
+  "quint-press-kit",
   "landing-page-printbag",
   "site-institucional-printbag",
   "donacica-hot-dog",

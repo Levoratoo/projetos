@@ -34,6 +34,7 @@ const SITE_SLUGS = new Set([
   "new-talent",
   "press-kit-levorato-dj",
   "claymoon-press-kit",
+  "quint-press-kit",
 ]);
 
 type FilterTab = "todos" | "sites" | "industria";

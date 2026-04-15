@@ -1,6 +1,6 @@
 /** Cores dos painéis de preview (modal + timeline) por slug do case. */
 export function getPreviewChrome(slug: string) {
-  if (slug === "claymoon-press-kit") {
+  if (slug === "claymoon-press-kit" || slug === "quint-press-kit") {
     return {
       radial: "rgba(124, 58, 237, 0.22)",
       radialSoft: "rgba(124, 58, 237, 0.1)",

@@ -1057,6 +1057,110 @@ const BUNDLES: Record<string, Partial<Record<NonPt, Bundle>>> = {
       tags: ["プレスキット", "マーケティング", "静的サイト", "GitHub Pages", "音楽", "i18n", "モバイルファースト"],
     },
   },
+  "quint-press-kit": {
+    en: {
+      title: "Quint (DJ & producer), Digital press kit",
+      area: "Marketing",
+      description:
+        "Digital press kit for Quint: one dark purple link with timeline, stages, Park Art, drops with modal, Spotify originals, floor support, music tabs, .zip press pack and booking — techno/underground, six languages.",
+      bullets: [
+        "Goal: sell the artist before the first conversation — story, media and contact in one flow.",
+        "Hero with photo and glow; timeline, venues, YouTube (Park Art, aftermovie), drops and modals.",
+        "Originals and floor support with embeds; SoundCloud / YouTube tabs; press downloads with .zip.",
+        "Booking via institutional email, WhatsApp and socials; OG, favicon and polished mobile.",
+        "Stack: vanilla HTML/CSS/JS, client-side i18n, lazy-loaded video; GitHub Pages deploy.",
+      ],
+      tags: [
+        "Press kit",
+        "Marketing",
+        "Static site",
+        "GitHub Pages",
+        "Music",
+        "i18n",
+        "Techno",
+      ],
+    },
+    es: {
+      title: "Quint (DJ & productor), Press kit digital",
+      area: "Marketing",
+      description:
+        "Press kit digital para Quint: un enlace oscuro y violeta con timeline, escenarios, Park Art, drops con modal, originales en Spotify, apoyo de pista, pestañas de música, .zip de prensa y booking — techno/underground, seis idiomas.",
+      bullets: [
+        "Objetivo: vender al artista antes de la primera conversación: narrativa, medios y contacto en un solo flujo.",
+        "Hero con foto y glow; timeline, venues, YouTube (Park Art, aftermovie), drops y modales.",
+        "Originales y apoyo de cabina con embeds; pestañas SoundCloud / YouTube; prensa con .zip.",
+        "Booking por correo institucional, WhatsApp y redes; OG, favicon y móvil cuidado.",
+        "Stack: HTML/CSS/JS vanilla, i18n en cliente, vídeo lazy; deploy en GitHub Pages.",
+      ],
+      tags: [
+        "Press kit",
+        "Marketing",
+        "Sitio estático",
+        "GitHub Pages",
+        "Música",
+        "i18n",
+        "Techno",
+      ],
+    },
+    zh: {
+      title: "Quint（DJ / 制作人）数字宣传资料",
+      area: "营销",
+      description:
+        "Quint 的数字宣传资料：深色紫色调单一链接，含时间线、舞台、Park Art、带模态的短片、Spotify 原创、舞池支持、音乐标签页、新闻资料 .zip 与预订 — techno/地下，六种语言。",
+      bullets: [
+        "目标：在第一次沟通前就完成“卖点”——叙事、素材与联系方式一条线。",
+        "主图与光效；时间线、场地、YouTube（Park Art、aftermovie）、短片与弹层。",
+        "原创与舞池支持嵌入；SoundCloud / YouTube 标签；新闻包 .zip。",
+        "机构邮箱、WhatsApp 与社交预订；OG、favicon 与移动端打磨。",
+        "技术栈：原生 HTML/CSS/JS、客户端 i18n、懒加载视频；GitHub Pages 部署。",
+      ],
+      tags: ["宣传资料", "营销", "静态网站", "GitHub Pages", "音乐", "i18n", "Techno"],
+    },
+    de: {
+      title: "Quint (DJ & Produzent), Digitales Presskit",
+      area: "Marketing",
+      description:
+        "Digitales Presskit für Quint: ein dunkler Violett-Link mit Timeline, Bühnen, Park Art, Drops mit Modal, Spotify-Originials, Floor-Support, Musik-Tabs, .zip-Pressemappe und Booking — Techno/Underground, sechs Sprachen.",
+      bullets: [
+        "Ziel: den Act vor dem ersten Gespräch verkaufen — Story, Medien und Kontakt in einem Flow.",
+        "Hero mit Foto und Glow; Timeline, Venues, YouTube (Park Art, Aftermovie), Drops und Modals.",
+        "Originials und Floor-Support mit Embeds; SoundCloud-/YouTube-Tabs; Presse-Downloads mit .zip.",
+        "Booking über institutionelle Mail, WhatsApp und Socials; OG, Favicon und mobiles Feintuning.",
+        "Stack: Vanilla HTML/CSS/JS, Client-i18n, Lazy-Video; Deploy auf GitHub Pages.",
+      ],
+      tags: [
+        "Presskit",
+        "Marketing",
+        "Statische Site",
+        "GitHub Pages",
+        "Musik",
+        "i18n",
+        "Techno",
+      ],
+    },
+    ja: {
+      title: "Quint（DJ / プロデューサー）デジタルプレスキット",
+      area: "マーケティング",
+      description:
+        "Quint 向けデジタルプレスキット：ダークパープルの単一 URL にタイムライン、ステージ、Park Art、モーダル付きドロップ、Spotify オリジナル、フロアサポート、音楽タブ、プレス用 .zip、ブッキング — techno/アンダーグラウンド、6 言語。",
+      bullets: [
+        "目的：初回の会話の前にアーティストを売り込む — ストーリー、メディア、連絡先を一つの流れに。",
+        "フォト＆グロー付きヒーロー；タイムライン、会場、YouTube（Park Art、アフタームービー）、ドロップとモーダル。",
+        "オリジナルとフロアサポートを埋め込み；SoundCloud / YouTube タブ；プレス .zip。",
+        "公式メール、WhatsApp、SNS でブッキング；OG、favicon、モバイル調整。",
+        "スタック：バニラ HTML/CSS/JS、クライアント i18n、遅延読み込み動画；GitHub Pages。",
+      ],
+      tags: [
+        "プレスキット",
+        "マーケティング",
+        "静的サイト",
+        "GitHub Pages",
+        "音楽",
+        "i18n",
+        "Techno",
+      ],
+    },
+  },
 };
 
 export function getLocalizedPreview(

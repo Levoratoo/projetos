@@ -56,6 +56,7 @@ export default function ProjectPage({ params }: PageProps) {
     project.slug === "donacica-hot-dog" ||
     project.slug === "new-talent" ||
     project.slug === "claymoon-press-kit" ||
+    project.slug === "quint-press-kit" ||
     project.slug === "previsao-demanda-python-estatistica" ||
     project.slug === "sistema-orcamentario-produtos-graficos" ||
     project.slug === "apresentador-projetos" ||
@@ -1038,6 +1039,115 @@ export default function ProjectPage({ params }: PageProps) {
                         <tr>
                           <td className="px-4 py-3 text-white/90 align-top">Versionamento e deploy</td>
                           <td className="px-4 py-3">Git, GitHub, GitHub Pages (site estático)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </CaseSection>
+            ) : null}
+
+            {project.slug === "quint-press-kit" ? (
+              <CaseSection id="visao-tecnica">
+                <section className="rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-glow/70">
+                    Visão técnica do projeto
+                  </p>
+                  <h2 className="mt-3 text-[clamp(22px,3vw,32px)] font-semibold text-white">
+                    HTML/CSS/JS vanilla, i18n no cliente e mídia sob demanda
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-300 sm:text-[15px]">
+                    <p>
+                      O press kit do Quint foi feito como{" "}
+                      <strong className="text-white">site estático</strong> — sem React/Vue — com{" "}
+                      <strong className="text-white">HTML5 semântico</strong>,{" "}
+                      <strong className="text-white">CSS3</strong> numa folha (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">styles.css</code>
+                      ) e <strong className="text-white">JavaScript vanilla</strong> em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">script.js</code>
+                      : navegação, smooth scroll,{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">IntersectionObserver</code>{" "}
+                      para reveals, carrosséis com arraste, modais de vídeo, contadores e troca de idioma com{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">data-i18n</code> no DOM.
+                      Deploy público:{" "}
+                      <a
+                        href="https://levoratoo.github.io/Quint/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-glow underline decoration-glow/45 underline-offset-2 hover:text-white"
+                      >
+                        levoratoo.github.io/Quint
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      <strong className="text-white">Internacionalização.</strong> Traduções em objeto (PT, EN, ES, ZH,
+                      DE, JA), função <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">applyLang()</code>
+                      , atributo <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">lang</code>{" "}
+                      no <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">&lt;html&gt;</code> e
+                      persistência em{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">localStorage</code> (
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">quint-lang</code>
+                      ).
+                    </p>
+                    <p>
+                      <strong className="text-white">Mídia e performance.</strong> Hero com{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">&lt;img&gt;</code> para
+                      controlar <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">object-fit</code>{" "}
+                      no mobile; vídeos locais (Drops / Suporte) com{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">preload=&quot;none&quot;</code>
+                      , poster em JPG, <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">data-src</code>{" "}
+                      carregado no hover ou ao abrir modal, para não baixar todos os MP4 de uma vez. YouTube (
+                      Park Art, aftermovie) e Spotify via{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">&lt;iframe&gt;</code>
+                      . Tipografia: Inter + Bebas Neue (Google Fonts); ícones Font Awesome e bandeiras (CDN).
+                    </p>
+                    <p>
+                      <strong className="text-white">SEO e compartilhamento.</strong> Meta description, canonical,{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">og:*</code> e{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">twitter:*</code> com URL
+                      absoluta coerente com o path do GitHub Pages. Favicon em SVG. Acessibilidade: abas e painéis com
+                      atributos ARIA; <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">scroll-padding-top</code>{" "}
+                      para navbar fixa;{" "}
+                      <code className="rounded bg-white/10 px-1.5 py-0.5 text-[13px] text-glow/90">prefers-reduced-motion</code>{" "}
+                      onde aplicável. Scripts Python (Pillow, OpenCV etc.) para thumbs e ajuste de assets ficam fora do que
+                      é servido ao visitante.
+                    </p>
+                  </div>
+                  <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                    <table className="w-full min-w-[280px] text-left text-sm text-neutral-300">
+                      <thead>
+                        <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                          <th className="px-4 py-3 font-medium">Camada</th>
+                          <th className="px-4 py-3 font-medium">Tecnologia</th>
+                          <th className="px-4 py-3 font-medium">Observação</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/5">
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Marcação</td>
+                          <td className="px-4 py-3">HTML5 semântico</td>
+                          <td className="px-4 py-3">Seções, âncoras, meta SEO/redes</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Estilo</td>
+                          <td className="px-4 py-3">CSS3 (variáveis, clamp, animações)</td>
+                          <td className="px-4 py-3">Tema escuro/roxo; responsivo</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Runtime</td>
+                          <td className="px-4 py-3">JavaScript ES5+ (vanilla)</td>
+                          <td className="px-4 py-3">i18n, carrosséis, modais, lazy vídeo</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Embeds</td>
+                          <td className="px-4 py-3">YouTube, Spotify (iframe)</td>
+                          <td className="px-4 py-3">Sets e lançamentos no próprio fluxo</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-white/90 align-top">Deploy</td>
+                          <td className="px-4 py-3">GitHub Pages</td>
+                          <td className="px-4 py-3">HTTPS; assets estáticos no repositório</td>
                         </tr>
                       </tbody>
                     </table>
