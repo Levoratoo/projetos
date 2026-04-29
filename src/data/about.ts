@@ -40,7 +40,7 @@ export const experiences: ExperienceItem[] = [
     id: "printbag",
     company: "Printbag Embalagens",
     roleKey: "rolePrintbag",
-    period: "Ago 2023",
+    period: "Ago 2025",
     current: true,
   },
   {
