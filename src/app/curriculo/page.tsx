@@ -39,7 +39,7 @@ const T: Record<Lang, {
     verify: "verificar",
     summary: "Analista de Negócios Sênior e trabalho com tecnologia há 6 anos, basicamente tentando convencer sistema, processo e gente a trabalharem juntos sem gerar terapia coletiva. Integro coisas que não conversam, automatizo o que ninguém quer fazer manualmente e tento fazer a tecnologia ajudar, em vez de atrapalhar ainda mais.",
     experiences: [
-      { role: "Analista de Negócios Sênior / Desenvolvedor Full Stack", company: "Printbag Embalagens", period: "Ago 2025 – atual · Camboriú, SC", desc: "Desenvolvimento de sistemas, automações, integrações, ERP e e-commerce. Se tem processo repetitivo, planilha que virou gambiarra oficial ou sistema que \"quase conversa\"… normalmente chega pra mim. Entender o caos, integrar as coisas, automatizar o possível e deixar tudo rodando mais liso." },
+      { role: "Analista de Negócios Sênior / Desenvolvedor Full Stack", company: "Printbag Embalagens", period: "Ago 2023 – atual · Camboriú, SC", desc: "Desenvolvimento de sistemas, automações, integrações, ERP e e-commerce. Se tem processo repetitivo, planilha que virou gambiarra oficial ou sistema que \"quase conversa\"… normalmente chega pra mim. Entender o caos, integrar as coisas, automatizar o possível e deixar tudo rodando mais liso." },
       { role: "Gerente de Projetos – PJ", company: "Rede Ufit Academia", period: "Ago 2025 – Out 2025 · Itapema, SC", desc: "Organizei o caos tecnológico pra rede crescer sem surtar. Implementei soluções de IA pra automatizar fluxo comercial, atendimento e captação de leads, conectando WhatsApp, RD Station e sistemas internos." },
       { role: "Gerente de Projetos – PJ", company: "Sankhya Gestão de Negócios", period: "Jun 2024 – Ago 2025 · Balneário Camboriú, SC", desc: "Implantação, integração e suporte a novos clientes. Ajudava empresas a tirar o ERP do \"modo projeto\" e colocar pra rodar de verdade no dia a dia. Alinhar expectativa, resolver pepino e adaptar sistema pra realidade do cliente." },
       { role: "Analista de Sistemas", company: "Banana Brasil", period: "Fev 2023 – Out 2024 · Jaraguá do Sul, SC", desc: "Guardião do ERP da empresa. Banco de dados, suporte ao time, desenvolvimento de soluções internas, automação de processos e tradução da tecnologia pra quem só queria fazer o trabalho acontecer." },
@@ -63,7 +63,7 @@ const T: Record<Lang, {
     verify: "verify",
     summary: "Senior Business Analyst with 6 years in tech, bridging the gap between systems, processes and people. I integrate things that don't talk to each other, automate what no one wants to do manually, and make sure technology helps rather than gets in the way.",
     experiences: [
-      { role: "Senior Business Analyst / Full Stack Developer", company: "Printbag Embalagens", period: "Aug 2025 – present · Camboriú, SC", desc: "Systems development, automation, integrations, ERP and e-commerce. If there's a repetitive process, a spreadsheet that became the unofficial workaround, or a system that \"almost works\", it usually lands on my desk. Understand the chaos, integrate things, automate what's possible, keep everything running smoothly." },
+      { role: "Senior Business Analyst / Full Stack Developer", company: "Printbag Embalagens", period: "Aug 2023 – present · Camboriú, SC", desc: "Systems development, automation, integrations, ERP and e-commerce. If there's a repetitive process, a spreadsheet that became the unofficial workaround, or a system that \"almost works\", it usually lands on my desk. Understand the chaos, integrate things, automate what's possible, keep everything running smoothly." },
       { role: "Project Manager – Freelance", company: "Rede Ufit Academia", period: "Aug 2025 – Oct 2025 · Itapema, SC", desc: "Organized the tech chaos so the network could grow. Implemented AI solutions to automate sales flow, customer service and lead capture, connecting WhatsApp, RD Station and internal systems." },
       { role: "Project Manager – Freelance", company: "Sankhya Gestão de Negócios", period: "Jun 2024 – Aug 2025 · Balneário Camboriú, SC", desc: "Implementation, integration and support for new and active clients. Helped companies move the ERP from \"project mode\" into real daily operations. Aligning expectations, solving problems and adapting the system to the client's reality." },
       { role: "Systems Analyst", company: "Banana Brasil", period: "Feb 2023 – Oct 2024 · Jaraguá do Sul, SC", desc: "ERP guardian. Database maintenance, team support, internal solution development and process automation. Translating technology for people who just wanted to get their work done." },
@@ -87,7 +87,7 @@ const T: Record<Lang, {
     verify: "verificar",
     summary: "Analista de Negocios Senior con 6 años en tecnología. Integro sistemas que no se comunican, automatizo tareas manuales y hago que la tecnología ayude en lugar de complicar.",
     experiences: [
-      { role: "Analista de Negocios Senior / Desarrollador Full Stack", company: "Printbag Embalagens", period: "Ago 2025 – actual · Camboriú, SC", desc: "Desarrollo de sistemas, automatizaciones, integraciones, ERP y e-commerce. Entiendo el caos, integro las piezas y automatizo todo lo posible." },
+      { role: "Analista de Negocios Senior / Desarrollador Full Stack", company: "Printbag Embalagens", period: "Ago 2023 – actual · Camboriú, SC", desc: "Desarrollo de sistemas, automatizaciones, integraciones, ERP y e-commerce. Entiendo el caos, integro las piezas y automatizo todo lo posible." },
       { role: "Gerente de Proyectos – Freelance", company: "Rede Ufit Academia", period: "Ago 2025 – Oct 2025 · Itapema, SC", desc: "Implementé soluciones de IA para automatizar flujos comerciales y captación de leads." },
       { role: "Gerente de Proyectos – Freelance", company: "Sankhya Gestão de Negócios", period: "Jun 2024 – Ago 2025 · Balneário Camboriú, SC", desc: "Implantación, integración y soporte a clientes. Ayudé a empresas a poner el ERP en producción real." },
       { role: "Analista de Sistemas", company: "Banana Brasil", period: "Feb 2023 – Oct 2024 · Jaraguá do Sul, SC", desc: "Gestión de base de datos, soporte al equipo, desarrollo de soluciones internas y automatización." },
@@ -111,7 +111,7 @@ const T: Record<Lang, {
     verify: "验证",
     summary: "高级业务分析师，拥有 6 年技术经验，专注于系统集成、流程自动化和业务技术融合。擅长需求分析、ERP 实施和数据驱动决策。",
     experiences: [
-      { role: "高级业务分析师 / 全栈开发者", company: "Printbag Embalagens", period: "2025年8月 – 至今", desc: "负责系统开发、自动化、集成、ERP 和电商平台建设，优化重复性流程并推动数字化转型。" },
+      { role: "高级业务分析师 / 全栈开发者", company: "Printbag Embalagens", period: "2023年8月 – 至今", desc: "负责系统开发、自动化、集成、ERP 和电商平台建设，优化重复性流程并推动数字化转型。" },
       { role: "项目经理（自由职业）", company: "Rede Ufit Academia", period: "2025年8月 – 2025年10月", desc: "实施 AI 解决方案，自动化商业流程和线索获取，连接 WhatsApp、RD Station 和内部系统。" },
       { role: "项目经理（自由职业）", company: "Sankhya Gestão de Negócios", period: "2024年6月 – 2025年8月", desc: "负责 ERP 实施、集成与客户支持，帮助企业将系统从「项目模式」切换为日常生产运营。" },
       { role: "系统分析师", company: "Banana Brasil", period: "2023年2月 – 2024年10月", desc: "数据库管理、团队支持、内部系统开发和流程自动化。" },
@@ -135,7 +135,7 @@ const T: Record<Lang, {
     verify: "verifizieren",
     summary: "Senior Business Analyst mit 6 Jahren Technologieerfahrung. Ich integriere Systeme, automatisiere manuelle Prozesse und sorge dafür, dass Technologie hilft statt hindert.",
     experiences: [
-      { role: "Senior Business Analyst / Full Stack Entwickler", company: "Printbag Embalagens", period: "Aug 2025 – heute · Camboriú, SC", desc: "Systementwicklung, Automatisierung, Integrationen, ERP und E-Commerce. Chaotische Prozesse strukturieren, integrieren und optimieren." },
+      { role: "Senior Business Analyst / Full Stack Entwickler", company: "Printbag Embalagens", period: "Aug 2023 – heute · Camboriú, SC", desc: "Systementwicklung, Automatisierung, Integrationen, ERP und E-Commerce. Chaotische Prozesse strukturieren, integrieren und optimieren." },
       { role: "Projektmanager – Freelance", company: "Rede Ufit Academia", period: "Aug 2025 – Okt 2025 · Itapema, SC", desc: "KI-Lösungen zur Automatisierung von Vertrieb und Lead-Generierung implementiert." },
       { role: "Projektmanager – Freelance", company: "Sankhya Gestão de Negócios", period: "Jun 2024 – Aug 2025 · Balneário Camboriú, SC", desc: "ERP-Implementierung, Integration und Kundensupport. Unternehmen in den Produktivbetrieb überführt." },
       { role: "Systemanalyst", company: "Banana Brasil", period: "Feb 2023 – Okt 2024 · Jaraguá do Sul, SC", desc: "Datenbankpflege, Teamunterstützung, interne Lösungsentwicklung und Prozessautomatisierung." },
@@ -159,7 +159,7 @@ const T: Record<Lang, {
     verify: "確認する",
     summary: "テクノロジー業界6年のシニアビジネスアナリスト。システム統合、プロセス自動化、ERP実装を専門とし、ビジネスとテクノロジーの橋渡し役として価値ある成果を届けます。",
     experiences: [
-      { role: "シニアビジネスアナリスト / フルスタック開発者", company: "Printbag Embalagens", period: "2025年8月 – 現在", desc: "システム開発、自動化、連携、ERPおよびEコマースを担当。複雑なプロセスを整理し自動化。" },
+      { role: "シニアビジネスアナリスト / フルスタック開発者", company: "Printbag Embalagens", period: "2023年8月 – 現在", desc: "システム開発、自動化、連携、ERPおよびEコマースを担当。複雑なプロセスを整理し自動化。" },
       { role: "プロジェクトマネージャー（フリーランス）", company: "Rede Ufit Academia", period: "2025年8月 – 2025年10月", desc: "AI ソリューションを実装して営業フローとリード獲得を自動化。" },
       { role: "プロジェクトマネージャー（フリーランス）", company: "Sankhya Gestão de Negócios", period: "2024年6月 – 2025年8月", desc: "ERP 導入・統合・顧客サポート。企業がERPを実運用へ移行できるよう支援。" },
       { role: "システムアナリスト", company: "Banana Brasil", period: "2023年2月 – 2024年10月", desc: "データベース管理、チームサポート、内部ソリューション開発、プロセス自動化。" },
