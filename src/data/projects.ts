@@ -2074,94 +2074,6 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "melao-crm",
-    title: "Melão CRM, WhatsApp comercial",
-    subtitle: "CRM web integrado ao WhatsApp para conversas, pipeline e follow-up.",
-    summary:
-      "Clone operacional do Melão Gestor: login, inbox e gestão comercial em cima do fluxo de WhatsApp, com deploy público na Vercel.",
-    description:
-      "Aplicação web de CRM focada em atendimento comercial via WhatsApp. Centraliza autenticação, conversas e acompanhamento de leads/clientes em uma interface única, publicada em https://ecommerce-levorato.vercel.app.",
-    year: 2026,
-    status: "Em produção",
-    progress: 100,
-    type: "CRM",
-    domain: "Comercial",
-    segment: "WhatsApp / Vendas",
-    tags: ["CRM", "WhatsApp", "Comercial", "SPA", "Vercel"],
-    stack: ["React", "TypeScript", "Vite", "Vercel"],
-    cover: {
-      kind: "gradient",
-      a: "rgba(255, 196, 64, 0.42)",
-      b: "rgba(40, 120, 72, 0.38)",
-      c: "rgba(255, 255, 255, 0.1)"
-    },
-    context:
-      "Times comerciais perdiam contexto entre WhatsApp pessoal, planilhas e CRM genérico. O Melão concentra o atendimento em um fluxo web com identidade própria.",
-    problem: [
-      "Conversas comerciais espalhadas em aparelhos e chats pessoais.",
-      "Falta de visão única de leads e follow-up.",
-      "Onboarding lento sem um produto leve e acessível pelo browser."
-    ],
-    constraints: [
-      "Manter experiência simples de login e inbox.",
-      "Publicar demo acessível na Vercel.",
-      "Preservar repositório público para evolução do produto."
-    ],
-    solution: [
-      "SPA com autenticação e tela de entrada da conta.",
-      "Fluxo orientado a conversas comerciais no estilo Melão Gestor.",
-      "Deploy contínuo em Vercel com URL pública de demonstração."
-    ],
-    results: [
-      "Demo pública pronta para apresentação comercial.",
-      "Base de CRM web reutilizável para evoluções de inbox e pipeline.",
-      "Repositório versionado no GitHub (Levoratoo/Ecommerce)."
-    ],
-    learnings: [
-      "CRM de WhatsApp precisa de login rápido e foco total na conversa.",
-      "Deploy estático/SPA acelera feedback com stakeholders."
-    ],
-    nextSteps: [
-      "Expor mais telas autenticadas na demo pública.",
-      "Documentar papéis, filas e integrações de API no README do produto."
-    ],
-    kpis: [
-      { label: "Canal", value: "WhatsApp comercial" },
-      { label: "Demo", value: "Vercel pública" },
-      { label: "Formato", value: "SPA CRM" }
-    ],
-    links: [
-      { label: "Repositório GitHub", href: "https://github.com/Levoratoo/Ecommerce" }
-    ],
-    accessLinks: [
-      {
-        label: "Acesso público",
-        url: "https://ecommerce-levorato.vercel.app/",
-        visibility: "public"
-      }
-    ],
-    gallery: [
-      {
-        title: "Login Melão",
-        description: "Entrada da conta com e-mail e senha.",
-        thumbSrc: "/projects/melao-crm/thumb.jpg",
-        fullSrc: "/projects/melao-crm/thumb.jpg"
-      },
-      {
-        title: "Autenticação",
-        description: "Fluxo de acesso ao CRM comercial.",
-        thumbSrc: "/projects/melao-crm/screen1.jpg",
-        fullSrc: "/projects/melao-crm/screen1.jpg"
-      },
-      {
-        title: "Formulário de entrada",
-        description: "Campos de e-mail e senha prontos para sessão.",
-        thumbSrc: "/projects/melao-crm/screen2.jpg",
-        fullSrc: "/projects/melao-crm/screen2.jpg"
-      }
-    ]
-  },
-  {
     slug: "sop-printbag",
     title: "Software S&OP Printbag",
     subtitle: "Sales & Operations Planning corporativo com demanda, capacidade e consensos.",
@@ -2522,6 +2434,327 @@ export const projects: Project[] = [
       }
     ]
   }
+
+,
+
+  {
+    slug: "musefy",
+    title: "MuseFy, plataforma para artistas",
+    subtitle: "Press kit, rider, calendário, promos, pré-save e Download Gate em um só lugar.",
+    summary:
+      "Produto SaaS para DJs e produtores criarem site/press kit profissional em minutos e operarem carreira musical com ferramentas de divulgação.",
+    description:
+      "MuseFy (também conhecido como meupresskit) é a plataforma para artistas criarem press kit digital, organizarem rider e calendário, enviarem/receberem promos, gerarem pré-save e Download Gate e avisarem fãs — com domínio próprio (musefy.com.br) e deploy Next.js na Vercel.",
+    year: 2026,
+    status: "Em produção",
+    progress: 100,
+    type: "SaaS",
+    domain: "Música",
+    segment: "Press kit / Carreira musical",
+    tags: ["SaaS", "Press Kit", "DJ", "Next.js", "Vercel", "Mercado Pago"],
+    stack: ["Next.js", "TypeScript", "React", "Vercel", "Auth.js", "Mercado Pago"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(180, 40, 220, 0.45)",
+      b: "rgba(20, 10, 40, 0.55)",
+      c: "rgba(255, 120, 200, 0.12)"
+    },
+    context:
+      "Artistas espalhavam bio, fotos, rider e links em chats e Instagram. O MuseFy concentra carreira musical em um produto com onboarding rápido e páginas públicas.",
+    problem: [
+      "Press kit e mídia espalhados em arquivos e DMs.",
+      "Falta de página profissional com booking e prova social.",
+      "Ferramentas de promo, pré-save e aviso a fãs fragmentadas."
+    ],
+    constraints: [
+      "Onboarding em minutos, não em semanas.",
+      "Pagamentos e autenticação prontos para produção.",
+      "Performance e SEO em páginas públicas de artista."
+    ],
+    solution: [
+      "Criação de site/press kit digital orientada a DJ e produtor.",
+      "Rider, calendário, envio/recebimento de promos.",
+      "Pré-save, Download Gate e avisos para fãs.",
+      "Deploy Next.js com Auth.js, Blob e Mercado Pago."
+    ],
+    results: [
+      "Produto vivo em musefy.com.br.",
+      "Cases públicos de press kit (ex.: Maganhati) gerados pela plataforma.",
+      "Base SaaS para escalar ferramentas de carreira musical."
+    ],
+    learnings: [
+      "Artista compra velocidade: template + narrativa batem CMS genérico.",
+      "Press kit público é o melhor funil de aquisição do próprio SaaS."
+    ],
+    nextSteps: [
+      "Expandir catálogo de templates e automações de promo.",
+      "Aprofundar analytics de conversão de booking."
+    ],
+    kpis: [
+      { label: "Promessa", value: "Press kit em minutos" },
+      { label: "Domínio", value: "musefy.com.br" },
+      { label: "Stack", value: "Next.js + Vercel" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://musefy.com.br/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Home MuseFy",
+        description: "Proposta de valor e entrada da plataforma.",
+        thumbSrc: "/projects/musefy/thumb.jpg",
+        fullSrc: "/projects/musefy/thumb.jpg"
+      },
+      {
+        title: "Hero",
+        description: "Carreira musical em um só lugar.",
+        thumbSrc: "/projects/musefy/screen1.jpg",
+        fullSrc: "/projects/musefy/screen1.jpg"
+      },
+      {
+        title: "Produto",
+        description: "Ferramentas de press kit e divulgação.",
+        thumbSrc: "/projects/musefy/screen2.jpg",
+        fullSrc: "/projects/musefy/screen2.jpg"
+      },
+      {
+        title: "Recursos",
+        description: "Seções de funcionalidades e conversão.",
+        thumbSrc: "/projects/musefy/screen3.jpg",
+        fullSrc: "/projects/musefy/screen3.jpg"
+      },
+      {
+        title: "Conversão",
+        description: "CTAs e narrativa de aquisição.",
+        thumbSrc: "/projects/musefy/screen4.jpg",
+        fullSrc: "/projects/musefy/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "levorato-prospect",
+    title: "Levorato Prospect",
+    subtitle: "Prospecção ativa de leads no Instagram e WhatsApp com agentes de IA.",
+    summary:
+      "Plataforma de prospecção e outreach: captura de leads, campanhas, agentes de resposta com IA, Google Maps e extensão Chrome.",
+    description:
+      "Levorato Prospect (projeto Vercel sdre-ai) concentra prospecção comercial em Instagram e WhatsApp — campanhas com fila, agentes de IA, leitura de estabelecimentos no Google Maps, workspaces por marca e extensão Chrome. Acesso por convite com login OTP.",
+    year: 2026,
+    status: "Em produção",
+    progress: 100,
+    type: "Plataforma",
+    domain: "Comercial",
+    segment: "Prospecção / Outreach",
+    tags: ["Prospecção", "Instagram", "WhatsApp", "IA", "Chrome Extension", "PWA"],
+    stack: ["Next.js", "TypeScript", "React", "Vercel", "PWA"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 80, 40, 0.4)",
+      b: "rgba(20, 20, 30, 0.55)",
+      c: "rgba(255, 180, 120, 0.1)"
+    },
+    context:
+      "Times comerciais precisavam unificar captura de leads, disparos e follow-up em Instagram/WhatsApp sem depender de ferramentas soltas e planilhas.",
+    problem: [
+      "Prospecção manual e sem fila operacional.",
+      "Respostas e follow-up inconsistentes entre canais.",
+      "Leads de Maps/Instagram sem painel único.",
+      "Falta de API/extensão para fluxos autenticados no browser."
+    ],
+    constraints: [
+      "Acesso invite-only com OTP por e-mail.",
+      "APIs oficiais da Meta quando a conta profissional autoriza.",
+      "Workspaces separados por conta de marca."
+    ],
+    solution: [
+      "Painel único para Instagram e WhatsApp.",
+      "Campanhas com fila, follows, DMs e agentes de IA.",
+      "Scanner Google Maps (telefone, endereço, site, Instagram).",
+      "Extensão Chrome + recursos /developers para API e webhooks."
+    ],
+    results: [
+      "Produto público em sdre-ai.vercel.app com marca Levorato Prospect.",
+      "Fluxo completo de prospecção + atendimento assistido por IA.",
+      "Base para times operarem outreach com governança de convite."
+    ],
+    learnings: [
+      "Prospecção multi-canal exige fila e workspace por marca.",
+      "Extensão Chrome reduz fricção quando a sessão já está autenticada."
+    ],
+    nextSteps: [
+      "Ampliar automações de follow-up e analytics de campanha.",
+      "Endurecer observabilidade de agentes e webhooks."
+    ],
+    kpis: [
+      { label: "Canais", value: "Instagram + WhatsApp" },
+      { label: "IA", value: "Agentes de resposta" },
+      { label: "Acesso", value: "Convite + OTP" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://sdre-ai.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Landing",
+        description: "Proposta de valor do Levorato Prospect.",
+        thumbSrc: "/projects/levorato-prospect/thumb.jpg",
+        fullSrc: "/projects/levorato-prospect/thumb.jpg"
+      },
+      {
+        title: "Visão geral",
+        description: "O que a plataforma faz em Instagram e WhatsApp.",
+        thumbSrc: "/projects/levorato-prospect/screen1.jpg",
+        fullSrc: "/projects/levorato-prospect/screen1.jpg"
+      },
+      {
+        title: "Recursos",
+        description: "Detalhamento de prospecção e agentes.",
+        thumbSrc: "/projects/levorato-prospect/screen2.jpg",
+        fullSrc: "/projects/levorato-prospect/screen2.jpg"
+      },
+      {
+        title: "Sobre",
+        description: "Página institucional do produto.",
+        thumbSrc: "/projects/levorato-prospect/screen3.jpg",
+        fullSrc: "/projects/levorato-prospect/screen3.jpg"
+      },
+      {
+        title: "Developers",
+        description: "API, auth, webhooks e extensão.",
+        thumbSrc: "/projects/levorato-prospect/screen4.jpg",
+        fullSrc: "/projects/levorato-prospect/screen4.jpg"
+      },
+      {
+        title: "Login OTP",
+        description: "Entrada por convite com código no e-mail.",
+        thumbSrc: "/projects/levorato-prospect/screen5.jpg",
+        fullSrc: "/projects/levorato-prospect/screen5.jpg"
+      }
+    ]
+  },
+  {
+    slug: "asramos",
+    title: "AS. Ramos Empreendimentos",
+    subtitle: "Site institucional e portais para corretor, investidor, fornecedor e cliente.",
+    summary:
+      "Presença digital da AS. Ramos: empreendimentos em Balneário Camboriú, narrativa da construtora e portais de relacionamento.",
+    description:
+      "Projeto web da AS. Ramos Empreendimentos (referência em construção por administração desde 1996). Inclui vitrine de empreendimentos, sobre a empresa, blog/contato e portais (corretor, investidor, fornecedor, cliente), com versão Next.js na Vercel e site em produção em asramos.com.br.",
+    year: 2026,
+    status: "Em produção",
+    progress: 100,
+    type: "Site",
+    domain: "Imobiliário",
+    segment: "Construtora / Empreendimentos",
+    tags: ["Imobiliário", "Institucional", "Next.js", "Empreendimentos", "BC"],
+    stack: ["Next.js", "TypeScript", "React", "Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(180, 150, 90, 0.4)",
+      b: "rgba(40, 50, 70, 0.45)",
+      c: "rgba(255, 255, 255, 0.1)"
+    },
+    context:
+      "A construtora precisava de uma vitrine moderna de empreendimentos em BC/região e caminhos claros para corretor, investidor, fornecedor e cliente.",
+    problem: [
+      "Oferta de empreendimentos pouco navegável.",
+      "Múltiplos públicos (corretor, investidor, cliente) sem portais claros.",
+      "Necessidade de presença institucional alinhada à marca desde 1996."
+    ],
+    constraints: [
+      "Manter credibilidade de construtora consolidada.",
+      "Suportar catálogo de empreendimentos e CTAs de contato.",
+      "Publicar experiência moderna em Next.js/Vercel."
+    ],
+    solution: [
+      "Home com empreendimentos e narrativa da marca.",
+      "Portais: corretor, investidor, fornecedor, cliente e trabalhe conosco.",
+      "Seções Sobre, Empreendimentos, Blog e Fale Conosco.",
+      "Deploy Next.js na Vercel com domínio/marca AS. Ramos."
+    ],
+    results: [
+      "Vitrine digital alinhada à operação em Balneário Camboriú.",
+      "Entradas distintas por persona (corretor/investidor/cliente).",
+      "Base Next.js para evoluir além do legado WordPress."
+    ],
+    learnings: [
+      "Imobiliário vende por prova de obra + caminhos por persona.",
+      "Portais separados reduzem ruído entre corretor e cliente final."
+    ],
+    nextSteps: [
+      "Unificar conteúdo editorial entre Vercel e domínio principal.",
+      "Ampliar fichas de empreendimento e performance mobile."
+    ],
+    kpis: [
+      { label: "Mercado", value: "BC e região" },
+      { label: "Desde", value: "1996" },
+      { label: "Foco", value: "Empreendimentos + portais" }
+    ],
+    accessLinks: [
+      {
+        label: "Site",
+        url: "https://asramos.com.br/",
+        visibility: "public"
+      },
+      {
+        label: "Vercel",
+        url: "https://asramos.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Home Next.js",
+        description: "Hero e navegação da AS. Ramos na Vercel.",
+        thumbSrc: "/projects/asramos/thumb.jpg",
+        fullSrc: "/projects/asramos/thumb.jpg"
+      },
+      {
+        title: "Empreendimentos",
+        description: "Vitrine de lançamentos e unidades.",
+        thumbSrc: "/projects/asramos/screen1.jpg",
+        fullSrc: "/projects/asramos/screen1.jpg"
+      },
+      {
+        title: "Portais",
+        description: "Entradas para corretor, investidor e cliente.",
+        thumbSrc: "/projects/asramos/screen2.jpg",
+        fullSrc: "/projects/asramos/screen2.jpg"
+      },
+      {
+        title: "Institucional",
+        description: "Narrativa e seções da marca.",
+        thumbSrc: "/projects/asramos/screen3.jpg",
+        fullSrc: "/projects/asramos/screen3.jpg"
+      },
+      {
+        title: "Produção",
+        description: "Site em asramos.com.br.",
+        thumbSrc: "/projects/asramos/screen4.jpg",
+        fullSrc: "/projects/asramos/screen4.jpg"
+      },
+      {
+        title: "Catálogo",
+        description: "Empreendimentos em destaque.",
+        thumbSrc: "/projects/asramos/screen5.jpg",
+        fullSrc: "/projects/asramos/screen5.jpg"
+      },
+      {
+        title: "Conteúdo",
+        description: "Prova social e aprofundamento da oferta.",
+        thumbSrc: "/projects/asramos/screen6.jpg",
+        fullSrc: "/projects/asramos/screen6.jpg"
+      }
+    ]
+  },
 
 ];
 
@@ -3113,33 +3346,6 @@ export const projectsLite: ProjectLite[] = [
     ]
   },
   {
-    slug: "melao-crm",
-    title: "Melão CRM, WhatsApp comercial",
-    oneLiner: "CRM web integrado ao WhatsApp para conversas e follow-up comercial.",
-    problem: "Atendimento comercial espalhado entre WhatsApp pessoal e planilhas.",
-    solution: "SPA de CRM com login e fluxo no estilo Melão Gestor, publicada na Vercel.",
-    features: [
-      "Login e sessão de conta",
-      "Interface focada em conversas comerciais",
-      "Demo pública na Vercel",
-      "Repositório versionado no GitHub"
-    ],
-    benefits: [
-      "Canal único para apresentar o CRM",
-      "Base para evoluir inbox e pipeline",
-      "Onboarding rápido via browser"
-    ],
-    techStack: ["React", "TypeScript", "Vite", "Vercel"],
-    accessLinks: [
-      { label: "Acesso público", url: "https://ecommerce-levorato.vercel.app/" }
-    ],
-    images: [
-      { src: "/projects/melao-crm/thumb.jpg", alt: "Login Melão" },
-      { src: "/projects/melao-crm/screen1.jpg", alt: "Autenticação" },
-      { src: "/projects/melao-crm/screen2.jpg", alt: "Formulário de entrada" }
-    ]
-  },
-  {
     slug: "sop-printbag",
     title: "Software S&OP Printbag",
     oneLiner: "Plataforma S&OP com demanda, capacidade, vendas, consensos e jobs Python.",
@@ -3225,6 +3431,89 @@ export const projectsLite: ProjectLite[] = [
       { src: "/projects/portflow-logistica/screen5.jpg", alt: "Simulation Center" }
     ]
   }
+
+,
+
+  {
+    slug: "musefy",
+    title: "MuseFy, plataforma para artistas",
+    oneLiner: "Press kit, rider, promos, pré-save e Download Gate para DJs e produtores.",
+    problem: "Carreira musical espalhada entre Instagram, arquivos e ferramentas soltas.",
+    solution: "SaaS Next.js em musefy.com.br para criar press kit e operar divulgação.",
+    features: [
+      "Press kit / site profissional em minutos",
+      "Rider e calendário",
+      "Promos, pré-save e Download Gate",
+      "Avisos para fãs e páginas públicas"
+    ],
+    benefits: [
+      "Um lugar para a carreira musical",
+      "Aquisição via páginas públicas de artista",
+      "Stack pronta para produção na Vercel"
+    ],
+    techStack: ["Next.js", "TypeScript", "Auth.js", "Vercel", "Mercado Pago"],
+    accessLinks: [{ label: "Acesso público", url: "https://musefy.com.br/" }],
+    images: [
+      { src: "/projects/musefy/thumb.jpg", alt: "Home MuseFy" },
+      { src: "/projects/musefy/screen2.jpg", alt: "Produto" },
+      { src: "/projects/musefy/screen4.jpg", alt: "Conversão" }
+    ]
+  },
+  {
+    slug: "levorato-prospect",
+    title: "Levorato Prospect",
+    oneLiner: "Prospecção e outreach no Instagram e WhatsApp com agentes de IA.",
+    problem: "Captura e follow-up de leads sem painel único nem fila.",
+    solution: "Plataforma com campanhas, IA, Google Maps e extensão Chrome.",
+    features: [
+      "Campanhas Instagram/WhatsApp com fila",
+      "Agentes de IA para resposta",
+      "Scanner Google Maps",
+      "Extensão Chrome e API/developers"
+    ],
+    benefits: [
+      "Outreach multi-canal em um painel",
+      "Governança por convite e workspace",
+      "Menos fricção operacional no browser"
+    ],
+    techStack: ["Next.js", "TypeScript", "Vercel", "PWA"],
+    accessLinks: [{ label: "Acesso público", url: "https://sdre-ai.vercel.app/" }],
+    images: [
+      { src: "/projects/levorato-prospect/thumb.jpg", alt: "Landing" },
+      { src: "/projects/levorato-prospect/screen3.jpg", alt: "Sobre" },
+      { src: "/projects/levorato-prospect/screen4.jpg", alt: "Developers" },
+      { src: "/projects/levorato-prospect/screen5.jpg", alt: "Login OTP" }
+    ]
+  },
+  {
+    slug: "asramos",
+    title: "AS. Ramos Empreendimentos",
+    oneLiner: "Site e portais da construtora em Balneário Camboriú.",
+    problem: "Vitrine e relacionamentos (corretor/investidor/cliente) pouco claros.",
+    solution: "Experiência Next.js com empreendimentos, institucional e portais.",
+    features: [
+      "Home e catálogo de empreendimentos",
+      "Portais por persona",
+      "Sobre, blog e contato",
+      "Deploy Vercel + domínio de produção"
+    ],
+    benefits: [
+      "Marca alinhada à operação desde 1996",
+      "Caminhos claros por público",
+      "Base moderna para evoluir o digital"
+    ],
+    techStack: ["Next.js", "TypeScript", "React", "Vercel"],
+    accessLinks: [
+      { label: "Site", url: "https://asramos.com.br/" },
+      { label: "Vercel", url: "https://asramos.vercel.app/" }
+    ],
+    images: [
+      { src: "/projects/asramos/thumb.jpg", alt: "Home Next.js" },
+      { src: "/projects/asramos/screen2.jpg", alt: "Portais" },
+      { src: "/projects/asramos/screen4.jpg", alt: "Produção" },
+      { src: "/projects/asramos/screen5.jpg", alt: "Catálogo" }
+    ]
+  },
 
 ];
 
@@ -3767,32 +4056,6 @@ export const previewProjects: PreviewProject[] = [
     ]
   },
   {
-    slug: "melao-crm",
-    title: "Melão CRM, WhatsApp comercial",
-    year: 2026,
-    area: "Comercial",
-    status: "Em produção",
-    progress: 100,
-    tags: ["CRM", "WhatsApp", "Vercel"],
-    thumb: "/projects/melao-crm/thumb.jpg",
-    description:
-      "CRM web integrado ao WhatsApp (estilo Melão Gestor) com login, fluxo comercial e demo pública na Vercel.",
-    bullets: [
-      "Login e sessão para acessar o CRM",
-      "Foco em conversas e follow-up comercial",
-      "Deploy público em ecommerce-levorato.vercel.app",
-      "Código versionado em Levoratoo/Ecommerce"
-    ],
-    accessLinks: [
-      { label: "Acesso público", url: "https://ecommerce-levorato.vercel.app/" }
-    ],
-    gallery: [
-      { src: "/projects/melao-crm/thumb.jpg", alt: "Login Melão" },
-      { src: "/projects/melao-crm/screen1.jpg", alt: "Autenticação" },
-      { src: "/projects/melao-crm/screen2.jpg", alt: "Formulário de entrada" }
-    ]
-  },
-  {
     slug: "sop-printbag",
     title: "Software S&OP Printbag",
     year: 2026,
@@ -3878,6 +4141,87 @@ export const previewProjects: PreviewProject[] = [
     ]
   }
 
+,
+
+  {
+    slug: "musefy",
+    title: "MuseFy, plataforma para artistas",
+    year: 2026,
+    area: "Música",
+    status: "Em produção",
+    progress: 100,
+    tags: ["SaaS", "Press Kit", "Next.js", "Vercel"],
+    thumb: "/projects/musefy/thumb.jpg",
+    description:
+      "Plataforma para DJs e produtores criarem press kit, rider, calendário, promos, pré-save e Download Gate em minutos — musefy.com.br.",
+    bullets: [
+      "Press kit / site profissional rápido",
+      "Rider, calendário e promos",
+      "Pré-save, Download Gate e avisos a fãs",
+      "Produto vivo com Auth.js e Mercado Pago"
+    ],
+    accessLinks: [{ label: "Acesso público", url: "https://musefy.com.br/" }],
+    gallery: [
+      { src: "/projects/musefy/thumb.jpg", alt: "Home MuseFy" },
+      { src: "/projects/musefy/screen2.jpg", alt: "Produto" },
+      { src: "/projects/musefy/screen3.jpg", alt: "Recursos" },
+      { src: "/projects/musefy/screen4.jpg", alt: "Conversão" }
+    ]
+  },
+  {
+    slug: "levorato-prospect",
+    title: "Levorato Prospect",
+    year: 2026,
+    area: "Comercial",
+    status: "Em produção",
+    progress: 100,
+    tags: ["Prospecção", "Instagram", "WhatsApp", "IA"],
+    thumb: "/projects/levorato-prospect/thumb.jpg",
+    description:
+      "Prospecção ativa no Instagram e WhatsApp: campanhas, agentes de IA, Google Maps e extensão Chrome em um painel.",
+    bullets: [
+      "Campanhas com fila em IG e WhatsApp",
+      "Agentes de IA para follow-up",
+      "Leads via Google Maps",
+      "API, webhooks e extensão Chrome"
+    ],
+    accessLinks: [{ label: "Acesso público", url: "https://sdre-ai.vercel.app/" }],
+    gallery: [
+      { src: "/projects/levorato-prospect/thumb.jpg", alt: "Landing" },
+      { src: "/projects/levorato-prospect/screen2.jpg", alt: "Recursos" },
+      { src: "/projects/levorato-prospect/screen4.jpg", alt: "Developers" },
+      { src: "/projects/levorato-prospect/screen5.jpg", alt: "Login OTP" }
+    ]
+  },
+  {
+    slug: "asramos",
+    title: "AS. Ramos Empreendimentos",
+    year: 2026,
+    area: "Imobiliário",
+    status: "Em produção",
+    progress: 100,
+    tags: ["Construtora", "Empreendimentos", "Next.js", "BC"],
+    thumb: "/projects/asramos/thumb.jpg",
+    description:
+      "Site e portais da AS. Ramos em Balneário Camboriú: empreendimentos, institucional e relações com corretor, investidor e cliente.",
+    bullets: [
+      "Vitrine de empreendimentos",
+      "Portais por persona",
+      "Institucional desde 1996",
+      "Next.js na Vercel + domínio de produção"
+    ],
+    accessLinks: [
+      { label: "Site", url: "https://asramos.com.br/" },
+      { label: "Vercel", url: "https://asramos.vercel.app/" }
+    ],
+    gallery: [
+      { src: "/projects/asramos/thumb.jpg", alt: "Home" },
+      { src: "/projects/asramos/screen2.jpg", alt: "Portais" },
+      { src: "/projects/asramos/screen4.jpg", alt: "Produção" },
+      { src: "/projects/asramos/screen5.jpg", alt: "Catálogo" }
+    ]
+  },
+
 ];
 
 const featuredPreviewSlug = "landing-page-printbag";
@@ -3939,7 +4283,9 @@ export const homeProjectSlugs = [
   "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica",
   "gestao-producao-industrial-mes",
-  "melao-crm",
+  "musefy",
+  "levorato-prospect",
+  "asramos",
   "sop-printbag",
   "site-lofi-bc",
   "portflow-logistica"
