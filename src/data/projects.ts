@@ -2072,7 +2072,458 @@ export const projects: Project[] = [
         fullSrc: "/projects/quint-press-kit/screen10.jpg"
       }
     ]
-  }];
+  },
+  {
+    slug: "melao-crm",
+    title: "Melão CRM, WhatsApp comercial",
+    subtitle: "CRM web integrado ao WhatsApp para conversas, pipeline e follow-up.",
+    summary:
+      "Clone operacional do Melão Gestor: login, inbox e gestão comercial em cima do fluxo de WhatsApp, com deploy público na Vercel.",
+    description:
+      "Aplicação web de CRM focada em atendimento comercial via WhatsApp. Centraliza autenticação, conversas e acompanhamento de leads/clientes em uma interface única, publicada em https://ecommerce-levorato.vercel.app.",
+    year: 2026,
+    status: "Em produção",
+    progress: 100,
+    type: "CRM",
+    domain: "Comercial",
+    segment: "WhatsApp / Vendas",
+    tags: ["CRM", "WhatsApp", "Comercial", "SPA", "Vercel"],
+    stack: ["React", "TypeScript", "Vite", "Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 196, 64, 0.42)",
+      b: "rgba(40, 120, 72, 0.38)",
+      c: "rgba(255, 255, 255, 0.1)"
+    },
+    context:
+      "Times comerciais perdiam contexto entre WhatsApp pessoal, planilhas e CRM genérico. O Melão concentra o atendimento em um fluxo web com identidade própria.",
+    problem: [
+      "Conversas comerciais espalhadas em aparelhos e chats pessoais.",
+      "Falta de visão única de leads e follow-up.",
+      "Onboarding lento sem um produto leve e acessível pelo browser."
+    ],
+    constraints: [
+      "Manter experiência simples de login e inbox.",
+      "Publicar demo acessível na Vercel.",
+      "Preservar repositório público para evolução do produto."
+    ],
+    solution: [
+      "SPA com autenticação e tela de entrada da conta.",
+      "Fluxo orientado a conversas comerciais no estilo Melão Gestor.",
+      "Deploy contínuo em Vercel com URL pública de demonstração."
+    ],
+    results: [
+      "Demo pública pronta para apresentação comercial.",
+      "Base de CRM web reutilizável para evoluções de inbox e pipeline.",
+      "Repositório versionado no GitHub (Levoratoo/Ecommerce)."
+    ],
+    learnings: [
+      "CRM de WhatsApp precisa de login rápido e foco total na conversa.",
+      "Deploy estático/SPA acelera feedback com stakeholders."
+    ],
+    nextSteps: [
+      "Expor mais telas autenticadas na demo pública.",
+      "Documentar papéis, filas e integrações de API no README do produto."
+    ],
+    kpis: [
+      { label: "Canal", value: "WhatsApp comercial" },
+      { label: "Demo", value: "Vercel pública" },
+      { label: "Formato", value: "SPA CRM" }
+    ],
+    links: [
+      { label: "Repositório GitHub", href: "https://github.com/Levoratoo/Ecommerce" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://ecommerce-levorato.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Login Melão",
+        description: "Entrada da conta com e-mail e senha.",
+        thumbSrc: "/projects/melao-crm/thumb.jpg",
+        fullSrc: "/projects/melao-crm/thumb.jpg"
+      },
+      {
+        title: "Autenticação",
+        description: "Fluxo de acesso ao CRM comercial.",
+        thumbSrc: "/projects/melao-crm/screen1.jpg",
+        fullSrc: "/projects/melao-crm/screen1.jpg"
+      },
+      {
+        title: "Formulário de entrada",
+        description: "Campos de e-mail e senha prontos para sessão.",
+        thumbSrc: "/projects/melao-crm/screen2.jpg",
+        fullSrc: "/projects/melao-crm/screen2.jpg"
+      }
+    ]
+  },
+  {
+    slug: "sop-printbag",
+    title: "Software S&OP Printbag",
+    subtitle: "Sales & Operations Planning corporativo com demanda, capacidade e consensos.",
+    summary:
+      "Aplicação S&OP completa (sop-system): cadastros, demanda, capacidade, vendas, produção, SharePoint e jobs Python de previsão.",
+    description:
+      "Plataforma corporativa de Sales & Operations Planning para o contexto Printbag/Manus. Une cadastros mestres, dashboards de demanda e acurácia, colaborações/consensos, capacidade, carteira de pedidos, forecast, metas de produção e orquestração do pipeline Python de previsão via backend Node.",
+    year: 2026,
+    status: "Em produção",
+    progress: 100,
+    type: "Plataforma",
+    domain: "Operações",
+    segment: "S&OP / Planejamento",
+    tags: ["S&OP", "Previsão", "Capacidade", "Vendas", "Consensos", "Python"],
+    stack: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Wouter",
+      "TanStack Query",
+      "tRPC",
+      "Tailwind CSS",
+      "Radix/shadcn",
+      "Recharts",
+      "Node.js",
+      "Express",
+      "Drizzle ORM",
+      "MariaDB",
+      "Python",
+      "Vitest"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(46, 120, 210, 0.48)",
+      b: "rgba(18, 48, 110, 0.4)",
+      c: "rgba(180, 210, 255, 0.12)"
+    },
+    context:
+      "O S&OP dependia de referências externas (Easy 360), planilhas e scripts isolados. O sop-system concentra o ciclo de planejamento em uma aplicação web tipada, com governança de acesso e integrações.",
+    problem: [
+      "Planejamento fragmentado entre demanda, capacidade e vendas.",
+      "Scripts Python e planilhas sem trilha operacional unificada.",
+      "Cadastros mestres e de-para espalhados sem API tipada.",
+      "Dificuldade de consenso comercial/operacional com histórico auditável."
+    ],
+    constraints: [
+      "Preservar domínio amplo (famílias, produtos, clientes, recursos, turnos).",
+      "Rodar MariaDB local portátil e OAuth em produção.",
+      "Orquestrar previsão Python sem misturar com a leitura executiva.",
+      "Manter tipagem ponta a ponta com tRPC e Drizzle."
+    ],
+    solution: [
+      "SPA React + backend Express/tRPC com schema Drizzle em MariaDB.",
+      "Módulos de demanda (acurácia, previsões, colaborações, consensos).",
+      "Capacidade, vendas (carteira, forecast, faturamento) e metas de produção.",
+      "Jobs de previsão Python invocados pelo backend e integração SharePoint.",
+      "Níveis de acesso (gestor / gerente / master) e cadastros mestres."
+    ],
+    results: [
+      "Um sistema único para o ciclo S&OP em vez de planilhas soltas.",
+      "Base pronta para evolução do módulo de previsão (já destacado no portfólio).",
+      "Documentação de entrega e mapeamento funcional versionados no GitHub."
+    ],
+    learnings: [
+      "S&OP exige modelagem rica de cadastros antes dos dashboards.",
+      "Separar execução Python da UI de decisão reduz ambiguidade.",
+      "tRPC + Drizzle aceleram evolução segura em domínio grande."
+    ],
+    nextSteps: [
+      "Publicar demo estável em ambiente compartilhado.",
+      "Ampliar painéis executivos comparativos entre ciclos.",
+      "Endurecer testes e observabilidade dos jobs de previsão."
+    ],
+    kpis: [
+      { label: "Domínio", value: "S&OP ponta a ponta" },
+      { label: "API", value: "tRPC tipada" },
+      { label: "Previsão", value: "Jobs Python orquestrados" }
+    ],
+    links: [
+      { label: "Repositório GitHub", href: "https://github.com/Levoratoo/S-OP" }
+    ],
+    accessLinks: [
+      {
+        label: "Repositório",
+        url: "https://github.com/Levoratoo/S-OP",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Dashboard inicial",
+        description: "Entrada do ciclo S&OP com visão consolidada.",
+        thumbSrc: "/projects/sop-printbag/thumb.jpg",
+        fullSrc: "/projects/sop-printbag/thumb.jpg"
+      },
+      {
+        title: "Dashboard principal",
+        description: "Painel operacional do planejamento integrado.",
+        thumbSrc: "/projects/sop-printbag/screen1.jpg",
+        fullSrc: "/projects/sop-printbag/screen1.jpg"
+      },
+      {
+        title: "Demanda",
+        description: "Leitura de previsão e acurácia de demanda.",
+        thumbSrc: "/projects/sop-printbag/screen2.jpg",
+        fullSrc: "/projects/sop-printbag/screen2.jpg"
+      },
+      {
+        title: "Capacidade",
+        description: "Análise de capacidade e recursos.",
+        thumbSrc: "/projects/sop-printbag/screen3.jpg",
+        fullSrc: "/projects/sop-printbag/screen3.jpg"
+      },
+      {
+        title: "Vendas",
+        description: "Carteira, forecast e leitura comercial.",
+        thumbSrc: "/projects/sop-printbag/screen4.jpg",
+        fullSrc: "/projects/sop-printbag/screen4.jpg"
+      },
+      {
+        title: "Consensos",
+        description: "Colaboração e alinhamento do ciclo S&OP.",
+        thumbSrc: "/projects/sop-printbag/screen5.jpg",
+        fullSrc: "/projects/sop-printbag/screen5.jpg"
+      }
+    ]
+  },
+  {
+    slug: "site-lofi-bc",
+    title: "LO-FI BC, Site do clube",
+    subtitle: "Site institucional do clube de música eletrônica em Balneário Camboriú.",
+    summary:
+      "Landing do LO-FI BC com programação, atmosfera da pista, galeria e conversão para ingressos Sympla.",
+    description:
+      "Site estático do clube LO-FI BC: hero com aftermovie, programação de eventos, seções do clube, galeria fotográfica, newsletter e CTAs para Sympla/Instagram. Build com Vite e publish no GitHub Pages.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Nightlife / Entretenimento",
+    tags: ["Site estático", "Nightlife", "Vite", "GitHub Pages", "Sympla"],
+    stack: ["HTML5", "CSS3", "JavaScript", "Vite", "GitHub Pages"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(220, 40, 120, 0.45)",
+      b: "rgba(40, 10, 60, 0.5)",
+      c: "rgba(255, 180, 220, 0.12)"
+    },
+    context:
+      "O clube precisava de uma URL própria com identidade visual forte, agenda atualizável e caminho claro para comprar ingresso — sem depender só do Instagram.",
+    problem: [
+      "Programação e fotos espalhadas em posts de rede social.",
+      "Pouca autoridade de marca fora do Instagram.",
+      "Conversão para Sympla sem página institucional."
+    ],
+    constraints: [
+      "Manter stack leve (HTML/CSS/JS + Vite).",
+      "Publicar em GitHub Pages com assets locais.",
+      "Preservar estética dark/neon do clube."
+    ],
+    solution: [
+      "Hero cinematográfico com vídeo/poster da pista.",
+      "Grade de programação alimentada por data.js.",
+      "Seções Clube, Fotos, Contato e Newsletter.",
+      "CTAs para Sympla e Instagram com navegação lateral."
+    ],
+    results: [
+      "Presença web própria do LO-FI BC.",
+      "Agenda e galeria centralizadas em uma URL.",
+      "Deploy automático via GitHub Actions/Pages."
+    ],
+    learnings: [
+      "Nightlife vende por atmosfera: vídeo e tipografia pesam mais que texto longo.",
+      "Dados de eventos em JS facilitam atualização sem CMS."
+    ],
+    nextSteps: [
+      "Automatizar sync de posts/eventos.",
+      "Expandir newsletter e tracking de conversão Sympla."
+    ],
+    kpis: [
+      { label: "Canal", value: "Site + Sympla" },
+      { label: "Conteúdo", value: "Agenda e galeria" },
+      { label: "Deploy", value: "GitHub Pages" }
+    ],
+    links: [
+      { label: "Repositório GitHub", href: "https://github.com/Levoratoo/site-LOFI" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/site-LOFI/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero LO-FI",
+        description: "Abertura com marca e atmosfera da pista.",
+        thumbSrc: "/projects/site-lofi-bc/thumb.jpg",
+        fullSrc: "/projects/site-lofi-bc/thumb.jpg"
+      },
+      {
+        title: "Home",
+        description: "Primeira dobra com vídeo/poster e identidade.",
+        thumbSrc: "/projects/site-lofi-bc/screen1.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen1.jpg"
+      },
+      {
+        title: "Programação",
+        description: "Agenda de eventos e line-ups.",
+        thumbSrc: "/projects/site-lofi-bc/screen2.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen2.jpg"
+      },
+      {
+        title: "Clube e fotos",
+        description: "Narrativa do espaço e galeria.",
+        thumbSrc: "/projects/site-lofi-bc/screen3.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen3.jpg"
+      },
+      {
+        title: "Galeria e CTAs",
+        description: "Imagens e caminhos para ingresso/contato.",
+        thumbSrc: "/projects/site-lofi-bc/screen4.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen4.jpg"
+      },
+      {
+        title: "Galeria 1",
+        description: "Registro fotográfico da pista.",
+        thumbSrc: "/projects/site-lofi-bc/screen5.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen5.jpg"
+      },
+      {
+        title: "Interior neon",
+        description: "Ambiente interno do clube.",
+        thumbSrc: "/projects/site-lofi-bc/screen6.jpg",
+        fullSrc: "/projects/site-lofi-bc/screen6.jpg"
+      }
+    ]
+  },
+  {
+    slug: "portflow-logistica",
+    title: "PortFlow, Logística portuária",
+    subtitle: "Gestão logística de operações portuárias e transporte de contêineres.",
+    summary:
+      "PortFlow simula o fluxo de importação: navios, pátio, fiscalização, expedição, tracking e Simulation Center — demo em GitHub Pages.",
+    description:
+      "Sistema web de gestão logística (PortFlow) com dashboard, torre de controle, pátio/docas, ocorrências, contêineres, navios, transportadoras, relatórios, rastreamento e Simulation Center. Frontend Next.js em modo demo autônomo; backend NestJS+Prisma preservado no monorepo.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Plataforma",
+    domain: "Logística",
+    segment: "Operações portuárias",
+    tags: ["Logística", "Portuário", "Dashboard", "Next.js", "NestJS", "Demo"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Recharts",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Docker"
+    ],
+    cover: {
+      kind: "gradient",
+      a: "rgba(32, 160, 180, 0.45)",
+      b: "rgba(16, 48, 90, 0.42)",
+      c: "rgba(180, 230, 255, 0.12)"
+    },
+    context:
+      "Projeto de portfólio para demonstrar operação logística ponta a ponta — da previsão de navios à entrega — com UX de produto SaaS e dados plausíveis.",
+    problem: [
+      "Falta de visão unificada de pátio, docas e SLAs.",
+      "Fluxo documental e bloqueios operacionais difíceis de acompanhar.",
+      "Cliente externo sem portal filtrado por conta.",
+      "Demo de portfólio que dependia de backend sempre ligado."
+    ],
+    constraints: [
+      "Compatibilidade com build estático / GitHub Pages.",
+      "Modo demo autônomo com persistência em localStorage.",
+      "Manter backend NestJS+Prisma no monorepo para arquitetura real."
+    ],
+    solution: [
+      "Dashboard com KPIs, alertas e leitura operacional.",
+      "Torre de controle com fila, SLAs e priorização.",
+      "Pátio/docas, workflow documental e portal do cliente.",
+      "CRUD de contêineres/navios/transportadoras e Simulation Center.",
+      "Runtime demo no frontend + API NestJS opcional."
+    ],
+    results: [
+      "Demo pública navegável em GitHub Pages.",
+      "Narrativa completa do fluxo de importação em produto único.",
+      "Arquitetura pronta para evoluir do mock para API real."
+    ],
+    learnings: [
+      "Modo demo autônomo é decisivo para portfólio estático.",
+      "Torre de controle e pátio vendem melhor o domínio do que CRUD isolado."
+    ],
+    nextSteps: [
+      "Ligar mais módulos ao backend NestJS em modo api.",
+      "Expandir relatórios e tracking por código."
+    ],
+    kpis: [
+      { label: "Fluxo", value: "Navio → entrega" },
+      { label: "Demo", value: "GitHub Pages" },
+      { label: "Arquitetura", value: "Next + Nest monorepo" }
+    ],
+    links: [
+      { label: "Repositório GitHub", href: "https://github.com/Levoratoo/logistica-inteligente" }
+    ],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://levoratoo.github.io/logistica-inteligente/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Dashboard",
+        description: "Centro operacional PortFlow com KPIs e navegação.",
+        thumbSrc: "/projects/portflow-logistica/thumb.jpg",
+        fullSrc: "/projects/portflow-logistica/thumb.jpg"
+      },
+      {
+        title: "Visão geral",
+        description: "Painel inicial da operação portuária.",
+        thumbSrc: "/projects/portflow-logistica/screen1.jpg",
+        fullSrc: "/projects/portflow-logistica/screen1.jpg"
+      },
+      {
+        title: "Torre de controle",
+        description: "Fila de ação, SLAs e priorização do turno.",
+        thumbSrc: "/projects/portflow-logistica/screen2.jpg",
+        fullSrc: "/projects/portflow-logistica/screen2.jpg"
+      },
+      {
+        title: "Pátio e docas",
+        description: "Ocupação por zona e programação de berços.",
+        thumbSrc: "/projects/portflow-logistica/screen3.jpg",
+        fullSrc: "/projects/portflow-logistica/screen3.jpg"
+      },
+      {
+        title: "Contêineres",
+        description: "CRUD e acompanhamento de contêineres.",
+        thumbSrc: "/projects/portflow-logistica/screen4.jpg",
+        fullSrc: "/projects/portflow-logistica/screen4.jpg"
+      },
+      {
+        title: "Simulation Center",
+        description: "Automação contínua do fluxo demonstrativo.",
+        thumbSrc: "/projects/portflow-logistica/screen5.jpg",
+        fullSrc: "/projects/portflow-logistica/screen5.jpg"
+      }
+    ]
+  }
+
+];
 
 
 export type ProjectLite = {
@@ -2660,7 +3111,121 @@ export const projectsLite: ProjectLite[] = [
       { src: "/projects/quint-press-kit/screen9.jpg", alt: "Imprensa e downloads" },
       { src: "/projects/quint-press-kit/screen10.jpg", alt: "Booking e redes" }
     ]
+  },
+  {
+    slug: "melao-crm",
+    title: "Melão CRM, WhatsApp comercial",
+    oneLiner: "CRM web integrado ao WhatsApp para conversas e follow-up comercial.",
+    problem: "Atendimento comercial espalhado entre WhatsApp pessoal e planilhas.",
+    solution: "SPA de CRM com login e fluxo no estilo Melão Gestor, publicada na Vercel.",
+    features: [
+      "Login e sessão de conta",
+      "Interface focada em conversas comerciais",
+      "Demo pública na Vercel",
+      "Repositório versionado no GitHub"
+    ],
+    benefits: [
+      "Canal único para apresentar o CRM",
+      "Base para evoluir inbox e pipeline",
+      "Onboarding rápido via browser"
+    ],
+    techStack: ["React", "TypeScript", "Vite", "Vercel"],
+    accessLinks: [
+      { label: "Acesso público", url: "https://ecommerce-levorato.vercel.app/" }
+    ],
+    images: [
+      { src: "/projects/melao-crm/thumb.jpg", alt: "Login Melão" },
+      { src: "/projects/melao-crm/screen1.jpg", alt: "Autenticação" },
+      { src: "/projects/melao-crm/screen2.jpg", alt: "Formulário de entrada" }
+    ]
+  },
+  {
+    slug: "sop-printbag",
+    title: "Software S&OP Printbag",
+    oneLiner: "Plataforma S&OP com demanda, capacidade, vendas, consensos e jobs Python.",
+    problem: "Planejamento fragmentado entre planilhas, scripts e sistemas de referência.",
+    solution: "Aplicação React + Node/tRPC + MariaDB com domínio S&OP completo e previsão Python.",
+    features: [
+      "Cadastros mestres e níveis de acesso",
+      "Demanda, acurácia, colaborações e consensos",
+      "Capacidade, vendas e metas de produção",
+      "Orquestração de previsão Python e SharePoint"
+    ],
+    benefits: [
+      "Ciclo S&OP em um único sistema",
+      "API tipada para evolução segura",
+      "Trilha clara entre execução e decisão"
+    ],
+    techStack: ["React", "TypeScript", "tRPC", "Drizzle", "MariaDB", "Python"],
+    accessLinks: [
+      { label: "Repositório", url: "https://github.com/Levoratoo/S-OP" }
+    ],
+    images: [
+      { src: "/projects/sop-printbag/thumb.jpg", alt: "Dashboard inicial" },
+      { src: "/projects/sop-printbag/screen1.jpg", alt: "Dashboard principal" },
+      { src: "/projects/sop-printbag/screen2.jpg", alt: "Demanda" },
+      { src: "/projects/sop-printbag/screen3.jpg", alt: "Capacidade" },
+      { src: "/projects/sop-printbag/screen4.jpg", alt: "Vendas" },
+      { src: "/projects/sop-printbag/screen5.jpg", alt: "Consensos" }
+    ]
+  },
+  {
+    slug: "site-lofi-bc",
+    title: "LO-FI BC, Site do clube",
+    oneLiner: "Site do clube LO-FI BC com programação, galeria e ingressos Sympla.",
+    problem: "Marca e agenda dependiam só do Instagram.",
+    solution: "Site estático Vite com hero, agenda, galeria e CTAs para Sympla/Instagram.",
+    features: [
+      "Hero com aftermovie/poster",
+      "Programação em data.js",
+      "Galeria e seções do clube",
+      "Deploy no GitHub Pages"
+    ],
+    benefits: [
+      "URL própria com identidade forte",
+      "Agenda centralizada",
+      "Caminho claro para ingresso"
+    ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Vite", "GitHub Pages"],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/site-LOFI/" }
+    ],
+    images: [
+      { src: "/projects/site-lofi-bc/thumb.jpg", alt: "Hero LO-FI" },
+      { src: "/projects/site-lofi-bc/screen2.jpg", alt: "Programação" },
+      { src: "/projects/site-lofi-bc/screen5.jpg", alt: "Galeria" },
+      { src: "/projects/site-lofi-bc/screen6.jpg", alt: "Interior neon" }
+    ]
+  },
+  {
+    slug: "portflow-logistica",
+    title: "PortFlow, Logística portuária",
+    oneLiner: "Operação portuária ponta a ponta com torre de controle e Simulation Center.",
+    problem: "Sem demo unificada do fluxo navio → pátio → entrega.",
+    solution: "Monorepo Next.js + NestJS com modo demo estático no GitHub Pages.",
+    features: [
+      "Dashboard e torre de controle",
+      "Pátio, docas e contêineres",
+      "Portal do cliente e ocorrências",
+      "Simulation Center autônomo"
+    ],
+    benefits: [
+      "Demo pública navegável",
+      "Arquitetura pronta para API real",
+      "Narrativa completa de importação"
+    ],
+    techStack: ["Next.js", "NestJS", "Prisma", "PostgreSQL", "Tailwind"],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/logistica-inteligente/" }
+    ],
+    images: [
+      { src: "/projects/portflow-logistica/thumb.jpg", alt: "Dashboard" },
+      { src: "/projects/portflow-logistica/screen2.jpg", alt: "Torre de controle" },
+      { src: "/projects/portflow-logistica/screen3.jpg", alt: "Pátio e docas" },
+      { src: "/projects/portflow-logistica/screen5.jpg", alt: "Simulation Center" }
+    ]
   }
+
 ];
 
 
@@ -3200,7 +3765,120 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/quint-press-kit/screen9.jpg", alt: "Imprensa e downloads" },
       { src: "/projects/quint-press-kit/screen10.jpg", alt: "Booking e redes" }
     ]
-  }];
+  },
+  {
+    slug: "melao-crm",
+    title: "Melão CRM, WhatsApp comercial",
+    year: 2026,
+    area: "Comercial",
+    status: "Em produção",
+    progress: 100,
+    tags: ["CRM", "WhatsApp", "Vercel"],
+    thumb: "/projects/melao-crm/thumb.jpg",
+    description:
+      "CRM web integrado ao WhatsApp (estilo Melão Gestor) com login, fluxo comercial e demo pública na Vercel.",
+    bullets: [
+      "Login e sessão para acessar o CRM",
+      "Foco em conversas e follow-up comercial",
+      "Deploy público em ecommerce-levorato.vercel.app",
+      "Código versionado em Levoratoo/Ecommerce"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://ecommerce-levorato.vercel.app/" }
+    ],
+    gallery: [
+      { src: "/projects/melao-crm/thumb.jpg", alt: "Login Melão" },
+      { src: "/projects/melao-crm/screen1.jpg", alt: "Autenticação" },
+      { src: "/projects/melao-crm/screen2.jpg", alt: "Formulário de entrada" }
+    ]
+  },
+  {
+    slug: "sop-printbag",
+    title: "Software S&OP Printbag",
+    year: 2026,
+    area: "Operações",
+    status: "Em produção",
+    progress: 100,
+    tags: ["S&OP", "Previsão", "Capacidade", "tRPC", "Python"],
+    thumb: "/projects/sop-printbag/thumb.jpg",
+    description:
+      "Plataforma corporativa de Sales & Operations Planning: demanda, capacidade, vendas, consensos e jobs Python de previsão.",
+    bullets: [
+      "Cadastros mestres e níveis de acesso",
+      "Demanda, colaborações e consensos",
+      "Capacidade, carteira e forecast",
+      "Backend tRPC + MariaDB e previsão Python"
+    ],
+    accessLinks: [
+      { label: "Repositório", url: "https://github.com/Levoratoo/S-OP" }
+    ],
+    gallery: [
+      { src: "/projects/sop-printbag/thumb.jpg", alt: "Dashboard inicial" },
+      { src: "/projects/sop-printbag/screen1.jpg", alt: "Dashboard principal" },
+      { src: "/projects/sop-printbag/screen2.jpg", alt: "Demanda" },
+      { src: "/projects/sop-printbag/screen3.jpg", alt: "Capacidade" },
+      { src: "/projects/sop-printbag/screen4.jpg", alt: "Vendas" },
+      { src: "/projects/sop-printbag/screen5.jpg", alt: "Consensos" }
+    ]
+  },
+  {
+    slug: "site-lofi-bc",
+    title: "LO-FI BC, Site do clube",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Nightlife", "Site estático", "Vite", "Sympla"],
+    thumb: "/projects/site-lofi-bc/thumb.jpg",
+    description:
+      "Site do clube LO-FI BC em Balneário Camboriú: programação, atmosfera da pista, galeria e ingressos via Sympla.",
+    bullets: [
+      "Hero com aftermovie e identidade LO-FI",
+      "Programação de eventos atualizável",
+      "Galeria e seções do clube",
+      "CTAs para Sympla e Instagram"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/site-LOFI/" }
+    ],
+    gallery: [
+      { src: "/projects/site-lofi-bc/thumb.jpg", alt: "Hero LO-FI" },
+      { src: "/projects/site-lofi-bc/screen2.jpg", alt: "Programação" },
+      { src: "/projects/site-lofi-bc/screen3.jpg", alt: "Clube e fotos" },
+      { src: "/projects/site-lofi-bc/screen5.jpg", alt: "Galeria" },
+      { src: "/projects/site-lofi-bc/screen6.jpg", alt: "Interior neon" }
+    ]
+  },
+  {
+    slug: "portflow-logistica",
+    title: "PortFlow, Logística portuária",
+    year: 2026,
+    area: "Logística",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Logística", "Portuário", "Next.js", "NestJS", "Demo"],
+    thumb: "/projects/portflow-logistica/thumb.jpg",
+    description:
+      "PortFlow: operação portuária do navio à entrega, com torre de controle, pátio, contêineres e Simulation Center em demo pública.",
+    bullets: [
+      "Dashboard e torre de controle com SLAs",
+      "Pátio, docas e workflow documental",
+      "Portal do cliente e ocorrências",
+      "Demo autônoma no GitHub Pages"
+    ],
+    accessLinks: [
+      { label: "Acesso público", url: "https://levoratoo.github.io/logistica-inteligente/" }
+    ],
+    gallery: [
+      { src: "/projects/portflow-logistica/thumb.jpg", alt: "Dashboard" },
+      { src: "/projects/portflow-logistica/screen2.jpg", alt: "Torre de controle" },
+      { src: "/projects/portflow-logistica/screen3.jpg", alt: "Pátio e docas" },
+      { src: "/projects/portflow-logistica/screen4.jpg", alt: "Contêineres" },
+      { src: "/projects/portflow-logistica/screen5.jpg", alt: "Simulation Center" }
+    ]
+  }
+
+];
 
 const featuredPreviewSlug = "landing-page-printbag";
 const featuredPreviewIndex = previewProjects.findIndex(
@@ -3260,7 +3938,11 @@ export const homeProjectSlugs = [
   "apresentador-projetos",
   "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica",
-  "gestao-producao-industrial-mes"
+  "gestao-producao-industrial-mes",
+  "melao-crm",
+  "sop-printbag",
+  "site-lofi-bc",
+  "portflow-logistica"
 ];
 
 export const homeProjects = homeProjectSlugs
