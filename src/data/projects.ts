@@ -2500,36 +2500,41 @@ export const projects: Project[] = [
         label: "Acesso público",
         url: "https://musefy.com.br/",
         visibility: "public"
+      },
+      {
+        label: "Case Maganhati",
+        url: "https://musefy.com.br/maganhati",
+        visibility: "public"
       }
     ],
     gallery: [
       {
-        title: "Home MuseFy",
-        description: "Proposta de valor e entrada da plataforma.",
-        thumbSrc: "/projects/musefy/thumb.jpg",
-        fullSrc: "/projects/musefy/thumb.jpg"
+        title: "Case Maganhati",
+        description: "Press kit público gerado no MuseFy — hero cósmico.",
+        thumbSrc: "/projects/musefy/maganhati-hero.jpg",
+        fullSrc: "/projects/musefy/maganhati-hero.jpg"
       },
       {
-        title: "Hero",
-        description: "Carreira musical em um só lugar.",
+        title: "Maganhati ao vivo",
+        description: "Página pública musefy.com.br/maganhati.",
         thumbSrc: "/projects/musefy/screen1.jpg",
         fullSrc: "/projects/musefy/screen1.jpg"
       },
       {
-        title: "Produto",
-        description: "Ferramentas de press kit e divulgação.",
+        title: "Galeria do artista",
+        description: "Fotos e identidade no press kit.",
         thumbSrc: "/projects/musefy/screen2.jpg",
         fullSrc: "/projects/musefy/screen2.jpg"
       },
       {
-        title: "Recursos",
-        description: "Seções de funcionalidades e conversão.",
+        title: "Mídia e equipamento",
+        description: "Grid de fotos no case Maganhati.",
         thumbSrc: "/projects/musefy/screen3.jpg",
         fullSrc: "/projects/musefy/screen3.jpg"
       },
       {
-        title: "Conversão",
-        description: "CTAs e narrativa de aquisição.",
+        title: "Bio Maganhati",
+        description: "Narrativa e apresentação do artista.",
         thumbSrc: "/projects/musefy/screen4.jpg",
         fullSrc: "/projects/musefy/screen4.jpg"
       }
@@ -3927,11 +3932,15 @@ export const projectsLite: ProjectLite[] = [
       "Stack pronta para produção na Vercel"
     ],
     techStack: ["Next.js", "TypeScript", "Auth.js", "Vercel", "Mercado Pago"],
-    accessLinks: [{ label: "Acesso público", url: "https://musefy.com.br/" }],
+    accessLinks: [
+      { label: "Acesso público", url: "https://musefy.com.br/" },
+      { label: "Case Maganhati", url: "https://musefy.com.br/maganhati" }
+    ],
     images: [
-      { src: "/projects/musefy/thumb.jpg", alt: "Home MuseFy" },
-      { src: "/projects/musefy/screen2.jpg", alt: "Produto" },
-      { src: "/projects/musefy/screen4.jpg", alt: "Conversão" }
+      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" },
+      { src: "/projects/musefy/screen1.jpg", alt: "Maganhati ao vivo" },
+      { src: "/projects/musefy/screen2.jpg", alt: "Galeria Maganhati" },
+      { src: "/projects/musefy/screen4.jpg", alt: "Bio Maganhati" }
     ]
   },
   {
@@ -4753,12 +4762,16 @@ export const previewProjects: PreviewProject[] = [
       "Pré-save, Download Gate e avisos a fãs",
       "Produto vivo com Auth.js e Mercado Pago"
     ],
-    accessLinks: [{ label: "Acesso público", url: "https://musefy.com.br/" }],
+    accessLinks: [
+      { label: "Acesso público", url: "https://musefy.com.br/" },
+      { label: "Case Maganhati", url: "https://musefy.com.br/maganhati" }
+    ],
     gallery: [
-      { src: "/projects/musefy/thumb.jpg", alt: "Home MuseFy" },
-      { src: "/projects/musefy/screen2.jpg", alt: "Produto" },
-      { src: "/projects/musefy/screen3.jpg", alt: "Recursos" },
-      { src: "/projects/musefy/screen4.jpg", alt: "Conversão" }
+      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" },
+      { src: "/projects/musefy/screen1.jpg", alt: "Maganhati ao vivo" },
+      { src: "/projects/musefy/screen2.jpg", alt: "Galeria Maganhati" },
+      { src: "/projects/musefy/screen3.jpg", alt: "Mídia Maganhati" },
+      { src: "/projects/musefy/screen4.jpg", alt: "Bio Maganhati" }
     ]
   },
   {
