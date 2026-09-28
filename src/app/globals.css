@@ -1701,6 +1701,29 @@ a.hero-orbit__dot:focus-visible {
   background: var(--glow-ember);
 }
 
+/* Lista de projetos: barrinha mais presente */
+.project-list-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 72, 72, 0.85) rgba(255, 255, 255, 0.04);
+  mask-image: linear-gradient(to bottom, #000 92%, transparent 100%);
+}
+.project-list-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.project-list-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 99px;
+  margin: 4px 0;
+}
+.project-list-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 90, 90, 0.95), rgba(200, 30, 40, 0.75));
+  border-radius: 99px;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.45);
+}
+.project-list-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 110, 110, 1);
+}
+
 /* Impressão / PDF: seletor de idioma é fixed, motores de PDF ignoram só print:hidden em alguns casos */
 @media print {
   [data-floating-lang-switcher],
