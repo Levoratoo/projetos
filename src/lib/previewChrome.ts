@@ -1,5 +1,16 @@
 /** Cores dos painéis de preview (modal + timeline) por slug do case. */
 export function getPreviewChrome(slug: string) {
+  if (slug === "musefy") {
+    return {
+      radial: "rgba(140, 70, 255, 0.24)",
+      radialSoft: "rgba(140, 70, 255, 0.12)",
+      ctaBackground:
+        "linear-gradient(165deg, rgba(160,90,255,0.55) 0%, rgba(90,110,255,0.4) 45%, rgba(50,30,120,0.58) 100%)",
+      ctaShadow:
+        "inset 0 1px 0 rgba(255,255,255,0.14), 0 0 32px rgba(140,70,255,0.4), 0 0 8px rgba(160,120,255,0.45), 0 8px 24px rgba(0,0,0,0.4)",
+      ctaBorder: "1px solid rgba(180,140,255,0.4)"
+    };
+  }
   if (slug === "claymoon-press-kit" || slug === "quint-press-kit") {
     return {
       radial: "rgba(124, 58, 237, 0.22)",
