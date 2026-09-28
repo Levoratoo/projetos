@@ -4992,14 +4992,8 @@ function normalizePreviewAssets(collection: PreviewProject[]) {
 normalizeProjectAssets(projects);
 normalizeProjectsLiteAssets(projectsLite);
 normalizePreviewAssets(previewProjects);
-export const homeProjectSlugs = [
-  "press-kit-levorato-dj",
-  "claymoon-press-kit",
-  "quint-press-kit",
-  "landing-page-printbag",
-  "site-institucional-printbag",
-  "donacica-hot-dog",
-  "new-talent",
+/** Projetos recém-adicionados — sobem no topo da lista e ganham badge "Novo". */
+export const newlyAddedProjectSlugs = [
   "hoffman-agency",
   "ants-agency",
   "tchez-dj",
@@ -5007,6 +5001,25 @@ export const homeProjectSlugs = [
   "field-talents",
   "full-fight-academy",
   "sixx-house",
+  "levorato-prospect",
+  "asramos",
+  "sop-printbag",
+  "site-lofi-bc",
+  "portflow-logistica"
+] as const;
+
+export const newlyAddedProjectSlugSet = new Set<string>(newlyAddedProjectSlugs);
+
+export const homeProjectSlugs = [
+  // Novos em destaque no topo
+  ...newlyAddedProjectSlugs,
+  "press-kit-levorato-dj",
+  "claymoon-press-kit",
+  "quint-press-kit",
+  "landing-page-printbag",
+  "site-institucional-printbag",
+  "donacica-hot-dog",
+  "new-talent",
   "dashboard-separacao-estoque",
   "planejamento-orcamentario-coordenador",
   "sistema-orcamentario-produtos-graficos",
@@ -5015,12 +5028,7 @@ export const homeProjectSlugs = [
   "sistema-chamados-portfolio-vivo",
   "previsao-demanda-python-estatistica",
   "gestao-producao-industrial-mes",
-  "musefy",
-  "levorato-prospect",
-  "asramos",
-  "sop-printbag",
-  "site-lofi-bc",
-  "portflow-logistica"
+  "musefy"
 ];
 
 export const homeProjects = homeProjectSlugs

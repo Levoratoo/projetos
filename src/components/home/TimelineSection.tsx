@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PreviewProject, projects as fullProjects, previewProjects } from "@/data/projects";
+import { PreviewProject, projects as fullProjects, previewProjects, newlyAddedProjectSlugSet } from "@/data/projects";
 import { tHome } from "@/i18n/home";
 import { getLocalizedPreview } from "@/i18n/previewProjects";
 import { useLocale } from "@/state/locale";
@@ -190,12 +190,16 @@ function ProjectListItem({
   project,
   index,
   isActive,
+  isNew,
+  newLabel,
   onHover,
   onOpen,
 }: {
   project: PreviewProject;
   index: number;
   isActive: boolean;
+  isNew: boolean;
+  newLabel: string;
   onHover: () => void;
   onOpen: () => void;
 }) {
@@ -208,9 +212,23 @@ function ProjectListItem({
     <button
       className="group relative w-full overflow-hidden rounded-xl text-left transition-all duration-200"
       style={{
-        background: isActive ? replaceAlpha(accent, 0.12) : "rgba(255,255,255,0.02)",
-        border: `1px solid ${isActive ? replaceAlpha(accent, 0.4) : "rgba(255,255,255,0.07)"}`,
-        boxShadow: isActive ? `0 0 24px ${replaceAlpha(accent, 0.12)}` : "none",
+        background: isActive
+          ? replaceAlpha(accent, 0.12)
+          : isNew
+            ? "rgba(255,255,255,0.035)"
+            : "rgba(255,255,255,0.02)",
+        border: `1px solid ${
+          isActive
+            ? replaceAlpha(accent, 0.4)
+            : isNew
+              ? "rgba(255,90,90,0.22)"
+              : "rgba(255,255,255,0.07)"
+        }`,
+        boxShadow: isActive
+          ? `0 0 24px ${replaceAlpha(accent, 0.12)}`
+          : isNew
+            ? "0 0 18px rgba(220,40,50,0.08)"
+            : "none",
       }}
       onPointerEnter={onHover}
       onFocus={onHover}
@@ -221,7 +239,9 @@ function ProjectListItem({
         style={{
           background: isActive
             ? `linear-gradient(to bottom, ${replaceAlpha(accent, 0.95)}, ${replaceAlpha(accent, 0.45)})`
-            : "transparent",
+            : isNew
+              ? "linear-gradient(to bottom, rgba(255,80,90,0.7), rgba(255,80,90,0.2))"
+              : "transparent",
         }}
       />
 
@@ -240,6 +260,13 @@ function ProjectListItem({
               opacity: isActive ? 1 : 0.4,
             }}
           />
+          {isNew && (
+            <span className="absolute left-1 top-1 rounded px-1 py-[1px] text-[8px] font-bold uppercase tracking-wide text-white"
+              style={{ background: "rgba(220,40,55,0.92)", boxShadow: "0 0 8px rgba(220,40,55,0.45)" }}
+            >
+              {newLabel}
+            </span>
+          )}
         </div>
 
         <div className="min-w-0 flex-1">
@@ -285,10 +312,14 @@ function ProjectListItem({
 function MobileCard({
   project,
   index,
+  isNew,
+  newLabel,
   onOpen,
 }: {
   project: PreviewProject;
   index: number;
+  isNew: boolean;
+  newLabel: string;
   onOpen: () => void;
 }) {
   const { locale } = useLocale();
@@ -306,8 +337,10 @@ function MobileCard({
       transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94], delay: (index % 4) * 0.06 }}
       style={{
         background: "#0b0b13",
-        borderColor: replaceAlpha(accent, 0.18),
-        boxShadow: `0 4px 20px rgba(0,0,0,0.45)`,
+        borderColor: isNew ? "rgba(220,40,55,0.35)" : replaceAlpha(accent, 0.18),
+        boxShadow: isNew
+          ? `0 4px 24px rgba(220,40,55,0.18)`
+          : `0 4px 20px rgba(0,0,0,0.45)`,
       }}
       onClick={onOpen}
     >
@@ -345,16 +378,28 @@ function MobileCard({
         >
           {num}
         </span>
-        <span
-          className="absolute right-4 top-4 rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest"
-          style={{
-            background: replaceAlpha(accent, 0.15),
-            color: replaceAlpha(accent, 0.9),
-            border: `1px solid ${replaceAlpha(accent, 0.28)}`,
-          }}
-        >
-          {project.year}
-        </span>
+        {isNew ? (
+          <span
+            className="absolute right-4 top-4 rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest text-white"
+            style={{
+              background: "rgba(220,40,55,0.9)",
+              boxShadow: "0 0 12px rgba(220,40,55,0.4)",
+            }}
+          >
+            {newLabel}
+          </span>
+        ) : (
+          <span
+            className="absolute right-4 top-4 rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest"
+            style={{
+              background: replaceAlpha(accent, 0.15),
+              color: replaceAlpha(accent, 0.9),
+              border: `1px solid ${replaceAlpha(accent, 0.28)}`,
+            }}
+          >
+            {project.year}
+          </span>
+        )}
       </div>
 
       {/* Info */}
@@ -427,15 +472,16 @@ export function TimelineSection({
   // When filter changes, select first visible project
   const handleFilterChange = (id: FilterTab) => {
     setActiveFilter(id);
-    const first = items.find((p) => {
+    const next = items.find((p) => {
       if (id === "sites") return SITE_SLUGS.has(p.slug);
       if (id === "industria") return !SITE_SLUGS.has(p.slug);
       return true;
     });
-    if (first) setActiveSlug(first.slug);
+    if (next) setActiveSlug(next.slug);
   };
 
   const activeProject = filtered.find((p) => p.slug === activeSlug) ?? filtered[0];
+  const newLabel = t.newBadge;
 
   return (
     <section
@@ -518,6 +564,8 @@ export function TimelineSection({
                   project={project}
                   index={index}
                   isActive={project.slug === (activeProject?.slug ?? "")}
+                  isNew={newlyAddedProjectSlugSet.has(project.slug)}
+                  newLabel={newLabel}
                   onHover={() => setActiveSlug(project.slug)}
                   onOpen={() => openPreview(project.slug)}
                 />
@@ -550,6 +598,8 @@ export function TimelineSection({
               key={project.slug}
               project={project}
               index={index}
+              isNew={newlyAddedProjectSlugSet.has(project.slug)}
+              newLabel={newLabel}
               onOpen={() => openPreview(project.slug)}
             />
           ))}
