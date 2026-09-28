@@ -2510,33 +2510,9 @@ export const projects: Project[] = [
     gallery: [
       {
         title: "Case Maganhati",
-        description: "Press kit público gerado no MuseFy — hero cósmico.",
+        description: "Press kit público gerado no MuseFy.",
         thumbSrc: "/projects/musefy/maganhati-hero.jpg",
         fullSrc: "/projects/musefy/maganhati-hero.jpg"
-      },
-      {
-        title: "Maganhati ao vivo",
-        description: "Página pública musefy.com.br/maganhati.",
-        thumbSrc: "/projects/musefy/screen1.jpg",
-        fullSrc: "/projects/musefy/screen1.jpg"
-      },
-      {
-        title: "Galeria do artista",
-        description: "Fotos e identidade no press kit.",
-        thumbSrc: "/projects/musefy/screen2.jpg",
-        fullSrc: "/projects/musefy/screen2.jpg"
-      },
-      {
-        title: "Mídia e equipamento",
-        description: "Grid de fotos no case Maganhati.",
-        thumbSrc: "/projects/musefy/screen3.jpg",
-        fullSrc: "/projects/musefy/screen3.jpg"
-      },
-      {
-        title: "Bio Maganhati",
-        description: "Narrativa e apresentação do artista.",
-        thumbSrc: "/projects/musefy/screen4.jpg",
-        fullSrc: "/projects/musefy/screen4.jpg"
       }
     ]
   },
@@ -3937,10 +3913,7 @@ export const projectsLite: ProjectLite[] = [
       { label: "Case Maganhati", url: "https://musefy.com.br/maganhati" }
     ],
     images: [
-      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" },
-      { src: "/projects/musefy/screen1.jpg", alt: "Maganhati ao vivo" },
-      { src: "/projects/musefy/screen2.jpg", alt: "Galeria Maganhati" },
-      { src: "/projects/musefy/screen4.jpg", alt: "Bio Maganhati" }
+      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" }
     ]
   },
   {
@@ -4767,11 +4740,7 @@ export const previewProjects: PreviewProject[] = [
       { label: "Case Maganhati", url: "https://musefy.com.br/maganhati" }
     ],
     gallery: [
-      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" },
-      { src: "/projects/musefy/screen1.jpg", alt: "Maganhati ao vivo" },
-      { src: "/projects/musefy/screen2.jpg", alt: "Galeria Maganhati" },
-      { src: "/projects/musefy/screen3.jpg", alt: "Mídia Maganhati" },
-      { src: "/projects/musefy/screen4.jpg", alt: "Bio Maganhati" }
+      { src: "/projects/musefy/maganhati-hero.jpg", alt: "Case Maganhati" }
     ]
   },
   {
