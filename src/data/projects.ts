@@ -2755,7 +2755,482 @@ export const projects: Project[] = [
       }
     ]
   },
-
+  {
+    slug: "hoffman-agency",
+    title: "Hoffman, Music Agency",
+    subtitle: "Site institucional da agência musical Hoffman.",
+    summary: "Presença digital da Hoffman Music Agency: artistas, história, eventos e booking.",
+    description: "Site da Hoffman Music Agency com narrativa de marca, roster de artistas, agenda de eventos e CTA de booking — experiência visual full-bleed para o mercado musical brasileiro.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Agência musical",
+    tags: ["Agência","Música","Booking","Institucional"],
+    stack: ["Next.js","TypeScript","React","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(220, 40, 60, 0.45)",
+      b: "rgba(20, 10, 20, 0.55)",
+      c: "rgba(255, 120, 140, 0.12)"
+    },
+    context: "A Hoffman precisava de um site que comunicasse autoridade de agência musical e levasse rápido ao booking.",
+    problem: ["Marca sem vitrine digital alinhada ao roster.","Booking e prova social espalhados em redes.","Falta de narrativa institucional clara."],
+    constraints: ["Visual forte, full-bleed.","Foco em artistas, eventos e booking.","Deploy Vercel."],
+    solution: ["Hero com manifesto da agência.","Seções de artistas, história e eventos.","CTA de booking em destaque."],
+    results: ["Site vivo em hoffman5051.vercel.app.","Narrativa única para roster e booking.","Base para evolução da marca digital."],
+    learnings: ["Agência musical vende por roster + atmosfera.","Booking precisa estar a um clique do hero."],
+    nextSteps: ["Expandir fichas de artista.","Integrar agenda dinâmica."],
+    kpis: [{"label":"Tipo","value":"Music Agency"},{"label":"Foco","value":"Artistas + booking"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://hoffman5051.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Hoffman, Music Agency",
+        thumbSrc: "/projects/hoffman-agency/thumb.jpg",
+        fullSrc: "/projects/hoffman-agency/thumb.jpg"
+      },
+      {
+        title: "Manifesto",
+        description: "Manifesto — Hoffman, Music Agency",
+        thumbSrc: "/projects/hoffman-agency/screen1.jpg",
+        fullSrc: "/projects/hoffman-agency/screen1.jpg"
+      },
+      {
+        title: "Artistas",
+        description: "Artistas — Hoffman, Music Agency",
+        thumbSrc: "/projects/hoffman-agency/screen2.jpg",
+        fullSrc: "/projects/hoffman-agency/screen2.jpg"
+      },
+      {
+        title: "Eventos / booking",
+        description: "Eventos / booking — Hoffman, Music Agency",
+        thumbSrc: "/projects/hoffman-agency/screen3.jpg",
+        fullSrc: "/projects/hoffman-agency/screen3.jpg"
+      },
+      {
+        title: "Eventos / booking",
+        description: "Seção adicional — Hoffman, Music Agency",
+        thumbSrc: "/projects/hoffman-agency/screen4.jpg",
+        fullSrc: "/projects/hoffman-agency/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "ants-agency",
+    title: "ANTS, Agency",
+    subtitle: "Site da agência ANTS com identidade visual cinematográfica.",
+    summary: "Home da ANTS Agency com narrativa de marca, atmosfera e conversão para contato.",
+    description: "Site institucional da ANTS Agency: experiência visual dark/cinematográfica, home com hero impactante e seções de apresentação da agência.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Agência",
+    tags: ["Agência","Institucional","Branding"],
+    stack: ["HTML/CSS/JS","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(200, 120, 40, 0.4)",
+      b: "rgba(30, 20, 10, 0.55)",
+      c: "rgba(255, 200, 120, 0.1)"
+    },
+    context: "A ANTS precisava de uma home que transmitisse identidade forte e posicionamento de agência.",
+    problem: ["Presença digital genérica.","Pouca diferenciação visual.","Conversão para contato pouco clara."],
+    constraints: ["Identidade visual marcante.","Deploy estático/Vercel."],
+    solution: ["Hero cinematográfico.","Navegação enxuta.","Narrativa de marca em seções."],
+    results: ["Site publicado na Vercel.","Identidade visual consistente.","Base para cases e contato."],
+    learnings: ["Atmosfera vende antes do texto.","Hero precisa carregar a marca sozinho."],
+    nextSteps: ["Ampliar página de cases.","Ajustar performance de mídia."],
+    kpis: [{"label":"Tipo","value":"Agency site"},{"label":"Tom","value":"Cinematográfico"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://site-ants.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — ANTS, Agency",
+        thumbSrc: "/projects/ants-agency/thumb.jpg",
+        fullSrc: "/projects/ants-agency/thumb.jpg"
+      },
+      {
+        title: "Home",
+        description: "Home — ANTS, Agency",
+        thumbSrc: "/projects/ants-agency/screen1.jpg",
+        fullSrc: "/projects/ants-agency/screen1.jpg"
+      },
+      {
+        title: "Narrativa",
+        description: "Narrativa — ANTS, Agency",
+        thumbSrc: "/projects/ants-agency/screen2.jpg",
+        fullSrc: "/projects/ants-agency/screen2.jpg"
+      },
+      {
+        title: "Seções",
+        description: "Seções — ANTS, Agency",
+        thumbSrc: "/projects/ants-agency/screen3.jpg",
+        fullSrc: "/projects/ants-agency/screen3.jpg"
+      },
+      {
+        title: "Seções",
+        description: "Seção adicional — ANTS, Agency",
+        thumbSrc: "/projects/ants-agency/screen4.jpg",
+        fullSrc: "/projects/ants-agency/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "tchez-dj",
+    title: "Tchez, DJ & Producer",
+    subtitle: "Press kit / site do DJ e producer Tchez.",
+    summary: "Página do artista Tchez com sets, aftermovies, press e links para Spotify, Beatport e Instagram.",
+    description: "Site/press kit digital do DJ & producer Tchez: hero forte, sets, aftermovies, work, press e CTAs para plataformas e booking.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Press kit / Artista",
+    tags: ["Press Kit","DJ","Techno","Booking"],
+    stack: ["Next.js","TypeScript","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(80, 40, 200, 0.45)",
+      b: "rgba(10, 10, 30, 0.55)",
+      c: "rgba(160, 120, 255, 0.12)"
+    },
+    context: "Tchez precisava de uma URL única para vender o artista com sets, vídeos e press.",
+    problem: ["Links espalhados em redes.","Falta de press kit profissional.","Booking sem página de autoridade."],
+    constraints: ["Foco em mídia e plataformas.","Mobile-first."],
+    solution: ["Hero de artista.","Sets, aftermovies, work e press.","Links Spotify/Beatport/Instagram."],
+    results: ["Press kit público na Vercel.","Narrativa visual consistente.","Caminho claro para ouvir e contactar."],
+    learnings: ["Artista vende por mídia primeiro.","CTAs de plataformas precisam estar no hero."],
+    nextSteps: ["Atualizar drops e aftermovies.","i18n se necessário."],
+    kpis: [{"label":"Formato","value":"Press kit"},{"label":"Artista","value":"Tchez"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://tchez-web.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Tchez, DJ & Producer",
+        thumbSrc: "/projects/tchez-dj/thumb.jpg",
+        fullSrc: "/projects/tchez-dj/thumb.jpg"
+      },
+      {
+        title: "Sets / mídia",
+        description: "Sets / mídia — Tchez, DJ & Producer",
+        thumbSrc: "/projects/tchez-dj/screen1.jpg",
+        fullSrc: "/projects/tchez-dj/screen1.jpg"
+      },
+      {
+        title: "Work",
+        description: "Work — Tchez, DJ & Producer",
+        thumbSrc: "/projects/tchez-dj/screen2.jpg",
+        fullSrc: "/projects/tchez-dj/screen2.jpg"
+      },
+      {
+        title: "Press / links",
+        description: "Press / links — Tchez, DJ & Producer",
+        thumbSrc: "/projects/tchez-dj/screen3.jpg",
+        fullSrc: "/projects/tchez-dj/screen3.jpg"
+      },
+      {
+        title: "Press / links",
+        description: "Seção adicional — Tchez, DJ & Producer",
+        thumbSrc: "/projects/tchez-dj/screen4.jpg",
+        fullSrc: "/projects/tchez-dj/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "suntimes",
+    title: "Sun Times, A World in Peace",
+    subtitle: "Landing do evento Sun Times · 12.JUL.",
+    summary: "Site de evento com line-up, edições anteriores, artistas e conversão para Instagram/ingresso.",
+    description: "Landing do Sun Times (A World in Peace): hero do evento, próximos encontros, artistas, últimas edições, fotos e CTAs de contato/Instagram.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Evento",
+    tags: ["Evento","Landing","Nightlife","Line-up"],
+    stack: ["Vite","HTML/CSS/JS","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(255, 160, 40, 0.4)",
+      b: "rgba(40, 20, 10, 0.5)",
+      c: "rgba(255, 220, 140, 0.1)"
+    },
+    context: "O evento precisava de uma landing própria com line-up e memória das edições.",
+    problem: ["Divulgação só via Instagram.","Line-up e fotos sem URL estável.","Pouca conversão estruturada."],
+    constraints: ["Landing leve e visual.","Deploy Vercel."],
+    solution: ["Hero do evento.","Artistas e últimas edições.","CTAs Instagram/contato."],
+    results: ["Landing publicada.","Memória visual das edições.","URL compartilhável para divulgação."],
+    learnings: ["Evento vive de atmosfera + line-up.","Últimas edições geram confiança."],
+    nextSteps: ["Atualizar próxima data.","Galeria contínua."],
+    kpis: [{"label":"Tipo","value":"Event landing"},{"label":"Data","value":"12.JUL"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://suntimes-iota.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Sun Times, A World in Peace",
+        thumbSrc: "/projects/suntimes/thumb.jpg",
+        fullSrc: "/projects/suntimes/thumb.jpg"
+      },
+      {
+        title: "Próximo evento",
+        description: "Próximo evento — Sun Times, A World in Peace",
+        thumbSrc: "/projects/suntimes/screen1.jpg",
+        fullSrc: "/projects/suntimes/screen1.jpg"
+      },
+      {
+        title: "Artistas",
+        description: "Artistas — Sun Times, A World in Peace",
+        thumbSrc: "/projects/suntimes/screen2.jpg",
+        fullSrc: "/projects/suntimes/screen2.jpg"
+      },
+      {
+        title: "Edições / fotos",
+        description: "Edições / fotos — Sun Times, A World in Peace",
+        thumbSrc: "/projects/suntimes/screen3.jpg",
+        fullSrc: "/projects/suntimes/screen3.jpg"
+      },
+      {
+        title: "Edições / fotos",
+        description: "Seção adicional — Sun Times, A World in Peace",
+        thumbSrc: "/projects/suntimes/screen4.jpg",
+        fullSrc: "/projects/suntimes/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "field-talents",
+    title: "Field Talents, Music Agency",
+    subtitle: "Site da agência Field Talents com roster e booking.",
+    summary: "Presença digital da Field Talents: artistas, agenda, notícias e booking para o mercado BR/worldwide.",
+    description: "Site institucional da Field Talents Music Agency — artistas, agenda, notícias e CTA de booking, com visual de agência internacional.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Agência musical",
+    tags: ["Agência","Música","Booking","Roster"],
+    stack: ["HTML/CSS/JS","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(40, 160, 120, 0.4)",
+      b: "rgba(10, 30, 25, 0.55)",
+      c: "rgba(120, 220, 180, 0.1)"
+    },
+    context: "A Field Talents precisava de um site que posicionasse a agência no Brasil e no exterior.",
+    problem: ["Roster sem vitrine unificada.","Booking e agenda dispersos.","Marca sem presença institucional."],
+    constraints: ["Tom internacional.","Foco em artistas e booking."],
+    solution: ["Hero de music agency.","Artistas, agenda e notícias.","CTA de booking."],
+    results: ["Site publicado na Vercel.","Narrativa de agência clara.","Base para expansão do roster."],
+    learnings: ["Agência worldwide precisa de tom limpo e roster em evidência.","Booking no header acelera conversão."],
+    nextSteps: ["Conectar agenda dinâmica.","Ampliar notícias."],
+    kpis: [{"label":"Tipo","value":"Music Agency"},{"label":"Escopo","value":"BR / Worldwide"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://field-talents.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Field Talents, Music Agency",
+        thumbSrc: "/projects/field-talents/thumb.jpg",
+        fullSrc: "/projects/field-talents/thumb.jpg"
+      },
+      {
+        title: "Artistas",
+        description: "Artistas — Field Talents, Music Agency",
+        thumbSrc: "/projects/field-talents/screen1.jpg",
+        fullSrc: "/projects/field-talents/screen1.jpg"
+      },
+      {
+        title: "Agenda",
+        description: "Agenda — Field Talents, Music Agency",
+        thumbSrc: "/projects/field-talents/screen2.jpg",
+        fullSrc: "/projects/field-talents/screen2.jpg"
+      },
+      {
+        title: "Booking",
+        description: "Booking — Field Talents, Music Agency",
+        thumbSrc: "/projects/field-talents/screen3.jpg",
+        fullSrc: "/projects/field-talents/screen3.jpg"
+      },
+      {
+        title: "Booking",
+        description: "Seção adicional — Field Talents, Music Agency",
+        thumbSrc: "/projects/field-talents/screen4.jpg",
+        fullSrc: "/projects/field-talents/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "full-fight-academy",
+    title: "Full Fight Academy",
+    subtitle: "Site da academia de Muay Thai, Boxe e MMA em Itajaí.",
+    summary: "Landing da Full Fight Academy com modalidades, horários, galeria, local e conversão WhatsApp.",
+    description: "Site da Full Fight Academy (Itajaí): modalidades (Muay Thai, Boxe, MMA), galeria, horários, promo, local, FAQ e CTA WhatsApp.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Academia / Esportes",
+    tags: ["Academia","Muay Thai","Landing","WhatsApp"],
+    stack: ["Vite","HTML/CSS/JS","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(200, 40, 40, 0.45)",
+      b: "rgba(20, 10, 10, 0.55)",
+      c: "rgba(255, 140, 100, 0.1)"
+    },
+    context: "A academia precisava de uma landing para converter alunos via WhatsApp com prova de modalidades e horários.",
+    problem: ["Informação só no Instagram.","Horários e modalidades pouco claros.","Conversão lenta para matrícula."],
+    constraints: ["Mobile-first.","CTA WhatsApp forte."],
+    solution: ["Hero da academia.","Modalidades, galeria, horários e local.","FAQ + WhatsApp."],
+    results: ["Landing publicada.","Caminho claro para WhatsApp.","Prova social visual da academia."],
+    learnings: ["Academia converte com horário + WhatsApp.","Galeria de treino gera confiança."],
+    nextSteps: ["Atualizar promos e grade.","Tracking de cliques WhatsApp."],
+    kpis: [{"label":"Local","value":"Itajaí"},{"label":"CTA","value":"WhatsApp"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://full-fight-academy.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Full Fight Academy",
+        thumbSrc: "/projects/full-fight-academy/thumb.jpg",
+        fullSrc: "/projects/full-fight-academy/thumb.jpg"
+      },
+      {
+        title: "Modalidades",
+        description: "Modalidades — Full Fight Academy",
+        thumbSrc: "/projects/full-fight-academy/screen1.jpg",
+        fullSrc: "/projects/full-fight-academy/screen1.jpg"
+      },
+      {
+        title: "Galeria / horários",
+        description: "Galeria / horários — Full Fight Academy",
+        thumbSrc: "/projects/full-fight-academy/screen2.jpg",
+        fullSrc: "/projects/full-fight-academy/screen2.jpg"
+      },
+      {
+        title: "Local / CTA",
+        description: "Local / CTA — Full Fight Academy",
+        thumbSrc: "/projects/full-fight-academy/screen3.jpg",
+        fullSrc: "/projects/full-fight-academy/screen3.jpg"
+      },
+      {
+        title: "Local / CTA",
+        description: "Seção adicional — Full Fight Academy",
+        thumbSrc: "/projects/full-fight-academy/screen4.jpg",
+        fullSrc: "/projects/full-fight-academy/screen4.jpg"
+      }
+    ]
+  },
+  {
+    slug: "sixx-house",
+    title: "Arraial da Sixx House",
+    subtitle: "Landing do evento Sixx House · 17.JUL · São José/SC.",
+    summary: "Site do Arraial da Sixx House com line-up, a casa, fotos, local e contato/WhatsApp.",
+    description: "Landing do evento Arraial da Sixx House: próximo evento, últimos eventos, line livre, a casa, fotos, local e CTAs de WhatsApp/contato.",
+    year: 2026,
+    status: "Concluído",
+    progress: 100,
+    type: "Site",
+    domain: "Marketing",
+    segment: "Evento",
+    tags: ["Evento","Landing","Nightlife","São José"],
+    stack: ["Vite","HTML/CSS/JS","Vercel"],
+    cover: {
+      kind: "gradient",
+      a: "rgba(160, 40, 180, 0.4)",
+      b: "rgba(20, 10, 30, 0.55)",
+      c: "rgba(220, 140, 255, 0.1)"
+    },
+    context: "A Sixx House precisava de uma landing para o arraial com atmosfera, fotos e conversão WhatsApp.",
+    problem: ["Evento divulgado só em stories.","Fotos e local sem página própria.","Contato pouco estruturado."],
+    constraints: ["Landing visual de festa.","CTA WhatsApp."],
+    solution: ["Hero do arraial.","Últimos eventos, a casa e fotos.","Local + WhatsApp."],
+    results: ["Landing publicada na Vercel.","URL compartilhável do evento.","Memória visual da casa."],
+    learnings: ["Festa vende por foto + vibe.","WhatsApp fecha o funil local."],
+    nextSteps: ["Atualizar próxima data.","Galeria pós-evento."],
+    kpis: [{"label":"Tipo","value":"Event landing"},{"label":"Local","value":"São José/SC"},{"label":"Deploy","value":"Vercel"}],
+    accessLinks: [
+      {
+        label: "Acesso público",
+        url: "https://sixx-house.vercel.app/",
+        visibility: "public"
+      }
+    ],
+    gallery: [
+      {
+        title: "Hero",
+        description: "Hero — Arraial da Sixx House",
+        thumbSrc: "/projects/sixx-house/thumb.jpg",
+        fullSrc: "/projects/sixx-house/thumb.jpg"
+      },
+      {
+        title: "Próximo / últimos",
+        description: "Próximo / últimos — Arraial da Sixx House",
+        thumbSrc: "/projects/sixx-house/screen1.jpg",
+        fullSrc: "/projects/sixx-house/screen1.jpg"
+      },
+      {
+        title: "A casa",
+        description: "A casa — Arraial da Sixx House",
+        thumbSrc: "/projects/sixx-house/screen2.jpg",
+        fullSrc: "/projects/sixx-house/screen2.jpg"
+      },
+      {
+        title: "Fotos / local",
+        description: "Fotos / local — Arraial da Sixx House",
+        thumbSrc: "/projects/sixx-house/screen3.jpg",
+        fullSrc: "/projects/sixx-house/screen3.jpg"
+      },
+      {
+        title: "Fotos / local",
+        description: "Seção adicional — Arraial da Sixx House",
+        thumbSrc: "/projects/sixx-house/screen4.jpg",
+        fullSrc: "/projects/sixx-house/screen4.jpg"
+      }
+    ]
+  }
 ];
 
 
@@ -3514,7 +3989,125 @@ export const projectsLite: ProjectLite[] = [
       { src: "/projects/asramos/screen5.jpg", alt: "Catálogo" }
     ]
   },
-
+  {
+    slug: "hoffman-agency",
+    title: "Hoffman, Music Agency",
+    oneLiner: "Presença digital da Hoffman Music Agency: artistas, história, eventos e booking.",
+    problem: "Marca sem vitrine digital alinhada ao roster.",
+    solution: "Hero com manifesto da agência. Seções de artistas, história e eventos. CTA de booking em destaque.",
+    features: ["Hero com manifesto da agência.","Seções de artistas, história e eventos.","CTA de booking em destaque."],
+    benefits: ["Site vivo em hoffman5051.vercel.app.","Narrativa única para roster e booking.","Base para evolução da marca digital."],
+    techStack: ["Next.js","TypeScript","React","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://hoffman5051.vercel.app/" }],
+    images: [
+      { src: "/projects/hoffman-agency/thumb.jpg", alt: "Hero" },
+      { src: "/projects/hoffman-agency/screen2.jpg", alt: "Manifesto" },
+      { src: "/projects/hoffman-agency/screen3.jpg", alt: "Artistas" },
+      { src: "/projects/hoffman-agency/screen4.jpg", alt: "Eventos / booking" }
+    ]
+  },
+  {
+    slug: "ants-agency",
+    title: "ANTS, Agency",
+    oneLiner: "Home da ANTS Agency com narrativa de marca, atmosfera e conversão para contato.",
+    problem: "Presença digital genérica.",
+    solution: "Hero cinematográfico. Navegação enxuta. Narrativa de marca em seções.",
+    features: ["Hero cinematográfico.","Navegação enxuta.","Narrativa de marca em seções."],
+    benefits: ["Site publicado na Vercel.","Identidade visual consistente.","Base para cases e contato."],
+    techStack: ["HTML/CSS/JS","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://site-ants.vercel.app/" }],
+    images: [
+      { src: "/projects/ants-agency/thumb.jpg", alt: "Hero" },
+      { src: "/projects/ants-agency/screen2.jpg", alt: "Home" },
+      { src: "/projects/ants-agency/screen3.jpg", alt: "Narrativa" },
+      { src: "/projects/ants-agency/screen4.jpg", alt: "Seções" }
+    ]
+  },
+  {
+    slug: "tchez-dj",
+    title: "Tchez, DJ & Producer",
+    oneLiner: "Página do artista Tchez com sets, aftermovies, press e links para Spotify, Beatport e Instagram.",
+    problem: "Links espalhados em redes.",
+    solution: "Hero de artista. Sets, aftermovies, work e press. Links Spotify/Beatport/Instagram.",
+    features: ["Hero de artista.","Sets, aftermovies, work e press.","Links Spotify/Beatport/Instagram."],
+    benefits: ["Press kit público na Vercel.","Narrativa visual consistente.","Caminho claro para ouvir e contactar."],
+    techStack: ["Next.js","TypeScript","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://tchez-web.vercel.app/" }],
+    images: [
+      { src: "/projects/tchez-dj/thumb.jpg", alt: "Hero" },
+      { src: "/projects/tchez-dj/screen2.jpg", alt: "Sets / mídia" },
+      { src: "/projects/tchez-dj/screen3.jpg", alt: "Work" },
+      { src: "/projects/tchez-dj/screen4.jpg", alt: "Press / links" }
+    ]
+  },
+  {
+    slug: "suntimes",
+    title: "Sun Times, A World in Peace",
+    oneLiner: "Site de evento com line-up, edições anteriores, artistas e conversão para Instagram/ingresso.",
+    problem: "Divulgação só via Instagram.",
+    solution: "Hero do evento. Artistas e últimas edições. CTAs Instagram/contato.",
+    features: ["Hero do evento.","Artistas e últimas edições.","CTAs Instagram/contato."],
+    benefits: ["Landing publicada.","Memória visual das edições.","URL compartilhável para divulgação."],
+    techStack: ["Vite","HTML/CSS/JS","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://suntimes-iota.vercel.app/" }],
+    images: [
+      { src: "/projects/suntimes/thumb.jpg", alt: "Hero" },
+      { src: "/projects/suntimes/screen2.jpg", alt: "Próximo evento" },
+      { src: "/projects/suntimes/screen3.jpg", alt: "Artistas" },
+      { src: "/projects/suntimes/screen4.jpg", alt: "Edições / fotos" }
+    ]
+  },
+  {
+    slug: "field-talents",
+    title: "Field Talents, Music Agency",
+    oneLiner: "Presença digital da Field Talents: artistas, agenda, notícias e booking para o mercado BR/worldwide.",
+    problem: "Roster sem vitrine unificada.",
+    solution: "Hero de music agency. Artistas, agenda e notícias. CTA de booking.",
+    features: ["Hero de music agency.","Artistas, agenda e notícias.","CTA de booking."],
+    benefits: ["Site publicado na Vercel.","Narrativa de agência clara.","Base para expansão do roster."],
+    techStack: ["HTML/CSS/JS","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://field-talents.vercel.app/" }],
+    images: [
+      { src: "/projects/field-talents/thumb.jpg", alt: "Hero" },
+      { src: "/projects/field-talents/screen2.jpg", alt: "Artistas" },
+      { src: "/projects/field-talents/screen3.jpg", alt: "Agenda" },
+      { src: "/projects/field-talents/screen4.jpg", alt: "Booking" }
+    ]
+  },
+  {
+    slug: "full-fight-academy",
+    title: "Full Fight Academy",
+    oneLiner: "Landing da Full Fight Academy com modalidades, horários, galeria, local e conversão WhatsApp.",
+    problem: "Informação só no Instagram.",
+    solution: "Hero da academia. Modalidades, galeria, horários e local. FAQ + WhatsApp.",
+    features: ["Hero da academia.","Modalidades, galeria, horários e local.","FAQ + WhatsApp."],
+    benefits: ["Landing publicada.","Caminho claro para WhatsApp.","Prova social visual da academia."],
+    techStack: ["Vite","HTML/CSS/JS","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://full-fight-academy.vercel.app/" }],
+    images: [
+      { src: "/projects/full-fight-academy/thumb.jpg", alt: "Hero" },
+      { src: "/projects/full-fight-academy/screen2.jpg", alt: "Modalidades" },
+      { src: "/projects/full-fight-academy/screen3.jpg", alt: "Galeria / horários" },
+      { src: "/projects/full-fight-academy/screen4.jpg", alt: "Local / CTA" }
+    ]
+  },
+  {
+    slug: "sixx-house",
+    title: "Arraial da Sixx House",
+    oneLiner: "Site do Arraial da Sixx House com line-up, a casa, fotos, local e contato/WhatsApp.",
+    problem: "Evento divulgado só em stories.",
+    solution: "Hero do arraial. Últimos eventos, a casa e fotos. Local + WhatsApp.",
+    features: ["Hero do arraial.","Últimos eventos, a casa e fotos.","Local + WhatsApp."],
+    benefits: ["Landing publicada na Vercel.","URL compartilhável do evento.","Memória visual da casa."],
+    techStack: ["Vite","HTML/CSS/JS","Vercel"],
+    accessLinks: [{ label: "Acesso público", url: "https://sixx-house.vercel.app/" }],
+    images: [
+      { src: "/projects/sixx-house/thumb.jpg", alt: "Hero" },
+      { src: "/projects/sixx-house/screen2.jpg", alt: "Próximo / últimos" },
+      { src: "/projects/sixx-house/screen3.jpg", alt: "A casa" },
+      { src: "/projects/sixx-house/screen4.jpg", alt: "Fotos / local" }
+    ]
+  }
 ];
 
 
@@ -4221,7 +4814,139 @@ export const previewProjects: PreviewProject[] = [
       { src: "/projects/asramos/screen5.jpg", alt: "Catálogo" }
     ]
   },
-
+  {
+    slug: "hoffman-agency",
+    title: "Hoffman, Music Agency",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Agência","Música","Booking","Institucional"],
+    thumb: "/projects/hoffman-agency/thumb.jpg",
+    description: "Site da Hoffman Music Agency com narrativa de marca, roster de artistas, agenda de eventos e CTA de booking — experiência visual full-bleed para o mercado musical brasileiro.",
+    bullets: ["Hero com manifesto da agência.","Seções de artistas, história e eventos.","CTA de booking em destaque."],
+    accessLinks: [{ label: "Acesso público", url: "https://hoffman5051.vercel.app/" }],
+    gallery: [
+      { src: "/projects/hoffman-agency/thumb.jpg", alt: "Hero" },
+      { src: "/projects/hoffman-agency/screen2.jpg", alt: "Manifesto" },
+      { src: "/projects/hoffman-agency/screen3.jpg", alt: "Artistas" },
+      { src: "/projects/hoffman-agency/screen4.jpg", alt: "Eventos / booking" }
+    ]
+  },
+  {
+    slug: "ants-agency",
+    title: "ANTS, Agency",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Agência","Institucional","Branding"],
+    thumb: "/projects/ants-agency/thumb.jpg",
+    description: "Site institucional da ANTS Agency: experiência visual dark/cinematográfica, home com hero impactante e seções de apresentação da agência.",
+    bullets: ["Hero cinematográfico.","Navegação enxuta.","Narrativa de marca em seções."],
+    accessLinks: [{ label: "Acesso público", url: "https://site-ants.vercel.app/" }],
+    gallery: [
+      { src: "/projects/ants-agency/thumb.jpg", alt: "Hero" },
+      { src: "/projects/ants-agency/screen2.jpg", alt: "Home" },
+      { src: "/projects/ants-agency/screen3.jpg", alt: "Narrativa" },
+      { src: "/projects/ants-agency/screen4.jpg", alt: "Seções" }
+    ]
+  },
+  {
+    slug: "tchez-dj",
+    title: "Tchez, DJ & Producer",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Press Kit","DJ","Techno","Booking"],
+    thumb: "/projects/tchez-dj/thumb.jpg",
+    description: "Site/press kit digital do DJ & producer Tchez: hero forte, sets, aftermovies, work, press e CTAs para plataformas e booking.",
+    bullets: ["Hero de artista.","Sets, aftermovies, work e press.","Links Spotify/Beatport/Instagram."],
+    accessLinks: [{ label: "Acesso público", url: "https://tchez-web.vercel.app/" }],
+    gallery: [
+      { src: "/projects/tchez-dj/thumb.jpg", alt: "Hero" },
+      { src: "/projects/tchez-dj/screen2.jpg", alt: "Sets / mídia" },
+      { src: "/projects/tchez-dj/screen3.jpg", alt: "Work" },
+      { src: "/projects/tchez-dj/screen4.jpg", alt: "Press / links" }
+    ]
+  },
+  {
+    slug: "suntimes",
+    title: "Sun Times, A World in Peace",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Evento","Landing","Nightlife","Line-up"],
+    thumb: "/projects/suntimes/thumb.jpg",
+    description: "Landing do Sun Times (A World in Peace): hero do evento, próximos encontros, artistas, últimas edições, fotos e CTAs de contato/Instagram.",
+    bullets: ["Hero do evento.","Artistas e últimas edições.","CTAs Instagram/contato."],
+    accessLinks: [{ label: "Acesso público", url: "https://suntimes-iota.vercel.app/" }],
+    gallery: [
+      { src: "/projects/suntimes/thumb.jpg", alt: "Hero" },
+      { src: "/projects/suntimes/screen2.jpg", alt: "Próximo evento" },
+      { src: "/projects/suntimes/screen3.jpg", alt: "Artistas" },
+      { src: "/projects/suntimes/screen4.jpg", alt: "Edições / fotos" }
+    ]
+  },
+  {
+    slug: "field-talents",
+    title: "Field Talents, Music Agency",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Agência","Música","Booking","Roster"],
+    thumb: "/projects/field-talents/thumb.jpg",
+    description: "Site institucional da Field Talents Music Agency — artistas, agenda, notícias e CTA de booking, com visual de agência internacional.",
+    bullets: ["Hero de music agency.","Artistas, agenda e notícias.","CTA de booking."],
+    accessLinks: [{ label: "Acesso público", url: "https://field-talents.vercel.app/" }],
+    gallery: [
+      { src: "/projects/field-talents/thumb.jpg", alt: "Hero" },
+      { src: "/projects/field-talents/screen2.jpg", alt: "Artistas" },
+      { src: "/projects/field-talents/screen3.jpg", alt: "Agenda" },
+      { src: "/projects/field-talents/screen4.jpg", alt: "Booking" }
+    ]
+  },
+  {
+    slug: "full-fight-academy",
+    title: "Full Fight Academy",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Academia","Muay Thai","Landing","WhatsApp"],
+    thumb: "/projects/full-fight-academy/thumb.jpg",
+    description: "Site da Full Fight Academy (Itajaí): modalidades (Muay Thai, Boxe, MMA), galeria, horários, promo, local, FAQ e CTA WhatsApp.",
+    bullets: ["Hero da academia.","Modalidades, galeria, horários e local.","FAQ + WhatsApp."],
+    accessLinks: [{ label: "Acesso público", url: "https://full-fight-academy.vercel.app/" }],
+    gallery: [
+      { src: "/projects/full-fight-academy/thumb.jpg", alt: "Hero" },
+      { src: "/projects/full-fight-academy/screen2.jpg", alt: "Modalidades" },
+      { src: "/projects/full-fight-academy/screen3.jpg", alt: "Galeria / horários" },
+      { src: "/projects/full-fight-academy/screen4.jpg", alt: "Local / CTA" }
+    ]
+  },
+  {
+    slug: "sixx-house",
+    title: "Arraial da Sixx House",
+    year: 2026,
+    area: "Marketing",
+    status: "Concluído",
+    progress: 100,
+    tags: ["Evento","Landing","Nightlife","São José"],
+    thumb: "/projects/sixx-house/thumb.jpg",
+    description: "Landing do evento Arraial da Sixx House: próximo evento, últimos eventos, line livre, a casa, fotos, local e CTAs de WhatsApp/contato.",
+    bullets: ["Hero do arraial.","Últimos eventos, a casa e fotos.","Local + WhatsApp."],
+    accessLinks: [{ label: "Acesso público", url: "https://sixx-house.vercel.app/" }],
+    gallery: [
+      { src: "/projects/sixx-house/thumb.jpg", alt: "Hero" },
+      { src: "/projects/sixx-house/screen2.jpg", alt: "Próximo / últimos" },
+      { src: "/projects/sixx-house/screen3.jpg", alt: "A casa" },
+      { src: "/projects/sixx-house/screen4.jpg", alt: "Fotos / local" }
+    ]
+  }
 ];
 
 const featuredPreviewSlug = "landing-page-printbag";
@@ -4275,6 +5000,13 @@ export const homeProjectSlugs = [
   "site-institucional-printbag",
   "donacica-hot-dog",
   "new-talent",
+  "hoffman-agency",
+  "ants-agency",
+  "tchez-dj",
+  "suntimes",
+  "field-talents",
+  "full-fight-academy",
+  "sixx-house",
   "dashboard-separacao-estoque",
   "planejamento-orcamentario-coordenador",
   "sistema-orcamentario-produtos-graficos",

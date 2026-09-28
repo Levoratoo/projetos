@@ -35,6 +35,16 @@ const SITE_SLUGS = new Set([
   "press-kit-levorato-dj",
   "claymoon-press-kit",
   "quint-press-kit",
+  "hoffman-agency",
+  "ants-agency",
+  "tchez-dj",
+  "suntimes",
+  "field-talents",
+  "full-fight-academy",
+  "sixx-house",
+  "musefy",
+  "asramos",
+  "site-lofi-bc",
 ]);
 
 type FilterTab = "todos" | "sites" | "industria";
